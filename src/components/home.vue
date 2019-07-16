@@ -1,5 +1,5 @@
 <template>
-    <div><div>
+    <div>
             <b-jumbotron>
         <carousel></carousel><br>
         <h style="font-size: 60px;">we provide wide range of</h>
@@ -38,12 +38,10 @@
                                                           <b-media tag="li">
                                                             <b-img slot="aside" blank blank-color="#bac" width="64" alt="placeholder"></b-img>
                                                       
-                                                            <h5 class="mt-0 mb-1">List-based media object</h5>
+                                                            <h5 class="mt-0 mb-1" style="color:blue;">Our Mission</h5>
                                                             <p class="mb-0" style="font-size: 20px;font-family:Arial, Helvetica, sans-serif;">
-                                                              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                                                              Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
-                                                              ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                                                            </p>
+                                                                    Our Mission is to improve the life style of people and bring the products and services
+                                                                     under one platform with latest technology and secured transactions.</p>
                                                           </b-media>
                                                         </ul>
                                                       </div>
@@ -53,8 +51,8 @@
                                         <b-container class="bv-example-row">
                                                 <b-row>
                                                   <b-col sm="8">
-                                                        <div id="rcorners1" style="width:1200px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:500px;float:left;margin-top:20px;margin-left:20px;">
-                                                        <br>
+                                                        <div id="rcorners1" style="width:1200px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:auto;float:left;margin-top:20px;margin-left:20px;">
+                                                        
                                                         <div align="left">
                                                                 <b-card title="REGISTER" sub-title="YOUR PRODUCTS AND SERVICES">
                                                                   <b-card-text>
@@ -91,10 +89,10 @@
                                                                                                         <input  type="text" style="width:330px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Email">
 
                                                                                                 </b-col>
-                                                                                                <b-col>                             <input  type="text" style="width:330px;background-color: rgb(233, 238, 240);text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Address">
+                                                                                                <b-col>                             <input  type="text" style="width:330px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Address">
                                                                                                 </b-col>
                                                                                               </b-row><br>
-                                                                                              <b-button variant="outline-primary">Submit</b-button>
+                                                                                              <b-button variant="outline-primary">Save</b-button>
 
                                                                                       </b-container></b-card></div>
                                                                           
@@ -104,7 +102,10 @@
                                                   </b-col>
                                                 </b-row></b-container>
                         </b-jumbotron>
-                      </div>
+                        <footer class="footer footer-light">
+        ...
+    </footer>
+                      
     </div>
 </template>
 <script>
@@ -128,3 +129,4 @@
               width: 200px;
               height: 8px;  
             }
+            </style>

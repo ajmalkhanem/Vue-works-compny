@@ -25,20 +25,20 @@
                         <b-col></b-col> <b-col></b-col></b-row>
                       
                         <b-row><b-col></b-col> <b-col>
-                          <input type="password" style="width:330px;background-color: rgb(233, 238, 240); text-align: center;"  required class="form-control" id="rcorners1" placeholder="Password">
+                          <input type="email" style="width:330px;background-color: rgb(233, 238, 240); text-align: center;"  required class="form-control" id="rcorners1" placeholder="email">
                         </b-col><b-col></b-col></b-row>
                         </div>
                         <div class="form-group">
                                <b-row> <b-col></b-col><b-col>
-                         <router-link to="/signup" ><label style="color: lightslategray;">Forgot password</label></router-link></b-col>
+                        </b-col>
                                       <b-col></b-col></b-row>
                         </div>
 
                         <br>
 
-                                        <button type="submit" class="btn btn-primary">Sign in</button></b-col>
+                                        <button type="submit" class="btn btn-primary">Send OTP</button></b-col>
 
-                                        create your account <router-link to="/signup" ><b>SIGNUP</b></router-link> 
+                                        
                         
                       </form>
                       

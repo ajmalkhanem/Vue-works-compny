@@ -5,7 +5,7 @@
     
       <slide>
           <div class="col-md-12">
-              <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(211, 210, 216, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
+              <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
 
                   <img src="../assets/a2.png" style="width:150px;height: 150px;"></img>
                   <br><br>
@@ -15,7 +15,7 @@
         </slide> 
     <slide>
       <div class="col-md-12">
-          <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(211, 210, 216, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
+          <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
 
               <img src="../assets/a11.jpg" style="width:150px;height: 150px;"></img>
               <br><br>
@@ -26,9 +26,9 @@
    
       <slide>
         <div class="col-md-12">
-            <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(119, 123, 124, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(211, 210, 216, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
+            <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(119, 123, 124, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
 
-                <img src="../assets/a3.jpg" style="width:150px;height: 150px;"></img>
+                <img src="../assets/a1.png" style="width:150px;height: 150px;"></img>
                 <br><br>
                 <div class="text-center my-3">
                     <b-button v-b-tooltip.hover title="click to view details" class="btn btn-danger">Automobiles</b-button>
@@ -39,9 +39,9 @@
 
       <slide>
         <div class="col-md-12">
-            <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(211, 210, 216, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
+            <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
 
-                                                    <img src="../assets/a9.jpg" style="width:150px;height: 150px;"></img>
+                                                    <img src="../assets/a6.jpeg" style="width:150px;height: 150px;"></img>
                                                     <br><br>
                                                     <div class="text-center my-3">
                                                         <b-button v-b-tooltip.hover title="click to view details" class="btn btn-danger">Automobiles</b-button>
