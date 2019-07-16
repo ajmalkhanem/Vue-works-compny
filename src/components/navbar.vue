@@ -58,10 +58,11 @@
                             <p class="lead">Moreover, instead of plain text, you can also place your logo image inside the navbar. However, you need to set the logo height manually to fit it properly inside the navbar, as shown here:</p>
                             <p><router-link to="login" target="_blank" class="btn btn-success btn-lg">Sell your product</router-link></p>
                         </div>
-                        
-                        
-                        
+                        <div class="jumbotron">
                             <hooper></hooper>
+                        </div>
+                       
+                            
                             
                             
                         
@@ -84,12 +85,13 @@
             </div></template>
             <script>
                     import Hooper from "./Hooper";  
-
+                    import list from '@/components/list'
                   
                     export default {
                       name: 'App',
                       components: {
-                        Hooper
+                        Hooper,
+                        list
                         
                       }
                     }

@@ -6,9 +6,10 @@ import signup from '@/components/signup'
 import forgot from '@/components/forgot'
 import Hooper from '@/components/Hooper'
 import navbar from '@/components/navbar'
+import list from '@/components/list'
 
-import VueCarousel from 'vue-carousel';
-Vue.use(VueCarousel);
+
+
 
 
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/navbar',
       name: 'navbar',
       component: navbar
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: list
     }
   ]
 })
