@@ -4,48 +4,62 @@
   <hooper :infiniteScroll="true" :itemsToShow="4"   :progress="true" :autoPlay="true" :playSpeed="8000">
     
       <slide>
-          <div class="col-md-12">
-              <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
+        <div class="col-md-12">
 
-                  <img src="../assets/a2.png" style="width:150px;height: 150px;"></img>
-                  <br><br>
-                  <div class="text-center my-3">
-                      <b-button v-b-tooltip.hover title="click to view details" class="btn btn-danger">Automobiles</b-button>
-                    </div>  </div>      </div>  
+          <div class="container1">
+            <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+            <div class="middle">
+              <div class="text"><b>Education</b></div>
+            </div>
+          </div>                <br><br>
+            <div class="text-center my-3">
+              </div>
+                  
+    </div>    
         </slide> 
     <slide>
       <div class="col-md-12">
-          <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
 
-              <img src="../assets/a11.jpg" style="width:150px;height: 150px;"></img>
-              <br><br>
-              <div class="text-center my-3">
-                  <b-button v-b-tooltip.hover title="click to view details" class="btn btn-danger">Automobiles</b-button>
-                </div>  </div> </div> 
+        <div class="container1">
+          <img src="../assets/car.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+          <div class="middle">
+            <div class="text"><b>Automobiles</b></div>
+          </div>
+        </div>                <br><br>
+          <div class="text-center my-3">
+            </div>
+                
+  </div>  
     </slide> 
    
       <slide>
         <div class="col-md-12">
-            <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(119, 123, 124, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
 
-                <img src="../assets/a1.png" style="width:150px;height: 150px;"></img>
-                <br><br>
+              <div class="container1">
+                <img src="../assets/rest.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                <div class="middle">
+                  <div class="text"><b>Restaurant</b></div>
+                </div>
+              </div>                <br><br>
                 <div class="text-center my-3">
-                    <b-button v-b-tooltip.hover title="click to view details" class="btn btn-danger">Automobiles</b-button>
                   </div>
-                   </div>   
+                      
         </div>  
       </slide> 
 
       <slide>
         <div class="col-md-12">
-            <div id="rcorners1" style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(33, 99, 88, 0.39);border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
 
-                                                    <img src="../assets/a6.jpeg" style="width:150px;height: 150px;"></img>
-                                                    <br><br>
-                                                    <div class="text-center my-3">
-                                                        <b-button v-b-tooltip.hover title="click to view details" class="btn btn-danger">Automobiles</b-button>
-                                                      </div></div> </div> 
+          <div class="container1">
+            <img src="../assets/bus.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+            <div class="middle">
+              <div class="text"><b>Business</b></div>
+            </div>
+          </div>                <br><br>
+            <div class="text-center my-3">
+              </div>
+                  
+    </div>  
       </slide> 
 
     
@@ -186,4 +200,48 @@ h1, h2 {
       background: cornflowerblue;
       transition: .4s;
   }
+  
+
+
+
+.container1 {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container1:hover .image {
+  opacity: 0.3;
+}
+
+.container1:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: rgb(15, 10, 10);
+  font-size: 25px;
+  padding: 16px 32px;
+  text-align: left;
+}
 </style>
+
