@@ -2,7 +2,7 @@
     <div>
             <b-jumbotron>
         <carousel></carousel><br>
-        <h style="font-size: 60px;">we provide wide range of</h>
+        <label style="font-size: 60px;">we provide wide range of</label>
         <h1 style="font-size: 60px;"><b> services</b></h1><br>
         <Hooper></Hooper><br><br>
         <hr>
@@ -12,6 +12,7 @@
                                         <b-row>
                                           <b-col><img src="../assets/h1.png"></b-col>
                                           <b-col>
+                                              <section id="about">
                                                 <div>
                                                         <ul class="list-unstyled">
                                                           <b-media tag="li">
@@ -44,7 +45,7 @@
                                                                      under one platform with latest technology and secured transactions.</p>
                                                           </b-media>
                                                         </ul>
-                                                      </div>
+                                                      </div></section>
                                           </b-col>
                                         </b-row></b-container>
                                         <br><hr>
@@ -101,151 +102,14 @@
                                                   </b-col>
                                                 </b-row></b-container>
                         </b-jumbotron>
-                        <footer>
- 
-                                <div class="footer" id="footer">
-                             
-                                    <div class="container">
-                             
-                                        <div class="row">
-                             
-                                            <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                             
-                                                <h3> Specials</h3>
-                             
-                                                <ul>
-                             
-                                                    <li> <a href="#"> Product 1</a> </li>
-                             
-                                                    <li> <a href="#"> Product 1 </a> </li>
-                             
-                                                    <li> <a href="#"> Product 3 </a> </li>
-                             
-                                                    <li> <a href="#"> Product 4 </a> </li>
-                             
-                                                    <li> <a href="#"> Product 5 </a> </li>
-                             
-                                                </ul>
-                             
-                                            </div>
-                             
-                                            <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                             
-                                                <h3> Services </h3>
-                             
-                                                <ul>
-                             
-                                                    <li> <a href="#"> Services 1 </a> </li>
-                             
-                                                    <li> <a href="#"> Services 2 </a> </li>
-                             
-                                                    <li> <a href="#"> Services 3 </a> </li>
-                             
-                                                    <li> <a href="#"> Services 4 </a> </li>
-                             
-                                                    <li> <a href="#"> Services 5 </a> </li>
-                             
-                                                </ul>
-                             
-                                            </div>
-                             
-                                            <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                             
-                                                <h3> About </h3>
-                             
-                                                <ul>
-                             
-                                                    <li> <a href="#"> Our Company </a> </li>
-                             
-                                                    <li> <a href="#"> About Us </a> </li>
-                             
-                                                    <li> <a href="#"> Terms of Services </a> </li>
-                             
-                                                    <li> <a href="#"> Our Team </a> </li>
-                             
-                                                </ul>
-                             
-                                            </div>
-                             
-                                            <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                             
-                                                <h3> Contact </h3>
-                             
-                                                <ul>
-                             
-                                                    <li> <a href="#"> Contact Marketing </a> </li>
-                             
-                                                    <li> <a href="#"> Contact Sales </a> </li>
-                             
-                                                    <li> <a href="#"> Contact HR </a> </li>
-                             
-                                                    <li> <a href="#"> Contact Admin </a> </li>
-                             
-                                                </ul>
-                             
-                                            </div>
-                             
-                                            <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
-                             
-                                                <h3> Subscribe Us </h3>
-                             
-                                                <ul>
-                             
-                                                    <li>
-                             
-                                                        <div class="input-append subscribe-btn text-center">
-                             
-                                                            <input type="text" class="full text-center" placeholder="Email ">
-                             
-                                                            <button class="btn  btn-success" type="button"> Subscribe <i class="fa fa-save"> </i> </button>
-                             
-                                                        </div>
-                             
-                                                    </li>
-                             
-                                                </ul>
-                             
-                                                <ul class="social">
-                             
-                                                    <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
-                             
-                                                    <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
-                             
-                                                    <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
-                             
-                                                    <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
-                             
-                                                    <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
-                             
-                                                </ul>
-                             
-                                            </div>
-                             
-                                        </div>
-                             
-                                        <!--/.row-->
-                             
-                                    </div>
-                             
-                                    <!--/.container-->
-                             
-                                </div>
-                             
-                                <!--/.footer-->
-                             
-                               
-                             
-                             
-                             
-                                <!--/.footer-bottom-->
-                             
-                            </footer>
+                              
                       
     </div>
 </template>
 <script>
        import carousel from '@/components/carousel'
        import Hooper from '@/components/Hooper'
+
        import MenuIcon from "vue-material-design-icons/Menu.vue"
 
 
@@ -253,7 +117,8 @@
            components: {
           carousel,
           Hooper,
-          MenuIcon
+          MenuIcon,
+          
           
         },
        }

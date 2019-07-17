@@ -1,6 +1,6 @@
 <template>
-    <div>
-            <footer>
+    
+            <div>
  
                     <div class="footer" id="footer">
                  
@@ -34,13 +34,13 @@
                  
                                     <ul>
                  
-                                        <li> <a href="#"> Services 1 </a> </li>
+                                        <li> <a href="#"> Automobiles </a> </li>
                  
-                                        <li> <a href="#"> Services 2 </a> </li>
+                                        <li> <a href="#"> Business</a> </li>
                  
-                                        <li> <a href="#"> Services 3 </a> </li>
+                                        <li> <a href="#"> Education </a> </li>
                  
-                                        <li> <a href="#"> Services 4 </a> </li>
+                                        <li> <a href="#"> Restaurant </a> </li>
                  
                                         <li> <a href="#"> Services 5 </a> </li>
                  
@@ -72,14 +72,15 @@
                  
                                     <ul>
                  
-                                        <li> <a href="#"> Contact Marketing </a> </li>
+                                        <li> <a href="#"><b> Cloud global market</b> </a> </li>
                  
-                                        <li> <a href="#"> Contact Sales </a> </li>
+                                        <li> <a href="#"> United Arab Emirates</a> </li>
                  
-                                        <li> <a href="#"> Contact HR </a> </li>
+                                        <li> <a href="#"> Contact No : +971501615167 </a> </li>
                  
-                                        <li> <a href="#"> Contact Admin </a> </li>
-                 
+                                        <li> <a href="#"> Land line : 072535264 </a> </li>
+                                        <li> <a href="#">  admin@cloudgm.com </a> </li>
+
                                     </ul>
                  
                                 </div>
@@ -134,37 +135,10 @@
                  
                    
                  
-                    <div class="footer-bottom">
-                 
-                        <div class="container">
-                 
-                            <p class="pull-left"> Copyright © 2004-2018. All rights reserved. </p>
-                 
-                            <div class="pull-right">
-                 
-                                <ul class="nav nav-pills payments">
-                 
-                                    <li>We Accept:  </li>
-                 
-                                    <li><i class="fa fa-cc-paypal"></i></li>
-                 
-                                    <li><i class="fa fa-cc-mastercard"></i></li>
-                 
-                                    <li><i class="fa fa-cc-amex"></i></li>
-                 
-                                    <li><i class="fa fa-cc-visa"></i></li>                   
-                 
-                                </ul>
-                 
-                            </div>
-                 
-                        </div>
-                 
-                    </div>
-                 
+                    
                     <!--/.footer-bottom-->
-                 
-                </footer></div></template>
+            </div>
+                </template>
                 <script>
                         export default    {
                           name: 'app'
@@ -198,9 +172,9 @@
                      
                         background: #00003E;
                      
-                        background: -webkit-linear-gradient(to right, #31BDE6, #00003E); 
+                        background: -webkit-linear-gradient(to right, rgb(56, 111, 138), rgb(139, 139, 206)); 
                      
-                        background: linear-gradient(to right, #31BDE6, #00003E);    
+                        background: linear-gradient(to right, rgb(99, 149, 173), rgb(58, 58, 105));    
                      
                     }
                      
@@ -368,35 +342,7 @@
                      
                     }
                      
-                    .footer-bottom {
-                     
-                        background: #40E0D0;
-                     
-                        background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-                     
-                        background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
-                     
-                                    border-top: 1px solid #DDDDDD;
-                     
-                                    padding-top: 20px;
-                     
-                                    padding-bottom: 40px;
-                     
-                        color:#fff;
-                     
-                    }
-                     
-                    .footer-bottom p.pull-left {
-                     
-                                    padding-top: 6px;
-                     
-                    }
-                     
-                    .payments {
-                     
-                                    font-size: 1.5em;             
-                     
-                    }
+                    
                      
                     </style>
 

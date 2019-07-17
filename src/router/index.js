@@ -6,7 +6,7 @@ import forgot from '@/components/forgot'
 import Hooper from '@/components/Hooper'
 import navbar from '@/components/navbar'
 import list from '@/components/list'
-import footer from '@/components/footer'
+import footer1 from '@/components/footer1'
 import carousel from '@/components/carousel'
 import home from '@/components/home'
 
@@ -52,9 +52,9 @@ export default new Router({
       component: list
     },
     {
-      path: '/footer',
-      name: 'footer',
-      component: footer
+      path: '/footer1',
+      name: 'footer1',
+      component: footer1
     },
     {
       path: '/carousel',
