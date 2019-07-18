@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
           <div class="col">
-            <div id="rcorners1" style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(242, 247, 250, 0.39);border:solid rgb(235, 238, 240) 2px;height:500px;float:left;margin-top:20px;margin-left:20px;">
-                <br><br><br>
+            <div id="rcorners1" style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(242, 247, 250, 0.39);border:solid rgb(235, 238, 240) 2px;height:400px;float:left;margin-top:20px;margin-left:20px;">
+                <br><br>
                   <h2><b><label style="color:cornflowerblue;">Forgot your password ?</label></b></h2><br>
                   <p>Please enter your email address to search for your account.</p>
                         <form @submit.prevent="submit1">

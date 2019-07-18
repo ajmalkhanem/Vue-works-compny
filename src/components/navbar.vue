@@ -11,7 +11,7 @@
           <b-nav-item  class="navvink"><a href="#about">ABOUT</a></b-nav-item>
           <b-nav-item  class="navvink"><router-link to="">SERVICES</router-link></b-nav-item>
           <b-nav-item  class="navvink"><router-link to="">BUSINESS</router-link></b-nav-item>
-          <b-nav-item  class="navvink"><router-link to="">VENDOR REGISTRATION</router-link></b-nav-item>
+          <b-nav-item  class="navvink"><router-link to="/businesreg">BUSINESS REGISTRATION</router-link></b-nav-item>
 
          
           <b-nav-item  class="navvink"> <router-link to="/login" id="button" style="color:#131314 !important;"><strong>LOGIN</strong></router-link></b-nav-item>
@@ -128,7 +128,7 @@
      border:none;
      border:solid 2px 	#1a0c68!important;
      border-radius: 5px;
-     background: rgba(34, 8, 104, 0);
+     background: rgba(102, 97, 116, 0);
      font-size: 25px;
 }
 
