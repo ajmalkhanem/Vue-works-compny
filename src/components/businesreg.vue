@@ -1,8 +1,8 @@
 <template><div>
     
         <br>
-    <div class="container">
-        <div class="row">
+    <div class="container" >
+        <div class="row" style="background-color: white;">
           <div class="col">
             <div id="rcorners1" style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(245, 252, 245, 0.39);border:solid rgb(235, 238, 240) 2px;height:700px;float:left;margin-top:20px;margin-left:20px;">
                 <br><br>

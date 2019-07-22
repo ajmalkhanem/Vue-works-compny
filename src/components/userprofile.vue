@@ -1,87 +1,27 @@
-<template>
+   <template>
     <div>
-        <b-jumbotron>
-                <div>
-                        <b-card>
-                          <b-media>
-                           
-                            <b-media>
-                              <b-img slot="aside" src="../assets/car.jpg" width="64" alt="placeholder"></b-img>
-                      
-                              <h5 class="mt-0">Ajmal Khan</h5>
-                              <p class="mb-0">
-                                Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
-                                faucibus.
-                              </p>
-                            </b-media>
-                          </b-media>
-                        </b-card>
-                      </div>
-                          
-                    
-                        
-                      
-<br>
+        <navbar></navbar>
+                     
+
 
 <div>
-                
-  <b-card no-body>
-   <b-tabs pills card vertical>
-     <b-tab title="My vehicle"  active>
+  <b-card no-body  >
+   <b-tabs pills card vertical >
+     
+     <b-tab title="My Account"   active>
+   
          <b-card-text>
-                <div id="rcorners1" style="width:200px;margin-bottom:20px;padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:320px;float:left;margin-top:20px;margin-left:20px;">
-                        <br><img src="../assets/KK.jpg" style="width:150px;height: 150px;"></img>
-                        <h3>jeep</h3>
-                        <h6>Petrol</h6>
-                        <br>
-                        <b-button variant="warning">View Details</b-button>
-                    </div>
-                    <div id="rcorners1" style="width:200px;margin-bottom:20px;padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:320px;float:left;margin-top:20px;margin-left:20px;">
-                            <br><img src="../assets/KK.jpg" style="width:150px;height: 150px;"></img>
-                            <h3>jeep</h3>
-                            <h6>Petrol</h6>
-                            <br>
-                            <b-button variant="warning">View Details</b-button>
-                        </div>
-                        <div id="rcorners1" style="width:200px;margin-bottom:20px;padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:320px;float:left;margin-top:20px;margin-left:20px;">
-                                <br><img src="../assets/KK.jpg" style="width:150px;height: 150px;"></img>
-                                <h3>jeep</h3>
-                                <h6>Petrol</h6>
-                                <br>
-                                <b-button variant="warning">View Details</b-button>
-                            </div>
-                            <div id="rcorners1" style="width:200px;margin-bottom:20px;padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:320px;float:left;margin-top:20px;margin-left:20px;">
-                                    <br><img src="../assets/KK.jpg" style="width:150px;height: 150px;"></img>
-                                    <h3>jeep</h3>
-                                    <h6>Petrol</h6>
-                                    <br>
-                                    <b-button variant="warning">View Details</b-button>
-                                </div>
-                                <div id="rcorners1" style="width:200px;margin-bottom:20px;padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:320px;float:left;margin-top:20px;margin-left:20px;">
-                                        <br><img src="../assets/KK.jpg" style="width:150px;height: 150px;"></img>
-                                        <h3>jeep</h3>
-                                        <h6>Petrol</h6>
-                                        <br>
-                                        <b-button variant="warning">View Details</b-button>
-                                    </div>
-                                    <div id="rcorners1" style="width:200px;margin-bottom:20px;padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:320px;float:left;margin-top:20px;margin-left:20px;">
-                                            <br><img src="../assets/KK.jpg" style="width:150px;height: 150px;"></img>
-                                            <h3>jeep</h3>
-                                            <h6>Petrol</h6>
-                                            <br>
-                                            <b-button variant="warning">View Details</b-button>
-                                        </div>
-                                        <div id="rcorners1" style="width:200px;margin-bottom:20px;padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:320px;float:left;margin-top:20px;margin-left:20px;">
-                                                <br><img src="../assets/KK.jpg" style="width:150px;height: 150px;"></img>
-                                                <h3>jeep</h3>
-                                                <h6>Petrol</h6>
-                                                <br>
-                                                <b-button variant="warning">View Details</b-button>
-                                            </div>
+           <navbar1></navbar1>
+             <myaccount></myaccount>   
+                    
+                       
+                            
+                                
+                                    
      </b-card-text>
     </b-tab>
-     <b-tab title="Emergency Service" style="background-color:forestgreen;"><b-card-text>Emergency Service</b-card-text></b-tab>
-     <b-tab title="Buy & Sell"><b-card-text>
+     <b-tab title="Emergency Service" style="background-color:blanchedalmond;"><b-card-text>Emergency Service</b-card-text></b-tab>
+     <b-tab title="BUY & SELL"><b-card-text>
             <div>
                     <b-tabs content-class="mt-3">
                       <b-tab title="New Car" active><p>I'm the first tab</p></b-tab>
@@ -93,24 +33,37 @@
      <b-tab title="Accessories"><b-card-text>Accessories</b-card-text></b-tab>
      <b-tab title="Fuel Stations"><b-card-text>Fuel Stations</b-card-text></b-tab>
      <b-tab title="Help & Support"><b-card-text>Help & Support</b-card-text></b-tab>
-     <b-tab title="Tab 3"><b-card-text>Tab Contents 3</b-card-text></b-tab>
+     <b-tab title="Buy Coins"><b-card-text>
+       <buy></buy>
+     </b-card-text></b-tab>
+     <b-tab title="My Account"><b-card-text>
+        
+      
+
+     </b-card-text></b-tab>
 
      </b-tabs>
-      </b-card>
+      </b-card></b-container>
                       </div>
-                    <hr><br>
                     </b-jumbotron>
-                </div>
+                                 </div>
             </template>
     
                       <script>
-                            import Hooper1 from '@/components/Hooper1'
-                     
-                     
+                            import Hooper from '@/components/Hooper'
+                            import myaccount from '@/components/myaccount'
+                            import buy from '@/components/buy'
+                            import navbar1 from '@/components/navbar1'
+                            import navbar from '@/components/navbar'
+
                      
                              export default {
                                 components: {
-                               Hooper1
+                               Hooper,  
+                               myaccount,
+                               buy,
+                               navbar1,
+                               navbar
                                
                                
                                
@@ -127,3 +80,50 @@
             }
             
             </style>
+            <style>
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color:white;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+</style>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial;
+      font-size: 17px;
+    }
+    
+    .container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .container img {vertical-align: middle;}
+    
+    .container .content {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+    </style>

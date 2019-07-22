@@ -2,9 +2,15 @@
     <div class="navv">
     <b-navbar  toggleable="lg" type="light"  style="background-color: #ebeef2;">
        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    &nbsp;&nbsp;&nbsp;<a href="">  <b-img :src="require('../assets/logo1.png')" ></b-img></a>
-        <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
-          <b-collapse is-nav id="nav_collapse">
+    &nbsp;&nbsp;&nbsp;<a href=""> <b-img :src="require('../assets/logo1.png')" ></b-img></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div class="topnav">
+                       <div class="search-container">
+                            <form action="">
+                              <input type="text" placeholder=" Search.." name="search">
+                              <button type="submit" style="color: white;">Search</button>
+                            </form>
+                          </div>
+                        </div>          <b-collapse is-nav id="nav_collapse">
           
           <b-nav-item href="#" class="mx-auto"></b-nav-item>
           <b-nav-item class="navt"><router-link to="/sellerindex"><strong><div style="color:	#111113 !important;">Become seller</div></strong></router-link></b-nav-item>
@@ -12,7 +18,6 @@
           <b-nav-item class="navt"><router-link to="/login"><strong><div style="color:	#111113 !important;">Signin</div></strong></router-link></b-nav-item>
 
          </b-collapse>
-         </b-navbar-nav toggleable="lg"> 
        <b-navbar-brand>
           <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
           </b-navbar-brand>

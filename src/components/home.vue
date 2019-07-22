@@ -1,18 +1,38 @@
 <template>
     <div>
-            <b-jumbotron>
-        <carousel></carousel><br>
-        <label style="font-size: 60px;">we provide wide range of</label>
-        <h1 style="font-size: 60px;"><b> services</b></h1><br>
+      <navbar></navbar>
+      <b-jumbotron>
+              
+                <b-row>
+                  <b-col>
+                      <h3>Find The Perfect Services</h3>
+                      <h3>For You And Your Business</h3>
+                      <br>
+                      <div class="topnav">
+
+                       <div class="search-container">
+                            <form action="/action_page.php">
+                              <input type="text" placeholder=" Search.." name="search">
+                              <button type="submit" style="color: white;">Search</button>
+                            </form>
+                          </div>
+                        </div>
+                    </b-col>
+                    <b-col>
+                        <img src="http://cloudgm.com/wp-content/uploads/2018/12/Banners_6-1.jpg" style="width: 1100px">
+                    </b-col>
+                  </b-row></b-jumbotron>
+                 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="font-size: 40px;">Popular Services We Provides</label>
+        <b-jumbotron style="background-color: white;">
         <Hooper></Hooper><br><br>
-        <hr>
+        
         
                 
                                 <b-container class="bv-example-row" id="about">
                                         <b-row>
                                           <b-col><img src="../assets/h1.png"></b-col>
                                           <b-col>
-                                              <section id="about">
                                                 <div>
                                                         <ul class="list-unstyled">
                                                           <b-media tag="li">
@@ -45,62 +65,22 @@
                                                                      under one platform with latest technology and secured transactions.</p>
                                                           </b-media>
                                                         </ul>
-                                                      </div></section>
+                                                      </div>
                                           </b-col>
                                         </b-row></b-container>
-                                        <br><hr>
-                                        <b-container class="bv-example-row">
-                                                <b-row>
-                                                  <b-col sm="8">
-                                                        
-                                                        <div align="left">
-                                                                <b-card title="REGISTER" sub-title="YOUR PRODUCTS AND SERVICES">
-                                                                  <b-card-text>
-                                                                    
-                                                                  </b-card-text>
-                                                              
-                                                                  <b-card-text style="color: lightseagreen;">VENDOR REGISTRATION</b-card-text>
-                                                              
-                                                                  
-                                                                
-                                                              
-                                                        <br><br>
-                                                                                <b-container class="bv-example-row">
-                                                                                    
-                                                                                        <b-row>
-                                                                                          <b-col>
-                                                                                                <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Your Name">
+                                        <br>
+                                        <div class="container1">
+                                          <img src="../assets/banner1.jpg" alt="Nature" style="width:1630px;height: 500px;">
+                                          <div class="text-block">
+                                            <br>
+                                            <h3 style="font-size: 100px;"><b>Become seller</b></h3>
+                                            <h1><b>Grew your Business</b></h1>
+                                            <h1><b>Without Worries</b></h1>
+                                            <b-button variant="outline-primary">Become Seller</b-button>
 
-                                                                                          </b-col>
-                                                                                          <b-col>
-                                                                                                <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Company Name">
 
-                                                                                          </b-col>
-                                                                                          <b-col>
-                                                                                                <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Products/Service">
-
-                                                                                          </b-col>
-                                                                                        </b-row><br><br>
-                                                                                        <b-row>
-                                                                                                <b-col>                             
-                                                                                                    <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Land/Mobile No">
-                                                                                                </b-col>
-                                                                                                <b-col>
-                                                                                                        <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Email">
-
-                                                                                                </b-col>
-                                                                                                <b-col>                             <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Address">
-                                                                                                </b-col>
-                                                                                              </b-row><br>
-                                                                                              <b-button variant="outline-primary">Save</b-button>
-
-                                                                                      </b-container></b-card></div>
-                                                                          
-                                                        
-                                                                
-                                                        
-                                                  </b-col>
-                                                </b-row></b-container>
+                                          </div>
+                                        </div>
                         </b-jumbotron>
                               
                       
@@ -109,8 +89,9 @@
 <script>
        import carousel from '@/components/carousel'
        import Hooper from '@/components/Hooper'
-
        import MenuIcon from "vue-material-design-icons/Menu.vue"
+       import navbar from '@/components/navbar'
+       import footer1 from '@/components/footer1'
 
 
         export default {
@@ -118,249 +99,99 @@
           carousel,
           Hooper,
           MenuIcon,
+          navbar,
+          footer1
           
           
         },
        }
       </script>
-      <style>
- 
-            #rcorners1 {
-              border-radius: 25px;
-              padding: 20px; 
-              width: 200px;
-              height: 8px;  
-            }
-            
- 
- 
- 
-        
- 
-.full {
- 
-    width: 100%; 
- 
-}
- 
- 
- 
-.footer {
- 
-                height: auto;
- 
-                padding-bottom: 30px;
- 
-                position: relative;
- 
-                width: 100%;
- 
-    color:#fff;
- 
-                border-bottom: 1px solid #CCCCCC;
- 
-                border-top: 1px solid #DDDDDD;
- 
-    background: #00003E;
- 
-    background: -webkit-linear-gradient(to right, #31BDE6, #00003E); 
- 
-    background: linear-gradient(to right, #31BDE6, #00003E);    
- 
-}
- 
- 
- 
- 
- 
-.footer h3 {
- 
-                border-bottom: 1px solid #BAC1C8;
- 
-    color:#fff;
- 
-                font-size: 18px;
- 
-                font-weight: 600;
- 
-                line-height: 27px;
- 
-                padding: 40px 0 10px;
- 
-                text-transform: uppercase;
- 
-}
- 
-.footer ul {
- 
-                font-size: 13px;
- 
-                list-style-type: none;
- 
-                margin-left: 0;
- 
-                padding-left: 0;
- 
-                margin-top: 15px;
- 
-                color: #7F8C8D;
- 
-}
- 
-.footer ul li a {
- 
-                padding: 0 0 5px 0;
- 
-                display: block;
- 
-}
- 
-.footer a {
- 
-                color: #78828D;
- 
-    color:#fff;
- 
-}
- 
-.supportLi h4 {
- 
-                font-size: 20px;
- 
-                font-weight: lighter;
- 
-                line-height: normal;
- 
-                margin-bottom: 0 !important;
- 
-                padding-bottom: 0;
- 
-}
- 
- 
- 
-.subscribe-btn .btn {
- 
-                border: medium none;
- 
-                border-radius: 4px;
- 
-                display: inline-block;
- 
-                height: 40px;
- 
-                padding: 0;
- 
-                width: 100%;
- 
-                color: #fff;
- 
-    margin-top:10px;
- 
-}
- 
-.subscribe-btn {
- 
-                overflow: hidden;
- 
-}
- 
- 
- 
-.social li {
- 
-                border: 2px solid #B5B5B5;
- 
-                -webkit-border-radius: 50%;
- 
-                -moz-border-radius: 50%;
- 
-                -o-border-radius: 50%;
- 
-                -ms-border-radius: 50%;
- 
-                border-radius: 50%;
- 
-                float: left;
- 
-                height: 36px;
- 
-                line-height: 36px;
- 
-                margin: 0 8px 0 0;
- 
-                padding: 0;
- 
-                text-align: center;
- 
-                width: 36px;
- 
-                transition: all 0.5s ease 0s;
- 
-                -moz-transition: all 0.5s ease 0s;
- 
-                -webkit-transition: all 0.5s ease 0s;
- 
-                -ms-transition: all 0.5s ease 0s;
- 
-                -o-transition: all 0.5s ease 0s;
- 
-}
- 
- 
- 
-.social li a {
- 
-                color: #EDEFF1;
- 
-}
- 
-.social li:hover {
- 
-                border: 2px solid #2c3e50;
- 
-                background: #2c3e50;
- 
-}
- 
-.social li a i {
- 
-                font-size: 16px;
- 
-                margin: 0 0 0 5px;
- 
-                color: #EDEFF1 !important;
- 
-}
- 
-.footer-bottom {
- 
-    background: #40E0D0;
- 
-    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
- 
-    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
- 
-                border-top: 1px solid #DDDDDD;
- 
-                padding-top: 20px;
- 
-                padding-bottom: 40px;
- 
-    color:#fff;
- 
-}
- 
-.footer-bottom p.pull-left {
- 
-                padding-top: 6px;
- 
-}
- 
-.payments {
- 
-                font-size: 1.5em;             
- 
-}
- 
-</style>
+
+<style>
+  .container1 {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .text-block {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: ;
+    color: white;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  </style>
+  <style>
+      * {box-sizing: border-box;}
+      
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .topnav {
+        overflow: hidden;
+      }
+      
+      .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+     
+      
+      .topnav .search-container {
+        float: left;
+      }
+      
+      .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+      }
+      
+      .topnav .search-container button {
+        float: right;
+        padding: 6px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #03adfc;;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .topnav .search-container button:hover {
+        background: #ccc;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .topnav .search-container {
+          float: none;
+        }
+        .topnav a, .topnav input[type=text], .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type=text] {
+          border: 1px solid #ccc;  
+        }
+      }
+      </style>

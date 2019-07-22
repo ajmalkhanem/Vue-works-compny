@@ -1,131 +1,101 @@
-<template>
-    <div> 
-<b-jumbotron>
+ <template>
+    <div> <navbar></navbar><br>
+     <b-container style="background-color: white;"><b-row>
+         
+      <b-col>
+              <img src="../assets/pro.png"><hr>
+              <h2 style="color: cadetblue;"><b>Complete Your Profile</b></h2>
+          </b-col>
+        
+        </b-row>
+          <b-row>
+          
+          <b-col><br>
+ <div>
+  <b-card no-body>
+    <b-tabs pills card end>
+      <b-tab title="Business profile" active><b-card-text>
+      <form action="">
+        <b-row>
+          <b-col>
+  <div class="form-group">
+    <label for="email" style="color: cadetblue;"><b>Email address:</b></label>
+    <input type="email" class="form-control" id="email" style="background-color: rgb(233, 238, 240);text-align: center;" >
+  </div></b-col>
+  <b-col>
+  <div class="form-group">
+      <label for="email"style="color: cadetblue;"><b>Email address:</b></label>
+      <input type="email" class="form-control" id="email" style="background-color: rgb(233, 238, 240);text-align: center;" >
+    </div></b-col>
+    <b-col>
+    <div class="form-group">
+        <label for="email"style="color: cadetblue;"><b>Email address:</b></label>
+        <input type="email" class="form-control" id="email" style="background-color: rgb(233, 238, 240);text-align: center;" >
+      </div></b-col>
+      </b-row>
+      <b-row><b-col>
+  <div class="form-group">
+    <label for="pwd"style="color: cadetblue;"><b>Email address:</b></label>
+    <input type="password" class="form-control" id="pwd" style="background-color: rgb(233, 238, 240);text-align: center;" >
+  </div></b-col>
+  <b-col>
+      <div class="form-group">
+        <label for="pwd"style="color: cadetblue;"><b>Email address:</b></label>
+        <input type="password" class="form-control" id="pwd" style="background-color: rgb(233, 238, 240);text-align: center;"  >
+      </div></b-col></b-row>
 
-  <div>
-                                <b-tabs content-class="mt-3">
-                                  <b-tab title="Business Profile" active>
-                                                <b-container class="bv-example-row">
-                                                                <b-row>
-                                                                  <b-col sm="8">
-                                                                        
-                                                                        <div align="left">
-                                                                                <b-card title="REGISTER" sub-title="YOUR PRODUCTS AND SERVICES">
-                                                                                  <b-card-text>
-                                                                                    
-                                                                                  </b-card-text>
-                                                                              
-                                                                                  <b-card-text style="color: lightseagreen;">BUSINESS REGISTRATION</b-card-text>
-                                                                              
-                                                                                  
-                                                                                
-                                                                              
-                                                                        <br><br>
-                                                                                                <b-container class="bv-example-row">
-                                                                                                    
-                                                                                                        <b-row>
-                                                                                                          <b-col>
-                                                                                                                        <input type="file" class="rounded-circle" style="width: 100px;height: 100px;"  alt="Cinque Terre">
+      <b-row><b-col>
+        <div class="form-group">
+          <label for="pwd"style="color: cadetblue;"><b>Email address:</b></label>
+          <input type="password" class="form-control" id="pwd" style="background-color: rgb(233, 238, 240);text-align: center;" >
+        </div></b-col>
+        <b-col>
+            <div class="form-group">
+              <label for="pwd"style="color: cadetblue;"><b>Email address:</b></label>
+              <input type="password" class="form-control" id="pwd" style="background-color: rgb(233, 238, 240);text-align: center;"  >
+            </div></b-col></b-row>
 
-                                            
-                                                                                                          </b-col>
-                                                                                                          <b-col>
-                                                                                                                        <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Business Name">
+  <div class="form-group form-check">
+    <label class="form-check-label">
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </b-card-text></b-tab>
+      <b-tab title="Upload Documents"><b-card-text>
+        <documentreg></documentreg>
+      </b-card-text></b-tab>
+    </b-tabs>
+  </b-card>
+</div>
+          </b-col>
+          
+        </b-row></b-container><br>
+        <navbar1></navbar1>
+        <br><br>
+        
 
-                                            
-                                                                                                          </b-col>
-                                                                                                          <b-col>
-                                                                                                                        <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder=" Corporate Email">
-
-                                            
-                                                                                                          </b-col>
-                                                                                                        </b-row><br><br>
-                                                                                                        <b-row>
-                                                                                                                <b-col> 
-                                                                                                                                <input  type="text" style="width:160px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Address">
-                            
-                                                                                                                </b-col>
-                                                                                                                <b-col>
-                                                                                                                                <input  type="text" style="width:230px;background-color: #ffffff;text-align: center;" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Registration Number">
-
-                                                                                                                </b-col>
-                                                                                                                <b-col>    
-                                                                                                                            <b-button variant="outline-primary"  style="width: 120px;">Next</b-button>
-                                                                     
-                                                                                                                     </b-col>
-                                                                                                              </b-row>
-                                                                                                              <br><br>
-                                            
-                                                                                                      </b-container></b-card></div>
-                                                                                          
-                                                                        
-                                                                                
-                                                                        
-                                                                  </b-col>
-                                                                </b-row></b-container>                                </b-tab>
-                                  <b-tab title="Business Documents">
-                                                <b-container class="bv-example-row">
-                                                                <b-row>
-                                                                  <b-col sm="8">
-                                                                        
-                                                                        <div align="left">
-                                                                                <b-card title="DOCUMENTS" sub-title="UPLOAD YOUR DOCUMENTS">
-                                                                                  <b-card-text>
-                                                                                    
-                                                                                  </b-card-text>
-                                                                              
-                                                                                  <b-card-text style="color: lightseagreen;">DOCUMENT VARIFICATION</b-card-text>
-                                                                              
-                                                                                  
-                                                                                
-                                                                              
-                                                                        <br><br>
-                                                                                                <b-container class="bv-example-row">
-                                                                                                    
-                                                                                                        <b-row>
-                                                                                                          <b-col>
-                                                                                                         <img src="../assets/car.jpg" style="width: 100px;height: 100px;" class="rounded-circle" alt="Sample image">
-                                                                                                          </b-col>
-                                                                                                          <b-col>
-                                            
-                                                                                                          </b-col>
-                                                                                                          <b-col>
-                                            
-                                                                                                          </b-col>
-                                                                                                        </b-row><br><br>
-                                                                                                        <b-row>
-                                                                                                                <b-col>                             
-                                                                                                                </b-col>
-                                                                                                                <b-col>
-                                                                                                                </b-col>
-                                                                                                                <b-col>    
-                                                                     
-                                                                                                                     </b-col>
-                                                                                                              </b-row>
-                                                                                                              <br><br>
-                                            
-                                                                                                      </b-container></b-card></div>
-                                                                                          
-                                                                        
-                                                                                
-                                                                        
-                                                                  </b-col>
-                                                                </b-row></b-container>                                </b-tab>
-                                  <b-tab title="Disabled" ><p>I'm a disabled tab!</p></b-tab>
-                                </b-tabs>
-                              </div>
-                              
-
-
-
-
-
-
-
-            
-</b-jumbotron>
+  
   
     </div></template>
+    <script>
+    import navbar from '@/components/navbar'
+    import navbar1 from '@/components/navbar1'
+
+    import documentreg from '@/components/documentreg'
+      
+ export default {
+    components: {
+   
+   navbar,
+   documentreg,
+   navbar1
+   
+   
+ },
+}
+
+    </script>
     <style>
 
 #rcorners1 {
@@ -137,3 +107,5 @@ text-align: center;
 }
 
 </style>
+
+

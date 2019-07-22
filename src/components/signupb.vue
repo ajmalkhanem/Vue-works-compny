@@ -60,7 +60,6 @@
 
                                     Already member  <router-link to="/login" ><b><h9 style="color:#03adfc;">Signin</h9></b></router-link> 
                                     <br><br>
-                                    <button type="button" class="btn btn-light"><router-link to="/signupb">Signup as a business</router-link></button>
 
                   </form>
                   
@@ -91,8 +90,7 @@
     //import store from "../store";
       export default {
         components:
-        { navbar
-        },
+        { navbar},
          data(){
           
             return {
@@ -102,8 +100,8 @@
               username: '',
               password:'',
               email:'',
-              ph:''
-              
+              ph:'',
+              place:''
               },
              /* mounted() {
 if (localStorage.users1.username) {
@@ -145,12 +143,12 @@ axios.post('http://13.233.110.196/register/',{
 username :this.users1.username,
 password : this.users1.password,
 email: this.users1.email,
-usertype:'0',
-lat:'0.000',
-lon:'0.000',
-role:'customer',
-place:'defgf',
-ph : this.users1.ph
+usertype:"0",
+lat:"f",
+lon:"h",
+role:"0",
+ph : this.users1.ph,
+place: this.users1.place,
 
 })
 /*.then(response => {

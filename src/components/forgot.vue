@@ -1,13 +1,14 @@
 <template><div>
-    
+    <navbar></navbar>
         <br><br>
     <div class="container">
         <div class="row">
           <div class="col">
-            <div id="rcorners1" style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:rgba(242, 247, 250, 0.39);border:solid rgb(235, 238, 240) 2px;height:400px;float:left;margin-top:20px;margin-left:20px;">
+            <div id="rcorners1" style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:white;border:solid rgb(235, 238, 240) 2px;height:420px;float:left;margin-top:20px;margin-left:20px;">
                 <br><br>
-                  <h2><b><label style="color:cornflowerblue;">Forgot your password ?</label></b></h2><br>
-                  <p>Please enter your email address to search for your account.</p>
+                  <h2><b><label style="color:#03adfc;">Reset password </label></b></h2><br>
+                  <h6>Please enter your email address and we w'll </h6>
+                  <h6> you a link to reset your password</h6>
                         <form @submit.prevent="submit1">
                         <div class="form-group">
                           <b-row><b-col>
@@ -19,20 +20,20 @@
                         </b-col><b-col></b-col></b-row>
                         </div>
                         
-                         <button type="submit" style="width: 330px;height:60px;" id="rcorners1" class="btn btn-primary">Send OTP</button></b-col>
+                         <button type="submit" style="width: 330px;height:60px;background-color: #03adfc;" id="rcorners1" class="btn btn-primary">Submit</button></b-col>
 
                                         
                         
                       </form><br>
                       
-                                  
+                               <h6 style="color:#03adfc;" >Back to signin</h6>  
                                 </div>
                                 
                       
           </div>
           <div class="col">
                 <b-row> <b-col>
-                        <img src="../assets/4.jpg" style="width: 500px;height:500px;" ></img> </b-col> 
+                        <img src="../assets/CLOUD.png" style="width: 500px;height:500px;" ></img> </b-col> 
                           <b-col></b-col> <b-col></b-col></b-row>
           </div>
         </div>
@@ -43,6 +44,16 @@
     </div>
     
 </template>
+<script>
+  import navbar from '@/components/navbar'
+  import axios from "axios";
+    //import store from "../store";
+      export default {
+        components:
+        { navbar
+        }}
+</script>
+
 <style>
  
 #rcorners1 {

@@ -1,258 +1,97 @@
 <template>
 
 <div>
-  <hooper :infiniteScroll="true" :itemsToShow="4"   :progress="true" :autoPlay="true" :playSpeed="8000">
     
-      <slide>
-            <b-container class="bv-example-row">
-                    <b-row>
-                 <b-col sm="8">
-                                    
-                <div align="left">
-                 <b-card title="DOCUMENTS">
-                                       
-            <b-card-text style="color: lightseagreen;">DOCUMENT VARIFICATION
-            </b-card-text>
-           
-             <b-container class="bv-example-row">
-            <b-row>
-            <b-col>
-            <img src="../assets/car.jpg" style="width: 200px;height: 200px;"  alt="Sample image">
-            </b-col>
-             <b-col></b-col><b-col></b-col>
-            </b-row><br><br>
-            <b-row>
-            <b-col>bvjhfh</b-col>
-            <b-col>jajamk</b-col>
-            <b-col>liyh</b-col>
-            </b-row>
-         </b-container></b-card></div>
-        </b-col>
-                            </b-row></b-container>  
-        </slide> 
-    <slide>
-            <b-container class="bv-example-row">
-                    <b-row>
-                 <b-col sm="8">
-                                    
-                <div align="left">
-                 <b-card title="DOCUMENTS">
-                                       
-            <b-card-text style="color: lightseagreen;">DOCUMENT VARIFICATION
-            </b-card-text>
-           
-             <b-container class="bv-example-row">
-            <b-row>
-            <b-col>
-            <img src="../assets/car.jpg" style="width: 200px;height: 200px;" class="rounded-circle" alt="Sample image">
-            </b-col>
-             
-            </b-row><br><br>
-            <b-row>
-            <b-col>bvjhfh</b-col>
-            <b-col>jajamk</b-col>
-            <b-col>liyh</b-col>
-            </b-row>
-         </b-container></b-card></div>
-        </b-col>
-                            </b-row></b-container>
-    </slide> 
-   
-      <slide>
-            <b-container class="bv-example-row">
-                    <b-row>
-                 <b-col sm="8">
-                                    
-                <div align="left">
-                 <b-card title="DOCUMENTS">
-                                       
-            <b-card-text style="color: lightseagreen;">DOCUMENT VARIFICATION
-            </b-card-text>
-           
-             <b-container class="bv-example-row">
-            <b-row>
-            <b-col>
-            <img src="../assets/car.jpg" style="width: 200px;height: 200px;" class="rounded-circle" alt="Sample image">
-            </b-col>
-             
-            </b-row><br><br>
-            <b-row>
-            <b-col>bvjhfh</b-col>
-            <b-col>jajamk</b-col>
-            <b-col>liyh</b-col>
-            </b-row>
-         </b-container></b-card></div>
-        </b-col>
-                            </b-row></b-container>
-      </slide> 
+        <b-row>
+          <b-col>
+              <div class="col-md-12">
 
-      <slide>
-            <b-container class="bv-example-row">
-                    <b-row>
-                 <b-col sm="8">
-                                    
-                <div align="left">
-                 <b-card title="DOCUMENTS">
-                                       
-            <b-card-text style="color: lightseagreen;">DOCUMENT VARIFICATION
-            </b-card-text>
-           
-             <b-container class="bv-example-row">
-            <b-row>
-            <b-col>
-            <img src="../assets/car.jpg" style="width: 200px;height: 200px;" class="rounded-circle" alt="Sample image">
-            </b-col>
-             
-            </b-row><br><br>
-            <b-row>
-            <b-col>bvjhfh</b-col>
-            <b-col>jajamk</b-col>
-            <b-col>liyh</b-col>
-            </b-row>
-         </b-container></b-card></div>
-        </b-col>
-                            </b-row></b-container>  
-      </slide> 
+                  <div class="container1">
+                    <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                    <div class="middle">
+                      <div class="text"><b>Education</b></div>
+                    </div>
+                  </div>            
+            </div>
+          </b-col>
+          <b-col>
+            <div class="col-md-12">
 
-    
-<hooper-navigation slot="hooper-addons" style="padding-left:80px!important;"></hooper-navigation>
-  </hooper>
+        <div class="container1">
+          <img src="../assets/car.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+          <div class="middle">
+            <div class="text"><b>Automobiles</b></div>
+          </div>
+        </div>    
+  </div>  
+          </b-col>
+          <b-col>
+            <div class="col-md-12">
+
+              <div class="container1">
+                <img src="../assets/rest.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                <div class="middle">
+                  <div class="text"><b>Restaurant</b></div>
+                </div>
+              </div>            
+        </div>  
+
+
+
+          </b-col>
+        </b-row>
+<br>
+        <b-row>
+            <b-col>
+                <div class="col-md-12">
+  
+                    <div class="container1">
+                      <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                      <div class="middle">
+                        <div class="text"><b>Education</b></div>
+                      </div>
+                    </div>            
+              </div>
+            </b-col>
+            <b-col>
+              <div class="col-md-12">
+  
+          <div class="container1">
+            <img src="../assets/car.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+            <div class="middle">
+              <div class="text"><b>Automobiles</b></div>
+            </div>
+          </div>    
+    </div>  
+            </b-col>
+            <b-col>
+              <div class="col-md-12">
+  
+                  <div>
+                      <b-card
+                        title="What is your business"
+                        style="max-width: 400px;height: 300px;"
+                        class="mb-2"
+                      >
+                        <b-card-text>
+                          Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </b-card-text>
+                    
+                        <b-button href="#" variant="primary">Become seller</b-button>
+                      </b-card>
+                    </div>            
+          </div>  
+  
+  
+  
+            </b-col>
+          </b-row>
+  
 </div>
 
 </template>
-<script>
-  import {
-  Hooper,
-  Slide,
-  Navigation as HooperNavigation 
-  } from 'hooper';
-  import 'hooper/dist/hooper.css';
-  export default {
-     components: {
-    Hooper,
-    Slide,
-    HooperNavigation
-  },
- }
-</script>
+
 <style>
-.bgt{
-  height:auto;
-  width:auto;
- 
-}
-@media (min-width: 576px) {
-.hooper{
-    position: relative;
-    
-    width: auto;
-    height: auto !important; 
-}
-}
-
-@media (min-width:375px) {
-
-.bgt{
-  height:auto;
-  width:300px;
- 
-}
-}
-@media (min-width:375px) {
-.hooper{
-    position: relative;
-    
-    width: auto;
-    height: auto; 
-}
-}
-@media (min-width:1281px) {
-.hooper{
-    position: relative;
-    
-    width: auto;
-    height: auto; 
-}
-}
-@media (min-width:1441px) {
-.hooper{
-    position: relative;
-   
-    width: auto;
-    height: auto; 
-}
-}
-@media (min-width:1025px) {
-.hooper{
-    position: relative;
-  
-    width: auto;
-    height: auto; 
-}
-}
-@media (min-width:768px) {
-.hooper{
-    position: relative;
-    
-    width: auto;
-    height: auto; 
-}
-}
-@media (min-width:320px) {
-.hooper{
-    position: relative;
-    
-    width: auto;
-    height: auto; 
-}
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-@media (min-width:1441px) {
-.bgt{
-  height:auto;
-  width:auto; 
-}
-}
-
-
-.bk{
-  background-color:grey;
-}
-.two {
-  border-style: solid;
-  border-width: 1px;
-  border-color:black;
- 
-}
-
-.so{
- background-color: brown!important;
-}
-.para {
-    color: black !important;
-      font-size: 15px !important ;
-      line-height: 1.5 !important;
-      text-align: justify !important;
-      display: block !important;
-      margin-block-start: 1em !important;
-      margin-block-end: 1em !important;
-      margin-inline-start: 0px !important;
-      margin-inline-end: 0px !important;
-  }
-  .square_btn
-  {
-      display: inline-block;
-      padding: 7px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      color: #FFF;
-      background: cornflowerblue;
-      transition: .4s;
-  }
-  
 
 
 
