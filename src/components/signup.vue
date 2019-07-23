@@ -148,8 +148,6 @@ email: this.users1.email,
 usertype:'0',
 lat:'0.000',
 lon:'0.000',
-role:'customer',
-place:'defgf',
 ph : this.users1.ph
 
 })

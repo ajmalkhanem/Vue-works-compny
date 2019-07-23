@@ -2,7 +2,7 @@
     <div>
         <navbar></navbar>
                      
-
+        
 
 <div>
   <b-card no-body  >
@@ -20,11 +20,15 @@
                                     
      </b-card-text>
     </b-tab>
-     <b-tab title="Emergency Service" style="background-color:blanchedalmond;"><b-card-text>Emergency Service</b-card-text></b-tab>
+     <b-tab title="My Car"><b-card-text>
+       <car></car>
+     </b-card-text></b-tab>
      <b-tab title="BUY & SELL"><b-card-text>
             <div>
                     <b-tabs content-class="mt-3">
-                      <b-tab title="New Car" active><p>I'm the first tab</p></b-tab>
+                      <b-tab title="New Car" active><p>I'm the first tab
+                        
+                      </p></b-tab>
                       <b-tab title="Used Car"><p>I'm the second tab</p></b-tab>
                       <b-tab title="Disabled" disabled><p>I'm a disabled tab!</p></b-tab>
                     </b-tabs>
@@ -55,6 +59,8 @@
                             import buy from '@/components/buy'
                             import navbar1 from '@/components/navbar1'
                             import navbar from '@/components/navbar'
+                            import car from '@/components/car'
+
 
                      
                              export default {
@@ -63,7 +69,8 @@
                                myaccount,
                                buy,
                                navbar1,
-                               navbar
+                               navbar,
+                               car
                                
                                
                                

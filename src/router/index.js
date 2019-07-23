@@ -19,6 +19,15 @@ import buy from '@/components/buy'
 import myaccount from '@/components/myaccount'
 import documentreg from '@/components/documentreg'
 import sellerindex from '@/components/sellerindex'
+import car from '@/components/car'
+import addcar from '@/components/addcar'
+import viewedit from '@/components/viewedit'
+import editcar from '@/components/editcar'
+import cardoc from '@/components/cardoc'
+
+
+
+
 
 
 
@@ -132,6 +141,31 @@ export default new Router({
       path: '/sellerindex',
       name: 'sellerindex',
       component: sellerindex
+    },
+    {
+      path: '/car',
+      name: 'car',
+      component: car
+    },
+    {
+      path: '/addcar',
+      name: 'addcar',
+      component: addcar
+    },
+    {
+      path: '/viewedit',
+      name: 'viewedit',
+      component: viewedit
+    },
+    {
+      path: '/editcar',
+      name: 'editcar',
+      component: editcar
+    },
+    {
+      path: '/cardoc',
+      name: 'cardoc',
+      component: cardoc
     }
   ]
 })
