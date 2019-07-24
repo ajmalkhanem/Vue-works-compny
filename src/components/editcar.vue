@@ -2,8 +2,7 @@
     <div> 
     <b-jumbotron style="background-color:white;">
         <div>
-  <b-alert show dismissible>
-Edit Details  </b-alert>
+  
 </div><br>
      <h2 style="color: cadetblue;"><b>Update Details</b></h2>
           <b-row>

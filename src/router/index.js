@@ -20,10 +20,22 @@ import myaccount from '@/components/myaccount'
 import documentreg from '@/components/documentreg'
 import sellerindex from '@/components/sellerindex'
 import car from '@/components/car'
+import newcar from '@/components/newcar'
+import usedcar from '@/components/usedcar'
 import addcar from '@/components/addcar'
 import viewedit from '@/components/viewedit'
 import editcar from '@/components/editcar'
 import cardoc from '@/components/cardoc'
+import modal1 from '@/components/modal1'
+import modal2 from '@/components/modal2'
+import modal3 from '@/components/modal3'
+import modal4 from '@/components/modal4'
+import access from '@/components/access'
+import fuel from '@/components/fuel'
+
+
+
+
 
 
 
@@ -148,6 +160,16 @@ export default new Router({
       component: car
     },
     {
+      path: '/newcar',
+      name: 'newcar',
+      component: newcar
+    },
+    {
+      path: '/usedcar',
+      name: 'usedcar',
+      component: usedcar
+    },
+    {
       path: '/addcar',
       name: 'addcar',
       component: addcar
@@ -166,6 +188,36 @@ export default new Router({
       path: '/cardoc',
       name: 'cardoc',
       component: cardoc
+    },
+    {
+      path: '/modal1',
+      name: 'modal1',
+      component: modal1
+    },
+    {
+      path: '/modal2',
+      name: 'modal2',
+      component: modal2
+    },
+    {
+      path: '/modal3',
+      name: 'modal3',
+      component: modal3
+    },
+    {
+      path: '/modal4',
+      name: 'modal4',
+      component: modal4
+    },
+    {
+      path: '/access',
+      name: 'access',
+      component: access
+    },
+    {
+      path: '/fuel',
+      name: 'fuel',
+      component: fuel
     }
   ]
 })

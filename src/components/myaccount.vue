@@ -62,11 +62,8 @@
                     
                           <b-row><b-col>
                             <div class="form-group">
-                                <B>Description:</B>
-                                <P>Each car payment consists of two parts: the principal 
-                                    (the original amount of the loan) and the interest. Interest on
-                                     car loans depends primarily on three main factors: the credit rating of the car buyer, 
-                                    whether the car is new or used, and the price of the car.</P>
+                              
+                                
                                 </div></b-col>
                             </b-row>
                     

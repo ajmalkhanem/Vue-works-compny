@@ -1,18 +1,8 @@
 <template>
     <div>
-            <b-alert show dismissible>
-                    Visit your vehicles .Update new ONES
-                  </b-alert>
+
         <br>
-     <b-row>
-         
-      <b-col>
-              <img src="../assets/car2.jpg">
-          </b-col>
-          <b-col>
-                <img src="../assets/spare.png" style="width:700px;height:300px;">
-            </b-col>
-        </b-row>
+     
           <b-row>
           
           <b-col><br>
@@ -81,7 +71,25 @@
                  car loans depends primarily on three main factors: the credit rating of the car buyer, 
                 whether the car is new or used, and the price of the car.</P>
             </div></b-col>
+        </b-row><hr>
+        <br>
+        <b-row>
+            <b-col>
+             <modal1></modal1>
+              </b-col>
+              <b-col>
+                <modal2></modal2>
+              </b-col>
+         
+        <b-col>
+        <modal3></modal3>
+        </b-col>
+        <b-col>
+          <modal4></modal4>
+        </b-col>
         </b-row>
+         
+         
 
   <div class="form-group form-check">
     <label class="form-check-label">
@@ -89,9 +97,21 @@
   </div>
 </form>
       </b-card-text></b-tab>
-      <b-tab title="View / Edit"><b-card-text>
-<editcar></editcar>      
-</b-card-text></b-tab>
+      <b-tab title="View / Edit">
+        <b-card-text>
+              <editcar></editcar>      
+</b-card-text>
+</b-tab>
+<b-tab title="Service History">
+  <b-card-text>
+hjhjhjhh
+  </b-card-text>
+</b-tab>
+<b-tab title="Maintanance Analytics">
+  <b-card-text>
+hhhhhh
+</b-card-text>
+</b-tab>
     </b-tabs>
   </b-card>
 </div>
@@ -101,7 +121,7 @@
         <br>
         <br><br>      
         <router-link to="/addcar">
-            <b-button variant="info">+ Add New</b-button></router-link>
+            <b-button variant="">+ Add New</b-button></router-link>
          
 
         
@@ -113,9 +133,11 @@
     import navbar from '@/components/navbar'
     import navbar1 from '@/components/navbar1'
     import editcar from '@/components/editcar'
-
-
-    import documentreg from '@/components/documentreg'
+    import modal1 from '@/components/modal1'
+    import modal2 from '@/components/modal2'
+    import modal3 from '@/components/modal3'
+    import modal4 from '@/components/modal4'
+     import documentreg from '@/components/documentreg'
       
  export default {
     components: {
@@ -123,13 +145,18 @@
    navbar,
    documentreg,
    navbar1,
-   editcar
+   editcar,
+   modal1,
+   modal2,
+   modal3,
+   modal4
    
    
  },
 }
 
     </script>
+    
     <style>
 
 #rcorners1 {

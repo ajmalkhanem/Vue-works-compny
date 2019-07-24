@@ -21,7 +21,7 @@
                                                                 <input type="file"></p>
                                                             </div>
                                                           </div>                                              </b-col>
-                                              <b-col>
+                                            <br>  <b-col>
                                                   <div class="coupon">
                                                             
                                                       <div class="container" style="background-color:white">
@@ -32,9 +32,7 @@
                                                       </div>
                                                     </div> 
                                               </b-col>
-                                              <b-col>
-                                                  
-                                              </b-col>
+                                             
                                             </b-row><br><br>
                                             <b-row>
                                                     <b-col> 
