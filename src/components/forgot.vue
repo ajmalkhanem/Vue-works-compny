@@ -16,7 +16,7 @@
                         </b-col> <b-col></b-col><b-col></b-col></b-row>
                      
                         <b-row> <b-col></b-col> <b-col>
-                            <input  type="text" style="width:330px;height:60px;background-color: #ffffff;text-align: center;" id="rcorners1" required class="form-control"  aria-describedby="emailHelp" placeholder="Registered email">
+                            <input  type="email"  pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" style="width:330px;height:60px;background-color: #ffffff;text-align: center;" id="rcorners1" required class="form-control"  aria-describedby="emailHelp" placeholder="Registered email">
                         </b-col><b-col></b-col></b-row>
                         </div>
                         

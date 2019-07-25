@@ -14,6 +14,7 @@ import carousel from '@/components/carousel'
 import home from '@/components/home'
 import businesreg from '@/components/businesreg'
 import businesprofile from '@/components/businesprofile'
+import customerprofile from '@/components/customerprofile'
 import userprofile from '@/components/userprofile'
 import buy from '@/components/buy'
 import myaccount from '@/components/myaccount'
@@ -122,6 +123,11 @@ export default new Router({
       path: '/businesprofile',
       name: 'businesprofile',
       component: businesprofile
+    },
+    {
+      path: '/customerprofile',
+      name: 'customerprofile',
+      component: customerprofile
     },
     {
       path: '/userprofile',

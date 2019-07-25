@@ -38,7 +38,7 @@
                                   </b-col> <b-col></b-col><b-col></b-col></b-row>
                                
                                   <b-row> <b-col></b-col> <b-col>
-                                      <input  type="text" style="width:330px;background-color: rgb(233, 238, 240);text-align: center;" v-model="users1.ph" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Mobile">
+                                      <input  type="text"  pattern="[7-9]{1}[0-9]{9}" style="width:330px;background-color: rgb(233, 238, 240);text-align: center;" v-model="users1.ph" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Mobile">
                                   </b-col><b-col></b-col></b-row>
                                   </div>
                                   <div class="form-group">
@@ -47,7 +47,7 @@
                                     </b-col> <b-col></b-col><b-col></b-col></b-row>
                                  
                                     <b-row> <b-col></b-col> <b-col>
-                                        <input  type="text" style="width:330px;background-color: rgb(233, 238, 240);text-align: center;" v-model="users1.email" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Email">
+                                        <input  type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" style="width:330px;background-color: rgb(233, 238, 240);text-align: center;" v-model="users1.email" required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Email">
                                     </b-col><b-col></b-col></b-row>
                                     </div>
 

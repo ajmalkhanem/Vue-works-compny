@@ -1,6 +1,9 @@
  <template><div>
     <navbar></navbar>
-        <br><br><br>
+        <br><br><br>{{ type}}
+        {{ stat }}
+        {{ new1 }}
+        {{ status1 }}
     <div class="container" style="background-color: white;">
         <div class="row">
           <div class="col">
@@ -64,9 +67,8 @@
                       
           </div>
           <div class="col">
-                <b-row> <b-col>
-                        <img src="../assets/CLOUD.png" style="width: 500px;height:680px;" ></img> </b-col> 
-                          <b-col></b-col> <b-col></b-col></b-row>
+                        <img src="../assets/CLOUD.png" style="width: 500px;height:720px;" ></img> 
+                          
           </div>
         </div>
         
@@ -101,8 +103,12 @@ watch: {
 name(newName) {
   localStorage.users1.username = newName;
 }
-},*/
-             obj:'',
+},*/                     
+ type:localStorage.getItem("type"),      
+        stat:localStorage.getItem("stat"),
+        new1:localStorage.getItem("new"),
+        status1:localStorage.getItem("status"),
+
              token:localStorage.getItem("token")
 
              };
@@ -127,34 +133,77 @@ axios.post('http://13.233.110.196/login/',{
 username :this.users1.username,
 password : this.users1.password,
 })
-/*.then(response => {
-        alert(that.$store.commit('LOGIN_SUCCESS', response.data.token));
-    }).catch(error => {
-        console.log("Error login")
-        console.log(error)
-    })
-    this.dialog = false*/
+
  .then((response) =>{
   console.log(response.data.token)
+  console.log(response.data.usertype)
+  console.log(response.data.status)
+
  store.commit("loginUser",response.data.token);
  localStorage.setItem("token", response.data.token)
-      this.$router.push({
-        name: "userprofile"
-      });
+ localStorage.setItem("type", response.data.usertype)
+ localStorage.setItem("stat", response.data.status)
+
+
+     // this.$router.push({
+       // name: "userprofile"
+     // });
     })
+    
  //this.$store.dispatch('submit1', { username, password })
  //.then(() => this.$router.push('/Home'))
  .catch((ev) => {})
  ev.target.reset()
-}
+ check1(ev);
+},
 
-/* login() {
-    username= this.users1.username 
-     password = this.users1.password
-    this.$store.dispatch('login', { username, password })
-   .then(() => this.$router.push('/'))
-   .catch(err => console.log(err))
-  }*/
+
+ check1()
+  {
+    if(stat=="true")
+    {
+      procheck();
+    }
+    if(stat=="false")
+    {
+      print("error");
+    }
+  },
+  procheck()
+  {
+    axios.post('http://13.233.110.196/user/me/',{   
+to:token
+})
+
+ .then((response) =>{
+  store.commit("loginUser",response.data.token);
+
+  localStorage.setItem("new", response.data.new)
+ localStorage.setItem("status", response.data.status)
+
+    })
+    if(new1=="true" && status1=="false")
+    {
+if(type=="0")
+{
+  this.$router.push({
+        name: "userprofile"
+      });
+}
+if(type=="1")
+{
+  this.$router.push({
+        name: "businessprofile"
+      });
+}
+    }
+    if(status=="true")
+{
+  this.$router.push({
+        name: "businesreg"
+      });
+}
+  }
 }
 };
 </script>

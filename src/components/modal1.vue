@@ -3,15 +3,11 @@
     
     
     
-    <b-button variant="light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add New Maintanance Bill</b-button>
     
-    <div id="id01" class="modal">
       <b-container style="background-color:white;">
-        <br><div>
-  <b-alert show dismissible>
-Fill Maintanance Bills Carefully  </b-alert>
-</div>
-      <form class="modal-content animate" action="">
+
+                <form @submit.prevent="submit1">
+
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
@@ -19,25 +15,25 @@ Fill Maintanance Bills Carefully  </b-alert>
         <div class="container3">
           <div class="form-group">
       <label for="policy" style="color: cadetblue;"><b>Task Name:</b></label>
-      <input type="text" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Task Name" >
+      <input type="text" class="form-control" v-model="users1.name" style="background-color: rgb(233, 238, 240);" placeholder="Task Name" >
     </div>
            <div class="form-group">
       <label for="policy" style="color: cadetblue;"><b>Date:</b></label>
-      <input type="date" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Policy Expiry Date" >
+      <input type="date" class="form-control" v-model="users1.date" style="background-color: rgb(233, 238, 240);" placeholder="Policy Expiry Date" >
     </div>
            <div class="form-group">
       <label for="policy" style="color: cadetblue;"><b>Odometer Reading</b></label>
-      <input type="text" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Odometer" >
+      <input type="text" class="form-control" v-model="users1.odometer" style="background-color: rgb(233, 238, 240);" placeholder="Odometer" >
     </div>
 
            <div class="form-group">
       <label for="policy" style="color: cadetblue;"><b>Service Amount</b></label>
-      <input type="text" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Amount" >
+      <input type="text" class="form-control" v-model="users1.amount" style="background-color: rgb(233, 238, 240);" placeholder="Amount" >
     </div>
 
            <div class="form-group">
       <label for="policy" style="color: cadetblue;"><b>Service Staion:</b></label>
-      <select  class="form-control" id="email" style="background-color: rgb(233, 238, 240);" >
+      <select  class="form-control" v-model="users1.station" style="background-color: rgb(233, 238, 240);" >
    <option value="volvo">select station</option>
   <option value="saab">Saab</option>
   <option value="fiat">Fiat</option>
@@ -46,7 +42,7 @@ Fill Maintanance Bills Carefully  </b-alert>
 
            <div class="form-group">
       <label for="policy" style="color: cadetblue;"><b>Remarks</b></label>
-      <input type="text" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="if any" >
+      <input type="text" class="form-control" v-model="users1.remarks" style="background-color: rgb(233, 238, 240);" placeholder="if any" >
     </div>
 
             
@@ -64,7 +60,7 @@ Fill Maintanance Bills Carefully  </b-alert>
         </b-row></div>
         <div class="form-group">
       <label for="policy" style="color: cadetblue;"><b></b></label>
-        <b-button variant="outline-primary">Save</b-button></div>
+        <b-button type="submit" variant="outline-primary">Save</b-button></div>
         </b-container>
         
 
@@ -73,134 +69,105 @@ Fill Maintanance Bills Carefully  </b-alert>
       </b-container>
 
     </div>
-    </div>
+    
     </template>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+     <script>
+ 
+
+import axios from "axios";
+//import store from "../store";
+export default {
+
+data(){
+
+return {
+
+users1:
+{
+name: '',
+date:'',
+odometer:'',
+amount:'',
+station:'',
+remarks:''
+
+
+},
+/* mounted() {
+if (localStorage.users1.username) {
+this.username = localStorage.users1.username;
+}
+},
+watch: {
+name(newName) {
+localStorage.users1.username = newName;
+}
+},*/
+obj:'',
+token:localStorage.getItem("token")
+
+};
+},
+methods: {
+submit1(ev) {
+ev.preventDefault()
+var datas1 = {};
+
+datas1['veh'] = this.users1.vehname;
+datas1['owner'] = this.users1.onname;
+datas1['plate'] = this.users1.platenum;
+datas1['tc'] = this.users1.tcnum;
+datas1['redate'] = this.users1.rgdate;
+datas1['pol'] = this.users1.exdate;
+datas1['in'] = this.users1.inexdate;
+datas1['polex'] = this.users1.polexdate;
+
+console.log(datas1)
+
+axios.post('http://13.233.110.196/add/maintainbill/',{  
+ to:this.token,  
+ id:"5d37e7f7a350550018668390",
+name :this.users1.name,
+date: this.users1.date,
+odometer: this.users1.odometer,
+amount: this.users1.amount,
+station: this.users1.station,
+remarks: this.users1.remarks,
+category:"dsdss"
+
+
+
+
+})
+/*.then(response => {
+alert(that.$store.commit('LOGIN_SUCCESS', response.data.token));
+}).catch(error => {
+console.log("Error login")
+console.log(error)
+})
+this.dialog = false*/
+.then((response) =>{
+//console.log(response.data.token)
+//store.commit("loginUser",response.data.token);
+//localStorage.setItem("token", response.data.token)
+// this.$router.push({
+// name: "userprofile"
+// });
+})
+//this.$store.dispatch('submit1', { username, password })
+//.then(() => this.$router.push('/Home'))
+.catch((ev) => {})
+ev.target.reset()
 }
 
-/* Set a style for all buttons */
-
-
-button:hover {
-  opacity: 0.8;
+/* login() {
+username= this.users1.username 
+password = this.users1.password
+this.$store.dispatch('login', { username, password })
+.then(() => this.$router.push('/'))
+.catch(err => console.log(err))
+}*/
 }
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container3 {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+};
 </script>
-
-
-
-  

@@ -75,14 +75,39 @@
         <br>
         <b-row>
             <b-col>
-             <modal1></modal1>
+                <div>
+                    <b-button v-b-toggle.collapse-1  variant="light" >Add Maintanance Bill</b-button>
+                    <b-collapse id="collapse-1" class="mt-2">
+                      <b-card>
+                        <p class="card-text"><modal1></modal1></p>
+                        
+                      </b-card>
+                    </b-collapse>
+                  </div>
+
               </b-col>
               <b-col>
-                <modal2></modal2>
+                  <div>
+                      <b-button v-b-toggle.collapse-2  variant="light" >Fuel Filling</b-button>
+                      <b-collapse id="collapse-2" class="mt-2">
+                        <b-card>
+                          <p class="card-text"><modal2></modal2></p>
+                          
+                        </b-card>
+                      </b-collapse>
+                    </div>
               </b-col>
          
         <b-col>
-        <modal3></modal3>
+            <div>
+                <b-button v-b-toggle.collapse-3  variant="light" >Add Penalty</b-button>
+                <b-collapse id="collapse-3" class="mt-2">
+                  <b-card>
+                    <p class="card-text"><modal3></modal3></p>
+                    
+                  </b-card>
+                </b-collapse>
+              </div>
         </b-col>
         <b-col>
           <modal4></modal4>

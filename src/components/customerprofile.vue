@@ -14,56 +14,33 @@
  <div>
   <b-card no-body>
     <b-tabs pills card end>
-      <b-tab title="Business profile" active><b-card-text>
+      <b-tab title="Customer profile" active><b-card-text>
         <form @submit.prevent="submit1">
           <b-row>
           <b-col>
   <div class="form-group">
-    <label for="email" style="color: cadetblue;"><b>Business Name:</b></label>
-    <input type="text" class="form-control" v-model="users1.busname" style="background-color: rgb(233, 238, 240);text-align: center;" required >
+    <label for="email" style="color: cadetblue;"><b>First Name:</b></label>
+    <input type="text" class="form-control" v-model="users1.firstname" style="background-color: rgb(233, 238, 240);text-align: center;" required >
   </div></b-col>
   <b-col>
   <div class="form-group">
-      <label for="email"style="color: cadetblue;"><b>Business Reg Number</b></label>
-      <input type="text" class="form-control" v-model="users1.busreg" style="background-color: rgb(233, 238, 240);text-align: center;" required >
+      <label for="email"style="color: cadetblue;"><b>Last Name</b></label>
+      <input type="text" class="form-control" v-model="users1.lastname" style="background-color: rgb(233, 238, 240);text-align: center;" required >
     </div></b-col>
     
       </b-row>
       <b-row><b-col>
   <div class="form-group">
-    <label for="pwd"style="color: cadetblue;"><b>Coperative Email:</b></label>
-    <input type="email" class="form-control" v-model="users1.busemail" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required style="background-color: rgb(233, 238, 240);text-align: center;" >
+    <label for="pwd"style="color: cadetblue;"><b>Nationality:</b></label>
+    <input type="text" class="form-control" v-model="users1.nation"  required style="background-color: rgb(233, 238, 240);text-align: center;" >
   </div></b-col>
   <b-col>
       <div class="form-group">
-        <label for="pwd"style="color: cadetblue;"><b>Address:</b></label>
-        <input type="text" class="form-control" v-model="users1.busaddress" style="background-color: rgb(233, 238, 240);text-align: center;" required >
+        <label for="pwd"style="color: cadetblue;"><b>Promo Reference Code</b></label>
+        <input type="text" class="form-control" v-model="users1.code" style="background-color: rgb(233, 238, 240);text-align: center;" required >
       </div></b-col></b-row>
-<br><h4 style="color: cadetblue;"><b>Business Documents</b></h4>
-<br>
-      <b-row><b-col>
-        <div class="coupon">
-                                                            
-          <div class="container" style="background-color:white">
-            </div>
-          <div class="container">
-            <p>
-              <input type="file"></p>
-          </div>
-        </div></b-col>
-        </b-row><br>
-        <b-row>
-          <b-col>
-            <div class="coupon">
-                                                              
-              <div class="container" style="background-color:white">
-                </div>
-              <div class="container">
-                <p>
-                  <input type="file"></p>
-              </div>
-            </div></b-col>
-        </b-row>
+
+    
 
   <div class="form-group form-check">
     <label class="form-check-label">
@@ -105,10 +82,10 @@ return {
 
 users1:
 {
-busname: '',
-busreg:'',
-busemail:'',
-busaddress:''
+firstname: '',
+lastname:'',
+nation:'',
+code:''
 
 },
 /* mounted() {
@@ -131,10 +108,10 @@ submit1(ev) {
 ev.preventDefault()
 var datas1 = {};
 
-datas1['busname'] = this.users1.busname;
-datas1['busreg'] = this.users1.busreg;
-datas1['busemail'] = this.users1.busemail;
-datas1['busaddress'] = this.users1.busaddress;
+datas1['fname'] = this.users1.firstname;
+datas1['lname'] = this.users1.lastname;
+datas1['nation'] = this.users1.nation;
+datas1['promocode'] = this.users1.code;
 
 
 console.log(datas1)
@@ -146,13 +123,12 @@ console.log(datas1)
 //    contentType: 'application/json; charset=utf-8',
 //    dataType: 'json',
 //  })
-axios.post('http://13.233.110.196/user/bussiness/',{  
+axios.post('http://13.233.110.196/user/customer/',{  
  to:this.token,  
-name :this.users1.busname,
-reg_no: this.users1.busreg,
-cor_email: this.users1.busemail,
-address: this.users1.busaddress,
-category:"5d36b2b42b4842377c2d665d"
+firstname :this.users1.firstname,
+lastname: this.users1.lastname,
+nationality: this.users1.nation,
+ref_code: this.users1.code,
 
 
 })
