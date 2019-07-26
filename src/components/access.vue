@@ -19,7 +19,7 @@
   </div></b-col>
   <b-col>
   <div class="form-group">
-      <h2 for="email" style="color: black;"><b>Audi OP</b></h2><br>
+      <h2 for="email" style="color: black;"><b>Audi</b></h2><br>
       <h6><b>DL 34 OS 4G</b></h6>
       <h6><b>PETROL ENGINE</b></h6>
       <h6><b>BRANDED VEHICLE</b></h6>

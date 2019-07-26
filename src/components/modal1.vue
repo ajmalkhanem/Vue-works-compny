@@ -8,9 +8,7 @@
 
                 <form @submit.prevent="submit1">
 
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
+       
     
         <div class="container3">
           <div class="form-group">
@@ -52,9 +50,11 @@
       <div class="form-group">
 <label for="policy" style="color: cadetblue;"><b>Select Category</b></label>        <b-row>
           <b-col>  <b-button variant="info">Tyre Charge</b-button>
-          </b-col>
+          </b-col></b-row><br>
+          <b-row>
           <b-col>   <b-button variant="info">General Service</b-button>
-          </b-col>
+          </b-col></b-row><br>
+          <b-row>
           <b-col>   <b-button variant="info">Accessories Change</b-button>
           </b-col>
         </b-row></div>
