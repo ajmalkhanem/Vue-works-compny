@@ -8,6 +8,7 @@ import Hooper from '@/components/Hooper'
 import Hooper1 from '@/components/Hooper1'
 import navbar from '@/components/navbar'
 import navbar1 from '@/components/navbar1'
+import navbar2 from '@/components/navbar2'
 import sellernavbar from '@/components/sellernavbar'
 import footer1 from '@/components/footer1'
 import carousel from '@/components/carousel'
@@ -33,6 +34,10 @@ import modal3 from '@/components/modal3'
 import modal4 from '@/components/modal4'
 import access from '@/components/access'
 import fuel from '@/components/fuel'
+import myvehicle from '@/components/myvehicle'
+import history from '@/components/history'
+
+
 
 
 
@@ -93,6 +98,11 @@ export default new Router({
       path: '/navbar1',
       name: 'navbar1',
       component: navbar1
+    },
+    {
+      path: '/navbar2',
+      name: 'navbar2',
+      component: navbar2
     },
     {
       path: '/sellernavbar',
@@ -161,9 +171,10 @@ export default new Router({
       component: sellerindex
     },
     {
-      path: '/car',
+      path: '/car/:id',
       name: 'car',
-      component: car
+      component: car,
+      props: true
     },
     {
       path: '/newcar',
@@ -196,17 +207,17 @@ export default new Router({
       component: cardoc
     },
     {
-      path: '/modal1',
+      path: '/modal1/:id',
       name: 'modal1',
       component: modal1
     },
     {
-      path: '/modal2',
+      path: '/modal2/:id',
       name: 'modal2',
       component: modal2
     },
     {
-      path: '/modal3',
+      path: '/modal3/:id',
       name: 'modal3',
       component: modal3
     },
@@ -224,6 +235,16 @@ export default new Router({
       path: '/fuel',
       name: 'fuel',
       component: fuel
+    },
+    {
+      path: '/myvehicle',
+      name: 'myvehicle',
+      component: myvehicle
+    },
+    {
+      path: '/history',
+      name: 'history',
+      component: history
     }
   ]
 })

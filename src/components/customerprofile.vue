@@ -143,12 +143,12 @@ this.dialog = false*/
 //console.log(response.data.token)
 //store.commit("loginUser",response.data.token);
 //localStorage.setItem("token", response.data.token)
-// this.$router.push({
-// name: "userprofile"
-// });
+ this.$router.push({
+ name: "userprofile"
+ });
 })
 //this.$store.dispatch('submit1', { username, password })
-//.then(() => this.$router.push('/Home'))
+//.then(() => this.$router.push('/userprofile'))
 .catch((ev) => {})
 ev.target.reset()
 }

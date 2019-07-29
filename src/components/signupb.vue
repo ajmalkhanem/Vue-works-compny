@@ -1,11 +1,21 @@
 <template><div>
     
     <navbar></navbar>
-    <br>
-    <div class="container" style="background-color: white;">
-        <div class="row">
+    <div class="bg1">
+    <div class="text-block">
+        <br><br><br>
+        <h1 style="font-size: 70px;"><b> Business Your Way</b></h1>
+        <p>Keep in customers happy We'll make grown easy</p>
+        <p>Keep in customers happy We'll make grown easy</p>
+        <p>Keep in customers happy We'll make grown easy</p>
+
+
+      </div>  <br><br>    
+        <div class="row" style="width:100%;">
+            <div class="col"></div>
       <div class="col">
-        <div  style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:white;border:solid rgb(235, 238, 240) 2px;height:700px;float:left;margin-top:20px;margin-left:20px;">
+        <div  class="transbox"
+        style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:white;border:solid rgb(235, 238, 240) 2px;height:700px;float:left;margin-top:20px;margin-left:20px;">
             <br><br>
               <h2><b><label style="color:#03adfc;">Sign up</label></b></h2><br>
               <p>Enter your details below to create your account</p>
@@ -68,15 +78,13 @@
                             
                   
       </div>
-      <div class="col">
-            <b-row> <b-col>
-                    <img src="../assets/CLOUD.png" style="width: 500px;height:720px;" ></img> </b-col> 
-                      <b-col></b-col> <b-col></b-col></b-row>
-      </div>
+     
     </div>
-    
+    <br><br>
   </div>
-  <br><br>
+    
+  
+  
 
 
 </div>
@@ -194,3 +202,39 @@ height: 8px;
 }
 
 </style>
+<style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    
+    .bg1 {
+      /* The image used */
+      background-image: url("https://www.bannerbatterien.com/upload/filecache/Banner-Batterien-Solar-web_17f1199fab90a9f453b9ba4167c28e87.jpg");
+    
+      /* Full height */
+      height: 100%; 
+    
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    div.transbox {
+      margin: 30px;
+      background-color: #ffffff;
+      border: 1px solid black;
+      opacity: .8;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+    .text-block {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      color: white;
+      padding-top: 25px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    </style>

@@ -58,7 +58,7 @@
 import axios from "axios";
 //import store from "../store";
 export default {
-
+props:['id'],
 data(){
 
 return {
@@ -105,7 +105,7 @@ console.log(datas1)
 
 axios.post('http://13.233.110.196/add/charges/',{  
  to:this.token,  
- id:"5d37e7f7a350550018668390",
+id:this.id,
 name :this.users1.name,
 date: this.users1.date,
 odometer: this.users1.odometer,

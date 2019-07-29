@@ -37,7 +37,7 @@
         <b-row>
          
       <b-col>
-              <img src="../assets/car2.gif" style="width:700px;height:300px;">
+              <img src="../assets/car2.gif" style="width:600px;height:300px;">
           </b-col>
           <b-col>
                 <img src="../assets/spare.jpg" style="width:700px;height:300px;">

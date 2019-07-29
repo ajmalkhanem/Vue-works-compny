@@ -1,14 +1,29 @@
 <template>
   <div>
     <navbar></navbar>
-    <br><br><br>
-    <div class="container" style="background-color: white;">
-      <div class="row">
+    <div class="bg">
+    <br><br>
+    <div class="text-block">
+        <br><br><br>
+        <h1 style="font-size: 70px;"><b> Business Your Way</b></h1>
+        <p>Keep in customers happy We'll make grown easy</p>
+        <p>Keep in customers happy We'll make grown easy</p>
+        <p>Keep in customers happy We'll make grown easy</p>
+
+
+      </div>
+    
+
+      <div class="row" style="width:100%;">
+          <div class="col">ccc</div>
         <div class="col">
-          <div id="rcorners1"
+          <div id="rcorners1" class="transbox"
             style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:660px;float:left;margin-top:20px;margin-left:20px;">
-            <br><br><br>
-            <h2><b><label style="color:#03adfc;">Sign in</label></b></h2><br>
+            <br>
+            <br><br>
+            <h2><b><label style="color:#03adfc;">Sign in</label></b></h2>
+            {{ msg}}
+            <br>
             <p>Enter your details below to access your account</p>
             <form @submit.prevent="submit1">
               <div class="form-group">
@@ -65,24 +80,27 @@
               <button type="submit" class="btn btn-primary" style="background-color: #03adfc;">Sign in</button></b-col>
 
               Not a member yet ? <router-link to="/signup"><b>
-                  <h9 style="color:#03adfc;">Signup</h9>
+                  <label style="color:#03adfc;">Signup</label>
                 </b></router-link>
 
             </form>
             <br><br>
             <b-row>
               <b-col>
-                <b-button variant="primary" style="background-color: #1606bf;text-align: center;width: 280px;">Continue
-                  with facebook</b-button>
+                  <div class="chip">
+                      <img src="../assets/fb.png" alt="Person" width="96" height="96">
+                      continue with facebook
+                    </div>
 
               </b-col>
             </b-row>
             <br>
             <b-row>
               <b-col>
-                <b-button variant="primary"
-                  style="background-color: rgb(203, 207, 219);text-align: center;width: 280px;">Continue with facebook
-                </b-button>
+                  <div class="chip">
+                      <img src="../assets/gg.jpg" alt="Person" width="96" height="96">
+                      continue with google
+                    </div>
 
               </b-col>
             </b-row>
@@ -93,15 +111,11 @@
 
 
         </div>
-        <div class="col">
-          <img src="../assets/CLOUD.png" style="width: 500px;height:720px;"></img>
-
-        </div>
+       
       </div>
-
+<br>
     </div>
 
-    <br><br><br>
   </div>
 
 </template>
@@ -125,19 +139,22 @@
         status: '',
         new1: '',
         status1: '',
-        usertype1: ''
+        usertype1: '',
+        msg:''
 
       };
     },
     methods: {
+      
       submit1(ev) {
+       // alert(this.msg)
         ev.preventDefault()
         var datas1 = {};
 
         datas1['username'] = this.users1.username;
         datas1['password'] = this.users1.password;
 
-        console.log(datas1)
+       // console.log(datas1)
        
         axios.post('http://13.233.110.196/login/', {
           username: this.users1.username,
@@ -151,6 +168,7 @@
             localStorage.setItem("token", response.data.token)
             this.status = response.data.status
             this.usertype1 = response.data.usertype
+            this.msg=response.data.message
 
             this.check1(response)
           })
@@ -161,8 +179,8 @@
         //alert("hai");
       },
       check1() {
-        console.log(localStorage.getItem("token")
-        )
+        //console.log(localStorage.getItem("token")
+        //)
 
         this.token = localStorage.getItem("token")
         if (this.status == true) {
@@ -176,8 +194,22 @@
           })
 
             .then((response) => {
-              console.log(response.data.new)
-              console.log(response.data.status)
+              store.commit("loginUser", response.data.data);
+            localStorage.setItem("data0",response.data.data.pro_pic)  
+            localStorage.setItem("data", response.data.data.firstname)
+            localStorage.setItem("data1", response.data.data.lastname)
+            localStorage.setItem("data2", response.data.data.nationality)
+            localStorage.setItem("data3", response.data.info.email)
+            localStorage.setItem("data4", response.data.info.ph)
+
+
+
+
+
+             // console.log(response.data.new)
+              //console.log(response.data.data)
+
+              //console.log(response.data.status)
               this.new1 = response.data.new
               this.status1 = response.data.status
               if (this.new1 == true ) 
@@ -213,7 +245,7 @@
               {
                 
                   this.$router.push({
-                    name: "busineshome"
+                    name: "home"
                   });
               }
               }
@@ -234,3 +266,58 @@
     height: 8px;
   }
 </style>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("http://www.scalsys.com/wallpapers/wallpaper-nyc/wallpaper-nyc_13713.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: .9;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
+  .text-block {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    color: white;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  </style>
+  <style>
+      .chip {
+        display: inline-block;
+        padding: 0 25px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color:white;
+      }
+      
+      .chip img {
+        float: left;
+        margin: 0 10px 0 -25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+      </style>

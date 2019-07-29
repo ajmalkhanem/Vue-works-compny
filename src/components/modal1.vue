@@ -78,6 +78,7 @@
 import axios from "axios";
 //import store from "../store";
 export default {
+    props:['id'],
 
 data(){
 
@@ -124,10 +125,10 @@ datas1['in'] = this.users1.inexdate;
 datas1['polex'] = this.users1.polexdate;
 
 console.log(datas1)
-
+alert(this.id);
 axios.post('http://13.233.110.196/add/maintainbill/',{  
  to:this.token,  
- id:"5d37e7f7a350550018668390",
+ id:this.id,
 name :this.users1.name,
 date: this.users1.date,
 odometer: this.users1.odometer,
