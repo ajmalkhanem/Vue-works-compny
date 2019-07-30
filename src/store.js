@@ -17,7 +17,9 @@ export default new Vuex.Store({
         },
         logoutUser (state) {
             state.isLoggedIn = false
+            state.data = false
            
         }
     }
+    
 })

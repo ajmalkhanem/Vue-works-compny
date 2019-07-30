@@ -2,7 +2,6 @@
   <div>
     <div class="chip">
       <img src="../assets/pro.jpg" alt="Person" style="width:170px; height:170px;">
-{{data0}}
     </div>
     <div class="chip">
       <h3><b>{{  data  }} {{data1}}</b></h3>

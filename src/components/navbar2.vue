@@ -9,17 +9,18 @@
             <b-collapse is-nav id="nav_collapse">
 
                 <b-nav-item href="#" class="mx-auto"></b-nav-item>
-                
-                
+
+
                 <b-nav-item class="navt">
                     <div class="dropdown">
                         <div class="chip">
                             <img src="../assets/pro.jpg" alt="Person" width="96" height="96">
-                              {{data}}
+                            {{data}}
 
                             <div class="dropdown-content">
-                                <a href="#">Logout</a>
-                                <a href="#">Link 3</a>
+                                    <a >logout</a>
+
+                                <a v-on:click="handlelogout()">logout</a>
                             </div>
                         </div>
                     </div>
@@ -35,14 +36,31 @@
 </template>
 
 <script lang="js">
+    import store from "../store";
+
     export default {
         name: 'app',
-        data(){
+        data() {
 
-return {
-    data: localStorage.getItem("data")
+            return {
+                data: localStorage.getItem("data")
 
-    }}}
+            }
+        },
+        methods: {
+            handlelogout() {
+                //alert("hai")
+                store.commit("logoutUser");
+                localStorage.removeItem('token')
+                localStorage.removeItem('data')
+                localStorage.removeItem('data1')
+                localStorage.removeItem('data2')
+                localStorage.removeItem('data3')
+                localStorage.removeItem('data4')
+                this.$router.push({ name: 'login' })
+            }
+        }
+    }
 </script>
 
 <style>

@@ -1,10 +1,11 @@
  <template>
-    <div> <navbar></navbar><br>
+    <div> <navbar2></navbar2><br>
     
 <b-jumbotron style="background-color:white;">   
     <div>
   <b-alert show dismissible>
 Add your vehicle details and upload documents  </b-alert>
+{{obj}}
 </div>      
      <b-row>
           
@@ -120,14 +121,14 @@ Add your vehicle details and upload documents  </b-alert>
 
 
     <script>
-  import navbar from '@/components/navbar'
+  import navbar2 from '@/components/navbar2'
   import navbar1 from '@/components/navbar1'
 
 import axios from "axios";
 //import store from "../store";
 export default {
 components:
-{ navbar,
+{ navbar2,
 navbar1
 },
 data(){
@@ -201,12 +202,11 @@ console.log(error)
 })
 this.dialog = false*/
 .then((response) =>{
-//console.log(response.data.token)
-//store.commit("loginUser",response.data.token);
+this.obj=response.data.msg//store.commit("loginUser",response.data.token);
 //localStorage.setItem("token", response.data.token)
-// this.$router.push({
-// name: "userprofile"
-// });
+ this.$router.push({
+name: "userprofile"
+});
 })
 //this.$store.dispatch('submit1', { username, password })
 //.then(() => this.$router.push('/Home'))

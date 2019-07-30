@@ -5,7 +5,7 @@
     
     
       <b-container style="background-color:white;">
-
+{{msg}}
                 <form @submit.prevent="submit1">
 
        
@@ -105,7 +105,7 @@ name(newName) {
 localStorage.users1.username = newName;
 }
 },*/
-obj:'',
+msg:'',
 token:localStorage.getItem("token")
 
 };
@@ -125,7 +125,7 @@ datas1['in'] = this.users1.inexdate;
 datas1['polex'] = this.users1.polexdate;
 
 console.log(datas1)
-alert(this.id);
+//alert(this.id);
 axios.post('http://13.233.110.196/add/maintainbill/',{  
  to:this.token,  
  id:this.id,
@@ -149,6 +149,7 @@ console.log(error)
 })
 this.dialog = false*/
 .then((response) =>{
+  this.msg=response.data.msg
 //console.log(response.data.token)
 //store.commit("loginUser",response.data.token);
 //localStorage.setItem("token", response.data.token)

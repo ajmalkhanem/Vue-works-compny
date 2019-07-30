@@ -36,23 +36,7 @@ import access from '@/components/access'
 import fuel from '@/components/fuel'
 import myvehicle from '@/components/myvehicle'
 import history from '@/components/history'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import store from '../store'
 
 
 
@@ -60,8 +44,9 @@ import history from '@/components/history'
 
 
 Vue.use(Router)
-
-export default new Router({
+let router=new Router({
+//export default new Router({
+  
   routes: [
     
     {
@@ -127,22 +112,30 @@ export default new Router({
     {
       path: '/businesreg',
       name: 'businesreg',
-      component: businesreg
+      component: businesreg,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/businesprofile',
       name: 'businesprofile',
-      component: businesprofile
+      component: businesprofile,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/customerprofile',
       name: 'customerprofile',
-      component: customerprofile
+      component: customerprofile,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/userprofile',
       name: 'userprofile',
-      component: userprofile
+      component: userprofile,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/Hooper1',
@@ -158,12 +151,16 @@ export default new Router({
     {
       path: '/myaccount',
       name: 'myaccount',
-      component: myaccount
+      component: myaccount,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/documentreg',
       name: 'documentreg',
-      component: documentreg
+      component: documentreg,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/sellerindex',
@@ -174,72 +171,100 @@ export default new Router({
       path: '/car/:id',
       name: 'car',
       component: car,
-      props: true
+      props: true,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/newcar',
       name: 'newcar',
-      component: newcar
+      component: newcar,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/usedcar',
       name: 'usedcar',
-      component: usedcar
+      component: usedcar,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/addcar',
       name: 'addcar',
-      component: addcar
+      component: addcar,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/viewedit',
       name: 'viewedit',
-      component: viewedit
+      component: viewedit,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/editcar',
       name: 'editcar',
-      component: editcar
+      component: editcar,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/cardoc',
       name: 'cardoc',
-      component: cardoc
+      component: cardoc,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/modal1/:id',
       name: 'modal1',
-      component: modal1
+      component: modal1,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/modal2/:id',
       name: 'modal2',
-      component: modal2
+      component: modal2,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/modal3/:id',
       name: 'modal3',
-      component: modal3
+      component: modal3,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/modal4',
       name: 'modal4',
-      component: modal4
+      component: modal4,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/access',
       name: 'access',
-      component: access
+      component: access,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/fuel',
       name: 'fuel',
-      component: fuel
+      component: fuel,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/myvehicle',
       name: 'myvehicle',
-      component: myvehicle
+      component: myvehicle,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/history',
@@ -248,3 +273,22 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((to, from, next) => {
+
+  if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
+    next({ name: 'login' })
+    return
+  }
+
+  if (to.path === '/login' && store.state.isLoggedIn) {
+    next({ name: 'userprofile' })
+    return
+  }
+  
+  next()
+ // next({ name: 'home' })
+})
+export default router
+
+
+

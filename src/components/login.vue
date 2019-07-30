@@ -2,8 +2,8 @@
   <div>
     <navbar></navbar>
     <div class="bg">
-    <br><br>
-    <div class="text-block">
+      <br><br>
+      <div class="text-block">
         <br><br><br>
         <h1 style="font-size: 70px;"><b> Business Your Way</b></h1>
         <p>Keep in customers happy We'll make grown easy</p>
@@ -12,10 +12,10 @@
 
 
       </div>
-    
+
 
       <div class="row" style="width:100%;">
-          <div class="col">ccc</div>
+        <div class="col">ccc</div>
         <div class="col">
           <div id="rcorners1" class="transbox"
             style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:660px;float:left;margin-top:20px;margin-left:20px;">
@@ -87,20 +87,20 @@
             <br><br>
             <b-row>
               <b-col>
-                  <div class="chip">
-                      <img src="../assets/fb.png" alt="Person" width="96" height="96">
-                      continue with facebook
-                    </div>
+                <div class="chip">
+                  <img src="../assets/fb.png" alt="Person" width="96" height="96">
+                  continue with facebook
+                </div>
 
               </b-col>
             </b-row>
             <br>
             <b-row>
               <b-col>
-                  <div class="chip">
-                      <img src="../assets/gg.jpg" alt="Person" width="96" height="96">
-                      continue with google
-                    </div>
+                <div class="chip">
+                  <img src="../assets/gg.jpg" alt="Person" width="96" height="96">
+                  continue with google
+                </div>
 
               </b-col>
             </b-row>
@@ -111,9 +111,9 @@
 
 
         </div>
-       
+
       </div>
-<br>
+      <br>
     </div>
 
   </div>
@@ -135,40 +135,40 @@
           username: '',
           password: ''
         },
-       token: '',
+        token: '',
         status: '',
         new1: '',
         status1: '',
         usertype1: '',
-        msg:''
+        msg: ''
 
       };
     },
     methods: {
-      
+
       submit1(ev) {
-       // alert(this.msg)
+        // alert(this.msg)
         ev.preventDefault()
         var datas1 = {};
 
         datas1['username'] = this.users1.username;
         datas1['password'] = this.users1.password;
 
-       // console.log(datas1)
-       
+        // console.log(datas1)
+
         axios.post('http://13.233.110.196/login/', {
           username: this.users1.username,
           password: this.users1.password,
         })
 
           .then((response) => {
-            
+
 
             store.commit("loginUser", response.data.token);
             localStorage.setItem("token", response.data.token)
             this.status = response.data.status
             this.usertype1 = response.data.usertype
-            this.msg=response.data.message
+            this.msg = response.data.message
 
             this.check1(response)
           })
@@ -185,74 +185,64 @@
         this.token = localStorage.getItem("token")
         if (this.status == true) {
           axios.post('http://13.233.110.196/user/me/', {
-           
+
           },
-          {
-          headers: {
-              to: this.token,
-            }
-          })
+            {
+              headers: {
+                to: this.token,
+              }
+            })
 
             .then((response) => {
-              store.commit("loginUser", response.data.data);
-            localStorage.setItem("data0",response.data.data.pro_pic)  
+
+
+             // console.log(response.data.new)
+             // console.log(response.data.data)
+
+              //console.log(response.data.status)
+              this.new1 = response.data.new
+              this.status1 = response.data.status
+              if (this.new1 == true) {
+
+                if (this.usertype1 == 0) {
+
+                  this.$router.push({
+                    name: "customerprofile"
+                  });
+                }
+                if (this.usertype1 == 1) {
+
+                  this.$router.push({
+                    name: "businesprofile"
+                  });
+                }
+              }
+
+              if (this.status1 == true) {
+
+                if (this.usertype1 == 0) {
+                  store.commit("loginUser", response.data.data);
+            //localStorage.setItem("data0",response.data.data.pro_pic)  
             localStorage.setItem("data", response.data.data.firstname)
             localStorage.setItem("data1", response.data.data.lastname)
             localStorage.setItem("data2", response.data.data.nationality)
             localStorage.setItem("data3", response.data.info.email)
             localStorage.setItem("data4", response.data.info.ph)
-
-
-
-
-
-             // console.log(response.data.new)
-              //console.log(response.data.data)
-
-              //console.log(response.data.status)
-              this.new1 = response.data.new
-              this.status1 = response.data.status
-              if (this.new1 == true ) 
-              {   
-               
-                if (this.usertype1 == 0 ) 
-              {
-                
-                  this.$router.push({
-                    name: "customerprofile"
-                  });
-              }
-              if (this.usertype1 == 1 ) 
-              {
-                
-                  this.$router.push({
-                    name: "businesprofile"
-                  });
-              }
-              }
-
-              if (this.status1 == true ) 
-              {   
-               
-                if (this.usertype1 == 0 ) 
-              {
-                
                   this.$router.push({
                     name: "userprofile"
                   });
-              }
-              if (this.usertype1 == 1 ) 
-              {
-                
+                }
+                if (this.usertype1 == 1) {
+
                   this.$router.push({
                     name: "home"
                   });
-              }
+                }
               }
 
             })
         }
-       
+
       }
 
     }
@@ -267,31 +257,34 @@
   }
 </style>
 <style>
-  body, html {
+  body,
+  html {
     height: 100%;
     margin: 0;
   }
-  
+
   .bg {
     /* The image used */
     background-image: url("http://www.scalsys.com/wallpapers/wallpaper-nyc/wallpaper-nyc_13713.jpg");
-  
+
     /* Full height */
-    height: 100%; 
-  
+    height: 100%;
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+
   div.transbox {
     margin: 30px;
     background-color: #ffffff;
     border: 1px solid black;
     opacity: .9;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
   }
+
   .text-block {
     position: absolute;
     top: 70px;
@@ -301,23 +294,23 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  </style>
-  <style>
-      .chip {
-        display: inline-block;
-        padding: 0 25px;
-        height: 50px;
-        font-size: 16px;
-        line-height: 50px;
-        border-radius: 25px;
-        background-color:white;
-      }
-      
-      .chip img {
-        float: left;
-        margin: 0 10px 0 -25px;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-      }
-      </style>
+</style>
+<style>
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: white;
+  }
+
+  .chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+</style>

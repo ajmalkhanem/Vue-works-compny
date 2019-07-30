@@ -5,6 +5,7 @@
   
 </div><br>
      <h2 style="color: cadetblue;"><b>Update Details</b></h2>
+     {{msg}}
           <b-row>
                         
 
@@ -28,7 +29,7 @@
     <b-col>
     <div class="form-group">
         <label for="plate" style="color: cadetblue;"><b>Traffic Plate Number:</b></label>
-        <input type="text" class="form-control"  v-model="users1.platenum" style="background-color: rgb(233, 238, 240);" placeholder="Traffic Plate Number" >
+        <input type="text" class="form-control"  v-model="users1.platenum" disabled style="background-color: rgb(233, 238, 240);" placeholder="Traffic Plate Number" >
       </div></b-col>
       </b-row>
       <b-row>
@@ -152,7 +153,7 @@ name(newName) {
 localStorage.users1.username = newName;
 }
 },*/
-obj:'',
+msg:'',
 token:localStorage.getItem("token")
 
 };
@@ -206,10 +207,10 @@ submit1(ev) {
             this.users1.onname = response.data.data.ownerName
             this.users1.platenum = response.data.data.plateNo
              this.users1.tcnum = response.data.data.tcNo
-            this.users1.rgdate = response.data.data.registerDate
-            this.users1.exdate = response.data.data.expiryDate
-            this.users1.inexdate = response.data.data.inexpiryDate
-            this.users1.polexdate = response.data.data.polexpiryDate
+            this.users1.rgdate = response.data.data.registerDate.slice(0,10)
+            this.users1.exdate = response.data.data.expiryDate.slice(0,10)
+            this.users1.inexdate = response.data.data.inexpiryDate.slice(0,10)
+            this.users1.polexdate = response.data.data.polexpiryDate.slice(0,10)
 
 
 
@@ -238,7 +239,7 @@ axios.post('http://13.233.110.196/edit/vehicle/',{
  id:this.id,
 vehicleName :this.users1.vehname,
 ownerName: this.users1.onname,
-plateNo: this.users1.platenum,
+//plateNo: this.users1.platenum,
 tcNo: this.users1.tcnum,
 registerDate: this.users1.rgdate,
 expiryDate: this.users1.exdate,
@@ -250,19 +251,13 @@ documents: "asasa"
 
 
 })
-/*.then(response => {
-alert(that.$store.commit('LOGIN_SUCCESS', response.data.token));
-}).catch(error => {
-console.log("Error login")
-console.log(error)
-})
-this.dialog = false*/
+
 .then((response) =>{
-//console.log(response.data.token)
+this.msg=response.data.msg
 //store.commit("loginUser",response.data.token);
 //localStorage.setItem("token", response.data.token)
-// this.$router.push({
-// name: "userprofile"
+ //this.$router.push({
+ //name: "userprofile"
 // });
 })
 //this.$store.dispatch('submit1', { username, password })
@@ -271,13 +266,6 @@ this.dialog = false*/
 ev.target.reset()
 }
 
-/* login() {
-username= this.users1.username 
-password = this.users1.password
-this.$store.dispatch('login', { username, password })
-.then(() => this.$router.push('/'))
-.catch(err => console.log(err))
-}*/
 }
 };
 </script>

@@ -1,18 +1,20 @@
 <template>
   <div>
     <navbar2></navbar2>
-    <div class="bg1">
+    <div class="bg5">
 
 <br>
       <div class="transbox1">
         <b-card no-body>
-          <b-tabs pills card vertical>
-
-            <b-tab title="MY ACCOUNT" active>
-
+          <b-tabs pills card vertical >
+              
+            <b-tab title="MY ACCOUNT" >
+                <template slot="title">
+                        <img src="../assets/home.png" alt="Person" style="width:60px;height:60px;" >
+                        
+                                    </template>
               <b-card-text>
 
-                <navbar1></navbar1>
 
                 <myaccount></myaccount>
 
@@ -23,6 +25,10 @@
               </b-card-text>
             </b-tab>
             <b-tab title="MY VEHICLE">
+                <template slot="title">
+                   
+                        <img src="../assets/veh.png" alt="Person" style="width:60px;height:60px;">
+                                    </template>
               <b-card-text>
                 <br>
                 <router-link to="/addcar">
@@ -33,6 +39,11 @@
               </b-card-text>
             </b-tab>
             <b-tab title="BUY & SELL">
+                <template slot="title">
+                    
+                        <img src="../assets/shop.png" alt="Person" style="width:60px;height:60px;">
+                      
+                                       </template>
               <b-card-text>
                 <b-row>
 
@@ -62,16 +73,28 @@
               </b-card-text>
             </b-tab>
             <b-tab title="ACCESSORIES">
+                <template slot="title">
+                        <img src="../assets/acces.png" alt="Person" style="width:60px;height:60px;">
+                      
+                                        </template>
               <b-card-text>
                 <access></access>
               </b-card-text>
             </b-tab>
             <b-tab title="FUEL STATIONS">
+                <template slot="title">
+                        <img src="../assets/fuels.png" alt="Person" style="width:60px;height:60px;">
+                        
+                                       </template>
               <b-card-text>
                 <fuel></fuel>
               </b-card-text>
             </b-tab>
             <b-tab title="HELP & SUPPORT">
+                <template slot="title">
+                        <img src="../assets/help.png" alt="Person" style="width:60px;height:60px;">
+                        
+                                    </template>
               <b-card-text>Help & Support</b-card-text>
             </b-tab>
 
@@ -187,9 +210,9 @@
     margin: 0;
   }
 
-  .bg1 {
+  .bg5 {
     /* The image used */
-    background-image: url("https://www.bannerbatterien.com/upload/filecache/Banner-Batterien-Solar-web_17f1199fab90a9f453b9ba4167c28e87.jpg");
+    background-image: url("https://colorlib.com/wp/wp-content/uploads/sites/2/dark-wordpress-themes.jpg");
 
     /* Full height */
     height: 100%;
@@ -208,4 +231,6 @@
     filter: alpha(opacity=60);
     /* For IE8 and earlier */
   }
+  
 </style>
+ 

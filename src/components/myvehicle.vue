@@ -6,8 +6,9 @@
         <div id="rcorners1"
           style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
           <br>
-          <h2>{{ listing.vehicleName}}</h2>
-          <img src="../assets/ab2.jpg" style="width: 100px;height:100px;">
+          <h2><b>{{ listing.vehicleName}}</b></h2>
+          
+          <img src="../assets/car.jpg" style="width: 200px;height:200px;">
         </div>
       </router-link>
 
