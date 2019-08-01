@@ -6,10 +6,6 @@
         <br><br><br>
         <h1 style="font-size: 70px;"><b> Business Your Way</b></h1>
         <p>Keep in customers happy We'll make grown easy</p>
-        <p>Keep in customers happy We'll make grown easy</p>
-        <p>Keep in customers happy We'll make grown easy</p>
-
-
       </div> <br><br>
       <div class="row" style="width:100%;">
         <div class="col"></div>
