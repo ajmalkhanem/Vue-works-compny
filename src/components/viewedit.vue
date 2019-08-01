@@ -1,5 +1,5 @@
  <template>
-    <div> <navbar></navbar>
+    <div> 
     <b-jumbotron style="background-color:white;">
         <div>
   <b-alert show dismissible>

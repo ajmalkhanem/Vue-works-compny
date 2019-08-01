@@ -1,5 +1,6 @@
 <template>
   <div id="App">
+    <sellernavbar></sellernavbar>
     <router-view/>
 <footer1></footer1>
   </div>
@@ -7,14 +8,14 @@
 
 <script>
  import footer1 from '../src/components/footer1'
- import navbar from '../src/components/navbar'
+ import sellernavbar from '../src/components/sellernavbar'
 
 export default {
   name: 'App',
   
   components: {
     footer1,
-    navbar
+    sellernavbar
   }
 }
 </script>
