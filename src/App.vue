@@ -11,6 +11,7 @@
 
 export default {
   name: 'App',
+  
   components: {
     footer1,
     navbar
@@ -25,5 +26,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+body{
+  overflow-x:hidden!important;
 }
 </style>

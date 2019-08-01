@@ -17,25 +17,38 @@
       
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="http://cloudgm.com/wp-content/uploads/2018/12/Banner_4-1.jpg">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
+      
 
       <!-- Slides with image only -->
-      <b-carousel-slide img-src="http://cloudgm.com/wp-content/uploads/2018/12/Banners_6-1.jpg"></b-carousel-slide>
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide>
         <img
           slot="img"
-          class="d-block img-fluid w-100"
-          width="1024"
-          height="480"
-          src="http://cloudgm.com/wp-content/uploads/2018/12/Banners_3.jpg"
-          alt="image slot"
+          width="100%"
+          height="650"
+          src="https://eventnook.s3.amazonaws.com/u/1/coverimage_1807057462030_sabre-banner.png"alt="image slot"
         >
       </b-carousel-slide>
+      <b-carousel-slide>
+          <img
+            slot="img"
+            width="100%"
+            height="650"
+            src="https://www.ciegate.com/wp-content/uploads/ipad-meeting.jpg"
+            alt="image slot"
+          >
+        </b-carousel-slide>
+        <b-carousel-slide>
+          <img
+            slot="img"
+            width="100%"
+            height="650"
+            src="https://d2fni493fitngs.cloudfront.net/blog/wp-content/uploads/2019/01/22172629/Planoly-Blog-Post-Reaching-Out-to-Influencers-Banner-2.jpg"
+            alt="image slot"
+          >
+        </b-carousel-slide>
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
       

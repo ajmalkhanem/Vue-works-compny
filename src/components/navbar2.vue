@@ -1,9 +1,9 @@
 <template>
     <div class="navv">
-        <b-navbar toggleable="lg" type="light" style="background-color: #ebeef2;">
+        <b-navbar toggleable="lg" type="light" style="background-color: white;">
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
             &nbsp;&nbsp;&nbsp;<a href="">
-                <b-img :src="require('../assets/logo1.png')"></b-img>
+                <b-img :src="require('../assets/logo.png')" style="width:200px;height:160px;"></b-img>
             </a>
             <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
             <b-collapse is-nav id="nav_collapse">
@@ -18,7 +18,7 @@
                             {{data}}
 
                             <div class="dropdown-content">
-                                    <a >logout</a>
+                                    <a >settings</a>
 
                                 <a v-on:click="handlelogout()">logout</a>
                             </div>

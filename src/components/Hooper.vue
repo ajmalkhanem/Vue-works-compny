@@ -4,21 +4,94 @@
   <hooper :infiniteScroll="true" :itemsToShow="4"   :progress="true" :autoPlay="true" :playSpeed="8000">
     
       <slide>
-        <div class="col-md-12">
-
+        
           <div class="container1">
             <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
             <div class="middle">
               <div class="text"><b>Education</b></div>
             </div>
           </div>                <br><br>
-            <div class="text-center my-3">
-              </div>
-                  
-    </div>    
+           
         </slide> 
+        <slide>
+           
+    
+              <div class="container1">
+                <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                <div class="middle">
+                  <div class="text"><b>Education</b></div>
+                </div>
+              </div>                <br><br>
+                 
+            </slide> 
+            <slide>
+                
+        
+                  <div class="container1">
+                    <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                    <div class="middle">
+                      <div class="text"><b>Education</b></div>
+                    </div>
+                  </div>                <br><br>
+                    
+                </slide> 
+                <slide>
+                    
+            
+                      <div class="container1">
+                        <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                        <div class="middle">
+                          <div class="text"><b>Education</b></div>
+                        </div>
+                      </div>                <br><br>
+                        
+                    </slide> 
+                    <slide>
+                        
+                
+                          <div class="container1">
+                            <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                            <div class="middle">
+                              <div class="text"><b>Education</b></div>
+                            </div>
+                          </div>                <br><br>
+                           
+                        </slide> 
+                        <slide>
+                            
+                    
+                              <div class="container1">
+                                <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                                <div class="middle">
+                                  <div class="text"><b>Education</b></div>
+                                </div>
+                              </div>                <br><br>
+                                
+                            </slide> 
+                            <slide>
+                                
+                        
+                                  <div class="container1">
+                                    <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                                    <div class="middle">
+                                      <div class="text"><b>Education</b></div>
+                                    </div>
+                                  </div>                <br><br>
+                                    
+                                </slide> 
+                                <slide>
+                            
+                                      <div class="container1">
+                                        <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                                        <div class="middle">
+                                          <div class="text"><b>Education</b></div>
+                                        </div>
+                                      </div>                <br><br>
+                                        
+                                              
+                              
+                                    </slide> 
     <slide>
-      <div class="col-md-12">
 
         <div class="container1">
           <img src="../assets/car.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
@@ -26,14 +99,10 @@
             <div class="text"><b>Automobiles</b></div>
           </div>
         </div>                <br><br>
-          <div class="text-center my-3">
-            </div>
-                
-  </div>  
+          
     </slide> 
    
       <slide>
-        <div class="col-md-12">
 
               <div class="container1">
                 <img src="../assets/rest.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
@@ -41,25 +110,17 @@
                   <div class="text"><b>Restaurant</b></div>
                 </div>
               </div>                <br><br>
-                <div class="text-center my-3">
-                  </div>
+                
                       
-        </div>  
+       
       </slide> 
 
       <slide>
-        <div class="col-md-12">
-
-          <div class="container1">
-            <img src="../assets/bus.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
-            <div class="middle">
-              <div class="text"><b>Business</b></div>
-            </div>
-          </div>                <br><br>
-            <div class="text-center my-3">
-              </div>
+          <div class="style_prevu_kit" style="background-color: lawngreen;">
+                         <br><br>
+           
                   
-    </div>  
+    </div>
       </slide> 
 
     
@@ -230,7 +291,7 @@ h1, h2 {
 }
 
 .container1:hover .image {
-  opacity: 0.3;
+  opacity: .9;
 }
 
 .container1:hover .middle {
@@ -244,4 +305,38 @@ h1, h2 {
   text-align: left;
 }
 </style>
+<style>
+.fond{position:absolute;padding-top:85px;top:0;left:0; right:0;bottom:0;
+  background-color:#00506b;}
+ 
+ .style_prevu_kit
+ {
+     display:inline-block;
+     border:0;
+     width:196px;
+     height:210px;
+     position: relative;
+     -webkit-transition: all 200ms ease-in;
+     -webkit-transform: scale(1); 
+     -ms-transition: all 200ms ease-in;
+     -ms-transform: scale(1); 
+     -moz-transition: all 200ms ease-in;
+     -moz-transform: scale(1);
+     transition: all 200ms ease-in;
+     transform: scale(1);   
+ 
+ }
+ .style_prevu_kit:hover
+ {
+     box-shadow: 0px 0px 150px #000000;
+     z-index: 2;
+     -webkit-transition: all 200ms ease-in;
+     -webkit-transform: scale(1.5);
+     -ms-transition: all 200ms ease-in;
+     -ms-transform: scale(1.5);   
+     -moz-transition: all 200ms ease-in;
+     -moz-transform: scale(1.5);
+     transition: all 200ms ease-in;
+     transform: scale(1.5);
+ }</style>
 

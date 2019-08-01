@@ -1,7 +1,7 @@
 <template>
   <div>
+               
     <navbar2></navbar2>
-    <b-jumbotron>
       <b-row>
 
         <b-col><br>
@@ -35,8 +35,9 @@
                             <div class="form-group">
                               <h2 for="email" style="color: black;">Details</h2><br>
                               <h6><b>{{list.plateNo}}</b></h6>
-                              <h6><b>{{list.tcNo}}</b></h6>
                               <h6><b>{{list.registerDate}}</b></h6>
+                              <h6><b>{{list.tcNo}}</b></h6>
+
                               <h6><b>{{list.polexpiryDate}}</b></h6>
                               <h6><b>{{list.inexpiryDate}}</b></h6>
 
@@ -159,9 +160,8 @@
         </b-col>
 
       </b-row>
-      <br>
-      <br>
-    </b-jumbotron>
+      
+    
 
 
 
@@ -267,3 +267,34 @@
     border-radius: 50%;
   }
 </style>
+<style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+  
+    .bg5 {
+      /* The image used */
+      background-image: url("https://i.pinimg.com/originals/46/1d/25/461d254f8563f8945ce3a385f289df17.jpg");
+  
+      /* Full height */
+      height: 100%;
+  
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+    div.transbox1 {
+      margin: 30px;
+      background-color: #ffffff;
+      border: 1px solid white;
+      opacity: 2;
+      filter: alpha(opacity=60);
+      /* For IE8 and earlier */
+    }
+    
+  </style>
+   

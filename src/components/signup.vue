@@ -76,7 +76,7 @@
                 <b-row>
                   <b-col></b-col>
                   <b-col>
-                    <input type="text" pattern="[7-9]{1}[0-9]{9}"
+                    <input type="text" pattern="[0-9]{1}[0-9]{9}"
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;" v-model="users1.ph"
                       required class="form-control" id="rcorners1" aria-describedby="emailHelp" placeholder="Mobile">
                   </b-col>

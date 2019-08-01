@@ -1,14 +1,14 @@
 <template>
     <div class="navv">
-    <b-navbar  toggleable="lg" type="light"  style="background-color: #ebeef2;">
+    <b-navbar  toggleable="lg" type="light"  style="background-color: white;">
        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    &nbsp;&nbsp;&nbsp;<a href=""> <b-img :src="require('../assets/logo1.png')" ></b-img></a>
+    &nbsp;&nbsp;&nbsp;<a href=""> <b-img :src="require('../assets/logo.png')" style="width:200px;height:130px;" ></b-img></a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div class="topnav">
                        <div class="search-container">
                             <form action="">
-                              <input type="text" placeholder=" Search.." name="search">
-                              <button type="submit" style="color: white;">Search</button>
-                            </form>
+                              <input type="text" style="background-color:#f2ebeb;width:350px;height:50px;" placeholder=" Search.." name="search">
+                              <button  style="background-color:#f2ebeb;width:60px;height:50px;" type="submit" s><i class="fa fa-search"></i></button>                      
+       </form>
                           </div>
                         </div>          <b-collapse is-nav id="nav_collapse">
           
@@ -16,6 +16,12 @@
           <b-nav-item class="navt"><router-link to="/sellerindex"><strong><div style="color:	#111113 !important;">Become seller</div></strong></router-link></b-nav-item>
           <b-nav-item class="navt"><router-link to="/signup"><strong><div style="color:	#111113 !important;">Signup</div></strong></router-link></b-nav-item>
           <b-nav-item class="navt"><router-link to="/login"><strong><div style="color:	#111113 !important;">Signin</div></strong></router-link></b-nav-item>
+          <b-nav-item class="navt"><router-link to=""><strong><div style="color:	#111113 !important;">
+            <img src="../assets/ind.png" style="width:25px;height:20px;">
+            </div></strong></router-link></b-nav-item>
+          <b-nav-item class="navt"><router-link to=""><strong><div style="color:	#111113 !important;">
+            <img src="../assets/uae.png" style="width:25px;height:25px;">
+            </div></strong></router-link></b-nav-item>
 
          </b-collapse>
        <b-navbar-brand>

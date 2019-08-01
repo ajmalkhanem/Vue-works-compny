@@ -14,8 +14,8 @@
       </div>
 
 
-      <div class="row" style="width:100%;">
-        <div class="col">ccc</div>
+      <div class="row"style="width:100%;">
+        <div class="col"></div>
         <div class="col">
           <div id="rcorners1" class="transbox"
             style="width:500px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:660px;float:left;margin-top:20px;margin-left:20px;">
@@ -94,7 +94,7 @@
 
               </b-col>
             </b-row>
-            <br>
+            
             <b-row>
               <b-col>
                 <div class="chip">
@@ -140,7 +140,9 @@
         new1: '',
         status1: '',
         usertype1: '',
-        msg: ''
+        msg: '',
+        log:store.state.isLoggedIn,
+
 
       };
     },
@@ -268,7 +270,8 @@
     background-image: url("http://www.scalsys.com/wallpapers/wallpaper-nyc/wallpaper-nyc_13713.jpg");
 
     /* Full height */
-    height: 100%;
+    height: auto;
+    width: 100%;
 
     /* Center and scale the image nicely */
     background-position: center;

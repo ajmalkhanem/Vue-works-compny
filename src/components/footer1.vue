@@ -2,10 +2,17 @@
     <div>
             <b-jumbotron>
             
-                        <h5><b>Cloud Online global market</b></h5>
-                        <p>UAE,345BB</p>
-                    <br>
+                        
           <b-row>
+              <b-col>
+                    <h5><b>Cloud Online global market</b></h5>
+                    <p>Cloud Global Market ,</p>
+                    <p>United Arab Emirates</p>
+                   <p>Contact No : +971501615167 </p>
+                <p>Land line : 072535264</p>
+                <p> admin@cloudgm.com</p>
+                <br>
+              </b-col>
               
             <b-col>
                 <h5><b>Categories</b></h5>

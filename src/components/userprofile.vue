@@ -1,21 +1,19 @@
 <template>
   <div>
-    <navbar2></navbar2>
-    <div class="bg5">
 
-<br>
-      <div class="transbox1">
+          <navbar2></navbar2>
+
         <b-card no-body>
           <b-tabs pills card vertical >
               
-            <b-tab title="MY ACCOUNT" >
+            <b-tab title="MY ACCOUNT" style="background-color:ivory;" >
                 <template slot="title">
-                        <img src="../assets/home.png" alt="Person" style="width:60px;height:60px;" >
-                        
+                        <img src="../assets/homeb.png" alt="Person" style="width:60px;height:60px;" >
+                        <label>Home</label>
                                     </template>
               <b-card-text>
 
-
+               
                 <myaccount></myaccount>
 
 
@@ -24,11 +22,12 @@
 
               </b-card-text>
             </b-tab>
-            <b-tab title="MY VEHICLE">
+            <b-tab>
                 <template slot="title">
                    
-                        <img src="../assets/veh.png" alt="Person" style="width:60px;height:60px;">
-                                    </template>
+                        <img src="../assets/veh.png" alt="Person" style="width:50px;height:50px;">
+                        <label> My Vehicle</label>
+                      </template>
               <b-card-text>
                 <br>
                 <router-link to="/addcar">
@@ -41,8 +40,9 @@
             <b-tab title="BUY & SELL">
                 <template slot="title">
                     
-                        <img src="../assets/shop.png" alt="Person" style="width:60px;height:60px;">
-                      
+                        <img src="../assets/mark.png" alt="Person" style="width:40px;height:40px;">
+                        <label>Buy & sell</label>
+
                                        </template>
               <b-card-text>
                 <b-row>
@@ -74,8 +74,9 @@
             </b-tab>
             <b-tab title="ACCESSORIES">
                 <template slot="title">
-                        <img src="../assets/acces.png" alt="Person" style="width:60px;height:60px;">
-                      
+                        <img src="../assets/a.png" alt="Person" style="width:40px;height:40px;">
+                        <label>Accessories</label>
+
                                         </template>
               <b-card-text>
                 <access></access>
@@ -83,8 +84,9 @@
             </b-tab>
             <b-tab title="FUEL STATIONS">
                 <template slot="title">
-                        <img src="../assets/fuels.png" alt="Person" style="width:60px;height:60px;">
-                        
+                        <img src="../assets/fu.png" alt="Person" style="width:40px;height:40px;">
+                        <label>fuel stations</label>
+
                                        </template>
               <b-card-text>
                 <fuel></fuel>
@@ -92,8 +94,9 @@
             </b-tab>
             <b-tab title="HELP & SUPPORT">
                 <template slot="title">
-                        <img src="../assets/help.png" alt="Person" style="width:60px;height:60px;">
-                        
+                        <img src="../assets/help.png" alt="Person" style="width:50px;height:50px;">
+                        <label>Help desk</label>
+
                                     </template>
               <b-card-text>Help & Support</b-card-text>
             </b-tab>
@@ -102,8 +105,7 @@
 
           </b-tabs>
         </b-card>
-      </div>
-    </div>
+      
   </div>
 </template>
 
@@ -144,6 +146,7 @@
     },
   }
 </script>
+
 <style>
   #rcorners1 {
     border-radius: 25px;

@@ -1,5 +1,9 @@
  <template>
-    <div> <navbar2></navbar2><br>
+    <div> <div class="bg5">
+      <br>
+            <div class="transbox1">
+               
+    <navbar2></navbar2>
     
 <b-jumbotron style="background-color:white;">   
     <div>
@@ -110,7 +114,7 @@ Add your vehicle details and upload documents  </b-alert>
           </b-col>
           
         </b-row>
-        </b-jumbotron>
+        </b-jumbotron></div></div>
         <br>
         <br><br>
         
@@ -235,5 +239,35 @@ text-align: center;
 }
 
 </style>
+<style>
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+  }
 
+  .bg5 {
+    /* The image used */
+    background-image: url("https://colorlib.com/wp/wp-content/uploads/sites/2/dark-wordpress-themes.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  div.transbox1 {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid white;
+    opacity: 2;
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
+  }
+  
+</style>
+ 
 

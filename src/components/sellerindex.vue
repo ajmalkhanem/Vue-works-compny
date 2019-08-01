@@ -1,12 +1,11 @@
 <template>
     <div>
       <sellernavbar></sellernavbar>
-                                        <b-jumbotron style="background-color:white;">
               <div class="container1">
-                                          <img src="../assets/banner1.jpg" alt="Nature" style="width:1630px;height:500px;">
+                                          <img src="../assets/baner1.jpg" alt="Nature" style="width:200%;height:auto;">
                                           <div class="text-block">
                                             <br>
-                                            <h1 style="font-size: 100px;"><b> Business Your Way</b></h1>
+                                            <h1 style="font-size: 300%;"><b> Business Your Way</b></h1>
                                             <p>Keep in customers happy We'll make grown easy</p>
                                          <b-button variant="primary">Become Seller</b-button>
  
@@ -15,7 +14,7 @@
                                         </div>
                 <br>
         <label style="font-size: 40px;"><b>Join Our Business Community</b></label><br><br>
-        <Hooper1></Hooper1><br><br>
+        <hooper2></hooper2><br><br>
         <b-jumbotron>
             
                 <h2><b>How It Works</b></h2>
@@ -48,18 +47,9 @@
  
                                         <br>
                                         <div class="container1">
-                                          <img src="../assets/banner1.jpg" alt="Nature" style="width:1630px;">
-                                          <div class="text-block">
-                                            <br>
-                                            <h3><b>Become seller</b></h3>
-                                            <h1><b>Grew your Business</b></h1>
-                                            <h1><b>Without Worries</b></h1>
-                                            <b-button variant="outline-primary">Become Seller</b-button>
-
-
-                                          </div>
+                                          <img src="../assets/banner1.jpg" alt="Nature" style="width:200%;height:;">
+                                          
                                         </div>
-                        </b-jumbotron>
                               
                       
     </div>
@@ -67,7 +57,7 @@
 <script>
        import carousel from '@/components/carousel'
        import Hooper from '@/components/Hooper'
-       import Hooper1 from '@/components/Hooper1'
+       import hooper2 from '@/components/hooper2'
 
        import MenuIcon from "vue-material-design-icons/Menu.vue"
        import navbar from '@/components/navbar'
@@ -80,7 +70,7 @@
            components: {
           carousel,
           Hooper,
-          Hooper1,
+          hooper2,
           MenuIcon,
           navbar,
           footer1,

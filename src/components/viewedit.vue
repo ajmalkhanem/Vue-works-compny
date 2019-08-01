@@ -78,17 +78,15 @@ Edit your profile with updated data  </b-alert>
   
     </div></template>
     <script>
-    import navbar from '@/components/navbar'
-    import navbar1 from '@/components/navbar1'
-
+    
     import documentreg from '@/components/documentreg'
       
  export default {
     components: {
    
-   navbar,
+  
    documentreg,
-   navbar1
+  
    
    
  },

@@ -36,6 +36,8 @@ import access from '@/components/access'
 import fuel from '@/components/fuel'
 import myvehicle from '@/components/myvehicle'
 import history from '@/components/history'
+import hooper2 from '@/components/hooper2'
+
 import store from '../store'
 
 
@@ -207,6 +209,13 @@ let router=new Router({
       path: '/editcar',
       name: 'editcar',
       component: editcar,
+      meta: { requiresAuth: true }
+
+    },
+    {
+      path: '/hooper2',
+      name: 'hooper2',
+      component: hooper2,
       meta: { requiresAuth: true }
 
     },
