@@ -1,5 +1,4 @@
 <template><div>
-    <navbar></navbar>
         <br><br>
     <div class="container">
         <div class="row">

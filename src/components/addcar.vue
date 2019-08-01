@@ -3,7 +3,6 @@
       <br>
             <div class="transbox1">
                
-    <navbar2></navbar2>
     
 <b-jumbotron style="background-color:white;">   
     <div>

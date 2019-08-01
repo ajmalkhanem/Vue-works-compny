@@ -1,5 +1,5 @@
  <template>
-    <div> <navbar></navbar><br>
+    <div> <br>
      <b-container style="background-color: white;"><b-row>
          
       <b-col>

@@ -29,7 +29,7 @@
             <div class="col-md-12">
 
               <div class="container1">
-                <img src="../assets/rest.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+                <img src="../assets/rest.jpg" alt="Avatar" class=er"image" style="width:400px;height: 300px;">
                 <div class="middle">
                   <div class="text"><b>Restaurant</b></div>
                 </div>
