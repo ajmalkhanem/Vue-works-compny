@@ -1,16 +1,17 @@
 <template>
     <div>
       <sellernavbar></sellernavbar>
-              <div class="container1">
-                                          <img src="../assets/baner1.jpg" alt="Nature" style="width:200%;height:auto;">
-                                          <div class="text-block">
-                                            <br>
-                                            <h1 style="font-size: 300%;"><b> Business Your Way</b></h1>
-                                            <p>Keep in customers happy We'll make grown easy</p>
-                                         <b-button variant="primary">Become Seller</b-button>
- 
-
-                                          </div>
+              <div class="container6">
+                                          <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
+                                          <div class="top-left">
+                                            <label style="color: white;font-size: 80px;">
+                                              <b>Business Your Way</b></label><br>
+                                              <label style="color: white;font-size: 50px;">
+grow your business </label>
+                                            </div>
+                                          <!--<div class="top-right">Top Right</div>
+                                          <div class="bottom-right">Bottom Right</div>
+                                          <div class="centered">Centered</div>-->
                                         </div>
                 <br>
         <label style="font-size: 40px;"><b>Join Our Business Community</b></label><br><br>
@@ -46,9 +47,17 @@
                 
  
                                         <br>
-                                        <div class="container1">
-                                          <img src="../assets/banner1.jpg" alt="Nature" style="width:200%;height:;">
-                                          
+                                       <div class="container6">
+                                          <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
+                                          <div class="top-left">
+                                            <label style="color: white;font-size: 80px;">
+                                              <b>Business Your Way</b></label><br>
+                                              <label style="color: white;font-size: 50px;">
+grow your business </label>
+                                            </div>
+                                          <!--<div class="top-right">Top Right</div>
+                                          <div class="bottom-right">Bottom Right</div>
+                                          <div class="centered">Centered</div>-->
                                         </div>
                               
                       
@@ -82,7 +91,7 @@
       </script>
 
 <style>
-  .container1 {
+  .container2 {
     position: relative;
     font-family: Arial;
   }
@@ -168,3 +177,41 @@
         }
       }
       </style>
+      <style>
+          .container6 {
+            position: relative;
+            text-align: center;
+            color: white;
+          }
+          
+          .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+          }
+          
+          .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+          }
+          
+          .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+          }
+          
+          .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+          }
+          
+          .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          </style>
