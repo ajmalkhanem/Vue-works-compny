@@ -1,7 +1,6 @@
 <template>
   <div>
                
-    <navbar2></navbar2>
       <b-row>
 
         <b-col><br>

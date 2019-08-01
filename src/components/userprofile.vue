@@ -1,7 +1,6 @@
 <template>
   <div>
 
-          <navbar2></navbar2>
 
         <b-card no-body>
           <b-tabs pills card vertical >

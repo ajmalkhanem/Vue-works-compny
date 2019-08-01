@@ -1,13 +1,15 @@
 <template>
     <div>
-      <sellernavbar></sellernavbar>
               <div class="container6">
                                           <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
                                           <div class="top-left">
-                                            <label style="color: white;font-size: 80px;">
-                                              <b>Business Your Way</b></label><br>
-                                              <label style="color: white;font-size: 50px;">
-grow your business </label>
+                                           <b> <label style="color: white;font-size: 80px;">
+                                              Business Your Way</label><br>
+                                              <label style="color: white;font-size: 30px;">
+                                                grow your business 
+                                                Without worries </label></b><br>
+                                                  <b-button variant="primary">Become Seller</b-button>
+
                                             </div>
                                           <!--<div class="top-right">Top Right</div>
                                           <div class="bottom-right">Bottom Right</div>

@@ -1,6 +1,5 @@
 <template>
     <div>
-      <sellernavbar></sellernavbar>
       <carousel></carousel>
                  <br><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="font-size: 40px;">Popular Services We Provides</label>
@@ -22,20 +21,20 @@
                                       <b-img slot="aside" blank blank-color="#abc" width="64" alt="placeholder"></b-img>
                                 
                                       <h1 class="mt-0 mb-1">About Us</h1><br>
-                                      <b> <p class="mb-0" style="font-family:Arial, Helvetica, sans-serif;color:teal;">
+                                       <p class="mb-0" style="font-family:monospace;color:teal;font-size: 20px;">
                                               CLOUD GM is an e commerce single platform, our objective is to provide 
                                               buyers and sellers a best market to trade. We provide the best MARKET PLACE to
                                                showcase the products and services. We provide the best customer service to make 
                                                the operations the best in the market.</p>
-                                               <p style="font-family:Arial, Helvetica, sans-serif;color:teal;">We provide the best technology platform to receive orders, customer 
-                                                   interactions, feedbacks, ratings and proper analysis.</p></b>
+                                               <p style="font-family:monospace;color:teal;font-size: 20px;">We provide the best technology platform to receive orders, customer 
+                                                   interactions, feedbacks, ratings and proper analysis.</p>
                                     </b-media>
                                 
                                     <b-media tag="li" class="my-4" >
                                       <b-img slot="aside" blank blank-color="#cba" width="64" alt="placeholder"></b-img>
                                 
                                       <b><h5 class="mt-0 mb-1" style="color: rgb(4, 4, 20);">Our Vision</h5></b>
-                                      <p class="mb-0" style="font-family:Arial, Helvetica, sans-serif;color:teal;">
+                                      <p class="mb-0" style="font-family:monospace;color:teal;font-size: 20px;">
                                               Our Vision is be the biggest customer friendly e-commerce platform in the world</p>
                                     </b-media>
                                 
@@ -43,7 +42,7 @@
                                       <b-img slot="aside" blank blank-color="#bac" width="64" alt="placeholder"></b-img>
                                 
                                      <b> <h5 class="mt-0 mb-1" style="color:rgb(6, 6, 32);">Our Mission</h5></b>
-                                      <p class="mb-0" style="font-size: 16px;font-family:Arial, Helvetica, sans-serif;color: teal;">
+                                      <p class="mb-0" style="font-family:monospace;color:teal;font-size: 20px;">
                                               Our Mission is to improve the life style of people and bring the products and services
                                                under one platform with latest technology and secured transactions.</p>
                                     </b-media>
@@ -59,10 +58,13 @@
                                         <div class="container6">
                                           <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
                                           <div class="top-left">
-                                            <label style="color: white;font-size: 80px;">
-                                              <b>Business Your Way</b></label><br>
-                                              <label style="color: white;font-size: 50px;">
-grow your business </label>
+                                            <b><label style="color: white;font-size: 60px;font-family:Georgia;">
+                                              Fullfill Your needs</label><br>
+                                              <label style="color: white;font-size: 30px;font-family:Georgia;">
+With better option </label></b>
+<br>
+<b-button variant="warning">Ordey Now</b-button>
+
                                             </div>
                                           <!--<div class="top-right">Top Right</div>
                                           <div class="bottom-right">Bottom Right</div>

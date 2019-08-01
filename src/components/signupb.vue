@@ -1,7 +1,6 @@
 <template>
   <div>
 
-    <navbar></navbar>
     <div class="bg1">
       <div class="text-block">
         <br><br><br>
