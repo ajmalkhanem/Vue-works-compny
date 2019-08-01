@@ -69,7 +69,7 @@
             </div>
           </div>  
           <div class="container1">
-            <img src="../assets/o9.jpg" alt="Avatar" class="image"  style="width:100%;height: 275px;">
+            <img src="../assets/o9.jpg" alt="Avatar" class="image"  style="width:100%;height: 300px;">
             <div class="middle">
               <div class="text"><b>Market Place</b>
                                             <p style="font-size:12px;">
@@ -146,7 +146,7 @@
             </div>
           </div> 
           <div class="container1">
-            <img src="../assets/o3.jpg" alt="Avatar" class="image"  style="width:100%;height:275px;">
+            <img src="../assets/o3.jpg" alt="Avatar" class="image"  style="width:100%;height:300px;">
             <div class="middle">
               <div class="text"><b>Automobiles</b>
               <p style="font-size:12px;">

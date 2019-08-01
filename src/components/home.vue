@@ -2,9 +2,8 @@
     <div>
       <sellernavbar></sellernavbar>
       <carousel></carousel>
-                 <br>
+                 <br><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="font-size: 40px;">Popular Services We Provides</label>
-        <b-jumbotron style="background-color: white;">
           <buy></buy>
         <br><br>
         
@@ -14,7 +13,7 @@
       <br>
                 <b-row>
                     <b-col>
-                      <img src="../assets/h1.png"style="width:100%;height:auto;" >
+                      <img src="../assets/221.jpg"style="width:100%;height:auto;" >
                     </b-col>
                     <b-col>
                           <div>
@@ -57,19 +56,19 @@
 </div>
                 
                                         <br>
-                                        <div class="container1">
-                                            <img src="../assets/banner1.jpg" alt="Nature" style="width:200%;height:500px;">
-                                            <div class="text-block">
-                                              <br>
-                                              <h3><b>Become Contomer</b></h3>
-                                              <h1><b>Use your needs</b></h1>
-                                              <h1><b>Without Worries</b></h1>
-                                              <b-button variant="primary">Become Customer</b-button>
-  
-  
+                                        <div class="container6">
+                                          <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
+                                          <div class="top-left">
+                                            <label style="color: white;font-size: 80px;">
+                                              <b>Business Your Way</b></label><br>
+                                              <label style="color: white;font-size: 50px;">
+grow your business </label>
                                             </div>
-                                          </div>
-                        </b-jumbotron>
+                                          <!--<div class="top-right">Top Right</div>
+                                          <div class="bottom-right">Bottom Right</div>
+                                          <div class="centered">Centered</div>-->
+                                        </div>
+                       
                               
                       
     </div>
@@ -192,7 +191,7 @@
         
         .hero-image {
           background-image: 
-           url("http://cloudgm.com/wp-content/uploads/2018/12/Banners_3.jpg");
+           url("");
           height: 50%;
           background-position: center;
           background-repeat: no-repeat;
@@ -209,7 +208,7 @@
         }
         .hero-image2 {
           background-image: 
-           url("https://i.pinimg.com/originals/46/1d/25/461d254f8563f8945ce3a385f289df17.jpg");
+           url("");
          height: 50%;
          background-position: center;
          background-repeat: no-repeat;
@@ -235,7 +234,7 @@
   div.transbox4 {
     margin: 30px;
     background-color: #ffffff;
-    opacity:.5;
+    opacity:1;
     filter: alpha(opacity=60);
     /* For IE8 and earlier */
   }
@@ -246,3 +245,41 @@
           color: white;
         }
         </style>
+        <style>
+          .container6 {
+            position: relative;
+            text-align: center;
+            color: white;
+          }
+          
+          .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+          }
+          
+          .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+          }
+          
+          .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+          }
+          
+          .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+          }
+          
+          .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          </style>

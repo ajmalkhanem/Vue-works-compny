@@ -26,26 +26,19 @@
       <b-carousel-slide>
         <img
           slot="img"
-          width="100%"
-          height="650"
-          src="https://eventnook.s3.amazonaws.com/u/1/coverimage_1807057462030_sabre-banner.png"alt="image slot"
+          class="d-block img-fluid w-100"
+          width="1024"
+          height="400"
+          src="https://www.travelerchoice.com/wp-content/uploads/2016/05/TC08057-Lifestyle-Photo_home-page-banner.jpg"alt="image slot"
         >
       </b-carousel-slide>
       <b-carousel-slide>
           <img
             slot="img"
-            width="100%"
-            height="650"
-            src="https://www.ciegate.com/wp-content/uploads/ipad-meeting.jpg"
-            alt="image slot"
-          >
-        </b-carousel-slide>
-        <b-carousel-slide>
-          <img
-            slot="img"
-            width="100%"
-            height="650"
-            src="https://d2fni493fitngs.cloudfront.net/blog/wp-content/uploads/2019/01/22172629/Planoly-Blog-Post-Reaching-Out-to-Influencers-Banner-2.jpg"
+            class="d-block img-fluid w-100"
+            width="1024"
+            height="400"
+            src="https://www.travelerchoice.com/wp-content/uploads/2016/05/TC08057-Lifestyle-Photo_home-page-banner.jpg"
             alt="image slot"
           >
         </b-carousel-slide>
