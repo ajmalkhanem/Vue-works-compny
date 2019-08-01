@@ -37,6 +37,8 @@ import fuel from '@/components/fuel'
 import myvehicle from '@/components/myvehicle'
 import history from '@/components/history'
 import hooper2 from '@/components/hooper2'
+import slider from '@/components/slider'
+import hoop from '@/components/hoop'
 
 import store from '../store'
 
@@ -279,7 +281,19 @@ let router=new Router({
       path: '/history',
       name: 'history',
       component: history
+    },
+    {
+      path: '/slider',
+      name: 'slider',
+      component: slider
+    },
+    {
+      path: '/hoop',
+      name: 'hoop',
+      component: hoop
     }
+
+    
   ]
 })
 router.beforeEach((to, from, next) => {
