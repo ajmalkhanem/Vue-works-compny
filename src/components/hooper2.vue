@@ -90,7 +90,7 @@
         <div class="column">
          
           <div class="container1">
-            <img src="../assets/o2.jpg" alt="Avatar" class="image"  style="width:100%;height:260px;">
+            <img src="../assets/o2.jpg" alt="Avatar" class="image"  style="width:100%;height:280px;">
             <div class="middle">
               <div class="text"><b>Restaurants</b>
                                     <p style="font-size:12px;">
@@ -102,15 +102,14 @@
             </div>
           </div> 
           <div class="container1">
-              <b-card  class="image" style="width:100%;height:300px;">
-              <div class="middle">
-                <div class="text"><b>Start your Business</b>
+              <b-card  class="image" style="width:100%;height:290px;"><br>
+                <b>Start your Business</b>
                 <p style="font-size:12px;">
                     “Plan Your Good Business”
                 </p>  <b-button variant="light">Become Seller</b-button>
   
-                </div>
-              </div></b-card>
+                
+              </b-card>
             </div>           
         </div>
       </div>
