@@ -27,7 +27,6 @@
                 </b-nav-item>
 
             </b-collapse>
-            </b-navbar-nav toggleable="lg">
             <b-navbar-brand>
                 <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
             </b-navbar-brand>
