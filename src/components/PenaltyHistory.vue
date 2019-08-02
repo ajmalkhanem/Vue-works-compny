@@ -39,7 +39,7 @@
               </tr>
               <tr>
 
-                <td style="color:cornflowerblue;background-color: cornflowerblue;">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link to="PenaltyHistory" style="text-decoration: none!important;">Penalty History</router-link>
                 </td>
 
@@ -79,7 +79,7 @@
           </table>
         </div>
         <div class="col-md-8">
-          <h4>Penalty History</h4>
+          <h5>PENALTY HISTORY</h5>
         </div>
       </div>
     </div>

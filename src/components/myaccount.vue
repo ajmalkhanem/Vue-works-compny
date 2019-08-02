@@ -1,7 +1,7 @@
 <template>
   <div><div id="rcorners1" class="transbox"
     style="width:100%;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:auto;float:left;margin-top:20px;margin-left:20px;">
-   
+   {{msg}}
     <b-row>
       <b-col>
         <div>
@@ -32,32 +32,32 @@
     <div><div id="rcorners1" class="transbox"
       style="width:100%;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:auto;float:left;margin-top:20px;margin-left:20px;">
         <b-container style="background-color: white;">
-          <br> General<form>
-        <div class="form-group">
+          <br> General
+          <form @submit.prevent="submit1">        <div class="form-group">
           <label for="FirstName">First Name</label>
-          <input type="text" v-model="this.users1.firstname" class="form-control" style="height:auto;width:100%;" >
+          <input type="text" v-model="users1.firstname" class="form-control" style="height:auto;width:100%;" >
         </div>
         <div class="form-group">
             <label for="FirstName">Last Name</label>
-            <input type="text" v-model="this.users1.lastame" class="form-control" style="height:auto;width:100%;" >
+            <input type="text" v-model="users1.lastname" class="form-control" style="height:auto;width:100%;" >
           </div>
           <div class="form-group">
               <label for="FirstName">Username</label>
-              <input type="text" v-model="this.users1.username" class="form-control" style="height:auto;width:100%;" >
+              <input type="text" v-model="users1.username" class="form-control" style="height:auto;width:100%;" >
             </div>
             <div class="form-group">
                 <label for="FirstName">Nationality</label>
-                <input type="text" v-model="this.users1.nationality" class="form-control" style="height:auto;width:100%;" >
+                <input type="text" v-model="users1.nationality" class="form-control" style="height:auto;width:100%;" >
               </div>
             <div class="form-group">
                 <label for="FirstName">Email Id</label>
-                <input type="text" v-model="this.users1.email" class="form-control" style="height:auto;width:100%;" >
+                <input type="text" v-model="users1.email" class="form-control" style="height:auto;width:100%;" >
               </div>
               <div class="form-group">
-                  <input type="text" v-model="this.users1.ph" class="form-control" style="height:auto;width:100%;" >
+                  <input type="text" v-model="users1.ph" class="form-control" style="height:auto;width:100%;" >
                 </div>
         
-        
+        <button type="submit">submit</button>
         
       </form></b-container>
     </div>
@@ -161,7 +161,7 @@
           })
             .then((response) => {
               this.users1.firstname = response.data.data.firstname
-              this.users1.lastame = response.data.data.lastname
+              this.users1.lastname = response.data.data.lastname
               this.users1.nationality = response.data.data.nationality
                this.users1.email = response.data.info.email
               this.users1.ph = response.data.info.ph
@@ -181,11 +181,12 @@
    to:this.token,  
   firstname :this.users1.firstname,
   lastname: this.users1.lastname,
-  //plateNo: this.users1.platenum,
+  email: this.users1.email,
   nationality: this.users1.nationality,
   lon:"0.00",
   lat:"0.00",
-  username:this.users1.username
+  username:this.users1.username,
+  ph:this.users1.ph
   //documents: "asasa"
   
   
@@ -197,9 +198,9 @@
   this.msg=response.data.msg
   //store.commit("loginUser",response.data.token);
   //localStorage.setItem("token", response.data.token)
-   //this.$router.push({
-   //name: "userprofile"
-  // });
+   this.$router.push({
+   name: "slider"
+   });
   })
   //this.$store.dispatch('submit1', { username, password })
   //.then(() => this.$router.push('/Home'))

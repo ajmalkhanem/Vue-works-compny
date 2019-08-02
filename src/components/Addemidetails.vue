@@ -61,7 +61,7 @@
               </tr>
               <tr>
 
-                <td style="color:cornflowerblue;background-color: cornflowerblue;">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link to="Addemidetails" style="text-decoration: none!important;">Add EMI Details</router-link>
                 </td>
 
