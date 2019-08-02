@@ -36,6 +36,27 @@
                 </b-row>
               </div>
               <br>
+<<<<<<< HEAD
+              <div class="col-md-12 row">
+                <div class="col-md-6">
+                  <p style="text-align:right!important;">Forgot password</p>
+                </div>
+                <div class="col-md-6">
+                  <p><button type="submit" class="btn btn-primary" style="background-color: #03adfc;">Sign In</button>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-12 row">
+                <div class="col-md-7">
+                  <p style="text-align: left!important;"> Not a member yet? 
+                  <router-link to="/login"></router-link>
+                  </p>
+                </div>
+                <div class="col-md-4">
+                  <label style="color:#03adfc;">Signup</label>
+                </div>
+              </div>
+=======
              <p style="text-align: center!important;"><router-link to="" style="text-decoration: none!important;">Forgot Password</router-link></p>
               <button
               type="submit"
@@ -48,6 +69,7 @@
                 <label style="color:#03adfc;">Sign Up</label>
               </b>
             </router-link>
+>>>>>>> 3c77e13dc7f9534b047d768f929239fabeb8786e
 
               <!-- <button type="button" class="btn btn-light">
                         <router-link to="/signupb">Signup as a business</router-link>
