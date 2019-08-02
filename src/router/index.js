@@ -51,6 +51,7 @@ import Addemidetails from '@/components/Addemidetails'
 import Vehiclerenewal from '@/components/Vehiclerenewal'
 import signup1 from '@/components/signup1'
 import Billform from '@/components/Billform'
+import forgotpassword from '@/components/forgotpassword'
 
 
 import store from '../store'
@@ -360,6 +361,11 @@ let router=new Router({
       path: '/Billform',
       name: 'Billform',
       component: Billform
+    },
+    {
+      path: '/forgotpassword',
+      name: 'forgotpassword',
+      component: forgotpassword
     }
 
 
