@@ -137,7 +137,8 @@
                   <option value="audi">Tyre Charge</option></select>
                     </div>
                     <br>
-                    <b-button style=" background: rgb(242, 235, 235);color:black;"> save</b-button><br>
+                    <router-link to="" class="square_bt"><strong>Save</strong></router-link>
+                   <br>
               <!-- <b-container style="background-color:white;">
                   <div class="form-group">
             <label for="policy" style="color: cornflowerblue;"><h5>Select Category</h5></label>        <b-row>
@@ -291,6 +292,15 @@
     text-decoration: none;
     color: black!important;
     background: rgb(240, 240, 240);
+    transition: .4s;
+  }
+  .square_bt {
+    display: inline-block;
+    padding: 10px 40px!important;
+    border-radius: 25px!important;
+    text-decoration: none!important;
+    color: black!important;
+    background:  rgb(179, 158, 158)!important;
     transition: .4s;
   }
 </style>
