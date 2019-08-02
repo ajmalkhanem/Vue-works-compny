@@ -82,14 +82,14 @@
                         <b-col>
                           <div class="form-group">
                             <label for="pwd" style="color: cadetblue;">
-                              <b>Promo Reference Code</b>
+                              <b>Choose your Profile Pic</b>
                             </label>
                             <input
                               type="file"
                               id="file"
                               accept="image/*"
-                              v-on:change="uploadImage()"
-                              ref="file"
+                              v-on:change="uploadImage($event)"
+                              
                             />
                           </div>
                         </b-col>
@@ -174,6 +174,9 @@ export default {
             .then(response => {
               if (response.data.status == true) {
                 alert("Success");
+                this.$router.push({
+              name: "userprofile"
+            });
               } else {
                 alert("failed");
               }

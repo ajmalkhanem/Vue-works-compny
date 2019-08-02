@@ -33,9 +33,10 @@
                             <div class="dropdown-content">
                                     
 
-                                <a v-on:click="handlelogout()">logout</a>
-                                <a >settings</a>
-                            </div>
+                               
+ <router-link to=""><div style="color:	#111113 !important;">Settings</div></router-link>    
+ <router-link to="/myaccount"><div style="color:	#111113 !important;">Profile</div></router-link>  
+  <a v-on:click="handlelogout()">logout</a>                       </div>
                         
                     </div>
                 </b-nav-item>
@@ -62,8 +63,8 @@
           
           <b-nav-item href="#" class="mx-auto"></b-nav-item>
           <b-nav-item class="navt"><router-link to="/sellerindex"><strong><div style="color:	#111113 !important;">Become seller</div></strong></router-link></b-nav-item>
-          <b-nav-item class="navt"><router-link to="/signup"><strong><div style="color:	#111113 !important;">Signup</div></strong></router-link></b-nav-item>
-          <b-nav-item class="navt"><router-link to="/login"><strong><div style="color:	#111113 !important;">Signin</div></strong></router-link></b-nav-item>
+          <b-nav-item class="navt"><router-link to="/signup1"><strong><div style="color:	#111113 !important;">Signup</div></strong></router-link></b-nav-item>
+          <b-nav-item class="navt"><router-link to="/signin"><strong><div style="color:	#111113 !important;">Signin</div></strong></router-link></b-nav-item>
           <b-nav-item class="navt"><router-link to=""><strong><div style="color:	#111113 !important;">
             <img src="../assets/ind.png" style="width:25px;height:20px;">
             </div></strong></router-link></b-nav-item>
@@ -109,7 +110,7 @@
                 localStorage.removeItem('data2')
                 localStorage.removeItem('data3')
                 localStorage.removeItem('data4')
-                this.$router.push({ name: 'login' })
+                this.$router.push({ name: 'signin' })
             }
         }
     }

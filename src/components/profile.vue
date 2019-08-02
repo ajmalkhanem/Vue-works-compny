@@ -17,6 +17,7 @@
 
                 <th scope="col" style=" background: rgb(242, 235, 235)">
                   <router-link to="profile" style="text-decoration: none!important;">Maintenance Analitics
+                     <!--<modal1 :id="this.id"></modal1>-->
                   </router-link>
                 </th>
 
