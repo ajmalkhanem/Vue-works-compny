@@ -17,7 +17,7 @@
               <b-tabs pills card end>
                 <b-tab title="Customer profile" active>
                   <b-card-text>
-                    <form @submit.prevent="submit1">
+                    <form @submit.prevent="submit1" enctype="multipart/form-data">
                       <b-row>
                         <b-col>
                           <div class="form-group">
@@ -87,8 +87,8 @@
                             <input
                               type="file"
                               accept="image/*"
-                              @change="uploadImage($event)"
-                              id="file-input"
+                              v-on:change="uploadImage()"
+                              ref="file"
                             />
                           </div>
                         </b-col>
@@ -132,7 +132,7 @@ export default {
         code: ""
       },
 
-      obj: "",
+      file: "",
       msg1: "",
       token: localStorage.getItem("token")
     };
@@ -160,8 +160,10 @@ export default {
 
         .then(response => {
           console.log((this.msg1 = response.data.status));
-          if (this.msg1 == true) {
-            //alert("hai3");
+          if (this.msg1 == false) {
+            let formData = new FormData();
+
+            formData.append("file", this.file);
             axios({
               method: "POST",
               headers: {
@@ -169,14 +171,15 @@ export default {
               },
               url: "http://13.233.110.196/customer/add/dp/",
               data: {
-                dp: this.data
+                dp: formData
               },
+
               "Content-Type": "multipart/form-data"
             }).then(response => {
               console.log("image upload response > ", response);
             });
           } else {
-            alert("hai");
+            alert("g");
           }
           //this.$router.push({
           //name: "userprofile"
@@ -186,10 +189,9 @@ export default {
         .catch(ev => {});
       ev.target.reset();
     },
-    uploadImage(event) {
-      let data = new FormData();
-      data.append("name", "my-picture");
-      data.append("file", event.target.files[0]);
+
+    uploadImage() {
+      this.file = this.$refs.file.files[0];
     }
   }
 };
