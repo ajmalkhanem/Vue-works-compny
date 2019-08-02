@@ -37,6 +37,10 @@ import fuel from '@/components/fuel'
 import myvehicle from '@/components/myvehicle'
 import history from '@/components/history'
 import hooper2 from '@/components/hooper2'
+import signin from '@/components/signin'
+import profile from '@/components/profile'
+import accountdetails from '@/components/accountdetails'
+import address from '@/components/address'
 
 import store from '../store'
 
@@ -279,7 +283,28 @@ let router=new Router({
       path: '/history',
       name: 'history',
       component: history
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: signin
+    },
+    {
+      path: '/accountdetails',
+      name: 'accountdetails',
+      component: accountdetails
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: profile
+    },
+    {
+      path: '/address',
+      name: 'address',
+      component: address
     }
+
   ]
 })
 router.beforeEach((to, from, next) => {
