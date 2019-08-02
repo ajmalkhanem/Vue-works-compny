@@ -25,7 +25,7 @@
               <tbody>
                 <tr>
   
-                  <td style="color:cornflowerblue;background-color: cornflowerblue;">
+                  <td style=" background: rgb(242, 235, 235)">
                     <router-link to="MaintenanceHistory" style="text-decoration: none!important;">Maintenance History</router-link>
                   </td>
   
@@ -79,7 +79,7 @@
             </table>
           </div>
           <div class="col-md-8">
-            <h4>Maintenance History</h4>
+            <h5>MAINTENANCE HISTORY</h5>
           </div>
         </div>
       </div>
