@@ -41,6 +41,8 @@ import signin from '@/components/signin'
 import profile from '@/components/profile'
 import accountdetails from '@/components/accountdetails'
 import address from '@/components/address'
+import slider from '@/components/slider'
+import hoop from '@/components/hoop'
 
 import store from '../store'
 
@@ -303,8 +305,19 @@ let router=new Router({
       path: '/address',
       name: 'address',
       component: address
+    },
+{
+     path: '/slider',
+      name: 'slider',
+      component: slider
+    },
+    {
+      path: '/hoop',
+      name: 'hoop',
+      component: hoop
     }
 
+    
   ]
 })
 router.beforeEach((to, from, next) => {

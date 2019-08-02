@@ -5,19 +5,21 @@
 
       <div class="row"> 
         <div class="column">
-          <div class="container1">
-            <img src="../assets/o4.jpg" alt="Avatar" class="image" style="width:100%">
-            <div class="middle">
-              <div class="text"><b>Communication</b>
-              <p style="font-size:12px;">
-                  “Good Communication Means Good Business”
-              </p>  <b-button variant="light">Explore</b-button>
-
+            <div class="container1">
+                <img src="../assets/o3.jpg" alt="Avatar" class="image"  style="width:100%;height:300px;">
+                <div class="middle">
+                  <div class="text"><b>Automobiles</b>
+                  <p style="font-size:12px;">
+                      “Don't Worry Drive Happy “
+      
+                      </p>  <b-button variant="light">Explore</b-button>
+      
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>            
+                    
           <div class="container1">
-          <img src="../assets/o6.jpg" alt="Avatar" class="image"  style="width:100%">
+          <img src="../assets/o6.jpg" alt="Avatar" class="image"  style="width:100%;height:260px;">
           <div class="middle">
             <div class="text"><b>Real Estate</b>
             <p style="font-size:12px;">
@@ -146,17 +148,16 @@
             </div>
           </div> 
           <div class="container1">
-            <img src="../assets/o3.jpg" alt="Avatar" class="image"  style="width:100%;height:300px;">
-            <div class="middle">
-              <div class="text"><b>Automobiles</b>
-              <p style="font-size:12px;">
-                  “Don't Worry Drive Happy “
+              <img src="../assets/o4.jpg" alt="Avatar" class="image" style="width:100%;height:300px;">
+              <div class="middle">
+                <div class="text"><b>Communication</b>
+                <p style="font-size:12px;">
+                    “Good Communication Means Good Business”
+                </p>  <b-button variant="light">Explore</b-button>
   
-                  </p>  <b-button variant="light">Explore</b-button>
-  
+                </div>
               </div>
-            </div>
-          </div>           
+            </div>           
         </div>
       </div>
       

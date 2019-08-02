@@ -38,10 +38,20 @@
             class="d-block img-fluid w-100"
             width="1024"
             height="400"
-            src="https://www.travelerchoice.com/wp-content/uploads/2016/05/TC08057-Lifestyle-Photo_home-page-banner.jpg"
+            src="https://jovinacooksitalian.files.wordpress.com/2018/07/famagusta-tiser.jpg"
             alt="image slot"
           >
         </b-carousel-slide>
+        <b-carousel-slide>
+            <img
+              slot="img"
+              class="d-block img-fluid w-100"
+              width="1024"
+              height="400"
+              src="https://mauibrewingco.com/maui-content/uploads/2017/08/Waikiki_Slider_Burger.jpg"
+              alt="image slot"
+            >
+          </b-carousel-slide>
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
       
