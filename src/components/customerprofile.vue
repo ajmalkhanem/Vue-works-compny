@@ -158,8 +158,8 @@ export default {
         }
       }).then(response => {
         if(response.data.status == true){
-          this.id = response.data.data._id;
           alert("Successfully added");
+          //imageupload
           let formData = new FormData();
           formData.append("dp", this.selectedFile);
           axios({
