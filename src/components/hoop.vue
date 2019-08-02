@@ -1,8 +1,8 @@
 <template>
 
     <div>
-            <div class="container">
-                    <hooper :infiniteScroll="true" :itemsToShow="3"   :progress="true" :autoPlay="true" :playSpeed="5000" :settings="hooperSettings">
+            <div class="container" style="padding-top: 50px; padding-bottom:50px">
+                    <hooper :infiniteScroll="true" :itemsToSlide="3"    :progress="true" :autoPlay="true" :playSpeed="5000" :settings="hooperSettings">
                       
                        
                          <!--<slide>
@@ -12,7 +12,7 @@
                             </slide> -->
                       <slide>
                         <div class="col-md-12">
-                          <img style="width:250px;height:auto;" src="../assets/hoop1.png">
+                          <img style="width:100%;height:auto;" src="../assets/h22.jpg">
                         </div>  
                       </slide> 
                        
@@ -20,13 +20,13 @@
                     
                      <slide>
                           <div class="col-md-12">
-                              <img  style="width:250px;height:auto;" src="../assets/hoop2.png">
+                              <img  style="width:100%;height:auto;" src="../assets/ab2.jpg">
                           </div>  
                         </slide> 
                   
                         <slide>
                           <div class="col-md-12">
-                              <img  src="../assets/hoop3.png" style="width:250px; height:auto;">
+                              <img  src="../assets/ab2.jpg" style="width:100%; height:auto;">
                           </div>  
                         </slide> 
                         
@@ -57,7 +57,7 @@
   data() {
     return {
       hooperSettings: {
-        itemsToShow: 2,
+        itemsToShow: 3,
         centerMode: true,
         breakpoints: {
           800: {
@@ -65,7 +65,7 @@
             itemsToShow: 3
           },
           1000: {
-            itemsToShow: 5,
+            itemsToShow: 3,
             pagination: 'fraction'
           }
         }

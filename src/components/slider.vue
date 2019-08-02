@@ -4,101 +4,120 @@
             <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab"
                 img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart"
                 @sliding-end="onSlideEnd">
-                <b-carousel-slide img-blank img-alt="Blank image">
-                    <img slot="img" class="d-block img-fluid w-100" width="1024" height="480" src="../assets/s1.jpg"
-                        alt="image slot">
-                </b-carousel-slide>
                 <b-carousel-slide>
-                    <img slot="img" class="d-block img-fluid w-100" width="1024" height="480" src="../assets/s2.jpg"
-                        alt="image slot">
-                </b-carousel-slide>
-                <b-carousel-slide>
-                    <img slot="img" class="d-block img-fluid w-100" width="1024" height="480" src="../assets/s4.jpg"
-                        alt="image slot">
+                  <img
+                  slot="img"
+                  class="d-block img-fluid w-100"
+                  width="1024"
+                  height="400"
+                  src="https://jovinacooksitalian.files.wordpress.com/2018/07/famagusta-tiser.jpg"
+                  alt="image slot"
+                >
                 </b-carousel-slide>
 
+                <b-carousel-slide >
+                  <img
+                  slot="img"
+                  class="d-block img-fluid w-100"
+                  width="1024"
+                  height="400"
+                  src="https://www.travelerchoice.com/wp-content/uploads/2016/05/TC08057-Lifestyle-Photo_home-page-banner.jpg"alt="image slot"
+                >
+                </b-carousel-slide>
+                <b-carousel-slide>
+                  <img
+                  slot="img"
+                  class="d-block img-fluid w-100"
+                  width="1024"
+                  height="400"
+                  src="https://mauibrewingco.com/maui-content/uploads/2017/08/Waikiki_Slider_Burger.jpg"
+                  alt="image slot"
+                >
+                </b-carousel-slide>
+                
             </b-carousel>
         </div>
         <div class="container">
-            <div class="row" style="padding-top: 30px;padding-bottom:30px">
+            <div class="row" style="padding-top: 80px;padding-bottom:30px">
 
-                <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
+                <div class="col-md-4 ">
+                        <div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
                                 <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="card-link">Card link</a>
-                                  <a href="#" class="card-link">Another link</a>
+                                  <p style="text-align: center;">
+                                  
+                                      <span><i class="fa fa-car fa-5x" style="color: blue"></i></span>
+                                      <p style="text-align: center; color: blue;" > My vehicles</p>
+                                  </p>
+                              
                                 </div>
                               </div>
                 </div>
 
-                <div class="col-md-4" >
-                        <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="card-link">Card link</a>
-                                  <a href="#" class="card-link">Another link</a>
-                                </div>
-                              </div>
-
-                </div>
-                <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="card-link">Card link</a>
-                                  <a href="#" class="card-link">Another link</a>
-                                </div>
-                              </div>
-   
-                </div>
+                <div class="col-md-4 ">
+                    <div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
+                            <div class="card-body">
+                              <p style="text-align: center;">
+                              
+                                  <span><i class="fa fa-building fa-5x" style="color: blue"></i></span>
+                                  <p style="text-align: center; color: blue;" > Emergency Services</p>
+                              </p>
+                          
+                            </div>
+                          </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
+                        <div class="card-body">
+                          <p style="text-align: center;">
+                          
+                              <span><i class="fa fa-building fa-5x" style="color: blue"></i></span>
+                              <p style="text-align: center; color: blue;" > Buy & Sell</p>
+                          </p>
+                      
+                        </div>
+                      </div>
+        </div>
 
             </div>
             <div class="row" style="padding-top: 30px;padding-bottom:30px">
 
-                    <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      <a href="#" class="card-link">Card link</a>
-                                      <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                  </div>
+                    
+                <div class="col-md-4 ">
+                    <div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
+                            <div class="card-body">
+                              <p style="text-align: center;">
+                              
+                                  <span><i class="fa fa-cog fa-5x" style="color: blue"></i></span>
+                                  <p style="text-align: center; color: blue;" > Accessories</p>
+                              </p>
+                          
+                            </div>
+                          </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="card " style="width: 18rem; height: 220px; border-radius: 25px">
+                        <div class="card-body">
+                          <p style="text-align: center;">
+                          
+                              <span><i class="fa fa-building fa-5x" style="color: blue"></i></span>
+                              <p style="text-align: center; color: blue;" > Fuel Stations</p>
+                          </p>
+                      
+                        </div>
+                      </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
+                    <div class="card-body">
+                      <p style="text-align: center;">
+                      
+                          <span><i class="fa fa-question fa-5x" style="color: blue"></i></span>
+                          <p style="text-align: center; color: blue;" > Help and Support</p>
+                      </p>
+                  
                     </div>
-    
-                    <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      <a href="#" class="card-link">Card link</a>
-                                      <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                  </div>
-    
-                    </div>
-                    <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      <a href="#" class="card-link">Card link</a>
-                                      <a href="#" class="card-link">Another link</a>
-                                    </div>
-                                  </div>
-       
-                    </div>
-    
+                  </div>
+    </div>
                 </div>
         </div>
         <div>
@@ -120,4 +139,8 @@
     }
 </script>
 <style>
+  .cd
+  {
+    border-radius: 75%;
+  }
 </style>
