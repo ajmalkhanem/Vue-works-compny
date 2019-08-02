@@ -49,6 +49,7 @@ import Addnewbills from '@/components/Addnewbills'
 import Addfuelfilling from '@/components/Addfuelfilling'
 import Addemidetails from '@/components/Addemidetails'
 import Vehiclerenewal from '@/components/Vehiclerenewal'
+import signup1 from '@/components/signup1'
 
 
 import store from '../store'
@@ -348,6 +349,11 @@ let router=new Router({
       path: '/Vehiclerenewal',
       name: 'Vehiclerenewal',
       component: Vehiclerenewal
+    },
+    {
+      path: '/signup1',
+      name: 'signup1',
+      component: signup1
     }
 
 

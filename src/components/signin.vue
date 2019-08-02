@@ -3,13 +3,13 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-6" style="padding-top:20px!important;padding-bottom:50px!important;">
+        <div class="col-md-6" style="padding-top:10px!important;padding-bottom:50px!important;">
           <div
             style="padding-left:20px!important;padding-right:20px!important;text-align: center;background-color:white;border:solid rgb(235, 238, 240) 2px;float:left;margin-top:20px;margin-left:20px;">
             <br><br>
             <h2 style="color:#03adfc;">Sign in</h2>
 
-            <p>Enter your details below to access your account</p>
+            <p>Enter your details below to access your account</p><br>
             <form @submit.prevent="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
 
@@ -36,25 +36,18 @@
                 </b-row>
               </div>
               <br>
-              <div class="col-md-12 row">
-                <div class="col-md-6">
-                  <p style="text-align:right!important;">Forgot password</p>
-                </div>
-                <div class="col-md-6">
-                  <p><button type="submit" class="btn btn-primary" style="background-color: #03adfc;">Sign In</button>
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-12 row">
-                <div class="col-md-7">
-                  <p style="text-align: left!important;"> Not a member yet? </p>
-                  <router-link to="/login"></router-link>
-                  </p>
-                </div>
-                <div class="col-md-4">
-                  <label style="color:#03adfc;">Signup</label>
-                </div>
-              </div>
+             <p style="text-align: center!important;"><router-link to="" style="text-decoration: none!important;">Forgot Password</router-link></p>
+              <button
+              type="submit"
+              class="btn btn-primary"
+              style="background-color: #03adfc;"
+            >Sign in</button>
+            Not a member yet?
+            <router-link to="/login">
+              <b>
+                <label style="color:#03adfc;">Sign Up</label>
+              </b>
+            </router-link>
 
               <!-- <button type="button" class="btn btn-light">
                         <router-link to="/signupb">Signup as a business</router-link>
@@ -80,7 +73,7 @@
 
 
         </div>
-        <div class="col-md-6 hid">
+        <div class="col-md-6 hid" style="padding-top:10px!important;">
           <div id="rectangle" class="rt">
             <p style="text-align: center!important;"> <img src="../assets/221.jpg"
                 style="width:400px;height:400px;padding-top:40px!important;">
@@ -157,7 +150,7 @@
   }
   @media only screen and (min-device-width: 1501px) and (max-device-width: 1700px) {
     .rt {
-      width: 1000px;
+      width: 1500px;
       height: 700px;
       background: rgb(240, 240, 240);
       border-top-left-radius: 290px;
