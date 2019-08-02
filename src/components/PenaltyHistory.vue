@@ -15,7 +15,7 @@
             <thead class="oo">
               <tr>
 
-                <th scope="col" style="color:cornflowerblue;background-color: cornflowerblue;">
+                <th scope="col">
                   <router-link to="profile" style="text-decoration: none!important;">Maintenance Analitics
                   </router-link>
                 </th>
@@ -39,7 +39,7 @@
               </tr>
               <tr>
 
-                <td>
+                <td style="color:cornflowerblue;background-color: cornflowerblue;">
                   <router-link to="PenaltyHistory" style="text-decoration: none!important;">Penalty History</router-link>
                 </td>
 
@@ -79,7 +79,7 @@
           </table>
         </div>
         <div class="col-md-8">
-          <h4>Analitics</h4>
+          <h4>Penalty History</h4>
         </div>
       </div>
     </div>
