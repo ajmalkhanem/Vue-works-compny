@@ -50,6 +50,7 @@ import Addfuelfilling from '@/components/Addfuelfilling'
 import Addemidetails from '@/components/Addemidetails'
 import Vehiclerenewal from '@/components/Vehiclerenewal'
 import signup1 from '@/components/signup1'
+import forgotpassword from '@/components/forgotpassword'
 
 
 import store from '../store'
@@ -354,7 +355,13 @@ let router=new Router({
       path: '/signup1',
       name: 'signup1',
       component: signup1
+    },
+    {
+      path: '/forgotpassword',
+      name: 'forgotpassword',
+      component: forgotpassword
     }
+
 
 
     
