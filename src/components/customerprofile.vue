@@ -86,6 +86,7 @@
                             </label>
                             <input
                               type="file"
+                              id="file"
                               accept="image/*"
                               v-on:change="uploadImage($event)"
                               
@@ -129,15 +130,18 @@ export default {
         firstname: "",
         lastname: "",
         nation: "",
-        code: "",
-       
+        code: ""
       },
- file: "",
       msg1: "",
-      token: localStorage.getItem("token")
+      selectedFile: "",
+      id: ""
     };
   },
   methods: {
+    uploadImage() {
+      this.selectedFile = event.target.files[0];
+      this.url = URL.createObjectURL(this.selectedFile);
+    },
     submit1(ev) {
       ev.preventDefault();
       var datas1 = {};
@@ -182,23 +186,18 @@ export default {
             }).then(response => {
               console.log("image upload response > ", response);
             });
-          } else {
-            alert("g");
-          }
-          //this.$router.push({
-          //name: "userprofile"
-          //});
+        }
+        else{
+          //code
+          alert("failed")
+        }
         })
-
-        .catch(ev => {});
-      ev.target.reset();
+        .catch(e => {
+          this.loading = false;
+          this.err = e.response.data.msg;
+          alert(this.err);
+        });
     },
-
-    uploadImage(event) {
-      this.file = event.target.files[0]
-      alert(this.file.name)
-      
-    }
   }
 };
 </script>
