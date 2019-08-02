@@ -86,6 +86,7 @@
                             </label>
                             <input
                               type="file"
+                              id="file"
                               accept="image/*"
                               v-on:change="uploadImage()"
                               ref="file"
@@ -129,73 +130,70 @@ export default {
         firstname: "",
         lastname: "",
         nation: "",
-        code: "",
-       
+        code: ""
       },
- file: "",
       msg1: "",
-      token: localStorage.getItem("token")
+      selectedFile: "",
+      id: ""
     };
   },
   methods: {
+    uploadImage() {
+      this.selectedFile = event.target.files[0];
+      this.url = URL.createObjectURL(this.selectedFile);
+    },
     submit1(ev) {
       ev.preventDefault();
-      var datas1 = {};
-
-      datas1["fname"] = this.users1.firstname;
-      datas1["lname"] = this.users1.lastname;
-      datas1["nation"] = this.users1.nation;
-      datas1["promocode"] = this.users1.code;
-
-      console.log(datas1);
-
-      axios
-        .post("http://13.233.110.196/user/customer/", {
-          to: this.token,
-          firstname: this.users1.firstname,
-          lastname: this.users1.lastname,
-          nationality: this.users1.nation,
-          ref_code: this.users1.code
-        })
-
-        .then(response => {
-          console.log((this.msg1 = response.data.status));
-          if (this.msg1 == false) {
-            let formData = new FormData();
-
-            formData.append("file", this.file);
-            axios({
-              method: "POST",
-              headers: {
-                to: localStorage.getItem("token"),
-                "Content-Type": "multipart/form-data"
-              },
-              url: "http://13.233.110.196/customer/add/dp/",
-              data: {
-                 formData
-              },
-
-              
-            }).then(response => {
-              console.log("image upload response > ", response);
+      var data = {};
+      data["firstname"] = this.users1.firstname;
+      data["lastname"] = this.users1.lastname;
+      data["nationality"] = this.users1.nation;
+      data["ref_code"] = this.users1.code;
+      axios({
+        method: "post",
+        url: "http://13.233.110.196/user/customer/",
+        data: data,
+        headers: {
+          to: localStorage.getItem("token")
+        }
+      }).then(response => {
+        if(response.data.status == true){
+          this.id = response.data.data._id;
+          alert("Successfully added");
+          let formData = new FormData();
+          formData.append("dp", this.selectedFile);
+          axios({
+            method: "post",
+            url: "http://13.233.110.196/customer/add/dp/",
+            data: formData,
+            headers: {
+              "Content-Type": "multipart/form-data",
+              to: localStorage.getItem("token")
+            }
+          })
+            .then(response => {
+              if (response.data.status == true) {
+                alert("Success");
+              } else {
+                alert("failed");
+              }
+            })
+            .catch(e => {
+              alert("Too Large image!! Failed");
+              this.loading = false;
             });
-          } else {
-            alert("g");
-          }
-          //this.$router.push({
-          //name: "userprofile"
-          //});
+        }
+        else{
+          //code
+          alert("failed")
+        }
         })
-
-        .catch(ev => {});
-      ev.target.reset();
+        .catch(e => {
+          this.loading = false;
+          this.err = e.response.data.msg;
+          alert(this.err);
+        });
     },
-
-    uploadImage() {
-      this.file = this.$refs.file.files[0];
-      alert(this.file)
-      
-    }
   }
 };
 </script>
