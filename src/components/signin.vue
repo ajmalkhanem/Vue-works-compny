@@ -91,20 +91,20 @@
 <style>
   .square_bt {
     display: inline-block;
-    padding: 7px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #FFF;
-    background: #00008b;
+    padding: 7px 20px!important;
+    border-radius: 25px!important;
+    text-decoration: none!important;
+    color: #FFF!important;
+    background: #00008b!important;
     transition: .4s;
   }
 
   .squarbt {
     display: inline-block;
-    padding: 7px 20px;
-    border-radius: 25px;
+    padding: 7px 20px!important;
+    border-radius: 25px!important;
     text-decoration: none;
-    color: black;
+    color: black!important;
     background: rgb(240, 240, 240);
     transition: .4s;
   }

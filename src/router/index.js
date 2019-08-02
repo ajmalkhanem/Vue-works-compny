@@ -50,6 +50,7 @@ import Addfuelfilling from '@/components/Addfuelfilling'
 import Addemidetails from '@/components/Addemidetails'
 import Vehiclerenewal from '@/components/Vehiclerenewal'
 import signup1 from '@/components/signup1'
+import Billform from '@/components/Billform'
 
 
 import store from '../store'
@@ -354,6 +355,11 @@ let router=new Router({
       path: '/signup1',
       name: 'signup1',
       component: signup1
+    },
+    {
+      path: '/Billform',
+      name: 'Billform',
+      component: Billform
     }
 
 
