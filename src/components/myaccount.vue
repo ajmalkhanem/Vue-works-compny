@@ -1,154 +1,69 @@
 <template>
-  <div>
+  <div><div id="rcorners1" class="transbox"
+    style="width:100%;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:auto;float:left;margin-top:20px;margin-left:20px;">
+   
     <b-row>
       <b-col>
-          <div>
-              <b-card  class="overflow-hidden" style="max-width:600px;">
-                <b-row no-gutters>
-                  <b-col md="6">
-                    <b-card-img src="http://arabellamc.com/arabella/themes/images/default-user.png" 
-                    class="rounded-circle" style="width:200px;height:200px;"></b-card-img>
-                  </b-col>
-                  <b-col md="6">
-                    <b-card-body title="">
-                       
-                      <b-card-text>
-                          <h3>{{  data  }} {{data1}}</h3>
-                          {{data4}}
-                      </b-card-text>
-                    </b-card-body>
-                  </b-col>
-                </b-row>
-              </b-card>
+        <div>
+          <b-card class="overflow-hidden" >
+            <b-row no-gutters>
+              <b-col md="6">
+                <b-card-img src="http://arabellamc.com/arabella/themes/images/default-user.png" class="rounded-circle"
+                  style="width:100px;height:100px;"></b-card-img>
+              </b-col>
+              <b-col md="6">
+                <b-card-body title="">
+
+                  
+                </b-card-body>
+              </b-col>
+            </b-row>
+          </b-card>
+        </div>
+      </b-col>
+      <b-col>
+
+
+      </b-col>
+    </b-row></div>
+
+
+    <br>
+    <div><div id="rcorners1" class="transbox"
+      style="width:100%;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:auto;float:left;margin-top:20px;margin-left:20px;">
+        <b-container style="background-color: white;">
+          <br> General<form>
+        <div class="form-group">
+          <label for="FirstName">First Name</label>
+          <input type="text" v-model="this.users1.firstname" class="form-control" style="height:auto;width:100%;" >
+        </div>
+        <div class="form-group">
+            <label for="FirstName">Last Name</label>
+            <input type="text" v-model="this.users1.lastame" class="form-control" style="height:auto;width:100%;" >
+          </div>
+          <div class="form-group">
+              <label for="FirstName">Username</label>
+              <input type="text" v-model="this.users1.username" class="form-control" style="height:auto;width:100%;" >
             </div>
-      </b-col>
-      <b-col>
-          <b-card-img src="https://miro.medium.com/max/500/0*vsjfm2j0Y5-yZjME.gif" 
-                    class="rounded-0" style="width:800px;height:240px;"></b-card-img>
-            
-      </b-col>
-    </b-row>
-      
-      
-<br>    <b-card header="Basic Details">
-        <blockquote class="blockquote mb-0">
-          <p><form action="">
-              <b-row>
-               
-                <b-col>
-                  <div class="form-group">
-                    <h6><b>Citizenship:</b></h6>
-                    <h6><b>Email Id:</b></h6>
-                    <h6><b>Contact No:</b></h6>
-      
-                  </div>
-                </b-col>
-                <b-col>
-                  <div class="form-group">
-                    <h6><b>{{ data2}}</b></h6>
-                    <h6><b>{{data3}}</b></h6>
-                    <h6><b>{{data4}}</b></h6>
-      
-                  </div>
-                </b-col>
-                
-                
-                <b-col>
-                  <div class="form-group">
-      
-                    
-      
-      
-                  </div>
-                </b-col>
-              </b-row>
-              <b-row>
-                <b-col>
-                  <div class="form-group">
-      
-                  </div>
-                </b-col>
-                <b-col>
-                  <div class="form-group">
-                  </div>
-                </b-col>
-              </b-row>
-      
-              <b-row>
-                <b-col>
-                  <div class="form-group">
-      
-      
-                  </div>
-                </b-col>
-              </b-row>
-      
-              <div class="form-group form-check">
-                <label class="form-check-label">
-                </label>
+            <div class="form-group">
+                <label for="FirstName">Nationality</label>
+                <input type="text" v-model="this.users1.nationality" class="form-control" style="height:auto;width:100%;" >
               </div>
-            </form></p>
-          <footer class="blockquote-footer">
-              <b-button v-b-toggle.collapse-1 variant="primary">Edit</b-button>
-  <b-collapse id="collapse-1" class="mt-2">
-    <b-card>
-      <p class="card-text">
-        <viewedit :id="this.id"></viewedit>
-      </p>
-      <b-button v-b-toggle.collapse-1-inner size="sm">Toggle Inner Collapse</b-button>
-      <b-collapse id="collapse-1-inner" class="mt-2">
-        <b-card>Hello!</b-card>
-      </b-collapse>
-    </b-card>
-  </b-collapse>
-                 
-  
-                
-          </footer>
-        </blockquote>
-      </b-card>
-    <p>
-      
-    </p>
+            <div class="form-group">
+                <label for="FirstName">Email Id</label>
+                <input type="text" v-model="this.users1.email" class="form-control" style="height:auto;width:100%;" >
+              </div>
+              <div class="form-group">
+                  <input type="text" v-model="this.users1.ph" class="form-control" style="height:auto;width:100%;" >
+                </div>
+        
+        
+        
+      </form></b-container>
+    </div>
+      </div>
     </b-tab>
-    <b-row>
-      <b-col>
-          <b-card-group deck>
-              <b-card
-                header="featured"
-                header-tag="header"
-                footer="Card Footer"
-                footer-tag="footer"
-                title="Title"
-              >
-                <b-card-text>Header and footers using props.</b-card-text>
-              </b-card></b-card-group>
-      </b-col>
-      <b-col>
-          <b-card-group deck>
-              <b-card
-                header="featured"
-                header-tag="header"
-                footer="Card Footer"
-                footer-tag="footer"
-                title="Title"
-              >
-                <b-card-text>Header and footers using props.</b-card-text>
-              </b-card></b-card-group>
-      </b-col>
-      <b-col>
-          <b-card-group deck>
-              <b-card
-                header="featured"
-                header-tag="header"
-                footer="Card Footer"
-                footer-tag="footer"
-                title="Title"
-              >
-                <b-card-text>Header and footers using props.</b-card-text>
-              </b-card></b-card-group>
-      </b-col>
-    </b-row>
+   
 
 
     <br><br>
@@ -156,47 +71,145 @@
   </div>
 </template>
 
+
 <script>
-  import viewedit from '@/components/viewedit'
-
-
+    import navbar from '@/components/navbar'
+    import navbar1 from '@/components/navbar1'
+  
+  import axios from "axios";
+  //import store from "../store";
   export default {
-    components: {
-
-      viewedit,
-
-
-
-    },
-    data() {
-      return {
-        data0: localStorage.getItem("data0"),   
-        data: localStorage.getItem("data"),
-        data1: localStorage.getItem("data1"),
-        data2: localStorage.getItem("data2"),
-        data3: localStorage.getItem("data3"),
-        data4: localStorage.getItem("data4")
-
-
-
-
-
-
-      };
-    }
-    //data: localStorage.getItem("data")
-   /* mounted: function () {
-      this.getData();
-    },
-    methods: {
-      getData() {
-        
-        //this.data=localStorage.getItem("data")
-        //console.log(localStorage.getItem("data"))
-      }
-    }*/
+        props:['id'],
+  
+  components:
+  { navbar,
+  navbar1
+  },
+  data(){
+  
+  return {
+  list:[],
+  users1:
+  {
+  firstname: '',
+  lastname:'',
+  nationality:'',
+  email:'',
+  ph:'',
+  username:''
+  
+  
+  },
+  /* mounted() {
+  if (localStorage.users1.username) {
+  this.username = localStorage.users1.username;
   }
-</script>
+  },
+  watch: {
+  name(newName) {
+  localStorage.users1.username = newName;
+  }
+  },*/
+  msg:'',
+  token:localStorage.getItem("token")
+  
+  };
+  },
+   mounted: function () {
+        this.submit1();
+        //alert(this.id)
+      },
+     /* methods: {
+        getData() {
+          //alert(this.id)
+          axios({
+            method: 'POST',
+            headers: {
+              to: localStorage.getItem("token")
+            },
+            url: 'http://13.233.110.196/view/vehicle/',
+            data: {
+              id: this.id
+            }
+  
+          })
+            .then((response) => {
+              this.users1.vehname = response.data.data.vehicleName
+              console.log(response.data)
+              console.log(this.list = response.data.data)
+  
+  
+  
+            })
+        },
+  
+      },*/
+  methods: {
+  
+    
+  submit1(ev) {
+    axios({
+            method: 'POST',
+            headers: {
+              to: localStorage.getItem("token")
+            },
+            url: 'http://13.233.110.196/user/me/',
+            data: {
+              id: this.id
+            }
+  
+          })
+            .then((response) => {
+              this.users1.firstname = response.data.data.firstname
+              this.users1.lastame = response.data.data.lastname
+              this.users1.nationality = response.data.data.nationality
+               this.users1.email = response.data.info.email
+              this.users1.ph = response.data.info.ph
+               this.users1.username=response.data.info.username   
+  
+  
+              console.log(response.data)
+              console.log(this.list = response.data.data)
+  
+  
+  
+            })
+  ev.preventDefault()
+  
+  
+  axios.post('http://13.233.110.196/edit/user/',{  
+   to:this.token,  
+  firstname :this.users1.firstname,
+  lastname: this.users1.lastname,
+  //plateNo: this.users1.platenum,
+  nationality: this.users1.nationality,
+  lon:"0.00",
+  lat:"0.00",
+  username:this.users1.username
+  //documents: "asasa"
+  
+  
+  
+  
+  })
+  
+  .then((response) =>{
+  this.msg=response.data.msg
+  //store.commit("loginUser",response.data.token);
+  //localStorage.setItem("token", response.data.token)
+   //this.$router.push({
+   //name: "userprofile"
+  // });
+  })
+  //this.$store.dispatch('submit1', { username, password })
+  //.then(() => this.$router.push('/Home'))
+  .catch((ev) => {})
+  ev.target.reset()
+  }
+  
+  }
+  };
+  </script>
 
 <style>
   body {

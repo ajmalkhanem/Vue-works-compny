@@ -106,7 +106,7 @@
                 <b>Start your Business</b>
                 <p style="font-size:12px;">
                     “Plan Your Good Business”
-                </p>  <b-button variant="light">Become Seller</b-button>
+                </p>  <b-button variant="primary">Become Seller</b-button>
   
                 
               </b-card>
