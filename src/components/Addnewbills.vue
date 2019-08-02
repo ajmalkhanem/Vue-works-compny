@@ -126,7 +126,7 @@
                         
                      
                     </div><br>
-                    <h5>Select Category</h5></label> <br>
+                    <h5>Select Category</h5></label> 
                   
                     <div class="form-group">
                      
