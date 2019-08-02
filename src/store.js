@@ -6,8 +6,11 @@ export default new Vuex.Store({
     state: {
         isLoggedIn: !!localStorage.getItem('token'),
         token: !!localStorage.getItem('token'),
-        isLog : !!localStorage.getItem('situation'),
         data:!!localStorage.getItem('data'),
+        data1:!!localStorage.getItem('data1'),
+        data2:!!localStorage.getItem('data2'),
+        data3:!!localStorage.getItem('data3'),
+        data4:!!localStorage.getItem('data4')
     },
     mutations: {
         loginUser (state) {
