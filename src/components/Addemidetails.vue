@@ -61,7 +61,7 @@
               </tr>
               <tr>
 
-                <td style="color:cornflowerblue;background-color: cornflowerblue;">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link to="Addemidetails" style="text-decoration: none!important;">Add EMI Details</router-link>
                 </td>
 
@@ -79,7 +79,7 @@
           </table>
         </div>
         <div class="col-md-8">
-          <h4>Add EMI Details</h4>
+          <h5>ADD EMI DETAILS</h5>
         </div>
       </div>
     </div>

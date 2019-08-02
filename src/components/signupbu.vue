@@ -75,9 +75,9 @@
                           <br><br>
                           
 
-                         <button type="button" class="btn btn-light">
+                            <!-- <button type="button" class="btn btn-light">
                         <router-link to="/signupb">Signup as a business</router-link>
-                      </button>
+                      </button>-->
 
                             <br>
                             <br>

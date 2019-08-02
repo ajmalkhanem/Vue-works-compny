@@ -54,7 +54,7 @@
               </tr>
               <tr>
 
-                <td style="color:cornflowerblue;background-color: cornflowerblue;">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link to="Addfuelfilling" style="text-decoration: none!important;">Add Fuel Filling</router-link>
                 </td>
 
@@ -78,38 +78,38 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
           
           <b-container style="background-color:white;">
-            <h4>Add Fuel Filling</h4><br>
-            <div 
-            >
+            <h5>ADD FUEL FILLING</h5><br>
+            <div
+            style="padding-left:20px!important;padding-right:20px!important;background-color:white;border:solid rgb(235, 238, 240) 2px;padding-bottom:20px!important;padding-top:20px!important;">
             <form @submit.prevent="submit1">
 
     
 
     <div class="container3">
       <div class="form-group">
-  <label for="policy" style="color: cornflowerblue;"><h4>Fuel Filling Title:</h4></label>
-  <input type="text" class="form-control" v-model="users1.name" style="background-color: rgb(233, 238, 240);" placeholder="Task Name" >
+  <label for="policy" ><h5>Fuel Filling Title</h5></label>
+  <input type="text" class="form-control" v-model="users1.name"  placeholder="Task Name" >
 </div>
        <div class="form-group">
-  <label for="policy" style="color: cornflowerblue;"><h4>Date:</h4></label>
-  <input type="date" class="form-control" v-model="users1.date" style="background-color: rgb(233, 238, 240);" placeholder="Policy Expiry Date" >
+  <label for="policy" ><h5>Date</h5></label>
+  <input type="date" class="form-control" v-model="users1.date"  placeholder="Policy Expiry Date" >
 </div>
        <div class="form-group">
-  <label for="policy" style="color: cornflowerblue;"><h4>Odometer Reading</h4></label>
-  <input type="text" class="form-control" v-model="users1.odometer" style="background-color: rgb(233, 238, 240);" placeholder="Odometer" >
-</div>
-
-       <div class="form-group">
-  <label for="policy" style="color: cornflowerblue;"><h4>Fuel Amount</h4></label>
-  <input type="text" class="form-control" v-model="users1.amount" style="background-color: rgb(233, 238, 240);" placeholder="Amount" >
+        <label for="policy" ><h5>Odometer Reading</h5></label>
+  <input type="text" class="form-control" v-model="users1.odometer"  placeholder="Odometer" >
 </div>
 
        <div class="form-group">
-  <label for="policy" style="color: cornflowerblue;"><h4>Fuel Station:</h4></label>
-  <select  class="form-control" v-model="users1.station" style="background-color: rgb(233, 238, 240);" >
+  <label for="policy" ><h5>Fuel Amount</h5></label>
+  <input type="text" class="form-control" v-model="users1.amount"  placeholder="Amount" >
+</div>
+
+       <div class="form-group">
+  <label for="policy" ><h5>Fuel Station</h5></label>
+  <select  class="form-control" v-model="users1.station"  >
 <option value="volvo">select station</option>
 <option value="saab">Saab</option>
 <option value="fiat">Fiat</option>
@@ -117,8 +117,8 @@
 </div>
 
        <div class="form-group">
-  <label for="policy" style="color: cornflowerblue;"><h4>Fuel Quantity</h4></label>
-  <input type="text" class="form-control" v-model="users1.remarks" style="background-color: rgb(233, 238, 240);" placeholder="if any" >
+  <label for="policy"><h5>Fuel Quantity</h5></label>
+  <input type="text" class="form-control" v-model="users1.remarks"  placeholder="if any" >
 </div>
 
         
@@ -128,7 +128,7 @@
   
     <div class="form-group">
   <label for="policy" style="color: cornflowerblue;"><h4></h4></label>
-    <b-button type="submit" variant="outline-primary">Save</b-button></div>
+  <b-button style=" background: rgb(242, 235, 235);color:black;"> save</b-button></div>
     </b-container>
     
 
@@ -138,7 +138,7 @@
   </b-container>
 
         </div>
-      </div>
+      </div><br>
     </div>
   </div>
 </template>
@@ -258,4 +258,5 @@
     border: 1px solid rgb(240, 240, 240) !important;
     border-radius: 3px !important;
   }
+  
 </style>

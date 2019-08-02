@@ -46,7 +46,7 @@
               </tr>
               <tr>
 
-                <td style="color:cornflowerblue;background-color: cornflowerblue;">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link to="Addnewbills" style="text-decoration: none!important;">Add new Maintenance bills
                   </router-link>
                 </td>
@@ -78,40 +78,40 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
          
       <b-container style="background-color:white;">
-        <h4>Add New Maintenance Bills</h4><br>
+        <h5>ADD NEW MAINTENANCE BILL</h5><br>
 
             {{msg}}
             <div
-            style="padding-left:20px!important;padding-right:20px!important;background-color:white;border:solid rgb(235, 238, 240) 2px;float:left;padding-bottom:20px!important;padding-top:20px!important;">
+            style="padding-left:20px!important;padding-right:20px!important;background-color:white;border:solid rgb(235, 238, 240) 2px;padding-bottom:20px!important;padding-top:20px!important;">
                             <form @submit.prevent="submit1">
             
                    
                 
                     <div class="container3">
                       <div class="form-group">
-                  <label for="policy" style="color:cornflowerblue;"><h5>Task Name</h5></label>
-                  <input type="text" class="form-control" v-model="users1.name" style="background-color: rgb(233, 238, 240);"  placeholder="Task Name" >
+                  <label for="policy" ><h5>Task Name</h5></label>
+                  <input type="text" class="form-control" v-model="users1.name"   placeholder="Task Name" >
                 </div>
                        <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;"><h5>Date</h5></label>
-                  <input type="date" class="form-control" v-model="users1.date" style="background-color: rgb(233, 238, 240);" placeholder="Policy Expiry Date" >
+                  <label for="policy" ><h5>Date</h5></label>
+                  <input type="date" class="form-control" v-model="users1.date" placeholder="Policy Expiry Date" >
                 </div>
                        <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;"><h5>Odometer Reading</h5></label>
-                  <input type="text" class="form-control" v-model="users1.odometer" style="background-color: rgb(233, 238, 240);" placeholder="Odometer" >
-                </div>
-            
-                       <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;"><h5>Service Amount</h5></label>
-                  <input type="text" class="form-control" v-model="users1.amount" style="background-color: rgb(233, 238, 240);" placeholder="Amount" >
+                  <label for="policy" ><h5>Odometer Reading</h5></label>
+                  <input type="text" class="form-control" v-model="users1.odometer"  placeholder="Odometer" >
                 </div>
             
                        <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;"><h5>Service Staion:</h5></label>
-                  <select  class="form-control" v-model="users1.station" style="background-color: rgb(233, 238, 240);" >
+                  <label for="policy" ><h5>Service Amount</h5></label>
+                  <input type="text" class="form-control" v-model="users1.amount"  placeholder="Amount" >
+                </div>
+            
+                       <div class="form-group">
+                  <label for="policy" ><h5>Service Staion</h5></label>
+                  <select  class="form-control" v-model="users1.station"  >
                <option value="volvo">select station</option>
               <option value="saab">Saab</option>
               <option value="fiat">Fiat</option>
@@ -119,29 +119,25 @@
                 </div>
             
                        <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;"><h5>Remarks</h5></label>
-                  <input type="text" class="form-control" v-model="users1.remarks" style="background-color: rgb(233, 238, 240);" placeholder="if any" >
+                  <label for="policy" ><h5>Remarks</h5></label>
+                  <input type="text" class="form-control" v-model="users1.remarks"  placeholder="if any" >
                 </div>
             
                         
                      
                     </div><br>
-                    <h5 style="color: cornflowerblue;" >Select Category</h5></label> <br>
-                    <div class="row">
-                            <div class="col-md-4">
-                                    <b-button style="background-color:cornflowerblue;">  Accessories Change</b-button>
-                                </div>
-                                <div class="col-md-4">
-                                        <b-button style="background-color:cornflowerblue;">General Service</b-button>
-                                    </div>
-                        <div class="col-md-4">
-                                <b-button style="background-color:cornflowerblue;">Tyre Charge</b-button>
-                        </div>
-                        
-                           
+                    <h5>Select Category</h5></label> <br>
+                  
+                    <div class="form-group">
+                     
+                      <select  class="form-control" v-model="users1.station"  >
+                   
+                  <option value="saab">Accessories Change</option>
+                  <option value="fiat">General Service</option>
+                  <option value="audi">Tyre Charge</option></select>
                     </div>
                     <br>
-                    <b-button style="background-color:cornflowerblue;"> save</b-button><br>
+                    <b-button style=" background: rgb(242, 235, 235);color:black;"> save</b-button><br>
               <!-- <b-container style="background-color:white;">
                   <div class="form-group">
             <label for="policy" style="color: cornflowerblue;"><h5>Select Category</h5></label>        <b-row>

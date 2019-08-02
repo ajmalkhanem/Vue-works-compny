@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
   
-                  <td style="color:cornflowerblue;background-color: cornflowerblue;">
+                  <td style=" background: rgb(242, 235, 235)">
                     <router-link to="FuelFillingHistory" style="text-decoration: none!important;">Fuel Filling History</router-link>
                   </td>
   
@@ -79,7 +79,7 @@
             </table>
           </div>
           <div class="col-md-8">
-            <h4>Fuel Filling History</h4>
+            <h5>FUEL FILLING HISTORY</h5>
           </div>
         </div>
       </div>
