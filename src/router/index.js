@@ -39,10 +39,17 @@ import history from '@/components/history'
 import hooper2 from '@/components/hooper2'
 import signin from '@/components/signin'
 import profile from '@/components/profile'
-import accountdetails from '@/components/accountdetails'
-import address from '@/components/address'
+
+import FuelFillingHistory from '@/components/FuelFillingHistory'
 import slider from '@/components/slider'
 import hoop from '@/components/hoop'
+import MaintenanceHistory from '@/components/MaintenanceHistory'
+import PenaltyHistory from '@/components/PenaltyHistory'
+import Addnewbills from '@/components/Addnewbills'
+import Addfuelfilling from '@/components/Addfuelfilling'
+import Addemidetails from '@/components/Addemidetails'
+import Vehiclerenewal from '@/components/Vehiclerenewal'
+
 
 import store from '../store'
 
@@ -291,20 +298,16 @@ let router=new Router({
       name: 'signin',
       component: signin
     },
-    {
-      path: '/accountdetails',
-      name: 'accountdetails',
-      component: accountdetails
-    },
+   
     {
       path: '/profile',
       name: 'profile',
       component: profile
     },
     {
-      path: '/address',
-      name: 'address',
-      component: address
+      path: '/FuelFillingHistory',
+      name: 'FuelFillingHistory',
+      component: FuelFillingHistory
     },
 {
      path: '/slider',
@@ -315,7 +318,38 @@ let router=new Router({
       path: '/hoop',
       name: 'hoop',
       component: hoop
+    },
+    {
+      path: '/MaintenanceHistory',
+      name: 'MaintenanceHistory',
+      component: MaintenanceHistory
+    },
+    {
+      path: '/PenaltyHistory',
+      name: 'PenaltyHistory',
+      component: PenaltyHistory
+    },
+    {
+      path: '/Addnewbills',
+      name: 'Addnewbills',
+      component: Addnewbills
+    },
+    {
+      path: '/Addfuelfilling',
+      name: 'Addfuelfilling',
+      component: Addfuelfilling
+    },
+    {
+      path: '/Addemidetails',
+      name: 'Addemidetails',
+      component: Addemidetails
+    },
+    {
+      path: '/Vehiclerenewal',
+      name: 'Vehiclerenewal',
+      component: Vehiclerenewal
     }
+
 
     
   ]

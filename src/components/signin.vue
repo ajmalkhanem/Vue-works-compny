@@ -35,13 +35,6 @@
 
                 </b-row>
               </div>
-
-
-
-
-
-
-
               <br>
               <div class="col-md-12 row">
                 <div class="col-md-6">
@@ -103,14 +96,6 @@
 <script>
 </script>
 <style>
-  #rectangle {
-    width: 700px;
-    height: 700px;
-    background: rgb(240, 240, 240);
-    border-top-left-radius: 290px;
-    border-bottom-left-radius: 350px;
-  }
-
   .square_bt {
     display: inline-block;
     padding: 7px 20px;
@@ -120,6 +105,7 @@
     background: #00008b;
     transition: .4s;
   }
+
   .squarbt {
     display: inline-block;
     padding: 7px 20px;
@@ -141,18 +127,41 @@
       display: none;
     }
   }
+
   @media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
     .hid {
       display: none;
     }
   }
-   @media only screen and (min-device-width: 1606px) and (max-device-width: 2000px) {
-    .rt{
-      width: 2000px;
-    height: 700px;
-    background: rgb(240, 240, 240);
-    border-top-left-radius: 290px;
-    border-bottom-left-radius: 350px;
+
+  
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1300px) {
+    .rt {
+      width: 650px;
+      height: 700px;
+      background: rgb(240, 240, 240);
+      border-top-left-radius: 290px;
+      border-bottom-left-radius: 350px;
+
+    }
+  }
+  @media only screen and (min-device-width: 1301px) and (max-device-width: 1500px) {
+    .rt {
+      width: 800px;
+      height: 700px;
+      background: rgb(240, 240, 240);
+      border-top-left-radius: 290px;
+      border-bottom-left-radius: 350px;
+
+    }
+  }
+  @media only screen and (min-device-width: 1501px) and (max-device-width: 1700px) {
+    .rt {
+      width: 1000px;
+      height: 700px;
+      background: rgb(240, 240, 240);
+      border-top-left-radius: 290px;
+      border-bottom-left-radius: 350px;
 
     }
   }
