@@ -87,8 +87,8 @@
                             <input
                               type="file"
                               accept="image/*"
-                              v-on:change="uploadImage()"
-                              ref="file"
+                              v-on:change="uploadImage($event)"
+                              
                             />
                           </div>
                         </b-col>
@@ -160,20 +160,23 @@ export default {
 
         .then(response => {
           console.log((this.msg1 = response.data.status));
-          if (this.msg1 == false) {
+          if (this.msg1 == true) {
             let formData = new FormData();
 
-            formData.append("file", this.file);
+            formData.append("dp",this.file,this.file.name)
             axios({
               method: "POST",
               headers: {
                 to: localStorage.getItem("token"),
-                "Content-Type": "multipart/form-data"
+                
+                 
               },
               url: "http://13.233.110.196/customer/add/dp/",
               data: {
-                 formData
+                 dp:this.file.name,
+                
               },
+              "Content-Type": "multipart/form-data"
 
               
             }).then(response => {
@@ -191,9 +194,9 @@ export default {
       ev.target.reset();
     },
 
-    uploadImage() {
-      this.file = this.$refs.file.files[0];
-      alert(this.file)
+    uploadImage(event) {
+      this.file = event.target.files[0]
+      alert(this.file.name)
       
     }
   }
