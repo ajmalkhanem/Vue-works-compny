@@ -21,13 +21,8 @@
                                     <b-media tag="li">
                                       <b-img slot="aside" blank blank-color="#abc" width="64" alt="placeholder"></b-img>
                                 
-<<<<<<< HEAD
                                       <h5 class="mt-0 mb-1" style="padding-bottom: 10px"> About Us</h5>
                                        <p class="mb-0" style="text-align:justify;font-size:16px;font-family:Arial, Helvetica, sans-serif;color:black;">
-=======
-                                      <h1 class="mt-0 mb-1">About Us</h1><br>
-                                       <p class="mb-0" style="font-family:monospace;color:teal;font-size: 20px;">
->>>>>>> 101db906e732051c5177cbac0a6731e9c65ad601
                                               CLOUD GM is an e commerce single platform, our objective is to provide 
                                               buyers and sellers a best market to trade. We provide the best MARKET PLACE to
                                                showcase the products and services. We provide the best customer service to make 
