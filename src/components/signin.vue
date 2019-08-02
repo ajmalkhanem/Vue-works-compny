@@ -47,7 +47,7 @@
               </div>
               <div class="col-md-12 row">
                 <div class="col-md-7">
-                  <p style="text-align: left!important;"> Not a member yet? </p>
+                  <p style="text-align: left!important;"> Not a member yet? 
                   <router-link to="/login"></router-link>
                   </p>
                 </div>

@@ -129,10 +129,10 @@ export default {
         firstname: "",
         lastname: "",
         nation: "",
-        code: ""
+        code: "",
+       
       },
-
-      file: "",
+ file: "",
       msg1: "",
       token: localStorage.getItem("token")
     };
@@ -167,14 +167,15 @@ export default {
             axios({
               method: "POST",
               headers: {
-                to: localStorage.getItem("token")
+                to: localStorage.getItem("token"),
+                "Content-Type": "multipart/form-data"
               },
               url: "http://13.233.110.196/customer/add/dp/",
               data: {
-                dp: formData
+                 formData
               },
 
-              "Content-Type": "multipart/form-data"
+              
             }).then(response => {
               console.log("image upload response > ", response);
             });
@@ -192,6 +193,8 @@ export default {
 
     uploadImage() {
       this.file = this.$refs.file.files[0];
+      alert(this.file)
+      
     }
   }
 };
