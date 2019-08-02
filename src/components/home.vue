@@ -10,6 +10,7 @@
      <br>
             <div class="transbox4" >
       <br>
+                
                 <b-row>
                     <b-col>
                       <img src="../assets/221.jpg"style="width:100%;height:auto;" >
@@ -20,29 +21,35 @@
                                     <b-media tag="li">
                                       <b-img slot="aside" blank blank-color="#abc" width="64" alt="placeholder"></b-img>
                                 
-                                      <h1 class="mt-0 mb-1">About Us</h1><br>
-                                       <p class="mb-0" style="font-family:monospace;color:teal;font-size: 20px;">
+                                      <h5 class="mt-0 mb-1" style="padding-bottom: 10px"> About Us</h5>
+                                       <p class="mb-0" style="text-align:justify;font-size:16px;font-family:Arial, Helvetica, sans-serif;color:black;">
                                               CLOUD GM is an e commerce single platform, our objective is to provide 
                                               buyers and sellers a best market to trade. We provide the best MARKET PLACE to
                                                showcase the products and services. We provide the best customer service to make 
                                                the operations the best in the market.</p>
-                                               <p style="font-family:monospace;color:teal;font-size: 20px;">We provide the best technology platform to receive orders, customer 
+                                               <p style="font-family:Arial, Helvetica, sans-serif;color:black;">We provide the best technology platform to receive orders, customer 
+
                                                    interactions, feedbacks, ratings and proper analysis.</p>
                                     </b-media>
                                 
                                     <b-media tag="li" class="my-4" >
                                       <b-img slot="aside" blank blank-color="#cba" width="64" alt="placeholder"></b-img>
                                 
-                                      <b><h5 class="mt-0 mb-1" style="color: rgb(4, 4, 20);">Our Vision</h5></b>
-                                      <p class="mb-0" style="font-family:monospace;color:teal;font-size: 20px;">
+                                      <b><h5 class="mt-0 mb-1" style="color: black(4, 4, 20);" >Our Vision</h5></b>
+                                      <p class="mb-0" style=" padding-top: 10px;font-size: 16px;font-family:Arial, Helvetica, sans-serif;color:black;">
+
+       
                                               Our Vision is be the biggest customer friendly e-commerce platform in the world</p>
                                     </b-media>
                                 
                                     <b-media tag="li">
                                       <b-img slot="aside" blank blank-color="#bac" width="64" alt="placeholder"></b-img>
                                 
-                                     <b> <h5 class="mt-0 mb-1" style="color:rgb(6, 6, 32);">Our Mission</h5></b>
-                                      <p class="mb-0" style="font-family:monospace;color:teal;font-size: 20px;">
+
+                                     <b> <h5 class="mt-0 mb-1" style="color:rgb(6, 6, 32);padding-bottom: 8px">Our Mission</h5></b>
+                                      <p class="mb-0" style="font-size: 16px;font-family:Arial, Helvetica, sans-serif;color: black;">
+
+                              
                                               Our Mission is to improve the life style of people and bring the products and services
                                                under one platform with latest technology and secured transactions.</p>
                                     </b-media>
@@ -95,9 +102,8 @@ With better option </label></b>
         },
        }
       </script>
-
-<style>
-  .container1 {
+  <style>
+      .container1 {
     position: relative;
     font-family: Arial;
   }
@@ -106,14 +112,11 @@ With better option </label></b>
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: ;
     color: white;
     padding-top: 25px;
     padding-left: 20px;
     padding-right: 20px;
   }
-  </style>
-  <style>
       * {box-sizing: border-box;}
       
       body {
