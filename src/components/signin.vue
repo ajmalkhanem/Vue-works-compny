@@ -1,5 +1,6 @@
 <template>
   <div>
+    <hr class="rr" style="margin: 0!important">
     <div class="container">
       <div class="row">
 
@@ -164,5 +165,19 @@
       border-bottom-left-radius: 350px;
 
     }
+  }
+  @media only screen and (min-device-width: 1701px) and (max-device-width: 2000px) {
+    .rt {
+      width: 1800px;
+      height: 700px;
+      background: rgb(240, 240, 240);
+      border-top-left-radius: 290px;
+      border-bottom-left-radius: 350px;
+
+    }
+  }
+  .rr {
+    border: 1px solid rgb(240, 240, 240) !important;
+    border-radius: 3px !important;
   }
 </style>

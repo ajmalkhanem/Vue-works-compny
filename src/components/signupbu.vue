@@ -1,5 +1,6 @@
 <template>
     <div>
+        <hr class="rr" style="margin: 0!important">
         <div class="container">
             <div class="row">
                 
@@ -186,4 +187,8 @@
 
         }
     }
+    .rr {
+    border: 1px solid rgb(240, 240, 240) !important;
+    border-radius: 3px !important;
+  }
 </style>
