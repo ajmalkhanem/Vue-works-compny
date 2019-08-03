@@ -7,7 +7,7 @@
             <div class="row" style="padding-top: 80px;padding-bottom:30px">
 
                 <div class="col-md-4 ">
-                       <router-link v-bind:to="/profile"><div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
+                       <router-link v-bind:to="profile"><div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
                                 <div class="card-body">
                                   <p style="text-align: center;">
                                   

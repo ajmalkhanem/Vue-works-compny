@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <hr class="rr" style="margin:0!important;">
     <div class="container">
       <div class="col-md-12 row">
@@ -48,8 +47,8 @@
               </tr>
               <tr>
 
-                <td> 
-                  <router-link v-bind:to="'/Addnewbills/'+ listing.id" style="text-decoration: none!important;">Add new Maintenance bills
+                <td>
+                  <router-link to="Addnewbills" style="text-decoration: none!important;">Add new Maintenance bills
                   </router-link>
                 </td>
 
@@ -57,21 +56,21 @@
               <tr>
 
                 <td>
-                  <router-link v-bind:to="'/Addfuelfilling/'+ listing.id" style="text-decoration: none!important;">Add Fuel Filling</router-link>
+                  <router-link to="Addfuelfilling" style="text-decoration: none!important;">Add Fuel Filling</router-link>
                 </td>
 
               </tr>
               <tr>
 
                 <td>
-                  <router-link v-bind:to="'/Addemidetails/'+ listing.id" style="text-decoration: none!important;">Add EMI Details</router-link>
+                  <router-link to="Addemidetails" style="text-decoration: none!important;">Add EMI Details</router-link>
                 </td>
 
               </tr>
               <tr>
 
                 <td>
-                  <router-link v-bind:to="'/Vehiclerenewal/'+ listing.id" style="text-decoration: none!important;">Vehicle Renewal and Penalty Charges
+                  <router-link to="Vehiclerenewal" style="text-decoration: none!important;">Vehicle Renewal and Penalty Charges
                   </router-link>
                 </td>
 
@@ -88,45 +87,6 @@
   </div>
 </template>
 <script>
-
-
-  export default {
-    components: {
-
-
-    },
-    data() {
-      return {
-
-        list: [],
-
-      };
-    },
-    mounted: function () {
-      this.getData();
-    },
-    methods: {
-      getData() {
-        axios({
-          method: 'POST',
-          headers: {
-            to: localStorage.getItem("token")
-          },
-          url: 'http://13.233.110.196/list/vehicle/',
-
-        })
-          .then((response) => {
-
-            // console.log(response.data) 
-            //console.log(response.data[0])     
-            this.list = response.data.data
-
-          })
-      },
-
-    }
-  };
-
 </script>
 <style>
   .oo {
