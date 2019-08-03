@@ -334,22 +334,22 @@ let router=new Router({
       component: PenaltyHistory
     },
     {
-      path: '/Addnewbills',
+      path: '/Addnewbills/:id',
       name: 'Addnewbills',
       component: Addnewbills
     },
     {
-      path: '/Addfuelfilling',
+      path: '/Addfuelfilling/:id',
       name: 'Addfuelfilling',
       component: Addfuelfilling
     },
     {
-      path: '/Addemidetails',
+      path: '/Addemidetails/:id',
       name: 'Addemidetails',
       component: Addemidetails
     },
     {
-      path: '/Vehiclerenewal',
+      path: '/Vehiclerenewal/:id',
       name: 'Vehiclerenewal',
       component: Vehiclerenewal
     },

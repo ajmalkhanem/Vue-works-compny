@@ -7,7 +7,7 @@
             <div class="row" style="padding-top: 80px;padding-bottom:30px">
 
                 <div class="col-md-4 ">
-                       <router-link to="/profile"><div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
+                       <router-link v-bind:to="/profile"><div class="card " style="width: 18rem; height: 220px;border-radius: 25px">
                                 <div class="card-body">
                                   <p style="text-align: center;">
                                   
@@ -95,18 +95,51 @@
     </div>
 </template>
 <script>
-    import hoop from './hoop'
+    import hoop from '@/components/hoop'
     import carousel from '@/components/carousel'
 
-    export default
-    {
-        name:"slider",
-        components:{
-            hoop,
-            carousel
-        },
+  export default {
+    props:['id'],
+    name:"slider",
+    components: {
+
+hoop,
+carousel
+    },
+    data() {
+      return {
+
+        list: [],
+
+      };
+    },
+    mounted: function () {
+      this.getData();
+    },
+    methods: {
+      getData() {
+        axios({
+          method: 'POST',
+          headers: {
+            to: localStorage.getItem("token")
+          },
+          url: 'http://13.233.110.196/list/vehicle/',
+
+        })
+          .then((response) => {
+
+            // console.log(response.data) 
+            //console.log(response.data[0])     
+            this.list = response.data.data
+
+          })
+      },
+
     }
+  };
+
 </script>
+
 <style>
   .cd
   {
