@@ -305,9 +305,11 @@ let router=new Router({
     },
    
     {
-      path: '/profile',
+      path: '/profile/:id',
       name: 'profile',
-      component: profile
+      component: profile,
+      props: true,
+
     },
     {
       path: '/FuelFillingHistory',
@@ -335,22 +337,22 @@ let router=new Router({
       component: PenaltyHistory
     },
     {
-      path: '/Addnewbills',
+      path: '/Addnewbills/:id',
       name: 'Addnewbills',
       component: Addnewbills
     },
     {
-      path: '/Addfuelfilling',
+      path: '/Addfuelfilling/:id',
       name: 'Addfuelfilling',
       component: Addfuelfilling
     },
     {
-      path: '/Addemidetails',
+      path: '/Addemidetails/:id',
       name: 'Addemidetails',
       component: Addemidetails
     },
     {
-      path: '/Vehiclerenewal',
+      path: '/Vehiclerenewal/:id',
       name: 'Vehiclerenewal',
       component: Vehiclerenewal
     },
@@ -370,9 +372,10 @@ let router=new Router({
       component: forgotpassword
     },
     {
-      path: '/newpage',
+      path: '/newpage/:id',
       name: 'newpage',
-      component: newpage
+      component: newpage,
+      props: true,
     },
     {
       path: '/signupbu',

@@ -85,10 +85,8 @@
                       </div>
   
   
-                    </div>
-  
-  
-                  </div>
+                  
+                  
               </div>
             </div>
 
@@ -164,6 +162,8 @@
               </div>
             </div>
           </div>
+      
+  
 
 
 
@@ -177,6 +177,45 @@
   </div>
 </template>
 <script>
+
+
+  export default {
+    components: {
+
+
+    },
+    data() {
+      return {
+
+        list: [],
+
+      };
+    },
+    mounted: function () {
+      this.getData();
+    },
+    methods: {
+      getData() {
+        axios({
+          method: 'POST',
+          headers: {
+            to: localStorage.getItem("token")
+          },
+          url: 'http://13.233.110.196/list/vehicle/',
+
+        })
+          .then((response) => {
+
+            // console.log(response.data) 
+            //console.log(response.data[0])     
+            this.list = response.data.data
+
+          })
+      },
+
+    }
+  };
+
 </script>
 <style>
   .bg {
