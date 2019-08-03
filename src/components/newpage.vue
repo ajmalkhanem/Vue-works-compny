@@ -94,86 +94,14 @@
 
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="row " style="padding-bottom: 20px">
-            <div class="card mb-3 ">
-              <div class="row no-gutters">
-                <div class="col-md-4 ">
-                  <img src="../assets/h22.jpg" class="card-img img3 im1" alt="...">
-                </div>
-
-                <div class="col-md-8">
-                  <div class="card-body bg">
-                    <div class="bd">
-                      <h5 style="text-align: left;" class="card-title st"><b> &nbsp; Vehicle Name</b> </h5>
-
-                      <div class="row">
-                        <div class="col-md-1">
-
-                        </div>
-                        <div class="col-md-6">
-                          <b-row>
-                            <span class="pull-left"><b>Traffic Plate: </b></span>
-
-                          </b-row>
-                          <b-row>
-                            <span class="pull-left"><b>Registeration Date:</b> </span>
-                          </b-row>
-                          <b-row>
-                              <span class="pull-left"><b>TC Number:</b> </span>
-                          </b-row>
-                          <b-row>
-                              <span class="pull-left"><b>Policy Expire:</b></span>
-                          </b-row>
-                          <b-row>
-                              <span class="pull-left"><b>Insurance Expire:</b></span>
-                          </b-row>
-
-                        </div>
-                        <div class="col-md-4">
-                          <b-row>
-                            <span class="pull-left"> 1234567</span>
-                          </b-row>
-                          <b-row>
-                            <span class="pull-left">11/11/2018</span>
-                          </b-row>
-                          <b-row>
-                            <span class="pull-left">456789 </span>
-                          </b-row>
-                          <b-row>
-                              <span class="pull-left">11/11/2025 </span>
-                          </b-row>
-                          <b-row>
-                              <span class="pull-left">11/11/2025 </span>
-                          </b-row>
-
-                        </div>
-
-
-                      </div>
-
-                    </div>
-
-
-                  </div>
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-      
-  
-
-
-
-        </div>
+       
       </div>
 
 
     </div>
   </div>
 
+  </div>
   </div>
 </template>
 <script>

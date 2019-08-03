@@ -372,7 +372,7 @@ let router=new Router({
       component: forgotpassword
     },
     {
-      path: '/newpage/:id',
+      path: '/newpage',
       name: 'newpage',
       component: newpage,
       props: true,
