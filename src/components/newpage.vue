@@ -33,6 +33,7 @@
                   <img src="../assets/h22.jpg" class="card-img img3 im1" alt="...">
                 </div>
                 <div class="col-md-8">
+                  
                   <div class="card-body bg">
                     <div class="bd">
                         <h5 style="text-align: left;" class="card-title st" ><router-link style="color: black" to="Details"><b> Vehicle Name</b>  </router-link> </h5> 
@@ -55,36 +56,7 @@
 
           </div>
         </div>
-        <div class="col-md-6">
-            <div class="row " style="padding-bottom: 20px">
-              <div class="card mb-3 ">
-                <div class="row no-gutters">
-                  <div class="col-md-4 ">
-                    <img src="../assets/h22.jpg" class="card-img img3 im1" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body bg">
-                      <div class="bd">
-                          <h5 style="text-align: left;" class="card-title st" ><router-link style="color: black" to="Details"><b> Vehicle Name</b>  </router-link> </h5> 
-                          <div class="dot-hr"></div>
-                          <span class="pull-left"><b>Traffic Plate:</b> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 1234567</span> 
-                          <span class="pull-left"><b>Registeration Date:</b> 11/11/2018</span>  
-                          <span class="pull-left"><b>TC Number:</b>&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; 1234567</span> 
-                          <span class="pull-left"><b>Policy Expire.:</b> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;11/11/2029</span> 
-                          <span class="pull-left"><b>Insurancd Expire.:</b>&nbsp;  &nbsp; 11/11/2039</span> 
-                          
-                      </div>
-  
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-  
-  
-            </div>
-          </div>
+      
   
 
       </div>
@@ -93,6 +65,45 @@
   </div>
 </template>
 <script>
+
+
+  export default {
+    components: {
+
+
+    },
+    data() {
+      return {
+
+        list: [],
+
+      };
+    },
+    mounted: function () {
+      this.getData();
+    },
+    methods: {
+      getData() {
+        axios({
+          method: 'POST',
+          headers: {
+            to: localStorage.getItem("token")
+          },
+          url: 'http://13.233.110.196/list/vehicle/',
+
+        })
+          .then((response) => {
+
+            // console.log(response.data) 
+            //console.log(response.data[0])     
+            this.list = response.data.data
+
+          })
+      },
+
+    }
+  };
+
 </script>
 <style>
   .bg {

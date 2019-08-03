@@ -304,9 +304,11 @@ let router=new Router({
     },
    
     {
-      path: '/profile',
+      path: '/profile/:id',
       name: 'profile',
-      component: profile
+      component: profile,
+      props: true,
+
     },
     {
       path: '/FuelFillingHistory',
@@ -369,9 +371,10 @@ let router=new Router({
       component: forgotpassword
     },
     {
-      path: '/newpage',
+      path: '/newpage/:id',
       name: 'newpage',
-      component: newpage
+      component: newpage,
+      props: true,
     },
     {
       path: '/signupbu',
