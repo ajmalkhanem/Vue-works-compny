@@ -87,7 +87,7 @@
                 style="background-color: #03adfc;"
               >Sign up</button>
               Already member
-              <router-link to="/login">
+              <router-link to="/signin">
                 <b>
                   <label style="color:#03adfc;">Signin</label>
                 </b>
@@ -195,7 +195,7 @@ localStorage.users1.username = newName;
 
           if (this.msg1 == true) {
             this.$router.push({
-              name: "login"
+              name: "signin"
             });
           }
         })

@@ -208,7 +208,7 @@
                 if (this.usertype1 == 0) {
 
                   this.$router.push({
-                    name: "customerprofile"
+                    name: "completeprofile"
                   });
                 }
                 if (this.usertype1 == 1) {

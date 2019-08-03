@@ -23,31 +23,23 @@
     </div>
     <div class="container" style="padding-top: 30px;">
       <div class="row">
-
+          <div v-for="listing in list">
+              <router-link v-bind:to="'/profile/' + listing._id">
 
         <div class="col-md-6" style="padding-right: 30x;">
           <div class="row " style="padding-bottom: 20px">
-              <div v-for="listing in list">
-                  <router-link v-bind:to="'/profile/' + listing._id">
-                    <div id="rcorners1"
-                      style="width:300px;margin-bottom:20px;box-shadow: 0 4px 8px 0 rgba(228, 232, 233, 0.801), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding:1px 1px; text-align: center;background-color:#ffffff;border:solid rgb(235, 238, 240) 2px;height:300px;float:left;margin-top:20px;margin-left:20px;">
-                      <br>
-                      <h2><b>{{ listing.vehicleName}}</b></h2>
-                      
-                      <img src="../assets/car.jpg" style="width: 200px;height:200px;">
-                    </div>
-                  </router-link>
-            
-                </div>
+              
+                    
+                  
             <div class="card mb-3 ">
               <div class="row no-gutters">
                 <div class="col-md-4 ">
-                  <img src="../assets/h22.jpg" class="card-img img3 im1" alt="...">
+                  <img src="../assets/car.jpg" class="card-img img3 im1" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body bg">
                       <div class="bd">
-                        <h5 style="text-align: left;" class="card-title st"><b> &nbsp; Vehicle Name</b> </h5>
+                        <h5 style="text-align: left;" class="card-title st"><b> &nbsp;{{ listing.vehicleName}} </b> </h5>
   
                         <div class="row">
                           <div class="col-md-1">
@@ -74,19 +66,19 @@
                           </div>
                           <div class="col-md-4">
                             <b-row>
-                              <span class="pull-left"> 1234567</span>
+                              <span class="pull-left"> {{ listing.plateNo}}</span>
                             </b-row>
                             <b-row>
-                              <span class="pull-left">11/11/2018</span>
+                              <span class="pull-left">{{ listing.registerDate.slice(0.10)}}</span>
                             </b-row>
                             <b-row>
-                              <span class="pull-left">456789 </span>
+                              <span class="pull-left">{{ listing.tcNo}} </span>
                             </b-row>
                             <b-row>
-                                <span class="pull-left">11/11/2025 </span>
+                                <span class="pull-left">{{ listing.polexpiryDate}} </span>
                             </b-row>
                             <b-row>
-                                <span class="pull-left">11/11/2025 </span>
+                                <span class="pull-left">{{ listing.inexpiryDate}} </span>
                             </b-row>
   
                           </div>
@@ -110,7 +102,9 @@
       </div>
 
 
-    </div>
+    </div></router-link>
+            
+  </div>
   </div>
 
   </div>
