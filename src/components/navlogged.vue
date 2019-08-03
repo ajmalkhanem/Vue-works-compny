@@ -26,9 +26,7 @@
                                             <template slot="button-content"><i class="fa fa-user fa-2x" aria-hidden="true" ></i></template>
                                             <b-dropdown-item>My Profile</b-dropdown-item>
                                              <b-dropdown-item>Settings</b-dropdown-item>
-                                             <b-dropdown-divider></b-dropdown-divider>
-                                             <b-dropdown-item>Logout</b-dropdown-item>
-                                           </b-nav-item-dropdown>
+                                               <b-dropdown-item><a v-on:click="handlelogout()">logout</a></b-dropdown-item>                                            </b-nav-item-dropdown>
                         
                                 <!-- <span style="padding-left:10px;">SignIn  </span> -->
                                 
@@ -66,7 +64,7 @@
                 
        
                <div style="padding-left:200px;">
-                <div class="input-group srh "style="width: 13cm ;padding-bottom:10px;" >
+                <div class="input-group srh " style="width: 13cm ;padding-bottom:10px;" >
                      
                 <input type="text" class="form-control" placeholder="Search here">
                 <div class="input-group-append">
@@ -78,18 +76,12 @@
             
            </div>
             
-          <!-- <b-nav-item href="#" class="mx-auto">
-                <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
-
-          </b-nav-item> -->
+         
           
-          </b-nav-item>
         
           
-         </b-collapse>
-         </b-navbar-nav toggleable="lg"> 
+         
        <b-navbar-brand>
-          <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
           </b-navbar-brand>
       </b-navbar>
     </div>
@@ -148,7 +140,7 @@
 
             <b-nav-item class="ml-auto"><i class="fa fa-phone"> 1234567890</i></b-nav-item>
         </b-collapse>
-        </b-navbar-nav toggleable="lg">
+        
         <b-navbar-brand>
             <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
         </b-navbar-brand>
@@ -161,6 +153,44 @@
          name: 'app-header'
                          }
     </script>
+     <script lang="js">
+    import nav1 from '@/components/nav1'
+import navlogged from '@/components/navlogged'
+    import store from "../store";
+
+    export default {
+        name: 'app',
+        components:{
+            nav1,
+            navlogged
+        },
+        data() {
+
+            return {
+                data: localStorage.getItem("data")
+
+            }
+        },
+        computed: {
+        loggedIn(){
+            return  store.state.isLoggedIn
+        }
+    },
+        methods: {
+            handlelogout() {
+                //alert("hai")
+                store.commit("logoutUser");
+                localStorage.removeItem('token')
+                localStorage.removeItem('data')
+                localStorage.removeItem('data1')
+                localStorage.removeItem('data2')
+                localStorage.removeItem('data3')
+                localStorage.removeItem('data4')
+                this.$router.push({ name: 'signin' })
+            }
+        }
+    }
+</script>
     
     <style>
       

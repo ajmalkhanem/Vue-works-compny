@@ -51,7 +51,7 @@
                 
        
                <div style="padding-left:200px;">
-                <div class="input-group srh "style="width: 13cm ;padding-bottom:10px;" >
+                <div class="input-group srh " style="width: 13cm ;padding-bottom:10px;" >
                      
                 <input type="text" class="form-control" placeholder="Search here">
                 <div class="input-group-append">

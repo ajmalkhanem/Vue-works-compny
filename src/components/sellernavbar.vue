@@ -2,92 +2,27 @@
 <div>
     <div class="navv" v-if="loggedIn==true">
       
-    <b-navbar  toggleable="lg" type="light"  style="background-color: white;">
-       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    &nbsp;&nbsp;&nbsp;<a href=""> <b-img :src="require('../assets/logo.png')" style="width:200px;height:130px;" ></b-img></a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div class="topnav">
-                       <div class="search-container">
-                            <form action="">
-                              <input type="text" style="background-color:#f2ebeb;width:350px;height:50px;" placeholder=" Search.." name="search">
-                              <button  style="background-color:#f2ebeb;width:60px;height:50px;" type="submit" s><i class="fa fa-search"></i></button>                      
-       </form>
-                          </div>
-                        </div>          <b-collapse is-nav id="nav_collapse">
-          
-          <b-nav-item href="#" class="mx-auto"></b-nav-item>
-          <b-nav-item class="navt">
-            </b-nav-item>
-          <b-nav-item class="navt">
-            </b-nav-item>
-          <b-nav-item class="navt"><router-link to=""><strong><div style="color:	#111113 !important;">
-            <img src="../assets/ind.png" style="width:25px;height:20px;">
-            </div></strong></router-link></b-nav-item>
-          <b-nav-item class="navt"><router-link to=""><strong><div style="color:	#111113 !important;">
-            <img src="../assets/uae.png" style="width:25px;height:25px;">
-            </div></strong></router-link></b-nav-item>
-            <b-nav-item class="navt">
-                    <div class="dropdown">
-                            <img src="../assets/pro.png" class="rounded-circle" alt="Person" width="30" height="30">
-                            {{data}}
-
-                            <div class="dropdown-content">
-                                    
-
-                               
- <router-link to=""><div style="color:	#111113 !important;">Settings</div></router-link>    
- <router-link to="/editprofile"><div style="color:	#111113 !important;">Profile</div></router-link>  
-  <a v-on:click="handlelogout()">logout</a>                       </div>
-                        
-                    </div>
-                </b-nav-item>
-
-         </b-collapse>
-       <b-navbar-brand>
-          <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
-          </b-navbar-brand>
-      </b-navbar>
+   <navlogged></navlogged>
     </div>
     <div class="navv" v-else>
       
-    <b-navbar  toggleable="lg" type="light"  style="background-color: white;">
-       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    &nbsp;&nbsp;&nbsp;<a href=""> <b-img :src="require('../assets/logo.png')" style="width:200px;height:130px;" ></b-img></a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div class="topnav">
-                       <div class="search-container">
-                            <form action="">
-                              <input type="text" style="background-color:#f2ebeb;width:350px;height:50px;" placeholder=" Search.." name="search">
-                              <button  style="background-color:#f2ebeb;width:60px;height:50px;" type="submit" s><i class="fa fa-search"></i></button>                      
-       </form>
-                          </div>
-                        </div>          <b-collapse is-nav id="nav_collapse">
-          
-          <b-nav-item href="#" class="mx-auto"></b-nav-item>
-          <b-nav-item class="navt"><router-link to="/sellerindex"><strong><div style="color:	#111113 !important;">Become seller</div></strong></router-link></b-nav-item>
-          <b-nav-item class="navt"><router-link to="/signup1"><strong><div style="color:	#111113 !important;">Signup</div></strong></router-link></b-nav-item>
-          <b-nav-item class="navt"><router-link to="/signin"><strong><div style="color:	#111113 !important;">Signin</div></strong></router-link></b-nav-item>
-          <b-nav-item class="navt"><router-link to=""><strong><div style="color:	#111113 !important;">
-            <img src="../assets/ind.png" style="width:25px;height:20px;">
-            </div></strong></router-link></b-nav-item>
-          <b-nav-item class="navt"><router-link to=""><strong><div style="color:	#111113 !important;">
-            <img src="../assets/uae.png" style="width:25px;height:25px;">
-            </div></strong></router-link></b-nav-item>
-            
-
-         </b-collapse>
-       <b-navbar-brand>
-          <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
-          </b-navbar-brand>
-      </b-navbar>
+   <nav1></nav1>
     </div>
     </div>
 
     </template>
     
     <script lang="js">
+    import nav1 from '@/components/nav1'
+import navlogged from '@/components/navlogged'
     import store from "../store";
 
     export default {
         name: 'app',
+        components:{
+            nav1,
+            navlogged
+        },
         data() {
 
             return {
