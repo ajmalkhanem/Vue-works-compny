@@ -54,6 +54,7 @@ import Billform from '@/components/Billform'
 import forgotpassword from '@/components/forgotpassword'
 import newpage from '@/components/newpage'
 import signupbu from '@/components/signupbu'
+import navnew from '@/components/navnew'
 
 import store from '../store'
 
@@ -377,7 +378,15 @@ let router=new Router({
       path: '/signupbu',
       name: 'signupbu',
       component: signupbu
+    },
+    
+    {
+      path: '/navnew',
+      name: 'navnew',
+      component: navnew
     }
+
+
 
 
 

@@ -23,7 +23,7 @@
     </div>
     <div class="container" style="padding-top: 30px;">
       <div class="row">
-       
+
 
         <div class="col-md-6" style="padding-right: 30x;">
           <div class="row " style="padding-bottom: 20px">
@@ -33,21 +33,62 @@
                   <img src="../assets/h22.jpg" class="card-img img3 im1" alt="...">
                 </div>
                 <div class="col-md-8">
-                  <div class="card-body bg">
-                    <div class="bd">
-                        <h5 style="text-align: left;" class="card-title st" ><router-link style="color: black" to="Details"><b> Vehicle Name</b>  </router-link> </h5> 
-                        <div class="dot-hr"></div>
-                        <span class="pull-left"><b>Traffic Plate:</b> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 1234567</span> 
-                        <span class="pull-left"><b>Registeration Date:</b> 11/11/2018</span>  
-                        <span class="pull-left"><b>TC Number:</b>&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; 1234567</span> 
-                        <span class="pull-left"><b>Policy Expire.:</b> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;11/11/2029</span> 
-                        <span class="pull-left"><b>Insurancd Expire.:</b>&nbsp;  &nbsp; 11/11/2039</span> 
-                        
+                    <div class="card-body bg">
+                      <div class="bd">
+                        <h5 style="text-align: left;" class="card-title st"><b> &nbsp; Vehicle Name</b> </h5>
+  
+                        <div class="row">
+                          <div class="col-md-1">
+  
+                          </div>
+                          <div class="col-md-6">
+                            <b-row>
+                              <span class="pull-left"><b>Traffic Plate: </b></span>
+  
+                            </b-row>
+                            <b-row>
+                              <span class="pull-left"><b>Registeration Date:</b> </span>
+                            </b-row>
+                            <b-row>
+                                <span class="pull-left"><b>TC Number:</b> </span>
+                            </b-row>
+                            <b-row>
+                                <span class="pull-left"><b>Policy Expire:</b></span>
+                            </b-row>
+                            <b-row>
+                                <span class="pull-left"><b>Insurance Expire:</b></span>
+                            </b-row>
+  
+                          </div>
+                          <div class="col-md-4">
+                            <b-row>
+                              <span class="pull-left"> 1234567</span>
+                            </b-row>
+                            <b-row>
+                              <span class="pull-left">11/11/2018</span>
+                            </b-row>
+                            <b-row>
+                              <span class="pull-left">456789 </span>
+                            </b-row>
+                            <b-row>
+                                <span class="pull-left">11/11/2025 </span>
+                            </b-row>
+                            <b-row>
+                                <span class="pull-left">11/11/2025 </span>
+                            </b-row>
+  
+                          </div>
+  
+  
+                        </div>
+  
+                      </div>
+  
+  
                     </div>
-
-                    
+  
+  
                   </div>
-                </div>
               </div>
             </div>
 
@@ -56,39 +97,82 @@
           </div>
         </div>
         <div class="col-md-6">
-            <div class="row " style="padding-bottom: 20px">
-              <div class="card mb-3 ">
-                <div class="row no-gutters">
-                  <div class="col-md-4 ">
-                    <img src="../assets/h22.jpg" class="card-img img3 im1" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body bg">
-                      <div class="bd">
-                          <h5 style="text-align: left;" class="card-title st" ><router-link style="color: black" to="Details"><b> Vehicle Name</b>  </router-link> </h5> 
-                          <div class="dot-hr"></div>
-                          <span class="pull-left"><b>Traffic Plate:</b> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 1234567</span> 
-                          <span class="pull-left"><b>Registeration Date:</b> 11/11/2018</span>  
-                          <span class="pull-left"><b>TC Number:</b>&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; 1234567</span> 
-                          <span class="pull-left"><b>Policy Expire.:</b> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;11/11/2029</span> 
-                          <span class="pull-left"><b>Insurancd Expire.:</b>&nbsp;  &nbsp; 11/11/2039</span> 
-                          
+          <div class="row " style="padding-bottom: 20px">
+            <div class="card mb-3 ">
+              <div class="row no-gutters">
+                <div class="col-md-4 ">
+                  <img src="../assets/h22.jpg" class="card-img img3 im1" alt="...">
+                </div>
+
+                <div class="col-md-8">
+                  <div class="card-body bg">
+                    <div class="bd">
+                      <h5 style="text-align: left;" class="card-title st"><b> &nbsp; Vehicle Name</b> </h5>
+
+                      <div class="row">
+                        <div class="col-md-1">
+
+                        </div>
+                        <div class="col-md-6">
+                          <b-row>
+                            <span class="pull-left"><b>Traffic Plate: </b></span>
+
+                          </b-row>
+                          <b-row>
+                            <span class="pull-left"><b>Registeration Date:</b> </span>
+                          </b-row>
+                          <b-row>
+                              <span class="pull-left"><b>TC Number:</b> </span>
+                          </b-row>
+                          <b-row>
+                              <span class="pull-left"><b>Policy Expire:</b></span>
+                          </b-row>
+                          <b-row>
+                              <span class="pull-left"><b>Insurance Expire:</b></span>
+                          </b-row>
+
+                        </div>
+                        <div class="col-md-4">
+                          <b-row>
+                            <span class="pull-left"> 1234567</span>
+                          </b-row>
+                          <b-row>
+                            <span class="pull-left">11/11/2018</span>
+                          </b-row>
+                          <b-row>
+                            <span class="pull-left">456789 </span>
+                          </b-row>
+                          <b-row>
+                              <span class="pull-left">11/11/2025 </span>
+                          </b-row>
+                          <b-row>
+                              <span class="pull-left">11/11/2025 </span>
+                          </b-row>
+
+                        </div>
+
+
                       </div>
-  
-                      
+
                     </div>
+
+
                   </div>
+
+
                 </div>
               </div>
-  
-  
-  
             </div>
           </div>
-  
 
+
+
+        </div>
       </div>
+
+
     </div>
+  </div>
 
   </div>
 </template>
@@ -99,47 +183,54 @@
     max-width: 800px;
     max-height: 180px !important;
   }
+
   .im1:hover {
-  opacity: 1.0;
-  filter: alpha(opacity=100); /* For IE8 and earlier */
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    /* For IE8 and earlier */
   }
+
   .img3 {
-  opacity: 0.7;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
-  height: 100%!important;
-  width: 100% !important;
-}
-.st{
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+    /* For IE8 and earlier */
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .st {
     text-transform: uppercase;
     color: black;
     letter-spacing: 2px;
     position: relative;
 
-}
-.dot-hr {
+  }
+
+  .dot-hr {
     border-bottom: 1px dotted #CECBC7;
     margin-bottom: 10px;
-}
-.pull-left {
-    float: left!important;
-}
-.pull-right {
-    float: right!important;
-}
-.ab {
+  }
+
+  .pull-left {
+    float: left !important;
+  }
+
+  .pull-right {
+    float: right !important;
+  }
+
+  .ab {
     font-weight: 600;
     color: #ff0000;
     font-size: 25px;
-}
-.needs {
+  }
+
+  .needs {
     text-overflow: ellipsis !important;
-    
+
     width: 30em;
     overflow: hidden;
     text-overflow: ellipsis;
-    float: left!important;
-}
-    
-
-
+    float: left !important;
+  }
 </style>
