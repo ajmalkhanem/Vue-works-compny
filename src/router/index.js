@@ -54,7 +54,9 @@ import Billform from '@/components/Billform'
 import forgotpassword from '@/components/forgotpassword'
 import newpage from '@/components/newpage'
 import signupbu from '@/components/signupbu'
-import navnew from '@/components/navnew'
+import completeprofile from '@/components/completeprofile'
+import editprofile from '@/components/editprofile'
+import nav1 from '@/components/nav1'
 
 import store from '../store'
 
@@ -382,11 +384,20 @@ let router=new Router({
       name: 'signupbu',
       component: signupbu
     },
-    
     {
-      path: '/navnew',
-      name: 'navnew',
-      component: navnew
+      path: '/completeprofile',
+      name: 'completeprofile',
+      component: completeprofile
+    },
+    {
+      path: '/editprofile',
+      name: 'editprofile',
+      component: editprofile
+    },
+    {
+      path: '/nav1',
+      name: 'nav1',
+      component: nav1
     }
 
 
