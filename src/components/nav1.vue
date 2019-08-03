@@ -1,17 +1,34 @@
 <template>
-    <div class="navv" style="background-color: white!important;">
+    <div class="container" style="background-color: white!important;">
     <b-navbar  toggleable="lg" type="light" variant="light" style="background-color:white!important;">
-       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+    
       
        <a href="Home"><b-nav-text><h6 style="color:black;"></h6></b-nav-text></a>
         
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  <b-img :src="require('../assets/logo.png')" style=" width:200px; height:130px;padding-bottom:10px;"></b-img>
-        <a href=""><b-nav-text><h6 style="color:white;padding-left:10px!important;">tropicalschool@gmail.com</h6></b-nav-text></a>
-        <b-collapse is-nav id="nav_collapse">
+        <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
+        
+        
+                
+       
+               <div>
+                <div class="input-group srh "style="width: 13cm ;padding-bottom:10px;" >
+                     
+                <input type="text" class="form-control" placeholder="Search Entire story here">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-danger">
+                            <span ><i class="fa fa-search"></i> </span>  
+                    </button>
+                </div>
+            </div>
+            
+           </div>
+            
+          <b-nav-item href="#" class="mx-auto">
+                <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
+
+          </b-nav-item>
           
-         
-           <font-awesome-icon :icon="['fab', 'google']" style=" border-radius: 50%;  border: 1x solid grey;
-       padding:10px;  width:40px; height:40px;" size="1x" /></a></b-nav-item>
+          </b-nav-item>
         
           
          </b-collapse>
@@ -150,5 +167,11 @@
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
   }
+  .srh{
+    padding-right:50px!important;
+    padding-top: 15px;
+    text-align: left;
+  }
+
     
     </style>
