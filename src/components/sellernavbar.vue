@@ -35,7 +35,7 @@
 
                                
  <router-link to=""><div style="color:	#111113 !important;">Settings</div></router-link>    
- <router-link to="/myaccount"><div style="color:	#111113 !important;">Profile</div></router-link>  
+ <router-link to="/editprofile"><div style="color:	#111113 !important;">Profile</div></router-link>  
   <a v-on:click="handlelogout()">logout</a>                       </div>
                         
                     </div>

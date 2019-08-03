@@ -19,7 +19,7 @@
               <tr>
                 <th scope="col">
                   <router-link
-                    to="profile"
+                    :to="'/profile/' + this.id"
                     style="text-decoration: none!important;"
                   >Maintenance Analitics</router-link>
                 </th>
@@ -29,7 +29,7 @@
               <tr>
                 <td>
                   <router-link
-                    to="MaintenanceHistory"
+                    :to="'/MaintenanceHistory/' + this.id"
                     style="text-decoration: none!important;"
                   >Maintenance History</router-link>
                 </td>
@@ -37,7 +37,7 @@
               <tr>
                 <td>
                   <router-link
-                    to="FuelFillingHistory"
+                   :to="'/FuelFillingHistory/' + this.id"
                     style="text-decoration: none!important;"
                   >Fuel Filling History</router-link>
                 </td>
@@ -45,7 +45,7 @@
               <tr>
                 <td>
                   <router-link
-                    to="PenaltyHistory"
+                    :to="'/PenaltyHistory/' + this.id"
                     style="text-decoration: none!important;"
                   >Penalty History</router-link>
                 </td>
@@ -53,7 +53,7 @@
               <tr>
                 <td style=" background: rgb(242, 235, 235)">
                   <router-link
-                    to="Addnewbills"
+                   :to="'/Addnewbills/' + this.id"
                     style="text-decoration: none!important;"
                   >Add new Maintenance bills</router-link>
                 </td>
@@ -61,7 +61,7 @@
               <tr>
                 <td>
                   <router-link
-                    to="Addfuelfilling"
+                   :to="'/Addfuelfilling/' + this.id"
                     style="text-decoration: none!important;"
                   >Add Fuel Filling</router-link>
                 </td>
@@ -69,7 +69,7 @@
               <tr>
                 <td>
                   <router-link
-                    to="Addemidetails"
+                   :to="'/Addemidetails/' + this.id"
                     style="text-decoration: none!important;"
                   >Add EMI Details</router-link>
                 </td>
@@ -77,7 +77,7 @@
               <tr>
                 <td>
                   <router-link
-                    to="Vehiclerenewal"
+                   :to="'/Vehiclerenewal/' + this.id"
                     style="text-decoration: none!important;"
                   >Vehicle Renewal and Penalty Charges</router-link>
                 </td>
@@ -180,40 +180,7 @@
                   <strong>Save</strong>
                 </b-button>
                 <br />
-                <!-- <b-container style="background-color:white;">
-            
-                        
-                     
-                    </div><br>
-                    <h5>Select Category</h5></label> 
-                  
-                    <div class="form-group">
-                     
-                      <select  class="form-control" v-model="users1.station"  >
-                   
-                  <option value="saab">Accessories Change</option>
-                  <option value="fiat">General Service</option>
-                  <option value="audi">Tyre Charge</option></select>
-                    </div>
-                    <br>
-                    <router-link to="" class="squaree_bt"><strong>Save</strong></router-link>
-                   <br>
-              <!-- <b-container style="background-color:white;">
-                  <div class="form-group">
-            <label for="policy" style="color: cornflowerblue;"><h5>Select Category</h5></label>        <b-row>
-                      <b-col>  <b-button variant="info">Tyre Charge</b-button>
-                      </b-col></b-row><br>
-                      <b-row>
-                      <b-col>   <b-button variant="info">General Service</b-button>
-                      </b-col></b-row><br>
-                      <b-row>
-                      <b-col>   <b-button variant="info">Accessories Change</b-button>
-                      </b-col>
-                    </b-row></div>
-                    <div class="form-group">
-                  <label for="policy" style="color: cadetblue;"><b></b></label>
-                    <b-button type="submit" variant="outline-primary">Save</b-button></div>
-                </b-container>-->
+               
               </form>
             </div>
             <br />

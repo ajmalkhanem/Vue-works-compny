@@ -4,80 +4,84 @@
     <div class="container">
       <div class="col-md-12 row">
         <div class="col-md-6">
-          <p style="color:black!important;padding-top:20px!important;"><a href="/" style="text-decoration: none!important;"><strong>Home</strong></a> > &nbsp
+          <p style="color:black!important;padding-top:20px!important;"><a href="/"
+              style="text-decoration: none!important;"><strong>Home</strong></a> > &nbsp;
             <strong>My Account</strong></p>
         </div>
 
       </div>
       <div class="col-md-12 row" style="padding-top:40px!important;">
         <div class="col-md-4">
-          <table class="table table-bordered">
-            <thead class="oo">
-              <tr>
-
-                <th scope="col" style=" background: rgb(242, 235, 235)">
-                  <router-link to="profile" style="text-decoration: none!important;">Maintenance Analitics
-                     <!--<modal1 :id="this.id"></modal1>-->
-                  </router-link>
-                </th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-
-                <td>
-                  <router-link to="MaintenanceHistory" style="text-decoration: none!important;">Maintenance History</router-link>
-                </td>
-
-              </tr>
-              <tr>
-
-                <td>
-                  <router-link to="FuelFillingHistory" style="text-decoration: none!important;">Fuel Filling History</router-link>
-                </td>
-
-              </tr>
-              <tr>
-
-                <td>
-                  <router-link to="PenaltyHistory" style="text-decoration: none!important;">Penalty History</router-link>
-                </td>
-
-              </tr>
-              <tr>
-
-                <td>
-                  <router-link to="Addnewbills" style="text-decoration: none!important;">Add new Maintenance bills
-                  </router-link>
-                </td>
-
-              </tr>
-              <tr>
-
-                <td>
-                  <router-link to="Addfuelfilling" style="text-decoration: none!important;">Add Fuel Filling</router-link>
-                </td>
-
-              </tr>
-              <tr>
-
-                <td>
-                  <router-link to="Addemidetails" style="text-decoration: none!important;">Add EMI Details</router-link>
-                </td>
-
-              </tr>
-              <tr>
-
-                <td>
-                  <router-link to="Vehiclerenewal" style="text-decoration: none!important;">Vehicle Renewal and Penalty Charges
-                  </router-link>
-                </td>
-
-              </tr>
-
-            </tbody>
-          </table>
+            <table class="table table-bordered">
+                <thead class="oo">
+                  <tr>
+                    <th scope="col">
+                      <router-link
+                        :to="'/profile/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Maintenance Analitics</router-link>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <router-link
+                        :to="'/MaintenanceHistory/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Maintenance History</router-link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <router-link
+                       :to="'/FuelFillingHistory/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Fuel Filling History</router-link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <router-link
+                        :to="'/PenaltyHistory/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Penalty History</router-link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style=" background: rgb(242, 235, 235)">
+                      <router-link
+                       :to="'/Addnewbills/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Add new Maintenance bills</router-link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <router-link
+                       :to="'/Addfuelfilling/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Add Fuel Filling</router-link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <router-link
+                       :to="'/Addemidetails/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Add EMI Details</router-link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <router-link
+                       :to="'/Vehiclerenewal/' + this.id"
+                        style="text-decoration: none!important;"
+                      >Vehicle Renewal and Penalty Charges</router-link>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
         <div class="col-md-8">
           <h4>ANALYTICS</h4>
@@ -87,6 +91,46 @@
   </div>
 </template>
 <script>
+
+
+  export default {
+    props: ['id'],
+    components: {
+
+
+    },
+    data() {
+      return {
+
+        list: [],
+
+      };
+    },
+    mounted: function () {
+      this.getData();
+    },
+    methods: {
+      getData() {
+        axios({
+          method: 'POST',
+          headers: {
+            to: localStorage.getItem("token")
+          },
+          url: 'http://13.233.110.196/list/vehicle/',
+
+        })
+          .then((response) => {
+
+            // console.log(response.data) 
+            //console.log(response.data[0])     
+            this.list = response.data.data
+
+          })
+      },
+
+    }
+  };
+
 </script>
 <style>
   .oo {

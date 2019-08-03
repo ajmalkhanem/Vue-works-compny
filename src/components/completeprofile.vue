@@ -1,5 +1,7 @@
 <template>
     <div>
+      <div>
+        <form @submit.prevent="submit1" enctype="multipart/form-data" >
         <hr class="rr" style="margin:0!important"><br>
         <div class="container"><h3>Complete Profile</h3></div><br>
         <div class="container" style="background-color: #f5f5f5;" >
@@ -10,7 +12,13 @@
           <div class="col-md-8" style="padding-top:40px!important;padding-bottom:40px!important;">
           <h5><strong>Add Your Profile Picture Here</strong></h5>
           <div style="padding-top:50px!important;">
-          <router-link to="" id="bu" style="text-decoration: none!important;" >Upload Image</router-link>
+           <input
+                              type="file"
+                              id="file"
+                              accept="image/*"
+                              v-on:change="uploadImage($event)"
+                              
+                            />
           </div>
           </div></div>
       </div>
@@ -22,45 +30,124 @@
               <div class="col-md-5">
             
             
-              <form @submit="onSubmit" style="padding-top:30px!important;">
+              <div style="padding-top:30px!important;">
                     
                         
                     <div class="form-group">
                        
                       <label for="exampleInputEmail1" style="text-align: left!important;"></label>
-                      <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="First Name">
+                      <input type="text" class="form-control" v-model="users1.firstname" aria-describedby="emailHelp" placeholder="First Name">
                       
                     </div>
                     
                    
                        
                               <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleI" aria-describedby="emailHelp" placeholder="Last Name " >
+                                    <input type="text" class="form-control" v-model="users1.lastname" aria-describedby="emailHelp" placeholder="Last Name " >
                                          
                                        </div>
                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="exampleI" aria-describedby="emailHelp" placeholder="Nationality " >
+                                            <input type="text" class="form-control" v-model="users1.nation" aria-describedby="emailHelp" placeholder="Nationality " >
                                                  
                                                </div>
                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="exampleI" aria-describedby="emailHelp" placeholder="Promo Reference Code " >
+                                                    <input type="text" class="form-control" v-model="users1.code" aria-describedby="emailHelp" placeholder="Promo Reference Code " >
                                                          
                                                        </div>
                                       <br>
                     <p style="text-align: right!important;">
-                    <router-link to="" id="bu">Save & Continue</router-link>
-                   <br><br>
-                    <div class="bord" v-if=seen style="color:black!important;background-color:white!important;padding-left:10px!important;padding-right:10px!important;padding-top:10px!important;padding-bottom:10px!important;font-weight:bold!important;">
-                      {{msg}}
-                   </div> 
-                </p>
+  <b-button type="submit" variant="info">Register</b-button>
+                   <br><br></p>
                     
-                  </form></div><br>
+                    
+                  </div></div><br>
           </div>
-      </div><br>
-    </div>
+      </div><br></form>
+    </div></div>
 </template>
 <script>
+import navbar from "@/components/navbar";
+import navbar1 from "@/components/navbar1";
+
+import axios from "axios";
+//import store from "../store";
+export default {
+  components: { navbar, navbar1 },
+  data() {
+    return {
+      users1: {
+        firstname: "",
+        lastname: "",
+        nation: "",
+        code: ""
+      },
+      msg1: "",
+      selectedFile: "",
+      id: ""
+    };
+  },
+  methods: {
+    uploadImage() {
+      this.selectedFile = event.target.files[0];
+      this.url = URL.createObjectURL(this.selectedFile);
+    },
+    submit1(ev) {
+      ev.preventDefault();
+      var data = {};
+      data["firstname"] = this.users1.firstname;
+      data["lastname"] = this.users1.lastname;
+      data["nationality"] = this.users1.nation;
+      data["ref_code"] = this.users1.code;
+      axios({
+        method: "post",
+        url: "http://13.233.110.196/user/customer/",
+        data: data,
+        headers: {
+          to: localStorage.getItem("token")
+        }
+      }).then(response => {
+        if(response.data.status == true){
+          alert("Successfully added");
+          //imageupload
+          let formData = new FormData();
+          formData.append("dp", this.selectedFile);
+          axios({
+            method: "post",
+            url: "http://13.233.110.196/customer/add/dp/",
+            data: formData,
+            headers: {
+              "Content-Type": "multipart/form-data",
+              to: localStorage.getItem("token")
+            }
+          })
+            .then(response => {
+              if (response.data.status == true) {
+                alert("Success");
+                this.$router.push({
+              name: "userprofile"
+            });
+              } else {
+                alert("failed");
+              }
+            })
+            .catch(e => {
+              alert("Too Large image!! Failed");
+              this.loading = false;
+            });
+        }
+        else{
+          //code
+          alert("failed")
+        }
+        })
+        .catch(e => {
+          this.loading = false;
+          this.err = e.response.data.msg;
+          alert(this.err);
+        });
+    },
+  }
+};
 </script>
 <style>
      .rr {
