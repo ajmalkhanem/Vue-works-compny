@@ -78,56 +78,54 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-6">
-         
-          <b-container style="background-color:white;">
-            <h5>VEHICLE RENEWAL AND PENALTY CHARGES</h5><br>
-            <div
-            style="padding-left:20px!important;padding-right:20px!important;background-color:white;border:solid rgb(235, 238, 240) 2px;padding-bottom:20px!important;padding-top:20px!important;">
-            <form @submit.prevent="submit1">
+        <div class="col-md-8" style="padding-bottom: 20px;padding-top: 20px">
+          <h4>Vehicle Renewal</h4>
 
-    
-
-    <div class="container3">
-      <div class="form-group">
-  <label for="policy" ><h5>Task Name</h5></label>
-  <input type="text" class="form-control" v-model="users1.name"  placeholder="Task Name" >
-</div>
-       <div class="form-group">
-  <label for="policy" ><h5>Date</h5></label>
-  <input type="date" class="form-control" v-model="users1.date" placeholder="Policy Expiry Date" >
-</div>
-       <div class="form-group">
-  <label for="policy" ><h5>Odometer Reading</h5></label>
-  <input type="text" class="form-control" v-model="users1.odometer"  placeholder="Odometer" >
-</div>
-
-       <div class="form-group">
-  <label for="policy" ><h5>Amount</h5></label>
-  <input type="text" class="form-control" v-model="users1.amount"  placeholder="Amount" >
-</div>
-
-
-
-       
+          <div
+          style=" padding-left:20px!important;padding-right:20px!important;background-color:white;border:solid rgb(235, 238, 240) 2px;float:left;padding-bottom:20px!important;padding-top:20px!important;">
+            
+          
+          <form style="padding-bottom: 20px ;padding-top: 30px" @submit.prevent="submit1">
 
         
-     
-    </div>
-<b-container style="background-color:white;">
-  
-    <div class="form-group">
-  <label for="policy" style="color: cadetblue;"><b></b></label>
-  <b-button style=" background: rgb(242, 235, 235);color:black;"> save</b-button>
-  </div>
-    </b-container>
     
-
-
-  </form>
-</div>
-  </b-container>
-
+              <div class="container3">
+                <div class="form-group">
+            <label for="policy" style="color: cornflowerblue;"><b>Task Name:</b></label>
+            <input type="text" class="form-control" v-model="users1.name"  placeholder="Task Name" >
+          </div>
+                 <div class="form-group">
+            <label for="policy" style="color: cornflowerblue;"><b>Date:</b></label>
+            <input type="date" class="form-control" v-model="users1.date"  placeholder="Policy Expiry Date" >
+          </div>
+                 <div class="form-group">
+            <label for="policy" style="color: cornflowerblue;"><b>Odometer Reading</b></label>
+            <input type="text" class="form-control" v-model="users1.odometer"  placeholder="Odometer" >
+          </div>
+      
+                 <div class="form-group">
+            <label for="policy" style="color: cornflowerblue"><b>Amount</b></label>
+            <input type="text" class="form-control" v-model="users1.amount"  placeholder="Amount" >
+          </div>
+      
+      
+      
+                 
+      
+                  
+               
+              </div>
+         <b-container style="background-color:white;">
+            
+              <div class="form-group">
+            <label for="policy" style="color: cornflowerblue;"><b></b></label>
+              <b-button type="submit" variant="outline-primary">Save</b-button></div>
+              </b-container>
+              
+      
+          
+            </form>
+          </div>
         </div>
       </div><br>
     </div>

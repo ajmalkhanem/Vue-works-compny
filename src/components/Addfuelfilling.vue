@@ -128,7 +128,7 @@
   
     <div class="form-group">
   <label for="policy" style="color: cornflowerblue;"><h4></h4></label>
-  <router-link to="" class="square_bt"><strong>Save</strong></router-link></div>
+  <router-link to="" class="squaree_bt"><strong>Save</strong></router-link></div>
     </b-container>
     
 
@@ -258,10 +258,10 @@
     border: 1px solid rgb(240, 240, 240) !important;
     border-radius: 3px !important;
   }
-  .square_bt {
+  .squaree_bt {
     display: inline-block;
     padding: 10px 40px!important;
-    border-radius: 25px!important;
+    
     text-decoration: none!important;
     color: black!important;
     background:  rgb(179, 158, 158)!important;

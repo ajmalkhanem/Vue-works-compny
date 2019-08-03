@@ -181,6 +181,24 @@
                 </b-button>
                 <br />
                 <!-- <b-container style="background-color:white;">
+            
+                        
+                     
+                    </div><br>
+                    <h5>Select Category</h5></label> 
+                  
+                    <div class="form-group">
+                     
+                      <select  class="form-control" v-model="users1.station"  >
+                   
+                  <option value="saab">Accessories Change</option>
+                  <option value="fiat">General Service</option>
+                  <option value="audi">Tyre Charge</option></select>
+                    </div>
+                    <br>
+                    <router-link to="" class="squaree_bt"><strong>Save</strong></router-link>
+                   <br>
+              <!-- <b-container style="background-color:white;">
                   <div class="form-group">
             <label for="policy" style="color: cornflowerblue;"><h5>Select Category</h5></label>        <b-row>
                       <b-col>  <b-button variant="info">Tyre Charge</b-button>
@@ -332,4 +350,26 @@ export default {
   background: rgb(179, 158, 158) !important;
   transition: 0.4s;
 }
+  .rr {
+    border: 1px solid rgb(240, 240, 240) !important;
+    border-radius: 3px !important;
+  }
+  .squarbt {
+    display: inline-block;
+    padding: 7px 20px!important;
+    border-radius: 25px!important;
+    text-decoration: none;
+    color: black!important;
+    background: rgb(240, 240, 240);
+    transition: .4s;
+  }
+  .squaree_bt {
+    display: inline-block;
+    padding: 10px 40px!important;
+    
+    text-decoration: none!important;
+    color: black!important;
+    background:  rgb(179, 158, 158)!important;
+    transition: .4s;
+  }
 </style>
