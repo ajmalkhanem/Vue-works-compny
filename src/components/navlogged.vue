@@ -11,11 +11,26 @@
                             <b-nav-item>
         
                             
-                                <span style="padding-left:10px;">  Become a Seller  </span>
+                                <!-- <span style="padding-left:10px;">  Become a Seller  </span>
                                 <span style="padding-left:10px;"> | </span>
                                 <span style="padding-left:10px;">SignUp </span>
-                                <span style="padding-left:10px;">|  </span>
-                                <span style="padding-left:10px;">SignIn  </span>
+                                <span style="padding-left:10px;">|  </span> -->
+                                <!-- <b-nav-item-dropdown class="hv" text="PARTNER WITH US" right><i class="fa fa-user" aria-hidden="true"></i>
+                                        <b-dropdown-item href="#">EN</b-dropdown-item>
+                                        <b-dropdown-item href="#">ES</b-dropdown-item>
+                                        <b-dropdown-item href="#">RU</b-dropdown-item>
+                                        <b-dropdown-item href="#">FA</b-dropdown-item>
+                                    </b-nav-item-dropdown> -->
+
+                                    <b-nav-item-dropdown id="nav7_ddown" right>
+                                            <template slot="button-content"><i class="fa fa-user fa-2x" aria-hidden="true" ></i></template>
+                                            <b-dropdown-item>My Profile</b-dropdown-item>
+                                             <b-dropdown-item>Settings</b-dropdown-item>
+                                             <b-dropdown-divider></b-dropdown-divider>
+                                             <b-dropdown-item>Logout</b-dropdown-item>
+                                           </b-nav-item-dropdown>
+                        
+                                <!-- <span style="padding-left:10px;">SignIn  </span> -->
                                 
                 
                                
@@ -23,11 +38,11 @@
         
                             </b-nav-item>
         
-                            <b-nav-item class=" navt "><router-link to=""><strong><div style="color:	#111113 !important;">
-                                    <img src="../assets/ind.png" style="width:25px;height:20px;">
+                            <b-nav-item><router-link to=""><strong><div style="color:	#111113 !important;">
+                                    <img src="../assets/ind.png" style="width:25px;height:20px;margin-top: 12px;">
                                     </div></strong></router-link></b-nav-item>
-                                  <b-nav-item class="navt "><router-link to=""><strong><div style="color:	#111113 !important;">
-                                    <img src="../assets/uae.png" style="width:25px;height:25px;">
+                                  <b-nav-item><router-link to=""><strong><div style="color:	#111113 !important;">
+                                    <img src="../assets/uae.png" style="width:25px;height:25px;margin-top: 10px;">
                                     </div></strong></router-link></b-nav-item>
         
                         </b-navbar-nav>

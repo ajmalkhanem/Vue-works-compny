@@ -57,6 +57,8 @@ import signupbu from '@/components/signupbu'
 import completeprofile from '@/components/completeprofile'
 import editprofile from '@/components/editprofile'
 import nav1 from '@/components/nav1'
+import navlogged from '@/components/navlogged'
+
 
 import store from '../store'
 
@@ -398,6 +400,11 @@ let router=new Router({
       path: '/nav1',
       name: 'nav1',
       component: nav1
+    },
+    {
+      path: '/navlogged',
+      name: 'navlogged',
+      component: navlogged
     }
 
 
