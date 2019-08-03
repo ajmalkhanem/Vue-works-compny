@@ -87,12 +87,30 @@
         </div>
         <div class="col-md-8">
           <h5>MAINTENANCE HISTORY</h5>
-          <ul v-if="list.maintenanceBills.length">
-        <li v-for="(file, index) in list.maintenanceBills" :key="file.id">
-          <span>{{file.name}}</span> -
+          <p v-if="list.maintenanceBills.length">
+        <p v-for="(file) in list.maintenanceBills" :key="file.id">
           
-        </li>
-      </ul>
+          <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{file.odometer}}</th>
+      <td>{{file.name}}</td>
+      <td>{{file.amount}}</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+          </table>
+          
+        </p>
+     
         </div>
       </div>
     </div>
