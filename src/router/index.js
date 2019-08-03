@@ -52,8 +52,7 @@ import Vehiclerenewal from '@/components/Vehiclerenewal'
 import signup1 from '@/components/signup1'
 import Billform from '@/components/Billform'
 import forgotpassword from '@/components/forgotpassword'
-import signupbu from '@/components/signupbu'
-
+import newpage from '@/components/newpage'
 
 import store from '../store'
 
@@ -369,9 +368,9 @@ let router=new Router({
       component: forgotpassword
     },
     {
-      path: '/signupbu',
-      name: 'signupbu',
-      component: signupbu
+      path: '/newpage',
+      name: 'newpage',
+      component: newpage
     }
 
 
