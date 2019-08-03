@@ -1,107 +1,153 @@
 <template>
   <div>
-    <hr class="rr" style="margin:0!important;">
+    <hr class="rr" style="margin:0!important;" />
     <div class="container">
       <div class="col-md-12 row">
         <div class="col-md-6">
-          <p style="color:black!important;padding-top:20px!important;"><a href="/" style="text-decoration: none!important;"><strong>Home</strong></a> > &nbsp
-            <strong>My Account</strong></p>
+          <p style="color:black!important;padding-top:20px!important;">
+            <a href="/" style="text-decoration: none!important;">
+              <strong>Home</strong>
+            </a> > &nbsp;
+            <strong>My Account</strong>
+          </p>
         </div>
-
       </div>
       <div class="col-md-12 row" style="padding-top:40px!important;">
         <div class="col-md-4">
           <table class="table table-bordered">
             <thead class="oo">
               <tr>
-
                 <th scope="col">
-                  <router-link to="profile" style="text-decoration: none!important;">Maintenance Analitics
-                  </router-link>
+                  <router-link
+                    :to="'/profile/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Maintenance Analitics</router-link>
                 </th>
-
               </tr>
             </thead>
             <tbody>
               <tr>
-
                 <td>
-                  <router-link to="MaintenanceHistory" style="text-decoration: none!important;">Maintenance History</router-link>
+                  <router-link
+                    :to="'/MaintenanceHistory/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Maintenance History</router-link>
                 </td>
-
               </tr>
               <tr>
-
                 <td>
-                  <router-link to="FuelFillingHistory" style="text-decoration: none!important;">Fuel Filling History</router-link>
+                  <router-link
+                    :to="'/FuelFillingHistory/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Fuel Filling History</router-link>
                 </td>
-
               </tr>
               <tr>
-
+                <td>
+                  <router-link
+                    :to="'/PenaltyHistory/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Penalty History</router-link>
+                </td>
+              </tr>
+              <tr>
                 <td style=" background: rgb(242, 235, 235)">
-                  <router-link to="PenaltyHistory" style="text-decoration: none!important;">Penalty History</router-link>
+                  <router-link
+                    :to="'/Addnewbills/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Add new Maintenance bills</router-link>
                 </td>
-
               </tr>
               <tr>
-
                 <td>
-                  <router-link to="Addnewbills" style="text-decoration: none!important;">Add new Maintenance bills
-                  </router-link>
+                  <router-link
+                    :to="'/Addfuelfilling/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Add Fuel Filling</router-link>
                 </td>
-
               </tr>
               <tr>
-
                 <td>
-                  <router-link to="Addfuelfilling" style="text-decoration: none!important;">Add Fuel Filling</router-link>
+                  <router-link
+                    :to="'/Addemidetails/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Add EMI Details</router-link>
                 </td>
-
               </tr>
               <tr>
-
                 <td>
-                  <router-link to="Addemidetails" style="text-decoration: none!important;">Add EMI Details</router-link>
+                  <router-link
+                    :to="'/Vehiclerenewal/' + this.id"
+                    style="text-decoration: none!important;"
+                  >Vehicle Renewal and Penalty Charges</router-link>
                 </td>
-
               </tr>
-              <tr>
-
-                <td>
-                  <router-link to="Vehiclerenewal" style="text-decoration: none!important;">Vehicle Renewal and Penalty Charges
-                  </router-link>
-                </td>
-
-              </tr>
-
             </tbody>
           </table>
         </div>
         <div class="col-md-8">
           <h5>PENALTY HISTORY</h5>
+           <ul v-if="list.charges.length">
+        <li v-for="(file) in list.charges" :key="file.id">
+          <span>{{file.title}}</span> -
+          
+        </li>
+      </ul>
+                      <ul v-else>No data Found</ul>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+export default {
+  props: ["id"],
+  data() {
+    return {
+      list: [],
+      
+      // Note 'age' is left out and will not appear in the rendered table
+    };
+  },
+  mounted: function() {
+    this.getData();
+    //alert(this.id)
+  },
+  methods: {
+    getData() {
+      //alert(this.id)
+      axios({
+        method: "POST",
+        headers: {
+          to: localStorage.getItem("token")
+        },
+        url: "http://13.233.110.196/view/vehicle/",
+        data: {
+          id: this.id
+        }
+      }).then(response => {
+        console.log(response.data);
+        console.log((this.list = response.data.data));
+      });
+    }
+  }
+};
 </script>
 <style>
-  .oo {
-    color: blue !important;
-  }
+.oo {
+  color: blue !important;
+}
 
-  .table {
-    width: 80% !important;
-  }
+.table {
+  width: 80% !important;
+}
 
-  .th {
-    color: cornflowerblue;
-  }
+.th {
+  color: cornflowerblue;
+}
 
-  .rr {
-    border: 1px solid rgb(240, 240, 240) !important;
-    border-radius: 3px !important;
-  }
+.rr {
+  border: 1px solid rgb(240, 240, 240) !important;
+  border-radius: 3px !important;
+}
 </style>
