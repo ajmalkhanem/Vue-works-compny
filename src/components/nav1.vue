@@ -9,11 +9,11 @@
         
         
                 
-       
+        <b-nav-item href="#" class="ml-auto">
                <div>
                 <div class="input-group srh "style="width: 13cm ;padding-bottom:10px;" >
                      
-                <input type="text" class="form-control" placeholder="Search Entire story here">
+                <input type="text" class="form-control" placeholder="Search here">
                 <div class="input-group-append">
                     <button type="button" class="btn btn-danger">
                             <span ><i class="fa fa-search"></i> </span>  
@@ -21,12 +21,9 @@
                 </div>
             </div>
             
-           </div>
+           </div></b-nav-item>
             
-          <b-nav-item href="#" class="mx-auto">
-                <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
-
-          </b-nav-item>
+         
           
           </b-nav-item>
         
