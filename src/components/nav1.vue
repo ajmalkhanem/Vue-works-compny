@@ -4,7 +4,7 @@
     <b-navbar class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke" toggleable="lg" type="light"
       variant="light">
       <div class="container">
-        <span>Weicome to CloudGM </span>
+        <span>Welcome to CloudGM </span>
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
@@ -97,7 +97,7 @@
     
     <b-navbar toggleable="lg" style="background-color:#f8f9fa" type="light" variant="light">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <div style="padding-left: 100px;">
+      <div class="ty">
 
         <b-nav-item class="hv">
           <i class="fa fa-list"></i> &nbsp;CATEGORIES
@@ -301,5 +301,47 @@
     padding-right: 50px !important;
     padding-top: 15px;
     text-align: left;
+  }
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+      .ty{
+        padding-left:100px!important;
+      }
+    }
+    @media (min-width: 1025px) and (max-width: 1229px) {
+    
+    .ty{
+      padding-left:30px!important;
+    }
+  }
+    @media (min-width: 1330px) and (max-width: 1318px) {
+    
+    .ty{
+      padding-left:30px!important;
+    }
+  }
+  @media (min-width: 1331px) and (max-width: 1400px) {
+    
+    .ty{
+      padding-left:50px!important;
+    }
+  }
+  @media (min-width: 1401px) and (max-width: 1500px) {
+    
+    .ty{
+      padding-left:100px!important;
+    }
+  }
+  @media (min-width: 1501px) and (max-width: 1700px) {
+    
+    .ty{
+      padding-left:120px!important;
+    }
+  }
+  @media (min-width: 1701px) and (max-width: 1800px) {
+    
+    .ty{
+      padding-left:200px!important;
+    }
   }
 </style>

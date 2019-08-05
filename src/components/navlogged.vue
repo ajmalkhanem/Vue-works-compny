@@ -3,7 +3,7 @@
 
     <b-navbar class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke" toggleable="lg" type="light" variant="light">
         <div class="container">
-                <span >Weicome to CloudGM </span>
+                <span >Welcome to CloudGM </span>
 
                 <b-collapse id="nav-collapse" is-nav>
                         <b-navbar-nav class="ml-auto">
@@ -65,7 +65,7 @@
         
                 
        
-               <div style="padding-left:200px;">
+        <b-nav-item href="#" class="mx-auto">
                 <div class="input-group srh "style="width: 13cm ;padding-bottom:10px;" >
                      
                 <input type="text" class="form-control" placeholder="Search here">
@@ -75,8 +75,9 @@
                     </button>
                 </div>
             </div>
+        </b-nav-item>
             
-           </div>
+           
             
           <!-- <b-nav-item href="#" class="mx-auto">
                 <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
