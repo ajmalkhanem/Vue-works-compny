@@ -27,7 +27,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link
                     :to="'/MaintenanceHistory/' + this.id"
                     style="text-decoration: none!important;"
@@ -51,7 +51,7 @@
                 </td>
               </tr>
               <tr>
-                <td style=" background: rgb(242, 235, 235)">
+                <td>
                   <router-link
                     :to="'/Addnewbills/' + this.id"
                     style="text-decoration: none!important;"
@@ -87,30 +87,38 @@
         </div>
         <div class="col-md-8">
           <h5>MAINTENANCE HISTORY</h5>
+          <br />
           <p v-if="list.maintenanceBills.length">
-        <p v-for="(file) in list.maintenanceBills" :key="file.id">
-          
           <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">{{file.odometer}}</th>
-      <td>{{file.name}}</td>
-      <td>{{file.amount}}</td>
-      <td>@mdo</td>
-    </tr>
-  </tbody>
-          </table>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Issued_Date</th>
+                <th scope="col">Category</th>
+                <th scope="col">Station</th>
+                <th scope="col">Odometer</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody v-for="(file) in list.maintenanceBills" :key="file.id">
+              <tr>
+                <th scope="row"></th>
+                <td>{{file.name}}</td>
+                <td>{{file.amount}}</td>
+                <td>{{file.date.slice(0,10)}}</td>
+                <td>{{file.category}}</td>
+                <td>{{file.station}}</td>
+                <td>{{file.odometer}}</td>
+                <td>
+                  <b-button variant="danger">Delete</b-button>
+                </td>
+              </tr>
+            </tbody>
+          </table></p>
+          <p v-else>No data Found</p>
           
-        </p>
-     
         </div>
       </div>
     </div>

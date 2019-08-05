@@ -62,7 +62,7 @@
                 </td>
               </tr>
               <tr>
-                <td>
+                <td  style=" background: rgb(242, 235, 235)">
                   <router-link
                     :to="'/Addfuelfilling/' + this.id"
                     style="text-decoration: none!important;"

@@ -35,7 +35,7 @@
                 </td>
               </tr>
               <tr>
-                <td>
+                <td  style=" background: rgb(242, 235, 235)">
                   <router-link
                     :to="'/FuelFillingHistory/' + this.id"
                     style="text-decoration: none!important;"
@@ -51,7 +51,7 @@
                 </td>
               </tr>
               <tr>
-                <td style=" background: rgb(242, 235, 235)">
+                <td >
                   <router-link
                     :to="'/Addnewbills/' + this.id"
                     style="text-decoration: none!important;"
@@ -87,18 +87,36 @@
         </div>
         <div class="col-md-8">
           <h5>FUEL FILLING HISTORY</h5>
-          <ul v-if="list.fuelFilling.length">
-        <li v-for="(file, index) in list.fuelFilling" :key="file.id">
-          <span>{{file.title}}</span> -
-          
-        </li>
-      </ul>
-          <!--<p v-if="list.maintenanceBills.length">
-            
-                        {{list.maintenanceBills[0].name}}
-                        {{list.maintenanceBills[0].odometer}}
-                      </p>
-                      <p v-else>No data Found</p>-->
+           <p v-if="list.fuelFilling.length">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Issued_Date</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Station</th>
+                <th scope="col">Odometer</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody v-for="(file) in list.fuelFilling" :key="file.id">
+              <tr>
+                <th scope="row"></th>
+                <td>{{file.title}}</td>
+                <td>{{file.amount}}</td>
+                <td>{{file.date.slice(0,10)}}</td>
+                <td>{{file.quantity}}</td>
+                <td>{{file.station}}</td>
+                <td>{{file.odometer}}</td>
+                <td>
+                  <b-button variant="danger">Delete</b-button>
+                </td>
+              </tr>
+            </tbody>
+          </table></p>
+          <p v-else>No data Found</p>
         </div>
       </div>
     </div>

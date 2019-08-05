@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div>
+        <form @submit.prevent="submit1" enctype="multipart/form-data" >
+
+    
     <hr class="rr" style="margin:0!important"><br>
     <div class="container">
       <h3>Edit Profile</h3>
@@ -13,8 +17,13 @@
         <div class="col-md-8" style="padding-top:40px!important;padding-bottom:40px!important;">
           <h5><strong>Add Your Profile Picture Here</strong></h5>
           <div style="padding-top:50px!important;">
-            <router-link to="" id="bu" style="text-decoration: none!important;">Upload Image</router-link>
-          </div>
+            <input
+            type="file"
+            id="file"
+            accept="image/*"
+            v-on:change="uploadImage($event)"
+            
+          />          </div>
         </div>
       </div>
     </div>
@@ -28,7 +37,6 @@
         <div class="col-md-5">
 
 
-          <form @submit.prevent="submit1" style="padding-top:30px!important;">
 
 
             <div class="form-group">
@@ -72,11 +80,11 @@
                 <br><br></p>
              
 
-          </form>
+          
         </div><br>
       </div>
-    </div><br>
-  </div>
+    </div><br></form>
+  </div></div>
 </template>
 <script>
   import navbar from '@/components/navbar'
@@ -103,7 +111,8 @@
           nationality: '',
           email: '',
           ph: '',
-          username: ''
+          username: '',
+          pic:''
 
 
         },
@@ -140,6 +149,7 @@
             this.users1.email = response.data.info.email
             this.users1.ph = response.data.info.ph
             this.users1.username = response.data.info.username
+            this.users1.pic=response.data.data.pro_pic
 
 
             console.log(response.data)
@@ -168,7 +178,40 @@
 
         })
 
-          .then((response) => {
+          .then((response) => { 
+            if(response.data.status == true){
+          alert("Successfully added");
+          //imageupload
+          let formData = new FormData();
+          formData.append("dp", this.selectedFile);
+          axios({
+            method: "post",
+            url: "http://13.233.110.196/customer/add/dp/",
+            data: formData,
+            headers: {
+              "Content-Type": "multipart/form-data",
+              to: localStorage.getItem("token")
+            }
+          })
+            .then(response => {
+              if (response.data.status == true) {
+                alert("Success");
+                this.$router.push({
+              name: "slider"
+            });
+              } else {
+                alert("failed");
+              }
+            })
+            .catch(e => {
+              alert("Too Large image!! Failed");
+              this.loading = false;
+            });
+        }
+        else{
+          //code
+          alert("failed")
+        }
             this.msg = response.data.msg
             //store.commit("loginUser",response.data.token);
             //localStorage.setItem("token", response.data.token)

@@ -1,113 +1,112 @@
 <template>
   <div>
     <div>
-      <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab"
-        img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart"
-        @sliding-end="onSlideEnd">
+      <b-carousel id="carousel-1" :interval="4000" controls indicators background="#ababab"
+      img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" >
         <b-carousel-slide>
           <img slot="img" class="d-block img-fluid w-100" width="1024" height="400"
-            src="https://jovinacooksitalian.files.wordpress.com/2018/07/famagusta-tiser.jpg" alt="image slot">
+            src="http://wtautobody.com/wp-content/uploads/2015/04/b2.jpg" alt="image slot">
         </b-carousel-slide>
 
         <b-carousel-slide>
           <img slot="img" class="d-block img-fluid w-100" width="1024" height="400"
-            src="https://www.travelerchoice.com/wp-content/uploads/2016/05/TC08057-Lifestyle-Photo_home-page-banner.jpg"
+            src="http://www.testart.eu/wp-content/uploads/2017/01/bedienung-1600x400.jpg"
             alt="image slot">
         </b-carousel-slide>
         <b-carousel-slide>
           <img slot="img" class="d-block img-fluid w-100" width="1024" height="400"
-            src="https://mauibrewingco.com/maui-content/uploads/2017/08/Waikiki_Slider_Burger.jpg" alt="image slot">
+            src="https://skodadealers.ie/wp-content/uploads/2016/07/dealer_special_offers-1600x400.jpg" alt="image slot">
         </b-carousel-slide>
 
       </b-carousel>
     </div>
     <div class="container" style="padding-top: 30px;">
       <div class="row">
-          <div v-for="listing in list">
-              <router-link v-bind:to="'/profile/' + listing._id">
+        <div v-for="listing in list">
+          <router-link v-bind:to="'/profile/' + listing._id">
 
-        <div class="col-md-6" style="padding-right: 30x;">
-          <div class="row " style="padding-bottom: 20px">
-              
-                    
-                  
-            <div class="card mb-3 ">
-              <div class="row no-gutters">
-                <div class="col-md-4 ">
-                  <img src="../assets/car.jpg" class="card-img img3 im1" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body bg">
-                      <div class="bd">
-                        <h5 style="text-align: left;" class="card-title st"><b> &nbsp;{{ listing.vehicleName}} </b> </h5>
-  
-                        <div class="row">
-                          <div class="col-md-1">
-  
-                          </div>
-                          <div class="col-md-6">
-                            <b-row>
-                              <span class="pull-left"><b>Traffic Plate: </b></span>
-  
-                            </b-row>
-                            <b-row>
-                              <span class="pull-left"><b>Registeration Date:</b> </span>
-                            </b-row>
-                            <b-row>
+            <div class="col-md-6" style="padding-right: 30x;">
+              <div class="row " >
+
+
+
+                <div class="card mb-3 ">
+                  <div class="row no-gutters">
+                    <div class="col-md-4 ">
+                      <img src="../assets/car.jpg" class="card-img img3 im1" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body bg">
+                        <div class="bd">
+                          <h5 style="text-align: left;" class="card-title st"><b> &nbsp;{{ listing.vehicleName}} </b>
+                          </h5>
+
+                          <div class="row">
+
+                            <div class="col-md-6">
+                              <b-row>
+                                <span class="pull-left"><b>Traffic Plate: </b></span>
+
+                              </b-row>
+                              <b-row>
+                                <span class="pull-left"><b>Registeration Date:</b> </span>
+                              </b-row>
+                              <b-row>
                                 <span class="pull-left"><b>TC Number:</b> </span>
-                            </b-row>
-                            <b-row>
+                              </b-row>
+                              <b-row>
                                 <span class="pull-left"><b>Policy Expire:</b></span>
-                            </b-row>
-                            <b-row>
+                              </b-row>
+                              <b-row>
                                 <span class="pull-left"><b>Insurance Expire:</b></span>
-                            </b-row>
-  
+                              </b-row>
+
+                            </div>
+                            <div class="col-md-4">
+                              <b-row>
+                                <span class="pull-left"> {{ listing.plateNo}}</span>
+                              </b-row>
+                              <b-row>
+                                <span class="pull-left">{{ listing.registerDate.slice(0,10)}}</span>
+                              </b-row>
+                              <b-row>
+                                <span class="pull-left">{{ listing.tcNo}} </span>
+                              </b-row>
+                              <b-row>
+                                <span class="pull-left">{{ listing.polexpiryDate.slice(0,10)}} </span>
+                              </b-row>
+                              <b-row>
+                                <span class="pull-left">{{ listing.inexpiryDate.slice(0,10)}} </span>
+                              </b-row>
+
+                            </div>
+
+
                           </div>
-                          <div class="col-md-4">
-                            <b-row>
-                              <span class="pull-left"> {{ listing.plateNo}}</span>
-                            </b-row>
-                            <b-row>
-                              <span class="pull-left">{{ listing.registerDate.slice(0.10)}}</span>
-                            </b-row>
-                            <b-row>
-                              <span class="pull-left">{{ listing.tcNo}} </span>
-                            </b-row>
-                            <b-row>
-                                <span class="pull-left">{{ listing.polexpiryDate}} </span>
-                            </b-row>
-                            <b-row>
-                                <span class="pull-left">{{ listing.inexpiryDate}} </span>
-                            </b-row>
-  
-                          </div>
-  
-  
+
                         </div>
-  
+
+
+
+
                       </div>
-  
-  
-                  
-                  
+                    </div>
+
+
+
+                  </div>
+                </div>
+
               </div>
+
+
             </div>
+          </router-link>
 
-
-
-          </div>
         </div>
-       
       </div>
 
-
-    </div></router-link>
-            
-  </div>
-  </div>
-
-  </div>
+    </div>
   </div>
 </template>
 <script>
