@@ -58,7 +58,7 @@
           </b-nav-text>
         </a>
 
-        <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
+        <b-img :src="require('../assets/CGMlo.png')" style=" width:220px; height:100px;"></b-img>
 
 
 
