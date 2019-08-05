@@ -1,7 +1,6 @@
 <template>
   <div id="App">
-    <!-- <sellernavbar></sellernavbar> -->
-    <nav1></nav1>
+     <sellernavbar></sellernavbar>
     <router-view/>
 
 <footer1></footer1>
@@ -10,15 +9,15 @@
 
 <script>
  import footer1 from '../src/components/footer1'
-//  import sellernavbar from '../src/components/sellernavbar'
+ import sellernavbar from '../src/components/sellernavbar'
 
-import nav1 from '../src/components/nav1'
+//import nav1 from '../src/components/nav1'
 export default {
   name: 'App',
   
   components: {
     footer1,
-    nav1
+    sellernavbar
   }
 }
 </script>
