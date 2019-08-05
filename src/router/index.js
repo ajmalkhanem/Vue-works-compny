@@ -58,6 +58,8 @@ import completeprofile from '@/components/completeprofile'
 import editprofile from '@/components/editprofile'
 import nav1 from '@/components/nav1'
 import navlogged from '@/components/navlogged'
+import addcar1 from '@/components/addcar1'
+import editcar1 from '@/components/editcar1'
 
 
 import store from '../store'
@@ -440,6 +442,16 @@ let router=new Router({
       path: '/navlogged',
       name: 'navlogged',
       component: navlogged
+    },
+    {
+      path: '/addcar1',
+      name: 'addcar1',
+      component: addcar1
+    },
+    {
+      path: '/editcar1',
+      name: 'editcar1',
+      component: editcar1
     }
 
 
