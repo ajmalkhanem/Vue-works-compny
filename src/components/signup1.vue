@@ -10,9 +10,8 @@
             <br />
             <br />
             <h2 style="color:#03adfc;">Sign Up</h2>
-           <label style="color:red;">{{msg}}</label>
             <p>By joining I agree to receive emails from CloudGM</p>
-            <br />
+           <label style="color:red;">{{msg}}</label>
             
             <form @submit.prevent="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">

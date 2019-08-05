@@ -7,12 +7,12 @@
           <div
             style="padding-left:20px!important;padding-right:20px!important;text-align: center;background-color:white;border:solid rgb(235, 238, 240) 2px;float:left;margin-top:20px;margin-left:20px;"
           >
-            <br />
-            <br />
+            <br>
+            <br>
             <h2 style="color:#03adfc;">Sign in</h2>
-            <label style="color:red;">{{ msg }}</label>
             <p>Enter your details below to access your account</p>
-            <br />
+                        <label style="color:red;">{{ msg }}</label>
+
             <form @submit.prevent="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
                 <b-row>

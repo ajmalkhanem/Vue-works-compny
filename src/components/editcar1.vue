@@ -153,6 +153,7 @@ import navbar1 from "@/components/navbar1";
 import axios from "axios";
 //import store from "../store";
 export default {
+  props:['id'],
 
   components: { navbar, navbar1 },
   data() {
@@ -268,9 +269,9 @@ localStorage.users1.username = newName;
           this.msg = response.data.msg;
           //store.commit("loginUser",response.data.token);
           //localStorage.setItem("token", response.data.token)
-          //this.$router.push({
-          //name: "userprofile"
-          // });
+          this.$router.push({
+          name: "newpage"
+          });
         })
         //this.$store.dispatch('submit1', { username, password })
         //.then(() => this.$router.push('/Home'))

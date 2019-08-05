@@ -451,9 +451,10 @@ let router=new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: '/editcar1',
+      path: '/editcar1/:id',
       name: 'editcar1',
       component: editcar1,
+      props:true,
       meta: { requiresAuth: true }
     }
 
@@ -479,10 +480,7 @@ router.beforeEach((to, from, next) => {
     next({ name: 'home' })
     return
   }
-  if (to.path === '/completeprofile' && store.state.isLoggedIn) {
-    next({ name: 'home' })
-    return
-  }
+ 
   
   next()
  // next({ name: 'home' })
