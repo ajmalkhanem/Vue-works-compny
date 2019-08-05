@@ -7,7 +7,7 @@
       variant="light"
     >
       <div class="container">
-        <span>Weicome to CloudGM</span>
+        <span>Welcome to CloudGM</span>
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
