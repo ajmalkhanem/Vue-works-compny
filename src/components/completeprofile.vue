@@ -124,7 +124,7 @@ export default {
               if (response.data.status == true) {
                 alert("Success");
                 this.$router.push({
-              name: "userprofile"
+              name: "slider"
             });
               } else {
                 alert("failed");
@@ -132,6 +132,9 @@ export default {
             })
             .catch(e => {
               alert("Too Large image!! Failed");
+               this.$router.push({
+              name: "slider"
+            });
               this.loading = false;
             });
         }

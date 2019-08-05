@@ -10,13 +10,17 @@ export default new Vuex.Store({
         data1:!!localStorage.getItem('data1'),
         data2:!!localStorage.getItem('data2'),
         data3:!!localStorage.getItem('data3'),
-        data4:!!localStorage.getItem('data4')
+        data4:!!localStorage.getItem('data4'),
+        new:!!localStorage.getItem('new')
+
     },
     mutations: {
         loginUser (state) {
             state.isLoggedIn = true
             state.isLog = true
             state.data= true
+            state.new=true
+            
         },
         logoutUser (state) {
             state.isLoggedIn = false

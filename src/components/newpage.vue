@@ -102,6 +102,7 @@
 
             </div>
           </router-link>
+          <router-link :to="'/editcar1/' + listing._id">y</router-link>
 
         </div>
       </div>

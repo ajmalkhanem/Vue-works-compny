@@ -1,166 +1,166 @@
 <template>
   <div>
-               
-      <b-row>
 
-        <b-col><br>
+    <b-row>
+
+      <b-col><br>
+        <div>
           <div>
-            <div>
-              <b-card no-body>
-                <b-tabs pills card end>
-                  <b-tab title=".">
-                    <b-card-text>
-                      <form action="">
-                        <b-row>
-                          <b-col>
-                            <div class="form-group">
-                              <img src="../assets/car.jpg" style="width:200px;height:200px;">
+            <b-card no-body>
+              <b-tabs pills card end>
+                <b-tab title=".">
+                  <b-card-text>
+                    <form action="">
+                      <b-row>
+                        <b-col>
+                          <div class="form-group">
+                            <img src="../assets/car.jpg" style="width:200px;height:200px;">
+
+                          </div>
+                        </b-col>
+                        <b-col>
+                          <div class="form-group">
+                            <h2 for="email" style="color: black;"><b>{{list.vehicleName}}</b></h2><br>
+                            <h6><b>Traffic Plate:</b></h6>
+                            <h6><b>Registration Date:</b></h6>
+                            <h6><b>TC Number:</b></h6>
+                            <h6><b>Policy Expire:</b></h6>
+                            <h6><b>Insurance Expire</b></h6>
+
+
+                          </div>
+                        </b-col>
+                        <b-col>
+                          <div class="form-group">
+                            <h2 for="email" style="color: black;">Details</h2><br>
+                            <h6><b>{{list.plateNo}}</b></h6>
+                            <h6><b>{{list.registerDate}}</b></h6>
+                            <h6><b>{{list.tcNo}}</b></h6>
+
+                            <h6><b>{{list.polexpiryDate}}</b></h6>
+                            <h6><b>{{list.inexpiryDate}}</b></h6>
+
+
+
+                          </div>
+                        </b-col>
+
+                        <b-col>
+                          <div class="form-group">
+                            <div class="chip">
+                              <router-link to=""><img src="../assets/share.png" alt="Person" width="96" height="96">
+                              </router-link>
 
                             </div>
-                          </b-col>
-                          <b-col>
-                            <div class="form-group">
-                              <h2 for="email" style="color: black;"><b>{{list.vehicleName}}</b></h2><br>
-                              <h6><b>Traffic Plate:</b></h6>
-                              <h6><b>Registration Date:</b></h6>
-                              <h6><b>TC Number:</b></h6>
-                              <h6><b>Policy Expire:</b></h6>
-                              <h6><b>Insurance Expire</b></h6>
-
+                            <div class="chip">
+                              <router-link to=""><img src="../assets/se.jpg" alt="Person" width="96" height="96">
+                              </router-link>
 
                             </div>
-                          </b-col>
-                          <b-col>
-                            <div class="form-group">
-                              <h2 for="email" style="color: black;">Details</h2><br>
-                              <h6><b>{{list.plateNo}}</b></h6>
-                              <h6><b>{{list.registerDate}}</b></h6>
-                              <h6><b>{{list.tcNo}}</b></h6>
-
-                              <h6><b>{{list.polexpiryDate}}</b></h6>
-                              <h6><b>{{list.inexpiryDate}}</b></h6>
 
 
+                          </div>
+                        </b-col>
+                      </b-row>
+                      <b-row>
+                        <b-col>
+                          <div class="form-group">
 
-                            </div>
-                          </b-col>
-
-                          <b-col>
-                            <div class="form-group">
-                              <div class="chip">
-                                <router-link to=""><img src="../assets/share.png" alt="Person" width="96" height="96">
-                                </router-link>
-
-                              </div>
-                              <div class="chip">
-                                <router-link to=""><img src="../assets/se.jpg" alt="Person" width="96" height="96">
-                                </router-link>
-
-                              </div>
+                          </div>
+                        </b-col>
+                        <b-col>
+                          <div class="form-group">
+                          </div>
+                        </b-col>
+                      </b-row>
 
 
-                            </div>
-                          </b-col>
-                        </b-row>
-                        <b-row>
-                          <b-col>
-                            <div class="form-group">
+                      <hr>
+                      <br>
+                      <b-row>
+                        <b-col>
+                          <div>
+                            <b-button v-b-toggle.collapse-1 variant="light">Add Maintanance Bill</b-button>
+                            <b-collapse id="collapse-1" class="mt-2">
+                              <b-card>
+                                <p class="card-text">
+                                  <modal1 :id="this.id"></modal1>
+                                </p>
 
-                            </div>
-                          </b-col>
-                          <b-col>
-                            <div class="form-group">
-                            </div>
-                          </b-col>
-                        </b-row>
+                              </b-card>
+                            </b-collapse>
+                          </div>
 
+                        </b-col>
+                        <b-col>
+                          <div>
+                            <b-button v-b-toggle.collapse-2 variant="light">Fuel Filling</b-button>
+                            <b-collapse id="collapse-2" class="mt-2">
+                              <b-card>
+                                <p class="card-text">
+                                  <modal2 :id="this.id"></modal2>
+                                </p>
 
-                        <hr>
-                        <br>
-                        <b-row>
-                          <b-col>
-                            <div>
-                              <b-button v-b-toggle.collapse-1 variant="light">Add Maintanance Bill</b-button>
-                              <b-collapse id="collapse-1" class="mt-2">
-                                <b-card>
-                                  <p class="card-text">
-                                    <modal1 :id="this.id"></modal1>
-                                  </p>
+                              </b-card>
+                            </b-collapse>
+                          </div>
+                        </b-col>
 
-                                </b-card>
-                              </b-collapse>
-                            </div>
+                        <b-col>
+                          <div>
+                            <b-button v-b-toggle.collapse-3 variant="light">Add Penalty</b-button>
+                            <b-collapse id="collapse-3" class="mt-2">
+                              <b-card>
+                                <p class="card-text">
+                                  <modal3 :id="this.id"></modal3>
+                                </p>
 
-                          </b-col>
-                          <b-col>
-                            <div>
-                              <b-button v-b-toggle.collapse-2 variant="light">Fuel Filling</b-button>
-                              <b-collapse id="collapse-2" class="mt-2">
-                                <b-card>
-                                  <p class="card-text">
-                                    <modal2 :id="this.id"></modal2>
-                                  </p>
-
-                                </b-card>
-                              </b-collapse>
-                            </div>
-                          </b-col>
-
-                          <b-col>
-                            <div>
-                              <b-button v-b-toggle.collapse-3 variant="light">Add Penalty</b-button>
-                              <b-collapse id="collapse-3" class="mt-2">
-                                <b-card>
-                                  <p class="card-text">
-                                    <modal3 :id="this.id"></modal3>
-                                  </p>
-
-                                </b-card>
-                              </b-collapse>
-                            </div>
-                          </b-col>
-                          <b-col>
-                            <modal4></modal4>
-                          </b-col>
-                        </b-row>
+                              </b-card>
+                            </b-collapse>
+                          </div>
+                        </b-col>
+                        <b-col>
+                          <modal4></modal4>
+                        </b-col>
+                      </b-row>
 
 
 
-                        <div class="form-group form-check">
-                          <label class="form-check-label">
-                          </label>
-                        </div>
-                      </form>
-                    </b-card-text>
-                  </b-tab>
-                  <b-tab title=" Edit">
-                    <b-card-text>
-                      <editcar :id="this.id"></editcar>
-                    </b-card-text>
-                  </b-tab>
-                  <b-tab title="Service History">
-                    <b-card-text>
-                      <p v-if="list.maintenanceBills.length">
-                        {{list.maintenanceBills[0].name}}
-                        {{list.maintenanceBills[0].odometer}}
-                      </p>
-                      <p v-else>No data Found</p>
-                    </b-card-text>
-                  </b-tab>
-                  <b-tab title="Maintanance Analytics">
-                    <b-card-text>
-                      hhhhhh
-                    </b-card-text>
-                  </b-tab>
-                </b-tabs>
-              </b-card>
-            </div>
+                      <div class="form-group form-check">
+                        <label class="form-check-label">
+                        </label>
+                      </div>
+                    </form>
+                  </b-card-text>
+                </b-tab>
+                <b-tab title=" Edit">
+                  <b-card-text>
+                    <editcar :id="this.id"></editcar>
+                  </b-card-text>
+                </b-tab>
+                <b-tab title="Service History">
+                  <b-card-text>
+                    <p v-if="list.maintenanceBills.length">
+                      {{list.maintenanceBills[0].name}}
+                      {{list.maintenanceBills[0].odometer}}
+                    </p>
+                    <p v-else>No data Found</p>
+                  </b-card-text>
+                </b-tab>
+                <b-tab title="Maintanance Analytics">
+                  <b-card-text>
+                    hhhhhh
+                  </b-card-text>
+                </b-tab>
+              </b-tabs>
+            </b-card>
           </div>
-        </b-col>
+        </div>
+      </b-col>
 
-      </b-row>
-      
-    
+    </b-row>
+
+
 
 
 
@@ -267,33 +267,31 @@
   }
 </style>
 <style>
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
-  
-    .bg5 {
-      /* The image used */
-      background-image: url("https://i.pinimg.com/originals/46/1d/25/461d254f8563f8945ce3a385f289df17.jpg");
-  
-      /* Full height */
-      height: 100%;
-  
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-  
-    div.transbox1 {
-      margin: 30px;
-      background-color: #ffffff;
-      border: 1px solid white;
-      opacity: 2;
-      filter: alpha(opacity=60);
-      /* For IE8 and earlier */
-    }
-    
-  </style>
-   
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .bg5 {
+    /* The image used */
+    background-image: url("https://i.pinimg.com/originals/46/1d/25/461d254f8563f8945ce3a385f289df17.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  div.transbox1 {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid white;
+    opacity: 2;
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
+  }
+</style>

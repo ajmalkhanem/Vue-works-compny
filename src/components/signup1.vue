@@ -10,9 +10,10 @@
             <br />
             <br />
             <h2 style="color:#03adfc;">Sign Up</h2>
-
+           <label style="color:red;">{{msg}}</label>
             <p>By joining I agree to receive emails from CloudGM</p>
             <br />
+            
             <form @submit.prevent="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
                 <b-row>
@@ -55,6 +56,7 @@
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;"
                       required
                       v-model="users1.ph"
+                       pattern="[0-9]{1}[0-9]{9}"
                       class="form-control"
                       id="rcorners1"
                       aria-describedby="emailHelp"
@@ -71,6 +73,7 @@
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;"
                       required
                       v-model="users1.email"
+                       pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
                       class="form-control"
                       id="rcorners1"
                       aria-describedby="emailHelp"
@@ -215,6 +218,14 @@ localStorage.users1.username = newName;
   }
 };
 </script>
+<style>
+  #rcorners1 {
+    border-radius: 25px;
+    padding: 20px;
+    width: 200px;
+    height: 8px;
+  }
+</style>
     <style>
 .square_bt {
   display: inline-block;
