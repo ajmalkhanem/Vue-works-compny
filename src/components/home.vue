@@ -63,19 +63,8 @@
                 
                                         <br>
                                         <div class="container6">
-                                          <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
-                                          <div class="top-left">
-                                            <b><label style="color: white;font-size: 60px;font-family:Georgia;">
-                                              Fullfill Your needs</label><br>
-                                              <label style="color: white;font-size: 30px;font-family:Georgia;">
-With better option </label></b>
-<br>
-<b-button variant="warning">Ordey Now</b-button>
-
-                                            </div>
-                                          <!--<div class="top-right">Top Right</div>
-                                          <div class="bottom-right">Bottom Right</div>
-                                          <div class="centered">Centered</div>-->
+                                          <img src="https://ntechcorporate.in/wp-content/uploads/2017/04/native-app.jpg" alt="Snow" style="width:100%;">
+                                          
                                         </div>
                        
                               

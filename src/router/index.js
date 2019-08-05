@@ -315,18 +315,24 @@ let router=new Router({
       name: 'profile',
       component: profile,
       props: true,
+      meta: { requiresAuth: true }
+
 
     },
     {
       path: '/FuelFillingHistory/:id',
       name: 'FuelFillingHistory',
       props:true,
-      component: FuelFillingHistory
+      component: FuelFillingHistory,
+      meta: { requiresAuth: true }
+
     },
 {
      path: '/slider',
       name: 'slider',
-      component: slider
+      component: slider,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/hoop',
@@ -337,37 +343,50 @@ let router=new Router({
       path: '/MaintenanceHistory/:id',
       name: 'MaintenanceHistory',
       props:true,
-      component: MaintenanceHistory
+      component: MaintenanceHistory,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/PenaltyHistory/:id',
       name: 'PenaltyHistory',
       props:true,
-      component: PenaltyHistory
+      component: PenaltyHistory,
+      meta: { requiresAuth: true }
+
+
     },
     {
       path: '/Addnewbills/:id',
       name: 'Addnewbills',
       props:true,
-      component: Addnewbills
+      component: Addnewbills,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/Addfuelfilling/:id',
       name: 'Addfuelfilling',
       props:true,
-      component: Addfuelfilling
+      component: Addfuelfilling,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/Addemidetails/:id',
       name: 'Addemidetails',
       props:true,
-      component: Addemidetails
+      component: Addemidetails,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/Vehiclerenewal/:id',
       name: 'Vehiclerenewal',
       props:true,
-      component: Vehiclerenewal
+      component: Vehiclerenewal,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/signup1',
@@ -377,17 +396,23 @@ let router=new Router({
     {
       path: '/Billform',
       name: 'Billform',
-      component: Billform
+      component: Billform,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/forgotpassword',
       name: 'forgotpassword',
-      component: forgotpassword
+      component: forgotpassword,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/newpage',
       name: 'newpage',
       component: newpage,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/signupbu',
@@ -397,12 +422,16 @@ let router=new Router({
     {
       path: '/completeprofile',
       name: 'completeprofile',
-      component: completeprofile
+      component: completeprofile,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/editprofile',
       name: 'editprofile',
-      component: editprofile
+      component: editprofile,
+      meta: { requiresAuth: true }
+
     },
     {
       path: '/nav1',
@@ -435,12 +464,12 @@ let router=new Router({
 router.beforeEach((to, from, next) => {
 
   if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
-    next({ name: 'login' })
+    next({ name: 'signin' })
     return
   }
 
   if (to.path === '/login' && store.state.isLoggedIn) {
-    next({ name: 'userprofile' })
+    next({ name: 'slider' })
     return
   }
   

@@ -1,7 +1,24 @@
 <template>
     <div>
         <div>
-            <carousel></carousel>
+          <b-carousel id="carousel-1" :interval="4000" controls indicators background="#ababab"
+          img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;" >
+            <b-carousel-slide>
+              <img slot="img" class="d-block img-fluid w-100" width="1024" height="400"
+                src="http://wtautobody.com/wp-content/uploads/2015/04/b2.jpg" alt="image slot">
+            </b-carousel-slide>
+    
+            <b-carousel-slide>
+              <img slot="img" class="d-block img-fluid w-100" width="1024" height="400"
+                src="https://pictures.dealer.com/m/metrolexusvictoriatc/1423/2271ab1ea247d72d4a9c20949c67d00dx.jpg"
+                alt="image slot">
+            </b-carousel-slide>
+            <b-carousel-slide>
+              <img slot="img" class="d-block img-fluid w-100" width="1024" height="400"
+                src="https://www.rjsautobodyplus.com/images/banner-reviews.jpg" alt="image slot">
+            </b-carousel-slide>
+    
+          </b-carousel>
         </div>
         <div class="container">
             <div class="row" style="padding-top: 80px;padding-bottom:30px">

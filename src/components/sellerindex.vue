@@ -1,19 +1,8 @@
 <template>
     <div>
               <div class="container6">
-                                          <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
-                                          <div class="top-left">
-                                           <b> <label style="color: white;font-size: 80px;">
-                                              Business Your Way</label><br>
-                                              <label style="color: white;font-size: 30px;">
-                                                grow your business 
-                                                Without worries </label></b><br>
-                                                  <b-button variant="primary">Become Seller</b-button>
-
-                                            </div>
-                                          <!--<div class="top-right">Top Right</div>
-                                          <div class="bottom-right">Bottom Right</div>
-                                          <div class="centered">Centered</div>-->
+                                          <img src="https://club.mandaley.fr/wp-content/uploads/2018/02/economies-voyage-affaire.jpg" alt="Snow" style="width:100%;">
+                                          
                                         </div>
                 <br>
         <label style="font-size: 40px;"><b>Join Our Business Community</b></label><br><br>
@@ -48,18 +37,11 @@
         
                 
  
-                                        <br>
+                                        
                                        <div class="container6">
-                                          <img src="../assets/baner1.jpg" alt="Snow" style="width:100%;">
-                                          <div class="top-left">
-                                            <label style="color: white;font-size: 80px;">
-                                              <b>Business Your Way</b></label><br>
-                                              <label style="color: white;font-size: 50px;">
-grow your business </label>
-                                            </div>
-                                          <!--<div class="top-right">Top Right</div>
-                                          <div class="bottom-right">Bottom Right</div>
-                                          <div class="centered">Centered</div>-->
+                                          <img src="http://aap4u.com/wp-content/uploads/2017/04/AdvancedSliders_BizOwner4-1-1600x500.jpg" alt="Snow" style="width:100%;">
+                                         
+                                          
                                         </div>
                               
                       
