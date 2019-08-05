@@ -54,8 +54,7 @@
             style=" width:250px; height:130px;padding-bottom:10px;"
           ></b-img>
         </a>
-
-        <div style="padding-left:200px;">
+<b-nav-item class="ml-auto">
           <div class="input-group srh" style="width: 13cm ;padding-bottom:10px;">
             <input type="text" class="form-control" placeholder="Search here" />
             <div class="input-group-append">
@@ -65,8 +64,8 @@
                 </span>
               </button>
             </div>
-          </div>
-        </div>
+          </div></b-nav-item>
+        
 
         <!-- <b-nav-item href="#" class="mx-auto">
                 <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>

@@ -23,26 +23,6 @@
                 </b-dropdown-item>
               </b-nav-item-dropdown>
             </b-nav-item>
-    <b-navbar class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke" toggleable="lg" type="light" variant="light">
-        <div class="container">
-                <span >Welcome to CloudGM </span>
-
-                <b-collapse id="nav-collapse" is-nav>
-                        <b-navbar-nav class="ml-auto">
-                            
-                            <b-nav-item>
-        
-                            
-                                <!-- <span style="padding-left:10px;">  Become a Seller  </span>
-                                <span style="padding-left:10px;"> | </span>
-                                <span style="padding-left:10px;">SignUp </span>
-                                <span style="padding-left:10px;">|  </span> -->
-                                <!-- <b-nav-item-dropdown class="hv" text="PARTNER WITH US" right><i class="fa fa-user" aria-hidden="true"></i>
-                                        <b-dropdown-item href="#">EN</b-dropdown-item>
-                                        <b-dropdown-item href="#">ES</b-dropdown-item>
-                                        <b-dropdown-item href="#">RU</b-dropdown-item>
-                                        <b-dropdown-item href="#">FA</b-dropdown-item>
-                                    </b-nav-item-dropdown> -->
 
             <b-nav-item>
               <router-link to>
@@ -92,33 +72,6 @@
             </div>
           </div>
         </div>
-   
-      <b-navbar  toggleable="lg" type="light" variant="light" style="background-color:white!important;">
-    
-      
-       <a href="/">
-        
-        <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img></a>
-        
-        
-                
-       
-        <b-nav-item href="#" class="mx-auto">
-                <div class="input-group srh " style="width: 13cm ;padding-bottom:10px;" >
-                     
-                <input type="text" class="form-control" placeholder="Search here">
-                <div class="input-group-append">
-                    <button type="button" class="btn btn-danger">
-                            <span ><i class="fa fa-search"></i> </span>  
-                    </button>
-                </div>
-            </div>
-        </b-nav-item>
-            
-           
-            
-          <!-- <b-nav-item href="#" class="mx-auto">
-                <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
 
         <b-navbar-brand></b-navbar-brand>
       </b-navbar>
@@ -130,6 +83,7 @@
           <i class="fa fa-list"></i> &nbsp;CATEGORIES
         </b-nav-item>
       </div>
+      <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
       <b-collapse style="padding-right: 110px" is-nav id="nav_collapse">
         <b-nav-item class="mx-auto" href="#"></b-nav-item>
 
@@ -172,6 +126,7 @@
 
       <b-navbar-brand>
         <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
+      </b-navbar-brand>
     </b-navbar>
   </div>
 </template>
