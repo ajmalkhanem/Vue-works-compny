@@ -7,16 +7,16 @@
       variant="light"
     >
       <div class="container">
-        <span>Weicome to CloudGM</span>
+        <span>Welcome to CloudGM</span>
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
             <b-nav-item>
-              <span style="padding-left:10px;">Become a Seller</span>
+             <router-link to="sellerindex"> <span style="padding-left:10px;">Become a Seller</span></router-link>
               <span style="padding-left:10px;">|</span>
-              <span style="padding-left:10px;">SignUp</span>
+              <router-link to="signup1"> <span style="padding-left:10px;">SignUp</span></router-link>
               <span style="padding-left:10px;">|</span>
-              <span style="padding-left:10px;">SignIn</span>
+              <router-link to="signin"> <span style="padding-left:10px;">SignIn</span></router-link>
             </b-nav-item>
 
             <b-nav-item class="navt">
