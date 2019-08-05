@@ -93,6 +93,8 @@
         </b-navbar-brand>
       </b-navbar>
     </div>
+
+    
     <b-navbar toggleable="lg" style="background-color:#f8f9fa" type="light" variant="light">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <div style="padding-left: 100px;">
