@@ -135,7 +135,7 @@
         width: 120px !important;
     }
 
-    < !--.bg-light {}
+    .bg-light {}
 
     -->.navbar .nav-text .h3 {
         text-align: center;
