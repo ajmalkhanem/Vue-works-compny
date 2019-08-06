@@ -118,8 +118,8 @@
         </div>
         <div class="col-md-6 hid" style="padding-top:10px!important;">
           <div id="rectangle" class="rt">
-            <p style="text-align: center!important;">
-              <img
+            <p style="text-align: center!important;padding-top: 100px;">
+              <img 
                 src="../assets/CCLO.png"
                 style="width:400px;height:400px;padding-top:40px!important;"
               />

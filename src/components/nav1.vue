@@ -2,22 +2,21 @@
   <div>
       <b-navbar class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke" toggleable="lgh" type="light"
       variant="light">
-      <div class="container">
+      <div class="container" >
           <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <span>Welcome to CloudGM </span>
 
         <b-collapse is-nav id="nav_collapse">
           <b-navbar-nav class="ml-auto">
-
-            <b-nav-item>
-
-
-                <router-link to="/sellerindex" ><span style="padding-left:10px;"> Become a Seller </span></router-link>
-              <span style="padding-left:10px;"> | </span>
-             <router-link to="/signup1" ><span style="padding-left:10px;">SignUp </span></router-link>
+              
+          
+              <b-nav-item >
+                <router-link to="/sellerindex" style=" text-decoration: none!important;"><span style="padding-left:10px;"> Become a Seller </span></router-link>
+              <span style="padding-left:10px;" > | </span>
+             <router-link to="/signup1"style=" text-decoration: none!important;" ><span style="padding-left:10px;">SignUp </span></router-link>
               <span style="padding-left:10px;">| </span>
-              <router-link to="/signin" > <span style="padding-left:10px;">SignIn </span></router-link>
-
+              <router-link to="/signin" style=" text-decoration: none!important;"> <span style="padding-left:10px;">SignIn </span></router-link>
+            </b-nav-item>
 
 
 
@@ -60,7 +59,29 @@
             style=" width:250px; height:130px;padding-bottom:10px;"
           ></b-img>
         </a>
+        <b-nav-item >
+              
+            <b-nav-item-dropdown  text="CATEGORIES" class="ii" right>
+                <b-dropdown-item href="#">Automobile</b-dropdown-item>
+                <b-dropdown-item href="#">Communication</b-dropdown-item>
+                <b-dropdown-item href="#">Education </b-dropdown-item>
+                <b-dropdown-item href="#">Restaurant </b-dropdown-item>
+                <b-dropdown-item href="#">Stock Market </b-dropdown-item>
+                <b-dropdown-item href="#"> Real Estate </b-dropdown-item>
+                <b-dropdown-item href="#">Insurance </b-dropdown-item>
+                <b-dropdown-item href="#"> Health & Wealth</b-dropdown-item>
+                <b-dropdown-item href="#">Entertainment & Sports </b-dropdown-item>
+                <b-dropdown-item href="#">JObs </b-dropdown-item>
+                <b-dropdown-item href="#">Travel & Tourism </b-dropdown-item>
+                <b-dropdown-item href="#"> Market Place  </b-dropdown-item>
+              </b-nav-item-dropdown>
+          </b-nav-item>
+     
+    
+      
+        
 <b-nav-item class="ml-auto">
+  
           <div class="input-group srh sw" style="width: 13cm ;padding-bottom:10px;">
             <input type="text" class="form-control" placeholder="Search here" />
             <div class="input-group-append">
@@ -179,8 +200,7 @@
 }
 .nav-item a {
   color: black !important;
-}
-a:hover {
+
   color: black !important;
 }
 
@@ -305,5 +325,10 @@ a :hover {
   padding-right: 50px !important;
   padding-top: 15px;
   text-align: left;
+}
+@media (min-width: 760px) and (max-width: 1800px) {
+.ii{
+  display:none!important;
+}
 }
 </style>
