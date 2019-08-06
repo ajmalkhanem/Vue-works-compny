@@ -461,7 +461,8 @@ let router=new Router({
     {
       path: '/st',
       name: 'st',
-      component: st
+      component: st,
+      meta: { requiresAuth: true }
     },
     
      

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-jumbotron>
+        <b-jumbotron >
 
 
             <b-row>
