@@ -11,7 +11,9 @@ export default new Vuex.Store({
         data2:!!localStorage.getItem('data2'),
         data3:!!localStorage.getItem('data3'),
         data4:!!localStorage.getItem('data4'),
-        new:!!localStorage.getItem('new')
+        new:!!localStorage.getItem('new'),
+        new1:!!localStorage.getItem('new1')
+
 
     },
     mutations: {
@@ -19,13 +21,18 @@ export default new Vuex.Store({
             state.isLoggedIn = true
             state.isLog = true
             state.data= true
-            state.new=true
+            state.new1=true
             
         },
+       
+           
+            
+            
+        
         logoutUser (state) {
             state.isLoggedIn = false
             state.data = false
-           
+            
         }
     }
     

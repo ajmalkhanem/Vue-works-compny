@@ -106,8 +106,12 @@ export default {
           to: localStorage.getItem("token")
         }
       }).then(response => {
+        
         if(response.data.status == true){
+           store.commit("logiUser", response.data.status);
+          localStorage.setItem("new1", response.data.status);
           alert("Successfully added");
+         
           //imageupload
           let formData = new FormData();
           formData.append("dp", this.selectedFile);

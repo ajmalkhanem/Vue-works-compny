@@ -98,7 +98,7 @@
           <b-container style="background-color:white;">
             <h5>ADD FUEL FILLING</h5>
             <br />
-            {{msg }}{{"nj"}}
+            {{msg }}
             <div
               style="padding-left:20px!important;padding-right:20px!important;background-color:white;border:solid rgb(235, 238, 240) 2px;padding-bottom:20px!important;padding-top:20px!important;"
             >

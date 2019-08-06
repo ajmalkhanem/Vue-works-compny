@@ -175,7 +175,7 @@ export default {
             // console.log(response.data.data)
 
             //console.log(response.data.status)
-            store.commit("loginUser", response.data.token);
+            store.commit("loginUser", response.data.new);
           localStorage.setItem("new", response.data.new);
             this.new1 = response.data.new;
             this.status1 = response.data.status;
@@ -195,7 +195,7 @@ export default {
             if (this.status1 == true) {
               if (this.usertype1 == 0) {
                 store.commit("loginUser", response.data.data);
-                //localStorage.setItem("data0",response.data.data.pro_pic)
+               // localStorage.setItem("data0",response.data.data.pro_pic)
                 localStorage.setItem("data", response.data.data.firstname);
                 localStorage.setItem("data1", response.data.data.lastname);
                 localStorage.setItem("data2", response.data.data.nationality);

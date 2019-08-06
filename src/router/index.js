@@ -500,7 +500,14 @@ router.beforeEach((to, from, next) => {
     next({ name: 'home' })
     return
   }
- 
+  console.log(store.state.new)
+  if (to.path === '/completeprofile' &&  store.state.new) {
+    next({ name: 'completeprofile' })
+    return
+  }
+  
+  
+  
   
   next()
  // next({ name: 'home' })
