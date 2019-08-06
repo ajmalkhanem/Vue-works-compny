@@ -147,6 +147,7 @@ export default {
               .then(response => {
                 if (response.data.status == true) {
                   store.commit("completedUser", response.data.data);
+                   localStorage.setItem("complete", 'new');
                   alert("Success");
                   this.$router.push({
                     name: "slider"

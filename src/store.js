@@ -12,7 +12,8 @@ export default new Vuex.Store({
         data3: !!localStorage.getItem('data3'),
         data4: !!localStorage.getItem('data4'),
         new: !!localStorage.getItem('new'),
-        new1: !!localStorage.getItem('new1')
+        new1: !!localStorage.getItem('new1'),
+        complete: !!localStorage.getItem('complete')
     },
     mutations: {
         loginUser(state) {

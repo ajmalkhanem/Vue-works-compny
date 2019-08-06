@@ -489,6 +489,7 @@ router.beforeEach((to, from, next) => {
 
 
   if (to.path === '/completeprofile' && store.state.complete) {
+    console.log(store.state.complete)
     next({ name: 'slider' })
     return
   }

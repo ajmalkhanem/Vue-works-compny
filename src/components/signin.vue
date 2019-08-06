@@ -202,6 +202,7 @@ export default {
                 localStorage.setItem("data3", response.data.info.email);
                 localStorage.setItem("data4", response.data.info.ph);
                 store.commit("completedUser", response.data.data);
+                 localStorage.setItem("complete", 'new');
                 this.$router.push({
                   name: "slider"
                 });
