@@ -13,7 +13,7 @@
                 
                 <b-row>
                     <b-col>
-                      <img src="../assets/221.jpg"style="width:100%;height:auto;" >
+                      <img src="../assets/221.jpg" style="width:100%;height:auto;" >
                     </b-col>
                     <b-col>
                           <div>

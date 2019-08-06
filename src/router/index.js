@@ -427,6 +427,7 @@ let router=new Router({
       path: '/completeprofile',
       name: 'completeprofile',
       component: completeprofile,
+      meta: { requiresAuth: true }
 
     },
     {
@@ -500,12 +501,17 @@ router.beforeEach((to, from, next) => {
     return
   }
  
+ 
   if (to.path === '/completeprofile' &&  store.state.complete) {
     next({ name: 'slider' })
     return
   }
   
-
+  
+  
+  
+  next()
+ // next({ name: 'home' })
 })
 export default router
 
