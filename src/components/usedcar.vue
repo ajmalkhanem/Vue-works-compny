@@ -78,7 +78,7 @@
     <br />
   </div>
 </template>
-    <script>
+<script>
 import navbar from "@/components/navbar";
 import navbar1 from "@/components/navbar1";
 
