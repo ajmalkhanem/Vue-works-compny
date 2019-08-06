@@ -175,7 +175,7 @@ export default {
               if (response.data.status == true) {
                 alert("Success");
                 this.$router.push({
-              name: "slider"
+              name: "userprofile"
             });
               } else {
                 alert("failed");

@@ -427,7 +427,6 @@ let router=new Router({
       path: '/completeprofile',
       name: 'completeprofile',
       component: completeprofile,
-      meta: { requiresAuth: true }
 
     },
     {
@@ -500,9 +499,9 @@ router.beforeEach((to, from, next) => {
     next({ name: 'home' })
     return
   }
-  console.log(store.state.new)
-  if (to.path === '/completeprofile' &&  store.state.new) {
-    next({ name: 'completeprofile' })
+ 
+  if (to.path === '/completeprofile' &&  store.state.complete) {
+    next({ name: 'slider' })
     return
   }
   

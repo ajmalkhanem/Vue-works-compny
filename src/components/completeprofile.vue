@@ -70,7 +70,7 @@ import navbar from "@/components/navbar";
 import navbar1 from "@/components/navbar1";
 
 import axios from "axios";
-//import store from "../store";
+import store from "../store";
 export default {
   components: { navbar, navbar1 },
   data() {
@@ -108,8 +108,6 @@ export default {
       }).then(response => {
         
         if(response.data.status == true){
-           store.commit("logiUser", response.data.status);
-          localStorage.setItem("new1", response.data.status);
           alert("Successfully added");
          
           //imageupload
@@ -126,6 +124,7 @@ export default {
           })
             .then(response => {
               if (response.data.status == true) {
+                store.commit("completedUser", response.data.data);
                 alert("Success");
                 this.$router.push({
               name: "slider"
@@ -136,6 +135,7 @@ export default {
             })
             .catch(e => {
               alert("Image upload Not Success");
+               store.commit("completedUser", response.data.data);
                this.$router.push({
               name: "slider"
             });

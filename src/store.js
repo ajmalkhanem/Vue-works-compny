@@ -24,14 +24,14 @@ export default new Vuex.Store({
             state.new1=true
             
         },
-       
-           
-            
-            
+        completedUser (state) {
+            state.complete = true
+        },
         
         logoutUser (state) {
             state.isLoggedIn = false
             state.data = false
+            state.complete = false
             
         }
     }
