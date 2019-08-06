@@ -13,7 +13,7 @@
             <p>By joining I agree to receive emails from CloudGM</p>
            <label style="color:red;">{{msg}}</label>
             
-            <form @submit.prevent="submit1" style="padding-bottom:30px!important;">
+            <form @submit="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
                 <b-row>
                   <b-col>
@@ -23,6 +23,7 @@
                       required
                       v-model="users1.username"
                       class="form-control"
+                       minlength="6" maxlength="15"
                       id="rcorners1"
                       aria-describedby="emailHelp"
                       placeholder="Username"
@@ -39,6 +40,7 @@
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;"
                       required
                       v-model="users1.password"
+                       minlength="6" maxlength="15"
                       class="form-control"
                       id="rcorners1"
                       aria-describedby="emailHelp"
@@ -51,7 +53,7 @@
                 <b-row>
                   <b-col>
                     <input
-                      type="text"
+                      type="number"
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;"
                       required
                       v-model="users1.ph"
@@ -204,7 +206,7 @@ localStorage.users1.username = newName;
         //this.$store.dispatch('submit1', { username, password })
 
         .catch(ev => {});
-      ev.target.reset();
+      
     }
 
     /* login() {

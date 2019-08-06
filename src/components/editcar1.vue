@@ -50,6 +50,7 @@
                     class="form-control"
                     v-model="users1.platenum"
                     aria-describedby="emailHelp"
+                    disabled
                     placeholder="Traffic Plate Number "
                   />
                 </div>
@@ -242,7 +243,7 @@ localStorage.users1.username = newName;
 
       datas1["veh"] = this.users1.vehname;
       datas1["owner"] = this.users1.onname;
-      datas1["plate"] = this.users1.platenum;
+      //datas1["plate"] = this.users1.platenum;
       datas1["tc"] = this.users1.tcnum;
       datas1["redate"] = this.users1.rgdate;
       datas1["pol"] = this.users1.exdate;

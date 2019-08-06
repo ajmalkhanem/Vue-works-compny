@@ -13,7 +13,7 @@
             <p>Enter your details below to access your account</p>
                         <label style="color:red;">{{ msg }}</label>
 
-            <form @submit.prevent="submit1" style="padding-bottom:30px!important;">
+            <form @submit="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
                 <b-row>
                   <b-col>
@@ -154,7 +154,7 @@ export default {
         })
 
         .catch(ev => {});
-      ev.target.reset();
+      
       //alert("hai");
     },
     check1() {
