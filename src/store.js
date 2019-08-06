@@ -22,6 +22,7 @@ export default new Vuex.Store({
             state.isLog = true
             state.data= true
             state.new1=true
+            state.new=null
             
         },
        

@@ -68,7 +68,6 @@ import navlogged from '@/components/navlogged'
 
     .nav-item a {
         color: black !important;
-        hover: black !important;
     }
 
     a:hover {
@@ -131,7 +130,6 @@ import navlogged from '@/components/navlogged'
     li {
         display: inline-block;
         margin: 0 10px;
-        hover-color: black !important;
         text-decoration: none;
     }
 

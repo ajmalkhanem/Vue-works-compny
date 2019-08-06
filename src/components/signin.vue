@@ -175,11 +175,16 @@ export default {
             // console.log(response.data.data)
 
             //console.log(response.data.status)
-            store.commit("loginUser", response.data.new);
-          localStorage.setItem("new", response.data.new);
+            
             this.new1 = response.data.new;
             this.status1 = response.data.status;
+            //store.commit("loginUser", response.data.new);
+          //localStorage.setItem("new", response.data.new);
+        // console.log(response.data.new)
+                 
+          console.log(response.data.data)
             if (this.new1 == true) {
+               
               if (this.usertype1 == 0) {
                 this.$router.push({
                   name: "completeprofile"
