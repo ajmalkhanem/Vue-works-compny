@@ -67,16 +67,16 @@
                                 <span class="pull-left"> {{ listing.plateNo}}</span>
                               </b-row>
                               <b-row>
-                                <span class="pull-left">{{ listing.registerDate.slice(0,10)}}</span>
+                                <span class="pull-left">{{ listing.registerDate}}</span>
                               </b-row>
                               <b-row>
                                 <span class="pull-left">{{ listing.tcNo}} </span>
                               </b-row>
                               <b-row>
-                                <span class="pull-left">{{ listing.polexpiryDate.slice(0,10)}} </span>
+                                <span class="pull-left">{{ listing.polexpiryDate}} </span>
                               </b-row>
                               <b-row>
-                                <span class="pull-left">{{ listing.inexpiryDate.slice(0,10)}} </span>
+                                <span class="pull-left">{{ listing.inexpiryDate}} </span>
                               </b-row>
 
                             </div>
@@ -114,6 +114,7 @@
 
 
   export default {
+    props:['id'],
     components: {
 
 
