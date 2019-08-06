@@ -60,6 +60,7 @@ import nav1 from '@/components/nav1'
 import navlogged from '@/components/navlogged'
 import addcar1 from '@/components/addcar1'
 import editcar1 from '@/components/editcar1'
+import st from '@/components/st'
 
 
 import store from '../store'
@@ -452,7 +453,12 @@ let router=new Router({
       path: '/editcar1',
       name: 'editcar1',
       component: editcar1
-    }
+    },
+    {
+      path: '/st',
+      name: 'st',
+      component: st
+    },
 
 
 

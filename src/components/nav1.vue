@@ -1,45 +1,51 @@
 <template>
   <div>
-    <b-navbar
-      class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke"
-      toggleable="lg"
-      type="light"
-      variant="light"
-    >
+      <b-navbar class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke" toggleable="lgh" type="light"
+      variant="light">
       <div class="container">
-        <span>Welcome to CloudGM</span>
+          <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+        <span>Welcome to CloudGM </span>
 
-        <b-collapse id="nav-collapse" is-nav>
+        <b-collapse is-nav id="nav_collapse">
           <b-navbar-nav class="ml-auto">
+
             <b-nav-item>
-             <router-link to="sellerindex"> <span style="padding-left:10px;">Become a Seller</span></router-link>
-              <span style="padding-left:10px;">|</span>
-              <router-link to="signup1"> <span style="padding-left:10px;">SignUp</span></router-link>
-              <span style="padding-left:10px;">|</span>
-              <router-link to="signin"> <span style="padding-left:10px;">SignIn</span></router-link>
+
+
+              <span style="padding-left:10px;"> Become a Seller </span>
+              <span style="padding-left:10px;"> | </span>
+              <span style="padding-left:10px;">SignUp </span>
+              <span style="padding-left:10px;">| </span>
+              <span style="padding-left:10px;">SignIn </span>
+
+
+
+
+
             </b-nav-item>
 
-            <b-nav-item class="navt">
-              <router-link to>
-                <strong>
-                  <div style="color:	#111113 !important;">
-                    <img src="../assets/ind.png" style="width:25px;height:20px;" />
+            <b-nav-item class=" navt ">
+              <router-link to=""><strong>
+                  <div style="color:  #111113 !important;">
+                    <img src="../assets/ind.png" style="width:25px;height:20px;">
                   </div>
-                </strong>
-              </router-link>
+                </strong></router-link>
             </b-nav-item>
-            <b-nav-item class="navt">
-              <router-link to>
-                <strong>
-                  <div style="color:	#111113 !important;">
-                    <img src="../assets/uae.png" style="width:25px;height:25px;" />
+            <b-nav-item class="navt ">
+              <router-link to=""><strong>
+                  <div style="color:  #111113 !important;">
+                    <img src="../assets/uae.png" style="width:25px;height:25px;">
                   </div>
-                </strong>
-              </router-link>
+                </strong></router-link>
             </b-nav-item>
+
           </b-navbar-nav>
+
+
         </b-collapse>
       </div>
+
+
     </b-navbar>
     <div class="container" style="background-color: white!important;">
       <b-navbar
@@ -55,7 +61,7 @@
           ></b-img>
         </a>
 <b-nav-item class="ml-auto">
-          <div class="input-group srh" style="width: 13cm ;padding-bottom:10px;">
+          <div class="input-group srh sw" style="width: 13cm ;padding-bottom:10px;">
             <input type="text" class="form-control" placeholder="Search here" />
             <div class="input-group-append">
               <button type="button" class="btn btn-danger">
@@ -80,56 +86,64 @@
 
     
     <b-navbar toggleable="lg" style="background-color:#f8f9fa" type="light" variant="light">
-      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <div style="padding-left: 50px;">
-        <b-nav-item class="hv">
-          <i class="fa fa-list"></i> &nbsp;CATEGORIES
-        </b-nav-item>
-      </div>
+      
+      <div class="container">
+        <b-nav-item >
+          <i class="fa fa-list onlylap"></i>
+         
+        <b-nav-item class="hv"> <b-navbar-toggle target="nav_collapse"> 
+         <i class="fa fa-list"></i></b-navbar-toggle>CATEGORIES
+        </b-nav-item></b-nav-item>
+       
+      
       <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
-      <b-collapse style="padding-right: 110px" is-nav id="nav_collapse">
+      <b-collapse  is-nav id="nav_collapse">
         <b-nav-item class="mx-auto" href="#"></b-nav-item>
 
-        <b-nav-item-dropdown class="hv" text="HOME" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
+        <!-- <b-nav-item class="hv" text="HOME" right> -->
+          <b-nav-item href="#">HOME</b-nav-item>
+          <!-- <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
+        </b-nav-item-dropdown> --> 
 
-        <b-nav-item-dropdown class="hv" text="PAGES" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
+        
+        <b-nav-item href="#">PAGES</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>-->
+          </b-nav-item>
+       
+        <b-nav-item href="#">SERVICES</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-        <b-nav-item-dropdown class="hv" text="SERVICES" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
+        </b-nav-item-dropdown> -->
+      
+        <b-nav-item href="#">CONTACT US</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-        <b-nav-item-dropdown class="hv" text="CONTACT US" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
+        </b-nav-item-dropdown> -->
+        
+        <b-nav-item href="#">PARTNER WITH US</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-        <b-nav-item-dropdown class="hv" text="PARTNER WITH US" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-
+        </b-nav-item-dropdown> -->
+      </b-collapse>
         <b-nav-item class="ml-auto">
           <i class="fa fa-phone">1234567890</i>
         </b-nav-item>
-      </b-collapse>
+    
 
       <b-navbar-brand>
         <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
-      </b-navbar-brand>
+      </b-navbar-brand></div>
     </b-navbar>
   </div>
 </template>
@@ -145,7 +159,7 @@
   text-align: center;
 }
 .navbar-toggler {
-  background-color: black !important;
+  background-color: white !important;
 }
 .navvink {
   color: black !important;
@@ -194,6 +208,21 @@ a:hover {
     padding-left: 100px;
   }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .sw{
+      width:8cm!important;
+    
+    }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+
+.onlylap{
+  display: none!important;
+
+}
+}
+
 ul {
   list-style-type: none;
   padding: 0;

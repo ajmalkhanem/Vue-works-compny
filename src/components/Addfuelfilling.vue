@@ -179,9 +179,7 @@
                     <label for="policy" style="color: cornflowerblue;">
                       <h4></h4>
                     </label>
-                    <b-button type="submit" class="squaree_bt">
-                      <strong>Save</strong>
-                    </b-button>
+                    <b-button type="submit" variant="outline-primary">Save</b-button>
                   </div>
                 </b-container>
               </form>

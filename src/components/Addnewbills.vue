@@ -176,9 +176,7 @@
                   </select>
                 </div>
                 <br />
-                <b-button type="submit" class="square_bt">
-                  <strong>Save</strong>
-                </b-button>
+                <b-button type="submit" variant="outline-primary">Save</b-button>
                 <br />
                
               </form>

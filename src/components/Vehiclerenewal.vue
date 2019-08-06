@@ -85,17 +85,17 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-8" style="padding-bottom: 20px;padding-top: 20px">
-          <h4>Vehicle Renewal</h4>
-
+        <div class="col-md-8" style="padding-bottom: 20px;">
+          <h4>Vehicle Renewal and Penalty Charges</h4>
+          <br>
           <div
             style=" padding-left:20px!important;padding-right:20px!important;background-color:white;border:solid rgb(235, 238, 240) 2px;float:left;padding-bottom:20px!important;padding-top:20px!important;"
           >
-            <form style="padding-bottom: 20px ;padding-top: 30px" @submit.prevent="submit1">
+            <form style="padding-bottom: 10px ;" @submit.prevent="submit1">
               {{msg}}
               <div class="container3">
                 <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;">
+                  <label for="policy" >
                     <b>Task Name:</b>
                   </label>
                   <input
@@ -106,7 +106,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;">
+                  <label for="policy">
                     <b>Date:</b>
                   </label>
                   <input
@@ -117,7 +117,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue;">
+                  <label for="policy" >
                     <b>Odometer Reading</b>
                   </label>
                   <input
@@ -129,7 +129,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="policy" style="color: cornflowerblue">
+                  <label for="policy" >
                     <b>Amount</b>
                   </label>
                   <input

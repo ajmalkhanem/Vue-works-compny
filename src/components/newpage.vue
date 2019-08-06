@@ -21,12 +21,15 @@
       </b-carousel>
     </div>
     <div class="container" style="padding-top: 30px;">
-      <div class="row">
+        
+      <div class="col-md-12 row">
+        <div class="flex-container">
         <div v-for="listing in list">
-          <router-link v-bind:to="'/profile/' + listing._id">
+         
+           
+                <router-link style="text-decoration: none!important;" v-bind:to="'/profile/' + listing._id">
 
-            <div class="col-md-6" style="padding-right: 30x;">
-              <div class="row " >
+              <div class="col-md-6 " >
 
 
 
@@ -99,14 +102,16 @@
 
               </div>
 
-
-            </div>
-          </router-link>
+</router-link>
+            
+          
 
         </div>
-      </div>
+      </div><!-- 1st row-->
 
-    </div>
+
+
+    </div></div>
   </div>
 </template>
 <script>
