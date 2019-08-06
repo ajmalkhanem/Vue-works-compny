@@ -308,7 +308,8 @@ let router=new Router({
     {
       path: '/signin',
       name: 'signin',
-      component: signin
+      component: signin,
+
     },
    
     {
@@ -447,18 +448,25 @@ let router=new Router({
     {
       path: '/addcar1',
       name: 'addcar1',
-      component: addcar1
+      component: addcar1,
+      meta: { requiresAuth: true }
     },
     {
-      path: '/editcar1',
+      path: '/editcar1/:id',
       name: 'editcar1',
-      component: editcar1
+      component: editcar1,
+      props:true,
+      meta: { requiresAuth: true }
     },
     {
       path: '/st',
       name: 'st',
       component: st
     },
+    
+     
+     
+    
 
 
 
@@ -474,10 +482,15 @@ router.beforeEach((to, from, next) => {
     return
   }
 
-  if (to.path === '/login' && store.state.isLoggedIn) {
-    next({ name: 'slider' })
+  if (to.path === '/signin' && store.state.isLoggedIn) {
+    next({ name: 'home' })
     return
   }
+  if (to.path === '/signup1' && store.state.isLoggedIn) {
+    next({ name: 'home' })
+    return
+  }
+ 
   
   next()
  // next({ name: 'home' })

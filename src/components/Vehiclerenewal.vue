@@ -96,6 +96,7 @@
               <div class="container3">
                 <div class="form-group">
                   <label for="policy" >
+                  <label for="policy" style="color: Black;">
                     <b>Task Name:</b>
                   </label>
                   <input
@@ -107,6 +108,7 @@
                 </div>
                 <div class="form-group">
                   <label for="policy">
+                  <label for="policy" style="color: black;">
                     <b>Date:</b>
                   </label>
                   <input
@@ -118,6 +120,7 @@
                 </div>
                 <div class="form-group">
                   <label for="policy" >
+                  <label for="policy" style="color: black;">
                     <b>Odometer Reading</b>
                   </label>
                   <input
@@ -130,6 +133,7 @@
 
                 <div class="form-group">
                   <label for="policy" >
+                  <label for="policy" style="color: black">
                     <b>Amount</b>
                   </label>
                   <input

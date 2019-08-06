@@ -70,16 +70,16 @@
                                 <span class="pull-left"> {{ listing.plateNo}}</span>
                               </b-row>
                               <b-row>
-                                <span class="pull-left">{{ listing.registerDate.slice(0,10)}}</span>
+                                <span class="pull-left">{{ listing.registerDate}}</span>
                               </b-row>
                               <b-row>
                                 <span class="pull-left">{{ listing.tcNo}} </span>
                               </b-row>
                               <b-row>
-                                <span class="pull-left">{{ listing.polexpiryDate.slice(0,10)}} </span>
+                                <span class="pull-left">{{ listing.polexpiryDate}} </span>
                               </b-row>
                               <b-row>
-                                <span class="pull-left">{{ listing.inexpiryDate.slice(0,10)}} </span>
+                                <span class="pull-left">{{ listing.inexpiryDate}} </span>
                               </b-row>
 
                             </div>
@@ -102,9 +102,10 @@
 
               </div>
 
-</router-link>
-            
-          
+
+            </div>
+          </router-link>
+          <router-link :to="'/editcar1/' + listing._id">y</router-link>
 
         </div>
       </div><!-- 1st row-->
@@ -118,6 +119,7 @@
 
 
   export default {
+    props:['id'],
     components: {
 
 
