@@ -106,7 +106,7 @@
             </div>
           </router-link>
           <router-link :to="'/editcar1/' + listing._id">y</router-link>
-          <router-link :to="'/deletecar/' + listing._id">delete</router-link>
+          <router-link :to="'/deletecar/' + listing._id"></router-link>
 
         </div>
       </div>

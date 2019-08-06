@@ -60,10 +60,9 @@
                 style="background-color: #03adfc;"
               >Sign in</button>
               Not a member yet?
-              <router-link to="/signup1">
-                <b>
-                  <label style="color:#03adfc;">Sign Up</label>
-                </b>
+              <router-link to="/signup1" class="kk">
+               Sign Up
+                
               </router-link>
 
               <!-- <button type="button" class="btn btn-light">
@@ -87,11 +86,8 @@
         </div>
         <div class="col-md-6 hid" style="padding-top:10px!important;">
           <div id="rectangle" class="rt">
-            <p style="text-align: center!important;">
-              <img
-                src="../assets/221.jpg"
-                style="width:400px;height:400px;padding-top:40px!important;"
-              />
+            <p style="text-align: center!important;"> <img src="../assets/CCLO.png"
+                style="width:400px;height:400px;padding-top:40px!important;">
             </p>
           </div>
         </div>
@@ -307,5 +303,9 @@ export default {
 .rr {
   border: 1px solid rgb(240, 240, 240) !important;
   border-radius: 3px !important;
+}
+.kk{
+  color:cornflowerblue!important;
+  text-decoration: none!important;
 }
 </style>

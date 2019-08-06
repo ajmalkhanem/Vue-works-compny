@@ -62,6 +62,7 @@ import addcar1 from '@/components/addcar1'
 import editcar1 from '@/components/editcar1'
 import deletecar from '@/components/deletecar'
 
+import st from '@/components/st'
 
 
 import store from '../store'
@@ -465,7 +466,17 @@ let router=new Router({
       component: deletecar,
       props:true,
       meta: { requiresAuth: true }
-    }
+    },
+    {
+      path: '/st',
+      name: 'st',
+      component: st,
+      meta: { requiresAuth: true }
+    },
+    
+     
+     
+    
 
 
 

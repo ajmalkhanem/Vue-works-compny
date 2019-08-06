@@ -79,45 +79,61 @@
     <b-navbar toggleable="lg" style="background-color:#f8f9fa" type="light" variant="light">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <div style="padding-left: 100px;">
-        <b-nav-item class="hv">
-          <i class="fa fa-list"></i> &nbsp;CATEGORIES
-        </b-nav-item>
+          <b-nav-item class="hv">
+              
+              <b-nav-item-dropdown class="hv" text="CATEGORIES" right>
+                  <b-dropdown-item href="#">Automobile</b-dropdown-item>
+                  <b-dropdown-item href="#">Communication</b-dropdown-item>
+                  <b-dropdown-item href="#">Education </b-dropdown-item>
+                  <b-dropdown-item href="#">Restaurant </b-dropdown-item>
+                  <b-dropdown-item href="#">Stock Market </b-dropdown-item>
+                  <b-dropdown-item href="#"> Real Estate </b-dropdown-item>
+                  <b-dropdown-item href="#">Insurance </b-dropdown-item>
+                  <b-dropdown-item href="#"> Health & Wealth</b-dropdown-item>
+                  <b-dropdown-item href="#">Entertainment & Sports </b-dropdown-item>
+                  <b-dropdown-item href="#">JObs </b-dropdown-item>
+                  <b-dropdown-item href="#">Travel & Tourism </b-dropdown-item>
+                  <b-dropdown-item href="#"> Market Place  </b-dropdown-item>
+                </b-nav-item-dropdown>
+            </b-nav-item>
       </div>
       <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
       <b-collapse style="padding-right: 110px" is-nav id="nav_collapse">
-        <b-nav-item class="mx-auto" href="#"></b-nav-item>
+          <b-nav-item href="/">HOME</b-nav-item>
+          <!-- <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+        </b-nav-item-dropdown> --> 
 
-        <b-nav-item-dropdown class="hv" text="HOME" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
+        
+        <b-nav-item href="#">PAGES</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>-->
+          </b-nav-item>
+       
+        <b-nav-item href="#">SERVICES</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown class="hv" text="PAGES" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
+        </b-nav-item-dropdown> -->
+      
+        <b-nav-item href="#">CONTACT US</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-        <b-nav-item-dropdown class="hv" text="SERVICES" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
+        </b-nav-item-dropdown> -->
+        
+        <b-nav-item href="#">PARTNER WITH US</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-        <b-nav-item-dropdown class="hv" text="CONTACT US" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-        <b-nav-item-dropdown class="hv" text="PARTNER WITH US" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
+        </b-nav-item-dropdown> -->
+          
 
         <b-nav-item class="ml-auto">
           <i class="fa fa-phone">1234567890</i>

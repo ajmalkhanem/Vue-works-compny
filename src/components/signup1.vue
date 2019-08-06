@@ -91,10 +91,10 @@
                 style="background-color: #03adfc;"
               >Sign up</button>
               Already member
-              <router-link to="/signin">
-                <b>
-                  <label style="color:#03adfc;">Signin</label>
-                </b>
+              <router-link to="/signin"
+      
+                 style="color:#03adfc; text-decoration: none!important;" class="oo">Signin
+                
               </router-link>
               <br />
               <br />
@@ -108,12 +108,12 @@
               <div>________________ or ______________</div>
               <br />
               <div class="square_bt">
-                <router-link to class="square_bt">Continue with Facebook</router-link>
+                <router-link to class="square_bt" style="text-decoration: none!important;">Continue with Facebook</router-link>
               </div>
               <br />
               <br />
               <div class="squarbt">
-                <router-link to class="squarbt">Continue with Google</router-link>
+                <router-link to class="squarbt" style="text-decoration: none!important;">Continue with Google</router-link>
               </div>
             </form>
           </div>
@@ -122,7 +122,7 @@
           <div id="rectangle" class="rt">
             <p style="text-align: center!important;">
               <img
-                src="../assets/221.jpg"
+                src="../assets/CCLO.png"
                 style="width:400px;height:400px;padding-top:40px!important;"
               />
             </p>
@@ -236,6 +236,12 @@ localStorage.users1.username = newName;
   color: #fff;
   background: #00008b;
   transition: 0.4s;
+}
+.square_bt :hover{
+  color:white!important;
+}
+.oo:hover{
+  color:cornflowerblue!important;
 }
 
 .squarbt {
