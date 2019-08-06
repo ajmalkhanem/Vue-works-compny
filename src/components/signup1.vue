@@ -120,7 +120,7 @@
           <div id="rectangle" class="rt">
             <p style="text-align: center!important;">
               <img
-                src="../assets/221.jpg"
+                src="../assets/CCLO.png"
                 style="width:400px;height:400px;padding-top:40px!important;"
               />
             </p>

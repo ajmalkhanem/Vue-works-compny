@@ -4,7 +4,7 @@
 
 
             <b-row>
-                <b-col style="padding-left: 100px;">
+                <b-col>
                     <h5><b>Cloud Online global market</b></h5>
                     <p>Cloud Global Market ,</p>
                     <p>United Arab Emirates</p>

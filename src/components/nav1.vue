@@ -12,11 +12,11 @@
             <b-nav-item>
 
 
-              <span style="padding-left:10px;"> Become a Seller </span>
+                <router-link to="/sellerindex" ><span style="padding-left:10px;"> Become a Seller </span></router-link>
               <span style="padding-left:10px;"> | </span>
-              <span style="padding-left:10px;">SignUp </span>
+             <router-link to="/signup1" ><span style="padding-left:10px;">SignUp </span></router-link>
               <span style="padding-left:10px;">| </span>
-              <span style="padding-left:10px;">SignIn </span>
+              <router-link to="/signin" > <span style="padding-left:10px;">SignIn </span></router-link>
 
 
 
@@ -86,14 +86,27 @@
 
     
     <b-navbar toggleable="lg" style="background-color:#f8f9fa" type="light" variant="light">
-      
+        <b-navbar-toggle target="nav_collapse"> </b-navbar-toggle>
       <div class="container">
-        <b-nav-item >
-          <i class="fa fa-list onlylap"></i>
+      
          
-        <b-nav-item class="hv"> <b-navbar-toggle target="nav_collapse"> 
-         <i class="fa fa-list"></i></b-navbar-toggle>CATEGORIES
-        </b-nav-item></b-nav-item>
+          <b-nav-item class="hv">
+              
+              <b-nav-item-dropdown class="hv yy" text="CATEGORIES" right>
+                  <b-dropdown-item href="#">Automobile</b-dropdown-item>
+                  <b-dropdown-item href="#">Communication</b-dropdown-item>
+                  <b-dropdown-item href="#">Education </b-dropdown-item>
+                  <b-dropdown-item href="#">Restaurant </b-dropdown-item>
+                  <b-dropdown-item href="#">Stock Market </b-dropdown-item>
+                  <b-dropdown-item href="#"> Real Estate </b-dropdown-item>
+                  <b-dropdown-item href="#">Insurance </b-dropdown-item>
+                  <b-dropdown-item href="#"> Health & Wealth</b-dropdown-item>
+                  <b-dropdown-item href="#">Entertainment & Sports </b-dropdown-item>
+                  <b-dropdown-item href="#">JObs </b-dropdown-item>
+                  <b-dropdown-item href="#">Travel & Tourism </b-dropdown-item>
+                  <b-dropdown-item href="#"> Market Place  </b-dropdown-item>
+                </b-nav-item-dropdown>
+            </b-nav-item>
        
       
       <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
@@ -101,7 +114,7 @@
         <b-nav-item class="mx-auto" href="#"></b-nav-item>
 
         <!-- <b-nav-item class="hv" text="HOME" right> -->
-          <b-nav-item href="#">HOME</b-nav-item>
+          <b-nav-item href="/">HOME</b-nav-item>
           <!-- <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
@@ -206,6 +219,11 @@ a:hover {
     margin-right: 15px;
     margin-left: 15px;
     padding-left: 100px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+ .yy {
+display:none;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
