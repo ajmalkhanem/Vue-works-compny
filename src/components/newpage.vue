@@ -33,7 +33,10 @@
                 <div class="card mb-3 ">
                   <div class="row no-gutters">
                     <div class="col-md-4 ">
-                      <img src="../assets/car.jpg" class="card-img img3 im1" alt="...">
+                        
+                            <p v-for="doc in listing.documents">
+{{doc}}
+                      <img src="http://13.233.110.196/document/get/ class="card-img img3 im1" alt="..."></p>
                     </div>
                     <div class="col-md-8">
                       <div class="card-body bg">
@@ -123,6 +126,7 @@
       return {
 
         list: [],
+        length:''
 
       };
     },
