@@ -237,16 +237,14 @@ localStorage.users1.username = newName;
         })
 
         .then(response => {
-          this.msg = response.data.message 
-          this.msg1 = response.data.status 
+          this.msg = response.data.message;
+          this.msg1 = response.data.status;
 
-          if(this.msg1==true)
-          {
+          if (this.msg1 == true) {
             this.$router.push({
               name: "login"
-            }); }
-            
-
+            });
+          }
         })
         //this.$store.dispatch('submit1', { username, password })
 

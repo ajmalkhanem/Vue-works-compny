@@ -89,7 +89,6 @@
                               id="file"
                               accept="image/*"
                               v-on:change="uploadImage($event)"
-                              
                             />
                           </div>
                         </b-col>
@@ -156,47 +155,47 @@ export default {
         headers: {
           to: localStorage.getItem("token")
         }
-      }).then(response => {
-        if(response.data.status == true){
-          alert("Successfully added");
-          //imageupload
-          let formData = new FormData();
-          formData.append("dp", this.selectedFile);
-          axios({
-            method: "post",
-            url: "http://13.233.110.196/customer/add/dp/",
-            data: formData,
-            headers: {
-              "Content-Type": "multipart/form-data",
-              to: localStorage.getItem("token")
-            }
-          })
-            .then(response => {
-              if (response.data.status == true) {
-                alert("Success");
-                this.$router.push({
-              name: "userprofile"
-            });
-              } else {
-                alert("failed");
+      })
+        .then(response => {
+          if (response.data.status == true) {
+            alert("Successfully added");
+            //imageupload
+            let formData = new FormData();
+            formData.append("dp", this.selectedFile);
+            axios({
+              method: "post",
+              url: "http://13.233.110.196/customer/add/dp/",
+              data: formData,
+              headers: {
+                "Content-Type": "multipart/form-data",
+                to: localStorage.getItem("token")
               }
             })
-            .catch(e => {
-              alert("Too Large image!! Failed");
-              this.loading = false;
-            });
-        }
-        else{
-          //code
-          alert("failed")
-        }
+              .then(response => {
+                if (response.data.status == true) {
+                  alert("Success");
+                  this.$router.push({
+                    name: "userprofile"
+                  });
+                } else {
+                  alert("failed");
+                }
+              })
+              .catch(e => {
+                alert("Too Large image!! Failed");
+                this.loading = false;
+              });
+          } else {
+            //code
+            alert("failed");
+          }
         })
         .catch(e => {
           this.loading = false;
           this.err = e.response.data.msg;
           alert(this.err);
         });
-    },
+    }
   }
 };
 </script>

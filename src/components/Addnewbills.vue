@@ -37,7 +37,7 @@
               <tr>
                 <td>
                   <router-link
-                   :to="'/FuelFillingHistory/' + this.id"
+                    :to="'/FuelFillingHistory/' + this.id"
                     style="text-decoration: none!important;"
                   >Fuel Filling History</router-link>
                 </td>
@@ -53,7 +53,7 @@
               <tr>
                 <td style=" background: rgb(242, 235, 235)">
                   <router-link
-                   :to="'/Addnewbills/' + this.id"
+                    :to="'/Addnewbills/' + this.id"
                     style="text-decoration: none!important;"
                   >Add new Maintenance bills</router-link>
                 </td>
@@ -61,7 +61,7 @@
               <tr>
                 <td>
                   <router-link
-                   :to="'/Addfuelfilling/' + this.id"
+                    :to="'/Addfuelfilling/' + this.id"
                     style="text-decoration: none!important;"
                   >Add Fuel Filling</router-link>
                 </td>
@@ -69,7 +69,7 @@
               <tr>
                 <td>
                   <router-link
-                   :to="'/Addemidetails/' + this.id"
+                    :to="'/Addemidetails/' + this.id"
                     style="text-decoration: none!important;"
                   >Add EMI Details</router-link>
                 </td>
@@ -77,7 +77,7 @@
               <tr>
                 <td>
                   <router-link
-                   :to="'/Vehiclerenewal/' + this.id"
+                    :to="'/Vehiclerenewal/' + this.id"
                     style="text-decoration: none!important;"
                   >Vehicle Renewal and Penalty Charges</router-link>
                 </td>
@@ -178,7 +178,6 @@
                 <br />
                 <b-button type="submit" variant="outline-primary">Save</b-button>
                 <br />
-               
               </form>
             </div>
             <br />
@@ -315,26 +314,26 @@ export default {
   background: rgb(179, 158, 158) !important;
   transition: 0.4s;
 }
-  .rr {
-    border: 1px solid rgb(240, 240, 240) !important;
-    border-radius: 3px !important;
-  }
-  .squarbt {
-    display: inline-block;
-    padding: 7px 20px!important;
-    border-radius: 25px!important;
-    text-decoration: none;
-    color: black!important;
-    background: rgb(240, 240, 240);
-    transition: .4s;
-  }
-  .squaree_bt {
-    display: inline-block;
-    padding: 10px 40px!important;
-    
-    text-decoration: none!important;
-    color: black!important;
-    background:  rgb(179, 158, 158)!important;
-    transition: .4s;
-  }
+.rr {
+  border: 1px solid rgb(240, 240, 240) !important;
+  border-radius: 3px !important;
+}
+.squarbt {
+  display: inline-block;
+  padding: 7px 20px !important;
+  border-radius: 25px !important;
+  text-decoration: none;
+  color: black !important;
+  background: rgb(240, 240, 240);
+  transition: 0.4s;
+}
+.squaree_bt {
+  display: inline-block;
+  padding: 10px 40px !important;
+
+  text-decoration: none !important;
+  color: black !important;
+  background: rgb(179, 158, 158) !important;
+  transition: 0.4s;
+}
 </style>
