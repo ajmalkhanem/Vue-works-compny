@@ -60,6 +60,8 @@ import nav1 from '@/components/nav1'
 import navlogged from '@/components/navlogged'
 import addcar1 from '@/components/addcar1'
 import editcar1 from '@/components/editcar1'
+import deletecar from '@/components/deletecar'
+
 import st from '@/components/st'
 
 
@@ -459,6 +461,13 @@ let router=new Router({
       meta: { requiresAuth: true }
     },
     {
+      path: '/deletecar/:id',
+      name: 'deletecar',
+      component: deletecar,
+      props:true,
+      meta: { requiresAuth: true }
+    },
+    {
       path: '/st',
       name: 'st',
       component: st,
@@ -491,7 +500,14 @@ router.beforeEach((to, from, next) => {
     next({ name: 'home' })
     return
   }
- 
+  console.log(store.state.new)
+  if (to.path === '/completeprofile' &&  store.state.new) {
+    next({ name: 'completeprofile' })
+    return
+  }
+  
+  
+  
   
   next()
  // next({ name: 'home' })

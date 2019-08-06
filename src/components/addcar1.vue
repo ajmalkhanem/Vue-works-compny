@@ -226,7 +226,7 @@ registerDate: this.users1.rgdate,
 expiryDate: this.users1.exdate,
 inexpiryDate: this.users1.inexdate,
 polexpiryDate: this.users1.polexdate,
-documents: "asasa"
+//documents: "asasa"
 
 
 
@@ -273,7 +273,7 @@ if(response.data.status == true){
               }
             })
             .catch(e => {
-              alert("Too Large image!! Failed");
+              alert("Image upload Not success");
               this.loading = false;
             });
         }

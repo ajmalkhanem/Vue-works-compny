@@ -11,7 +11,10 @@
                           
                             <div class="col-md-4" >
                                 
-                                <router-link v-bind:to="'/profile/' + listing._id" style="text-decoration: none!important;">  <img src="../assets/car.jpg" style="width: 300px;height:200px;"></router-link></div>
+                                 
+                                  <p v-for="doc in listing.documents">
+
+                                      <img v-bind:src="'http://13.233.110.196/document/get/'+doc" class="card-img img3 im1" alt="..."></p></div>
                       <div class="col-md-8">
                           <h5 style="text-align: left;" class="card-title st"><b> &nbsp;{{ listing.vehicleName}} </b>
                           </h5>
@@ -38,8 +41,8 @@
                     <div class="col-md-2">
                         <b-nav-item-dropdown class="hv" text="Options "right>
                              <b-dropdown-item href="#"><router-link v-bind:to="'/editcar1/' + listing._id" style="text-decoration: none!important;">Edit</router-link></b-dropdown-item>
-                            <b-dropdown-item href="#">  <router-link v-bind:to="'/profile/' + listing._id" style="text-decoration: none!important;"> Delete</router-link></b-dropdown-item>
-                              <b-dropdown-item href="#">  <router-link v-bind:to="'/deletecar/' + listing._id" style="text-decoration: none!important;">View</router-link></b-dropdown-item>
+                            <b-dropdown-item href="#">  <router-link v-bind:to="'/profile/' + listing._id" style="text-decoration: none!important;"> view</router-link></b-dropdown-item>
+                              <b-dropdown-item href="#">  <router-link v-bind:to="'/deletecar/' + listing._id" style="text-decoration: none!important;">Delete</router-link></b-dropdown-item>
                           
                           </b-nav-item-dropdown>
                     </div>
@@ -50,7 +53,7 @@
                 </div>
             
                 </div>
-            
+                <router-link to="/addcar1" style="text-decoration: none!important;">Add New</router-link>
               </div><br></div>
 </template>
 <script>

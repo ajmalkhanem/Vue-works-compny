@@ -13,7 +13,7 @@
             <p>Enter your details below to access your account</p>
                         <label style="color:red;">{{ msg }}</label>
 
-            <form @submit.prevent="submit1" style="padding-bottom:30px!important;">
+            <form @submit="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
                 <b-row>
                   <b-col>
@@ -62,7 +62,7 @@
               Not a member yet?
               <router-link to="/signup1" class="kk">
                Sign Up
-                </b>
+                
               </router-link>
 
               <!-- <button type="button" class="btn btn-light">
@@ -150,7 +150,7 @@ export default {
         })
 
         .catch(ev => {});
-      ev.target.reset();
+      
       //alert("hai");
     },
     check1() {
@@ -175,7 +175,7 @@ export default {
             // console.log(response.data.data)
 
             //console.log(response.data.status)
-            store.commit("loginUser", response.data.token);
+            store.commit("loginUser", response.data.new);
           localStorage.setItem("new", response.data.new);
             this.new1 = response.data.new;
             this.status1 = response.data.status;
@@ -195,7 +195,7 @@ export default {
             if (this.status1 == true) {
               if (this.usertype1 == 0) {
                 store.commit("loginUser", response.data.data);
-                //localStorage.setItem("data0",response.data.data.pro_pic)
+               // localStorage.setItem("data0",response.data.data.pro_pic)
                 localStorage.setItem("data", response.data.data.firstname);
                 localStorage.setItem("data1", response.data.data.lastname);
                 localStorage.setItem("data2", response.data.data.nationality);
