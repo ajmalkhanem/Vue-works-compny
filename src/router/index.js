@@ -505,11 +505,7 @@ router.beforeEach((to, from, next) => {
     return
   }
   
-  
-  
-  
-  next()
- // next({ name: 'home' })
+
 })
 export default router
 
