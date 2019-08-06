@@ -204,7 +204,7 @@
               }
             })
             .catch(e => {
-              alert("Too Large image!! Failed");
+              alert("Image Not Upload");
               this.loading = false;
             });
         }
@@ -216,7 +216,7 @@
             //store.commit("loginUser",response.data.token);
             //localStorage.setItem("token", response.data.token)
             this.$router.push({
-              name: "profile"
+              name: "slider"
             });
           })
           //this.$store.dispatch('submit1', { username, password })

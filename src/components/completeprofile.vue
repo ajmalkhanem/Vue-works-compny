@@ -131,7 +131,7 @@ export default {
               }
             })
             .catch(e => {
-              alert("Too Large image!! Failed");
+              alert("Image upload Not Success");
                this.$router.push({
               name: "slider"
             });

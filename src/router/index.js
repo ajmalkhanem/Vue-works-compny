@@ -60,6 +60,8 @@ import nav1 from '@/components/nav1'
 import navlogged from '@/components/navlogged'
 import addcar1 from '@/components/addcar1'
 import editcar1 from '@/components/editcar1'
+import deletecar from '@/components/deletecar'
+
 
 
 import store from '../store'
@@ -454,6 +456,13 @@ let router=new Router({
       path: '/editcar1/:id',
       name: 'editcar1',
       component: editcar1,
+      props:true,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/deletecar/:id',
+      name: 'deletecar',
+      component: deletecar,
       props:true,
       meta: { requiresAuth: true }
     }

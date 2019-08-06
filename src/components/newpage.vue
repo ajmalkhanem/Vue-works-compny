@@ -35,8 +35,8 @@
                     <div class="col-md-4 ">
                         
                             <p v-for="doc in listing.documents">
-{{doc}}
-                      <img src="http://13.233.110.196/document/get/ class="card-img img3 im1" alt="..."></p>
+
+                      <img v-bind:src="'http://13.233.110.196/document/get/'+doc" class="card-img img3 im1" alt="..."></p>
                     </div>
                     <div class="col-md-8">
                       <div class="card-body bg">
@@ -106,6 +106,7 @@
             </div>
           </router-link>
           <router-link :to="'/editcar1/' + listing._id">y</router-link>
+          <router-link :to="'/deletecar/' + listing._id">delete</router-link>
 
         </div>
       </div>

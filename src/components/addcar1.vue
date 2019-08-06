@@ -273,7 +273,7 @@ if(response.data.status == true){
               }
             })
             .catch(e => {
-              alert("Too Large image!! Failed");
+              alert("Image upload Not success");
               this.loading = false;
             });
         }
