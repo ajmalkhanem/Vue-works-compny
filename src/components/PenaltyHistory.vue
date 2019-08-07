@@ -43,7 +43,7 @@
                 </td>
               </tr>
               <tr>
-                <td  style=" background: rgb(242, 235, 235)">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link
                     :to="'/PenaltyHistory/' + this.id"
                     style="text-decoration: none!important;"
@@ -87,8 +87,8 @@
         </div>
         <div class="col-md-8">
           <h5>PENALTY HISTORY</h5>
-          
-        <p v-if="list.charges.length">
+
+          <p v-if="list.charges.length"></p>
           <table class="table table-hover">
             <thead>
               <tr>
@@ -112,8 +112,7 @@
                 </td>
               </tr>
             </tbody>
-          </table></p>
-          <p v-else>No data Found</p>
+          </table>
         </div>
       </div>
     </div>
@@ -124,8 +123,8 @@ export default {
   props: ["id"],
   data() {
     return {
-      list: [],
-      
+      list: []
+
       // Note 'age' is left out and will not appear in the rendered table
     };
   },

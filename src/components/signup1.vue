@@ -12,8 +12,8 @@
             <br />
             <h2 style="color:#03adfc;">Sign Up</h2>
             <p>By joining I agree to receive emails from CloudGM</p>
-           <label style="color:red;">{{msg}}</label>
-            
+            <label style="color:red;">{{msg}}</label>
+
             <form @submit="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
                 <b-row>
@@ -24,7 +24,8 @@
                       required
                       v-model="users1.username"
                       class="form-control"
-                       minlength="6" maxlength="15"
+                      minlength="6"
+                      maxlength="15"
                       id="rcorners1"
                       aria-describedby="emailHelp"
                       placeholder="Username"
@@ -41,7 +42,8 @@
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;"
                       required
                       v-model="users1.password"
-                       minlength="6" maxlength="15"
+                      minlength="6"
+                      maxlength="15"
                       class="form-control"
                       id="rcorners1"
                       aria-describedby="emailHelp"
@@ -58,7 +60,7 @@
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;"
                       required
                       v-model="users1.ph"
-                       pattern="[0-9]{1}[0-9]{9}"
+                      pattern="[0-9]{1}[0-9]{9}"
                       class="form-control"
                       id="rcorners1"
                       aria-describedby="emailHelp"
@@ -75,7 +77,7 @@
                       style="width:330px;background-color: rgb(233, 238, 240);text-align: center;"
                       required
                       v-model="users1.email"
-                       pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+                      pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
                       class="form-control"
                       id="rcorners1"
                       aria-describedby="emailHelp"
@@ -92,17 +94,17 @@
                 style="background-color: #03adfc;"
               >Sign up</button>
               Already member
-              <router-link to="/signin"
-      
-                 style="color:#03adfc; text-decoration: none!important;" class="oo">Signin
-                
-              </router-link>
+              <router-link
+                to="/signin"
+                style="color:#03adfc; text-decoration: none!important;"
+                class="oo"
+              >Signin</router-link>
               <br />
               <br />
 
-              <!-- <button type="button" class="btn btn-light">
-                            <router-link to="/signupb">Signup as a business</router-link>
-              </button>-->
+              <button type="button" class="btn btn-light">
+                            <router-link to="/signupbu">Signup as a business</router-link>
+              </button>
 
               <br />
               <br />
@@ -114,7 +116,11 @@
               <br />
               <br />
               <div class="squarbt">
-                <router-link to class="squarbt" style="text-decoration: none!important;">Continue with Google</router-link>
+                <router-link
+                  to
+                  class="squarbt"
+                  style="text-decoration: none!important;"
+                >Continue with Google</router-link>
               </div>
             </form>
           </div>
@@ -208,7 +214,6 @@ localStorage.users1.username = newName;
         //this.$store.dispatch('submit1', { username, password })
 
         .catch(ev => {});
-      
     }
 
     /* login() {
@@ -222,12 +227,12 @@ localStorage.users1.username = newName;
 };
 </script>
 <style>
-  #rcorners1 {
-    border-radius: 25px;
-    padding: 20px;
-    width: 200px;
-    height: 8px;
-  }
+#rcorners1 {
+  border-radius: 25px;
+  padding: 20px;
+  width: 200px;
+  height: 8px;
+}
 </style>
     <style>
 .squ{
@@ -239,11 +244,11 @@ localStorage.users1.username = newName;
   background: #00008b;
   transition: 0.4s;
 }
-.square_bt :hover{
-  color:white!important;
+.square_bt :hover {
+  color: white !important;
 }
-.oo:hover{
-  color:cornflowerblue!important;
+.oo:hover {
+  color: cornflowerblue !important;
 }
 
 .squarbt {

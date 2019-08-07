@@ -1,89 +1,52 @@
 <template>
   <div>
-  
-    <!--
-      <b-navbar class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke" toggleable="lgh" type="light"
-      variant="light">
-      <div>
-         
+    <b-navbar
+      class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke"
+      toggleable="lgh"
+      type="light"
+      variant="light"
+    >
+      <div class="container">
+        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+        <span>Welcome to CloudGM</span>
 
         <b-collapse is-nav id="nav_collapse">
           <b-navbar-nav class="ml-auto">
-              <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-              <span>Welcome to CloudGM </span>
-          </b-navbar-nav>
-          <b-navbar-nav class="mr-auto">
-              <b-nav-item >
-                <router-link to="/sellerindex" style=" text-decoration: none!important;"><span style="padding-left:10px;"> Become a Seller </span></router-link>
-              <span style="padding-left:10px;" > | </span>
-             <router-link to="/signup1"style=" text-decoration: none!important;" ><span style="padding-left:10px;">SignUp </span></router-link>
-              <span style="padding-left:10px;">| </span>
-              <router-link to="/signin" style=" text-decoration: none!important;"> <span style="padding-left:10px;">SignIn </span></router-link>
+            <b-nav-item>
+              <router-link to="/sellerindex">
+                <span style="padding-left:10px;">Become a Seller</span>
+              </router-link>
+              <span style="padding-left:10px;">|</span>
+              <router-link to="/signup1">
+                <span style="padding-left:10px;">SignUp</span>
+              </router-link>
+              <span style="padding-left:10px;">|</span>
+              <router-link to="/signin">
+                <span style="padding-left:10px;">SignIn</span>
+              </router-link>
             </b-nav-item>
 
-
-
-
-            </b-nav-item>
-
-            <b-nav-item class=" navt ">
-              <router-link to=""><strong>
+            <b-nav-item class="navt">
+              <router-link to>
+                <strong>
                   <div style="color:  #111113 !important;">
-                    <img src="../assets/ind.png" style="width:25px;height:20px;">
+                    <img src="../assets/ind.png" style="width:25px;height:20px;" />
                   </div>
-                </strong></router-link>
+                </strong>
+              </router-link>
             </b-nav-item>
-            <b-nav-item class="navt ">
-              <router-link to=""><strong>
+            <b-nav-item class="navt">
+              <router-link to>
+                <strong>
                   <div style="color:  #111113 !important;">
-                    <img src="../assets/uae.png" style="width:25px;height:25px;">
+                    <img src="../assets/uae.png" style="width:25px;height:25px;" />
                   </div>
-                </strong></router-link>
+                </strong>
+              </router-link>
             </b-nav-item>
-
           </b-navbar-nav>
-
-
-        </b-collapse>-->
-        <b-navbar  toggleable="lg" type="light" variant="light" style="padding-top:10px!important;padding-bottom:10px!important;">
-            <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-            <h5 style="color: whitesmoke!important;">_____</h5>
-         <a href="/" style="text-decoration: none!important;"> <h5 style="color:black!important;">Welcome to CloudGM</h5></a>
-             <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
-               <b-collapse is-nav id="nav_collapse">
-                  <b-nav-item href="#" class="mx-auto"></b-nav-item>
-                  <b-nav-item >
-                      <router-link to="/sellerindex" style=" text-decoration: none!important;"><span style="padding-left:10px;"> Become a Seller </span></router-link>
-                    <span style="padding-left:10px;" > | </span>
-                   <router-link to="/signup1"style=" text-decoration: none!important;" ><span style="padding-left:10px;">SignUp </span></router-link>
-                    <span style="padding-left:10px;">| </span>
-                    <router-link to="/signin" style=" text-decoration: none!important;"> <span style="padding-left:10px;">SignIn </span></router-link>
-                  </b-nav-item>
-                  <b-nav-item class=" navt ">
-                      <router-link to=""><strong>
-                          <div style="color:  #111113 !important;">
-                            <img src="../assets/ind.png" style="width:25px;height:20px;">
-                          </div>
-                        </strong></router-link>
-                    </b-nav-item>
-                    <b-nav-item class="navt ">
-                      <router-link to=""><strong>
-                          <div style="color:  #111113 !important;">
-                            <img src="../assets/uae.png" style="width:25px;height:25px;">
-                          </div>
-                        </strong></router-link>
-                    </b-nav-item>
-                 
-                 
-                 </b-collapse>
-                 </b-navbar-nav toggleable="lg"> 
-               <b-navbar-brand>
-                  <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
-                  </b-navbar-brand>
-              </b-navbar>
-      
-
-
+        </b-collapse>
+      </div>
     </b-navbar>
 
     <!---->
@@ -100,29 +63,7 @@
             style=" width:250px; height:130px;padding-bottom:10px;"
           ></b-img>
         </a>
-        <b-nav-item >
-              
-            <b-nav-item-dropdown  text="CATEGORIES" class="ii" style="padding-left:70px!important;" right>
-                <b-dropdown-item href="#">Automobile</b-dropdown-item>
-                <b-dropdown-item href="#">Communication</b-dropdown-item>
-                <b-dropdown-item href="#">Education </b-dropdown-item>
-                <b-dropdown-item href="#">Restaurant </b-dropdown-item>
-                <b-dropdown-item href="#">Stock Market </b-dropdown-item>
-                <b-dropdown-item href="#"> Real Estate </b-dropdown-item>
-                <b-dropdown-item href="#">Insurance </b-dropdown-item>
-                <b-dropdown-item href="#"> Health & Wealth</b-dropdown-item>
-                <b-dropdown-item href="#">Entertainment & Sports </b-dropdown-item>
-                <b-dropdown-item href="#">JObs </b-dropdown-item>
-                <b-dropdown-item href="#">Travel & Tourism </b-dropdown-item>
-                <b-dropdown-item href="#"> Market Place  </b-dropdown-item>
-              </b-nav-item-dropdown>
-          </b-nav-item>
-     
-    
-      
-        
-<b-nav-item class="ml-auto">
-  
+        <b-nav-item class="ml-auto">
           <div class="input-group srh sw" style="width: 13cm ;padding-bottom:10px;">
             <input type="text" class="form-control" placeholder="Search here"
               style="margin-top: 0px;
@@ -136,8 +77,8 @@
                 </span>
               </button>
             </div>
-          </div></b-nav-item>
-        
+          </div>
+        </b-nav-item>
 
         <!-- <b-nav-item href="#" class="mx-auto">
                 <b-img :src="require('../assets/CGMlo.png')" style=" width:250px; height:130px;padding-bottom:10px;"></b-img>
@@ -150,66 +91,74 @@
       </b-navbar>
     </div>
 
-    <!--3rd-->
-   
-    <b-navbar  toggleable="lg" type="light" variant="light">
-        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-         
-        
-              <h5 style="color: whitesmoke!important;">________</h5>
-              <b-nav-item-dropdown class="hv cate" text="CATEGORIES" right>
-                  <b-dropdown-item href="#">Automobile</b-dropdown-item>
-                  <b-dropdown-item href="#">Communication</b-dropdown-item>
-                  <b-dropdown-item href="#">Education </b-dropdown-item>
-                  <b-dropdown-item href="#">Restaurant </b-dropdown-item>
-                  <b-dropdown-item href="#">Stock Market </b-dropdown-item>
-                  <b-dropdown-item href="#"> Real Estate </b-dropdown-item>
-                  <b-dropdown-item href="#">Insurance </b-dropdown-item>
-                  <b-dropdown-item href="#"> Health & Wealth</b-dropdown-item>
-                  <b-dropdown-item href="#">Entertainment & Sports </b-dropdown-item>
-                  <b-dropdown-item href="#">JObs </b-dropdown-item>
-                  <b-dropdown-item href="#">Travel & Tourism </b-dropdown-item>
-                  <b-dropdown-item href="#"> Market Place  </b-dropdown-item>
-                </b-nav-item-dropdown>
-            
-       
-      
-            <b-collapse is-nav id="nav_collapse">
-                <b-nav-item href="#" class="mx-auto"></b-nav-item>
+    <b-navbar toggleable="lg" style="background-color:#f8f9fa" type="light" variant="light">
+      <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+      <div class="container">
+        <b-nav-item class="hv">
+          <b-nav-item-dropdown class="hv yy" text="CATEGORIES" right>
+            <b-dropdown-item href="#">Automobile</b-dropdown-item>
+            <b-dropdown-item href="#">Communication</b-dropdown-item>
+            <b-dropdown-item href="#">Education</b-dropdown-item>
+            <b-dropdown-item href="#">Restaurant</b-dropdown-item>
+            <b-dropdown-item href="#">Stock Market</b-dropdown-item>
+            <b-dropdown-item href="#">Real Estate</b-dropdown-item>
+            <b-dropdown-item href="#">Insurance</b-dropdown-item>
+            <b-dropdown-item href="#">Health & Wealth</b-dropdown-item>
+            <b-dropdown-item href="#">Entertainment & Sports</b-dropdown-item>
+            <b-dropdown-item href="#">JObs</b-dropdown-item>
+            <b-dropdown-item href="#">Travel & Tourism</b-dropdown-item>
+            <b-dropdown-item href="#">Market Place</b-dropdown-item>
+          </b-nav-item-dropdown>
+        </b-nav-item>
 
+        <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
+        <b-collapse is-nav id="nav_collapse">
+          <b-nav-item class="mx-auto" href="#"></b-nav-item>
+
+          <!-- <b-nav-item class="hv" text="HOME" right> -->
           <b-nav-item href="/">HOME</b-nav-item>
-          
-         
+          <!-- <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+          </b-nav-item-dropdown>-->
 
-        
-        <b-nav-item href="#">PAGES</b-nav-item>
-        
-          </b-nav-item>
+          <b-nav-item href="#">PAGES</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>-->
+          
        
         <b-nav-item href="#">SERVICES</b-nav-item>
-         
-      
-        <b-nav-item href="#">CONTACT US</b-nav-item>
-         
-        
-        <b-nav-item href="#">PARTNER WITH US</b-nav-item>
-         
-      </b-collapse>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+          </b-nav-item-dropdown>-->
+
+          <b-nav-item href="#">CONTACT US</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+          </b-nav-item-dropdown>-->
+
+          <b-nav-item href="#">PARTNER WITH US</b-nav-item>
+          <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+          </b-nav-item-dropdown>-->
+        </b-collapse>
         <b-nav-item class="ml-auto">
           <i class="fa fa-phone">1234567890</i>
         </b-nav-item>
-    
 
-      </b-collapse>
-    </b-navbar-nav toggleable="lg"> 
-  <b-navbar-brand>
-     <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
-     </b-navbar-brand>
- </b-navbar>
-
-
-
-</b-navbar>
+        <b-navbar-brand>
+          <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
+        </b-navbar-brand>
+      </div>
+    </b-navbar>
   </div>
 </template>
     
@@ -265,23 +214,19 @@
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
- .cate {
-display:none!important;
+  .yy {
+    display: none;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-
-    .sw{
-      width:8cm!important;
-    
-    }
+  .sw {
+    width: 8cm !important;
+  }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-
-.onlylap{
-  display: none!important;
-
-}
+  .onlylap {
+    display: none !important;
+  }
 }
 
 ul {

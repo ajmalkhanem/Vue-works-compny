@@ -1,100 +1,109 @@
 <template>
-
-<div>
-    
-        <b-row>
-          <b-col>
-              <div class="col-md-12">
-
-                  <div class="container1">
-                    <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
-                    <div class="middle">
-                      <div class="text"><b>Education</b></div>
-                    </div>
-                  </div>            
-            </div>
-          </b-col>
-          <b-col>
-            <div class="col-md-12">
-
-        <div class="container1">
-          <img src="../assets/car.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
-          <div class="middle">
-            <div class="text"><b>Automobiles</b></div>
-          </div>
-        </div>    
-  </div>  
-          </b-col>
-          <b-col>
-            <div class="col-md-12">
-
-              <div class="container1">
-                <img src="../assets/rest.jpg" alt="Avatar" class=er"image" style="width:400px;height: 300px;">
-                <div class="middle">
-                  <div class="text"><b>Restaurant</b></div>
-                </div>
-              </div>            
-        </div>  
-
-
-
-          </b-col>
-        </b-row>
-<br>
-        <b-row>
-            <b-col>
-                <div class="col-md-12">
-  
-                    <div class="container1">
-                      <img src="../assets/edu.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
-                      <div class="middle">
-                        <div class="text"><b>Education</b></div>
-                      </div>
-                    </div>            
-              </div>
-            </b-col>
-            <b-col>
-              <div class="col-md-12">
-  
+  <div>
+    <b-row>
+      <b-col>
+        <div class="col-md-12">
           <div class="container1">
-            <img src="../assets/car.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+            <img
+              src="../assets/edu.jpg"
+              alt="Avatar"
+              class="image"
+              style="width:400px;height: 300px;"
+            />
             <div class="middle">
-              <div class="text"><b>Automobiles</b></div>
+              <div class="text">
+                <b>Education</b>
+              </div>
             </div>
-          </div>    
-    </div>  
-            </b-col>
-            <b-col>
-              <div class="col-md-12">
-  
-                  <div>
-                      <b-card
-                        title="What is your business"
-                        style="max-width: 400px;height: 300px;"
-                        class="mb-2"
-                      >
-                        <b-card-text>
-                          Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </b-card-text>
-                    
-                        <b-button href="#" variant="primary">Become seller</b-button>
-                      </b-card>
-                    </div>            
-          </div>  
-  
-  
-  
-            </b-col>
-          </b-row>
-  
-</div>
+          </div>
+        </div>
+      </b-col>
+      <b-col>
+        <div class="col-md-12">
+          <div class="container1">
+            <img
+              src="../assets/car.jpg"
+              alt="Avatar"
+              class="image"
+              style="width:400px;height: 300px;"
+            />
+            <div class="middle">
+              <div class="text">
+                <b>Automobiles</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </b-col>
+      <b-col>
+        <div class="col-md-12">
+          <div class="container1">
+            <img src="../assets/rest.jpg" alt="Avatar" class="image" style="width:400px;height: 300px;">
+            <div class="middle">
+              <div class="text">
+                <b>Restaurant</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+    <br />
+    <b-row>
+      <b-col>
+        <div class="col-md-12">
+          <div class="container1">
+            <img
+              src="../assets/edu.jpg"
+              alt="Avatar"
+              class="image"
+              style="width:400px;height: 300px;"
+            />
+            <div class="middle">
+              <div class="text">
+                <b>Education</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </b-col>
+      <b-col>
+        <div class="col-md-12">
+          <div class="container1">
+            <img
+              src="../assets/car.jpg"
+              alt="Avatar"
+              class="image"
+              style="width:400px;height: 300px;"
+            />
+            <div class="middle">
+              <div class="text">
+                <b>Automobiles</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </b-col>
+      <b-col>
+        <div class="col-md-12">
+          <div>
+            <b-card
+              title="What is your business"
+              style="max-width: 400px;height: 300px;"
+              class="mb-2"
+            >
+              <b-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</b-card-text>
 
+              <b-button href="#" variant="primary">Become seller</b-button>
+            </b-card>
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+  </div>
 </template>
 
 <style>
-
-
-
 .container1 {
   position: relative;
   width: 50%;
@@ -105,12 +114,12 @@
   display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
 .middle {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;

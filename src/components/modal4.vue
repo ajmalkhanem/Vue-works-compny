@@ -1,55 +1,88 @@
 <template>
-    <div>
-    
-    
-    
-    <b-button variant="light" onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Vehicle Renewal & Penalty Bill</b-button>
-    
+  <div>
+    <b-button
+      variant="light"
+      onclick="document.getElementById('id04').style.display='block'"
+      style="width:auto;"
+    >Vehicle Renewal & Penalty Bill</b-button>
+
     <div id="id04" class="modal">
       <b-container style="background-color:white;">
-      <form class="modal-content animate" action="">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-    
-        <div class="container3">
-          <div class="form-group">
-      <label for="policy" style="color: cadetblue;"><b>Task Name:</b></label>
-      <input type="text" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Task Name" >
-    </div>
-           <div class="form-group">
-      <label for="policy" style="color: cadetblue;"><b>Date:</b></label>
-      <input type="date" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Policy Expiry Date" >
-    </div>
-           <div class="form-group">
-      <label for="policy" style="color: cadetblue;"><b>Odometer Reading</b></label>
-      <input type="text" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Odometer" >
-    </div>
+        <form class="modal-content animate" action>
+          <div class="imgcontainer">
+            <span
+              onclick="document.getElementById('id04').style.display='none'"
+              class="close"
+              title="Close Modal"
+            >&times;</span>
+          </div>
 
-           <div class="form-group">
-      <label for="policy" style="color: cadetblue;"><b>Service Amount</b></label>
-      <input type="text" class="form-control" id="email" style="background-color: rgb(233, 238, 240);" placeholder="Amount" >
-    </div>
+          <div class="container3">
+            <div class="form-group">
+              <label for="policy" style="color: cadetblue;">
+                <b>Task Name:</b>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                style="background-color: rgb(233, 238, 240);"
+                placeholder="Task Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="policy" style="color: cadetblue;">
+                <b>Date:</b>
+              </label>
+              <input
+                type="date"
+                class="form-control"
+                id="email"
+                style="background-color: rgb(233, 238, 240);"
+                placeholder="Policy Expiry Date"
+              />
+            </div>
+            <div class="form-group">
+              <label for="policy" style="color: cadetblue;">
+                <b>Odometer Reading</b>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                style="background-color: rgb(233, 238, 240);"
+                placeholder="Odometer"
+              />
+            </div>
 
-           
+            <div class="form-group">
+              <label for="policy" style="color: cadetblue;">
+                <b>Service Amount</b>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                style="background-color: rgb(233, 238, 240);"
+                placeholder="Amount"
+              />
+            </div>
 
-           
-
-            
-  <b-button variant="outline-primary">Button</b-button>
-         
-        </div>
-    
-        
-      </form></b-container>
+            <b-button variant="outline-primary">Button</b-button>
+          </div>
+        </form>
+      </b-container>
     </div>
-    </div>
-    </template>
+  </div>
+</template>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -59,7 +92,6 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-
 
 button:hover {
   opacity: 0.8;
@@ -103,8 +135,8 @@ span.psw {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -133,27 +165,35 @@ span.psw {
 /* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+  animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
-  
+
 @keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
-     display: block;
-     float: none;
+    display: block;
+    float: none;
   }
   .cancelbtn {
-     width: 100%;
+    width: 100%;
   }
 }
 </style>
@@ -161,14 +201,14 @@ span.psw {
 
 <script>
 // Get the modal
-var modal = document.getElementById('id04');
+var modal = document.getElementById("id04");
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 </script>
 
 

@@ -2,7 +2,7 @@
   <div>
     <div>
       <form @submit.prevent="submit1" enctype="multipart/form-data">
-        <hr class="rr" style="margin:0!important" >
+        <hr class="rr" style="margin:0!important" />
         <br />
 
         <br />
@@ -154,7 +154,7 @@ import navbar1 from "@/components/navbar1";
 import axios from "axios";
 //import store from "../store";
 export default {
-  props:['id'],
+  props: ["id"],
 
   components: { navbar, navbar1 },
   data() {
@@ -272,7 +272,7 @@ localStorage.users1.username = newName;
           //store.commit("loginUser",response.data.token);
           //localStorage.setItem("token", response.data.token)
           this.$router.push({
-          name: "newpage"
+            name: "newpage"
           });
         })
         //this.$store.dispatch('submit1', { username, password })

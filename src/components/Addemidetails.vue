@@ -51,7 +51,7 @@
                 </td>
               </tr>
               <tr>
-                <td >
+                <td>
                   <router-link
                     :to="'/Addnewbills/' + this.id"
                     style="text-decoration: none!important;"
@@ -67,7 +67,7 @@
                 </td>
               </tr>
               <tr>
-                <td  style=" background: rgb(242, 235, 235)">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link
                     :to="'/Addemidetails/' + this.id"
                     style="text-decoration: none!important;"

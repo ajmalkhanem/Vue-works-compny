@@ -35,7 +35,7 @@
                 </td>
               </tr>
               <tr>
-                <td  style=" background: rgb(242, 235, 235)">
+                <td style=" background: rgb(242, 235, 235)">
                   <router-link
                     :to="'/FuelFillingHistory/' + this.id"
                     style="text-decoration: none!important;"
@@ -51,7 +51,7 @@
                 </td>
               </tr>
               <tr>
-                <td >
+                <td>
                   <router-link
                     :to="'/Addnewbills/' + this.id"
                     style="text-decoration: none!important;"
@@ -87,7 +87,7 @@
         </div>
         <div class="col-md-8">
           <h5>FUEL FILLING HISTORY</h5>
-           <p v-if="list.fuelFilling.length">
+          <p v-if="list.fuelFilling.length"></p>
           <table class="table table-hover">
             <thead>
               <tr>
@@ -115,8 +115,7 @@
                 </td>
               </tr>
             </tbody>
-          </table></p>
-          <p v-else>No data Found</p>
+          </table>
         </div>
       </div>
     </div>
@@ -124,7 +123,7 @@
 </template>
   <script>
 export default {
-  props:['id'],
+  props: ["id"],
   data() {
     return {
       list: []

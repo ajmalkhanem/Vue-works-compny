@@ -88,7 +88,7 @@
         <div class="col-md-8">
           <h5>MAINTENANCE HISTORY</h5>
           <br />
-          <p v-if="list.maintenanceBills.length">
+          <p v-if="list.maintenanceBills.length"></p>
           <table class="table table-hover">
             <thead>
               <tr>
@@ -116,9 +116,7 @@
                 </td>
               </tr>
             </tbody>
-          </table></p>
-          <p v-else>No data Found</p>
-          
+          </table>
         </div>
       </div>
     </div>
