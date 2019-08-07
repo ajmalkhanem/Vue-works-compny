@@ -61,7 +61,7 @@ import navlogged from '@/components/navlogged'
 import addcar1 from '@/components/addcar1'
 import editcar1 from '@/components/editcar1'
 import deletecar from '@/components/deletecar'
-
+import analytics from '@/components/analytics'
 import st from '@/components/st'
 
 
@@ -73,11 +73,11 @@ import store from '../store'
 
 
 Vue.use(Router)
-let router=new Router({
-//export default new Router({
-  
+let router = new Router({
+  //export default new Router({
+
   routes: [
-    
+
     {
       path: '/login',
       name: 'login',
@@ -313,7 +313,7 @@ let router=new Router({
       component: signin,
 
     },
-   
+
     {
       path: '/profile/:id',
       name: 'profile',
@@ -326,13 +326,13 @@ let router=new Router({
     {
       path: '/FuelFillingHistory/:id',
       name: 'FuelFillingHistory',
-      props:true,
+      props: true,
       component: FuelFillingHistory,
       meta: { requiresAuth: true }
 
     },
-{
-     path: '/slider',
+    {
+      path: '/slider',
       name: 'slider',
       component: slider,
       meta: { requiresAuth: true }
@@ -346,7 +346,7 @@ let router=new Router({
     {
       path: '/MaintenanceHistory/:id',
       name: 'MaintenanceHistory',
-      props:true,
+      props: true,
       component: MaintenanceHistory,
       meta: { requiresAuth: true }
 
@@ -354,7 +354,7 @@ let router=new Router({
     {
       path: '/PenaltyHistory/:id',
       name: 'PenaltyHistory',
-      props:true,
+      props: true,
       component: PenaltyHistory,
       meta: { requiresAuth: true }
 
@@ -363,7 +363,7 @@ let router=new Router({
     {
       path: '/Addnewbills/:id',
       name: 'Addnewbills',
-      props:true,
+      props: true,
       component: Addnewbills,
       meta: { requiresAuth: true }
 
@@ -371,7 +371,7 @@ let router=new Router({
     {
       path: '/Addfuelfilling/:id',
       name: 'Addfuelfilling',
-      props:true,
+      props: true,
       component: Addfuelfilling,
       meta: { requiresAuth: true }
 
@@ -379,7 +379,7 @@ let router=new Router({
     {
       path: '/Addemidetails/:id',
       name: 'Addemidetails',
-      props:true,
+      props: true,
       component: Addemidetails,
       meta: { requiresAuth: true }
 
@@ -387,7 +387,7 @@ let router=new Router({
     {
       path: '/Vehiclerenewal/:id',
       name: 'Vehiclerenewal',
-      props:true,
+      props: true,
       component: Vehiclerenewal,
       meta: { requiresAuth: true }
 
@@ -457,14 +457,14 @@ let router=new Router({
       path: '/editcar1/:id',
       name: 'editcar1',
       component: editcar1,
-      props:true,
+      props: true,
       meta: { requiresAuth: true }
     },
     {
       path: '/deletecar/:id',
       name: 'deletecar',
       component: deletecar,
-      props:true,
+      props: true,
       meta: { requiresAuth: true }
     },
     {
@@ -473,16 +473,22 @@ let router=new Router({
       component: st,
       meta: { requiresAuth: true }
     },
-    
-     
-     
-    
+    {
+      path: 'analytics',
+      name: 'analytics',
+      component: analytics,
+      meta: { requiresAuth: true }
+    },
 
 
 
 
 
-    
+
+
+
+
+
   ]
 })
 router.beforeEach((to, from, next) => {
@@ -496,21 +502,18 @@ router.beforeEach((to, from, next) => {
     next({ name: 'home' })
     return
   }
-  if (to.path === '/signup1' && store.state.isLoggedIn) {
-    next({ name: 'home' })
-    return
-  }
+   if (to.path === '/signup1' && store.state.isLoggedIn) {
+     next({ name: 'home' })
+     return
+   }
+  
   //console.log(store.state.new)
-  if (to.path === '/completeprofile' &&  store.state.new=="false") {
-    next({ name: 'slider' })
-    return
-  }
-  
-  
-  
-  
+
+
+
+
+
   next()
- // next({ name: 'home' })
 })
 export default router
 

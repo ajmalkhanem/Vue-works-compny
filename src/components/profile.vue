@@ -85,6 +85,37 @@
         </div>
         <div class="col-md-8">
           <h4>ANALYTICS</h4>
+          <div class="card-columns">
+              
+              <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <p class="card-text">Total Kilometer</p>
+                    
+                    <p class="card-text">{{km}}</p>
+                  </div>
+                </div>
+              <div class="card bg-light">
+                  <div class="card-body text-center">
+                      <p class="card-text">Total Expense</p>
+                    
+                      <p class="card-text">{{ex}}</p>
+                  </div>
+                </div>
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                    <p class="card-text">Mileage</p>
+                    
+                    <p class="card-text">{{mile}}</p>
+                </div>
+              </div>
+              
+             
+            </div><br>
+            <b-card header="Your Driving Cost" class="text-center">
+                <b-card-text>Service Cost : Rs.  {{sc}}</b-card-text>
+                <b-card-text>Fuel Cost  : Rs.   {{fc}}</b-card-text>
+
+              </b-card>
         </div>
       </div>
     </div>
@@ -103,11 +134,17 @@
       return {
 
         list: [],
+        km:'',
+        sc:'',
+        fc:'',
+        mile:'',
+        ex:'',
 
       };
     },
     mounted: function () {
       this.getData();
+      this.data1();
     },
     methods: {
       getData() {
@@ -127,6 +164,33 @@
 
           })
       },
+      data1() {
+        axios({
+          method: 'POST',
+          headers: {
+            to: localStorage.getItem("token")
+          },
+          url: 'http://13.233.110.196/vehicle/analytics',
+          data:{
+            id:this.id
+          }
+
+        })
+          .then((response) => {
+
+            // console.log(response.data) 
+            //console.log(response.data[0])     
+            this.km = response.data.km
+            this.ex = response.data.expense
+            this.fc = response.data.fuelcost
+            this.sc = response.data.servicecost
+            this.mile = response.data.mileage
+
+
+
+
+          })
+      }
 
     }
   };

@@ -7,11 +7,11 @@
           <div
             style="padding-left:20px!important;padding-right:20px!important;text-align: center;background-color:white;border:solid rgb(235, 238, 240) 2px;float:left;margin-top:20px;margin-left:20px;"
           >
-            <br>
-            <br>
+            <br />
+            <br />
             <h2 style="color:#03adfc;">Sign in</h2>
             <p>Enter your details below to access your account</p>
-                        <label style="color:red;">{{ msg }}</label>
+            <label style="color:red;">{{ msg }}</label>
 
             <form @submit="submit1" style="padding-bottom:30px!important;">
               <div class="form-group">
@@ -60,10 +60,7 @@
                 style="background-color: #03adfc;"
               >Sign in</button>
               Not a member yet?
-              <router-link to="/signup1" class="kk">
-               Sign Up
-                
-              </router-link>
+              <router-link to="/signup1" class="kk">Sign Up</router-link>
 
               <!-- <button type="button" class="btn btn-light">
                         <router-link to="/signupb">Signup as a business</router-link>
@@ -86,8 +83,11 @@
         </div>
         <div class="col-md-6 hid" style="padding-top:10px!important;">
           <div id="rectangle" class="rt">
-            <p style="text-align: center!important;"> <img src="../assets/CCLO.png"
-                style="width:400px;height:400px;padding-top:40px!important;">
+            <p style="text-align: center!important;">
+              <img
+                src="../assets/CCLO.png"
+                style="width:400px;height:400px;padding-top:40px!important;"
+              />
             </p>
           </div>
         </div>
@@ -142,6 +142,8 @@ export default {
         .then(response => {
           store.commit("loginUser", response.data.token);
           localStorage.setItem("token", response.data.token);
+          localStorage.setItem("msg", response.data.message);
+
           this.status = response.data.status;
           this.usertype1 = response.data.usertype;
           this.msg = response.data.message;
@@ -150,7 +152,7 @@ export default {
         })
 
         .catch(ev => {});
-      
+
       //alert("hai");
     },
     check1() {
@@ -175,16 +177,15 @@ export default {
             // console.log(response.data.data)
 
             //console.log(response.data.status)
-            
+
             this.new1 = response.data.new;
             this.status1 = response.data.status;
             //store.commit("loginUser", response.data.new);
-          //localStorage.setItem("new", response.data.new);
-        // console.log(response.data.new)
-                 
-          console.log(response.data.data)
+            //localStorage.setItem("new", response.data.new);
+            // console.log(response.data.new)
+
+            console.log(response.data.data);
             if (this.new1 == true) {
-               
               if (this.usertype1 == 0) {
                 this.$router.push({
                   name: "completeprofile"
@@ -200,7 +201,7 @@ export default {
             if (this.status1 == true) {
               if (this.usertype1 == 0) {
                 store.commit("loginUser", response.data.data);
-               // localStorage.setItem("data0",response.data.data.pro_pic)
+                // localStorage.setItem("data0",response.data.data.pro_pic)
                 localStorage.setItem("data", response.data.data.firstname);
                 localStorage.setItem("data1", response.data.data.lastname);
                 localStorage.setItem("data2", response.data.data.nationality);
@@ -309,8 +310,8 @@ export default {
   border: 1px solid rgb(240, 240, 240) !important;
   border-radius: 3px !important;
 }
-.kk{
-  color:cornflowerblue!important;
-  text-decoration: none!important;
+.kk {
+  color: cornflowerblue !important;
+  text-decoration: none !important;
 }
 </style>

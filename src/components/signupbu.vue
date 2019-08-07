@@ -114,6 +114,88 @@
     </div>
 </template>
 <script>
+import navbar from "@/components/navbar";
+
+import axios from "axios";
+//import store from "../store";
+export default {
+  components: { navbar },
+  data() {
+    return {
+      users1: {
+        username: "",
+        password: "",
+        email: "",
+        ph: "",
+        place: ""
+      },
+
+      obj: ""
+      // token:localStorage.getItem("token")
+    };
+  },
+  methods: {
+    submit1(ev) {
+      ev.preventDefault();
+      var datas1 = {};
+
+      datas1["username"] = this.users1.username;
+      datas1["password"] = this.users1.password;
+      datas1["email"] = this.users1.email;
+      datas1["ph"] = this.users1.ph;
+      datas1["place"] = this.users1.place;
+
+      console.log(datas1);
+
+      //  axios({
+      //   method: 'POST',
+      //    url: 'http://ghgj.com',
+      //    data : 'datas',
+      //    contentType: 'application/json; charset=utf-8',
+      //    dataType: 'json',
+      //  })
+      axios
+        .post("http://13.233.110.196/register/", {
+          username: this.users1.username,
+          password: this.users1.password,
+          email: this.users1.email,
+          usertype: "1",
+          lat: "0.00",
+          lon: "0.00",
+          role: "1",
+          ph: this.users1.ph,
+          place: this.users1.place
+        })
+        /*.then(response => {
+                  alert(that.$store.commit('LOGIN_SUCCESS', response.data.token));
+              }).catch(error => {
+                  console.log("Error login")
+                  console.log(error)
+              })
+              this.dialog = false*/
+        .then(response => {
+          //console.log(response.data.token)
+          //store.commit("loginUser",response.data.token);
+          //localStorage.setItem("token", response.data.token)
+          // this.$router.push({
+          // name: "userprofile"
+          // });
+        })
+        //this.$store.dispatch('submit1', { username, password })
+        //.then(() => this.$router.push('/Home'))
+        .catch(ev => {});
+      ev.target.reset();
+    }
+
+    /* login() {
+          username= this.users1.username 
+           password = this.users1.password
+          this.$store.dispatch('login', { username, password })
+         .then(() => this.$router.push('/'))
+         .catch(err => console.log(err))
+        }*/
+  }
+};
 </script>
 <style>
     .square_bt {
