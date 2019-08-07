@@ -121,14 +121,9 @@
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>-->
-<<<<<<< HEAD
           
        
         <b-nav-item href="#">SERVICES</b-nav-item>
-=======
-
-          <b-nav-item href="#">SERVICES</b-nav-item>
->>>>>>> 42c631f3241bab2ab84aea6c86c055d4e2574456
           <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
