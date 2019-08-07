@@ -1,12 +1,14 @@
 <template>
   <div>
     <div>
-      <form @submit.prevent="submit1" enctype="multipart/form-data">
+      <form @submit="submit1" enctype="multipart/form-data">
         <hr class="rr" style="margin:0!important" />
         <br />
         <div class="container" style="background-color: white!important;">
           <h3 style="padding-top:20px!important;">Add your vehicle details and upload documents</h3>
+
         </div>
+
         <br />
         <br />
         <!--2nd-->
@@ -127,16 +129,20 @@
                         accept="image/*"
                         v-on:change="uploadImage($event)"
                       />
-                    </p>
+
+                    </p> <output>
+      <img :src="previewUrl" v-if="previewUrl">
+      <p v-else>No image...</p>
+    </output>
                   </div>
                   <div class="container" style="background-color:white"></div>
                   <div class="container">
                     <p>
-                      <input type="file" />
+                     
                     </p>
                   </div>
                 </div>
-                <br />
+                <br /><label style="color:red;">{{obj}}</label>
                 <p style="text-align: left!important;">
                   <b-button type="submit" variant="info">Register</b-button>
                   <br />
@@ -185,6 +191,8 @@ localStorage.users1.username = newName;
       obj: "",
       selectedFile: "",
       id: "",
+      msg1:'',
+      previewUrl:'',
       token: localStorage.getItem("token")
     };
   },
@@ -192,6 +200,20 @@ localStorage.users1.username = newName;
     uploadImage() {
       this.selectedFile = event.target.files[0];
       this.url = URL.createObjectURL(this.selectedFile);
+       const file = event.target.files[0]
+      if (!file) {
+        return false
+      }
+      if (!file.type.match('image.*')) {
+        return false
+      }
+      const reader = new FileReader()
+      const that = this
+      reader.onload = function (e) {
+        that.previewUrl = e.target.result
+      }
+      reader.readAsDataURL(file)
+    
     },
     submit1(ev) {
       ev.preventDefault();
@@ -236,6 +258,7 @@ this.dialog = false*/
             let formData = new FormData();
             formData.append("document", this.selectedFile);
             formData.append("id", response.data.vid);
+            
             axios({
               method: "post",
               url: "http://13.233.110.196/vehicle/add/document/",
@@ -247,13 +270,15 @@ this.dialog = false*/
               }
             })
               .then(response => {
+               // this.msg1=response.data.msg
                 if (response.data.status == true) {
                   alert("Success");
                   this.$router.push({
                     name: "newpage"
                   });
                 } else {
-                  alert("failed");
+                  alert("fail");
+                   
                 }
               })
               .catch(e => {
@@ -262,17 +287,16 @@ this.dialog = false*/
               });
           } else {
             //code
-            alert("failed");
+            //alert(this.obj);
           }
 
           this.$router.push({
-            name: "newpage"
+            name: "addcar1"
           });
         })
         //this.$store.dispatch('submit1', { username, password })
         //.then(() => this.$router.push('/Home'))
         .catch(ev => {});
-      ev.target.reset();
     }
 
     /* login() {
