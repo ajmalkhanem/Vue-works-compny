@@ -152,6 +152,14 @@
           };
         },
         methods: {
+          uploadImage() {
+      this.selectedFile1 = event.target.files[0];
+      this.selectedFile2 = event.target.files[0];
+      this.selectedFile3 = event.target.files[0];
+      this.url = URL.createObjectURL(this.selectedFile1);
+      this.url = URL.createObjectURL(this.selectedFile2);
+      this.url = URL.createObjectURL(this.selectedFile3);
+    },
           submit1(ev) {
             ev.preventDefault();
             var datas1 = {};
@@ -199,7 +207,7 @@
 
             axios({
               method: "post",
-              url: "http://13.233.110.196/customer/add/dp/",
+              url: "http://13.233.110.196/business/upload/",
               data: formData,
               headers: {
                 "Content-Type": "multipart/form-data",
@@ -208,8 +216,8 @@
             })
               .then(response => {
                 if (response.data.status == true) {
-                  store.commit("completedUser", response.data.data);
-                   localStorage.setItem("complete", 'new');
+                 // store.commit("completedUser", response.data.data);
+                  // localStorage.setItem("complete", 'new');
                   alert("Success");
                   this.$router.push({
                     name: "slider"
