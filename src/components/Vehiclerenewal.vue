@@ -1,7 +1,7 @@
 <template>
     <div>
       <hr class="rr" style="margin:0!important;" />
-      <div class="container">
+      <div class="container" style="background-color: white!important;">
         <div class="col-md-12 row">
           <div class="col-md-6">
             <p style="color:black!important;padding-top:20px!important;">
@@ -85,7 +85,7 @@
               </tbody>
             </table>
           </div>
-          <div class="col-md-8" style="padding-bottom: 20px;padding-top: 20px">
+          <div class="col-md-8" style="padding-bottom: 20px;padding-top: 10px">
             <h4>Vehicle Renewal</h4>
   
             <div

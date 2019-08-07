@@ -5,11 +5,11 @@
 
     
     <hr class="rr" style="margin:0!important"><br>
-    <div class="container">
+    <div class="container ik">
       <h3>Edit Profile</h3>
     </div><br>
     {{msg}}
-    <div class="container" style="background-color: #f5f5f5;">
+    <div class="container tt" >
       <div class="row">
         <div class="col-md-4">
           <img src="../assets/download1.png">
@@ -252,6 +252,9 @@
   }
 
   .tt {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5!important;
+  }
+  .ik{
+    background-color: white!important;
   }
 </style>

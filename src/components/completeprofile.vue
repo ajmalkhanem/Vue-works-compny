@@ -3,7 +3,7 @@
       <div>
         <form @submit.prevent="submit1" enctype="multipart/form-data" >
         <hr class="rr" style="margin:0!important"><br>
-        <div class="container"><h3>Complete Profile</h3></div><br>
+        <div class="container ik"><h3>Complete Profile</h3></div><br>
         <div class="container" style="background-color: #f5f5f5;" >
       <div class="row">
           <div class="col-md-4" >
@@ -174,9 +174,12 @@ export default {
      font-size: 25px;
 }
 .ee{
-    background-color: azure;
+    background-color:white!important;
 }
 .tt{
-    background-color:  #f5f5f5;
+    background-color:  white!important;
+}
+.ik{
+  background-color:  white!important;
 }
 </style>

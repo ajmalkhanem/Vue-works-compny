@@ -47,7 +47,7 @@
               class="d-block img-fluid w-100"
               width="1024"
               height="400"
-              src="https://inlinenetworks.attractionmarketingproject.com/wp-content/uploads/sites/141/2018/02/Inline-Networks-Quote-1-1600x500.jpg"
+              src="https://jovinacooksitalian.files.wordpress.com/2018/07/famagusta-tiser.jpg"
               alt="image slot"
             >
           </b-carousel-slide>

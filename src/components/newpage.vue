@@ -9,18 +9,18 @@
                       <br>
                       <div class="col-md-12 row " style="margin-top:0px;">
                           
-                            <div class="col-md-4" >
+                            <div class="col-md-3" >
                                 
                                  
                                   <p v-for="doc in listing.documents">
 
-                                      <img v-bind:src="'http://13.233.110.196/document/get/'+doc" class="card-img img3 im1" alt="..."></p></div>
-                      <div class="col-md-8">
+                                      <img v-bind:src="'http://13.233.110.196/document/get/'+doc" class="card-img img3 im1" style="width:200px;height:200px;"></p></div>
+                      <div class="col-md-9">
                           <h5 style="text-align: left;" class="card-title st"><b> &nbsp;{{ listing.vehicleName}} </b>
                           </h5>
                           <div class="col-md-12 row">
                         
-                              <div  class="col-md-4">
+                              <div  class="col-md-3">
                                  
                                  <h6>Traffic Plate</h6>
                                  <h6>Registration Date</h6>
@@ -28,7 +28,7 @@
                                    <h6>Policy Expire</h6>
                                       <h6>Insurance Expire</h6>
                                   </div>
-                                  <div class="col-md-6">
+                                  <div class="col-md-4">
                       <!-- <h6>{{ listing.vehicleName}}</h6> -->
                        <h6>{{ listing.plateNo}}</h6>
                      <h6>{{ listing.registerDate}}</h6>
@@ -45,6 +45,9 @@
                               <b-dropdown-item href="#">  <router-link v-bind:to="'/deletecar/' + listing._id" style="text-decoration: none!important;">Delete</router-link></b-dropdown-item>
                           
                           </b-nav-item-dropdown>
+                    </div>
+                    <div class="col-md-3">
+
                     </div>
                       
                       </div></div>

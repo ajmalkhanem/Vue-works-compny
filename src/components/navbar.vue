@@ -33,7 +33,7 @@
     }
     .navbar-toggler{
         
-        background-color:black  !important;
+        background-color:white  !important;
       
     }
     .navt{

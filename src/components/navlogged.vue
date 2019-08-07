@@ -1,17 +1,79 @@
 <template>
   <div>
+    <!---->
+    <b-navbar  toggleable="lg" type="light" variant="light" style="padding-top:10px!important;padding-bottom:10px!important;">
+        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+        <h5 style="color: whitesmoke!important;">_____</h5>
+     <a href="/" style="text-decoration: none!important;"> <h5 style="color:black!important;">Welcome to CloudGM</h5></a>
+         <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
+           <b-collapse is-nav id="nav_collapse">
+              <b-nav-item href="#" class="mx-auto"></b-nav-item>
+              <b-nav-item >
+                  <b-navbar-nav class="ml-auto">
+                      <h5 style="color:whitesmoke;">_________</h5>
+                      <b-nav-item>
+                          
+                        <b-nav-item-dropdown id="nav7_ddown" right>
+                          <template slot="button-content">
+                            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                          </template>
+                          <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+                          <b-dropdown-item><router-link to="/editprofile"> Profile</router-link></b-dropdown-item>
+                          <b-dropdown-item><router-link to="">Settings</router-link></b-dropdown-item>
+                          <b-dropdown-item>
+                            <a v-on:click="handlelogout()">logout</a>
+                          </b-dropdown-item>
+                        </b-nav-item-dropdown>
+                      </b-nav-item>
+          
+                      <b-nav-item>
+                        <router-link to>
+                          <strong>
+                            <div style="color:	#111113 !important;">
+                              <img src="../assets/ind.png" style="width:25px;height:20px;margin-top: 12px;" />
+                            </div>
+                          </strong>
+                        </router-link>
+                      </b-nav-item>
+                      <b-nav-item>
+                        <router-link to>
+                          <strong>
+                            <div style="color:	#111113 !important;">
+                              <img src="../assets/uae.png" style="width:25px;height:25px;margin-top: 10px;" />
+                            </div>
+                          </strong>
+                        </router-link>
+                      </b-nav-item>
+                    </b-navbar-nav>
+                </b-nav-item>
+             
+             
+             </b-collapse>
+             </b-navbar-nav > 
+           <b-navbar-brand>
+              <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
+              </b-navbar-brand>
+          </b-navbar>
+  
+
+
+</b-navbar>
+
+    <!--
     <b-navbar
       class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke"
       toggleable="lgh"
       type="light"
       variant="light"
     >
-      <div class="container">
+      
           <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+          <h5 style="color: whitesmoke!important;">_____</h5>
         <span>Welcome to CloudGM</span>
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
+            <h5 style="color:whitesmoke;"></h5>
             <b-nav-item>
                 <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
               <b-nav-item-dropdown id="nav7_ddown" right>
@@ -47,9 +109,9 @@
             </b-nav-item>
           </b-navbar-nav>
         </b-collapse>
-      </div>
+      
     </b-navbar>
-    <!---->
+  -->
     
     <div class="container" style="background-color: white!important;">
         <b-navbar
@@ -88,7 +150,10 @@
   <b-nav-item class="ml-auto">
     
             <div class="input-group srh sw" style="width: 13cm ;padding-bottom:10px;">
-              <input type="text" class="form-control" placeholder="Search here" />
+              <input type="text" class="form-control" placeholder="Search here"  style="margin-top: 0px!important;
+              margin-right: 0px!important;
+              margin-bottom: 0px!important;
+              margin-left: 0px!important;" />
               <div class="input-group-append">
                 <button type="button" class="btn btn-danger">
                   <span>
@@ -113,12 +178,12 @@
     
     <b-navbar toggleable="lg" style="background-color:#f8f9fa" type="light" variant="light">
         <b-navbar-toggle target="nav_collapse"> </b-navbar-toggle>
-      <div class="container">
       
-         
+      
+        <h5 style="color: whitesmoke!important;">_____</h5>
           <b-nav-item class="hv">
               
-              <b-nav-item-dropdown class="hv yy " text="CATEGORIES" right>
+              <b-nav-item-dropdown class="hv cate " text="CATEGORIES" right>
                   <b-dropdown-item href="#">Automobile</b-dropdown-item>
                   <b-dropdown-item href="#">Communication</b-dropdown-item>
                   <b-dropdown-item href="#">Education </b-dropdown-item>
@@ -182,7 +247,7 @@
 
       <b-navbar-brand>
         <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
-      </b-navbar-brand></div>
+      </b-navbar-brand>
     </b-navbar>
   </div>
 </template>

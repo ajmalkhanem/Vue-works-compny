@@ -1,9 +1,10 @@
 <template>
   <div>
     <hr class="rr" style="margin: 0!important" />
-    <div class="container">
+    
       <div class="row">
         <div class="col-md-6" style="padding-top:10px!important;padding-bottom:50px!important;">
+          <div class="container re">
           <div
             style="padding-left:20px!important;padding-right:20px!important;text-align: center;background-color:white;border:solid rgb(235, 238, 240) 2px;float:left;margin-top:20px;margin-left:20px;"
           >
@@ -73,8 +74,8 @@
               <br />
               <div>________________ or ______________</div>
               <br />
-              <div class="square_bt">
-                <router-link to class="square_bt">Continue with Facebook</router-link>
+              <div class="squ">
+                <router-link to class="squ">Continue with Facebook</router-link>
               </div>
               <br />
               <br />
@@ -83,7 +84,7 @@
               </div>
             </form>
           </div>
-        </div>
+        </div></div>
         <div class="col-md-6 hid" style="padding-top:10px!important;">
           <div id="rectangle" class="rt">
             <p style="text-align: center!important;"> <img src="../assets/CCLO.png"
@@ -226,7 +227,7 @@ export default {
 }
 </style>
 <style>
-.square_bt {
+.squ{
   display: inline-block;
   padding: 7px 20px !important;
   border-radius: 25px !important;
@@ -307,5 +308,8 @@ export default {
 .kk{
   color:cornflowerblue!important;
   text-decoration: none!important;
+}
+.re{
+  background-color: white!important;
 }
 </style>

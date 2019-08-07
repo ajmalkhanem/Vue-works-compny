@@ -4,7 +4,7 @@
       <form @submit.prevent="submit1" enctype="multipart/form-data">
         <hr class="rr" style="margin:0!important" />
         <br />
-        <div class="container">
+        <div class="container" style="background-color: white!important;">
           <h3 style="padding-top:20px!important;">Add your vehicle details and upload documents</h3>
         </div>
         <br />

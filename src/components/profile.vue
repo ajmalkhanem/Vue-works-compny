@@ -1,7 +1,7 @@
 <template>
   <div>
     <hr class="rr" style="margin:0!important;">
-    <div class="container">
+    <div class="container" style="background-color: white!important;">
       <div class="col-md-12 row">
         <div class="col-md-6">
           <p style="color:black!important;padding-top:20px!important;"><a href="/"
