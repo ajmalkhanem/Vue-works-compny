@@ -94,7 +94,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 </template>
 <script>
 import navbar from "@/components/navbar";

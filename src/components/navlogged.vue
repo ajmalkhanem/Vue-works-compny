@@ -49,7 +49,7 @@
              
              
              </b-collapse>
-             </b-navbar-nav > 
+             
            <b-navbar-brand>
               <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
               </b-navbar-brand>
@@ -57,7 +57,7 @@
   
 
 
-</b-navbar>
+
 
     <!--
     <b-navbar
@@ -215,8 +215,9 @@
         <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
-        <b-dropdown-item href="#">FA</b-dropdown-item>-->
-
+          <b-dropdown-item href="#">FA</b-dropdown-item>-->
+        
+       
         <b-nav-item href="#">SERVICES</b-nav-item>
         <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
