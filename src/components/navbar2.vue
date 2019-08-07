@@ -60,107 +60,116 @@
 </script>
 
 <style>
-.navbar .nav-text .h3 {
-  text-align: center;
-}
+    .navbar .nav-text .h3 {
+        text-align: center;
+    }
 
-.navbar-toggler {
-  background-color: black !important;
-}
+    .navbar-toggler {
 
-.navt {
-  color: rgb(18, 126, 66) !important;
-}
+        background-color: white !important;
 
-.nav-item a {
-  color: black !important;
-  hover: black !important;
-}
+    }
 
-a:hover {
-  color: black !important;
-}
+    .navt {
+        color: rgb(18, 126, 66) !important;
+    }
 
-@media (min-width: 1281px) {
-  .navbar-expand-lg .navbar-nav .nav-link .nav-item {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding-left: 100px;
-  }
-}
+    .nav-item a {
+        color: black !important;
+        hover: black !important;
+    }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .navbar-expand-lg .navbar-nav .nav-link .nav-item .nav-text .h3 {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding-left: 200px;
-    font-size: 12px;
-    text-align: center;
-  }
-}
+    a:hover {
+        color: black !important;
+    }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navbar-expand-lg .navbar-nav .nav-link .nav-item .nav-text .h3 {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding-left: 150px;
-  }
-}
+    @media (min-width: 1281px) {
+        .navbar-expand-lg .navbar-nav .nav-link .nav-item {
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .navbar-expand-lg .navbar-nav .nav-link .nav-item {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding-left: 100px;
-  }
-}
+            margin-right: 15px;
+            margin-left: 15px;
+            padding-left: 100px;
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .navbar-expand-lg .navbar-nav .nav-link .nav-item {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding-left: 100px;
-  }
-}
+        }
+    }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        .navbar-expand-lg .navbar-nav .nav-link .nav-item .nav-text .h3 {
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-  hover-color: black !important;
-  text-decoration: none;
-}
+            margin-right: 15px;
+            margin-left: 15px;
+            padding-left: 200px;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
 
-a {
-  color: black;
-  font-weight: normal !important;
-  font-size: 16px !important;
-}
+    @media (min-width: 768px) and (max-width:1024px) {
+        .navbar-expand-lg .navbar-nav .nav-link .nav-item .nav-text .h3 {
 
-a:hover {
-  color: black !important;
-}
+            margin-right: 15px;
+            margin-left: 15px;
+            padding-left: 150px;
+        }
+    }
 
-a :hover {
-  text-decoration: none !important;
-}
+    @media (min-width: 481px) and (max-width: 767px) {
+        .navbar-expand-lg .navbar-nav .nav-link .nav-item {
 
-#button {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+            margin-right: 15px;
+            margin-left: 15px;
+            padding-left: 100px;
+        }
+    }
 
-  border: none;
-  border: solid 2px #1a0c68 !important;
-  border-radius: 5px;
-  background: rgba(102, 97, 116, 0);
-  font-size: 25px;
-}
+    @media (min-width: 320px) and (max-width: 480px) {
+        .navbar-expand-lg .navbar-nav .nav-link .nav-item {
+
+            margin-right: 15px;
+            margin-left: 15px;
+            padding-left: 100px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 10px;
+        hover-color: black !important;
+        text-decoration: none;
+    }
+
+    a {
+        color: black;
+        font-weight: normal !important;
+        font-size: 16px !important;
+
+    }
+
+    a:hover {
+        color: black !important;
+    }
+
+    a :hover {
+        text-decoration: none !important;
+    }
+
+    #button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        border: none;
+        border: solid 2px #1a0c68 !important;
+        border-radius: 5px;
+        background: rgba(102, 97, 116, 0);
+        font-size: 25px;
+    }
 </style>
 <style>
 .dropdown {

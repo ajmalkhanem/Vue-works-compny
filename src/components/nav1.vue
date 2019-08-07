@@ -48,6 +48,8 @@
         </b-collapse>
       </div>
     </b-navbar>
+
+    <!---->
     <div class="container" style="background-color: white!important;">
       <b-navbar
         toggleable="lg"
@@ -63,7 +65,11 @@
         </a>
         <b-nav-item class="ml-auto">
           <div class="input-group srh sw" style="width: 13cm ;padding-bottom:10px;">
-            <input type="text" class="form-control" placeholder="Search here" />
+            <input type="text" class="form-control" placeholder="Search here"
+              style="margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;"/>
             <div class="input-group-append">
               <button type="button" class="btn btn-danger">
                 <span>
@@ -169,15 +175,6 @@
 .navbar-toggler {
   background-color: white !important;
 }
-.navvink {
-  color: black !important;
-}
-.nav-item a {
-  color: black !important;
-}
-a:hover {
-  color: black !important;
-}
 
 @media (min-width: 1281px) {
   .navbar-expand-lg .navbar-nav .nav-link .nav-item {
@@ -254,47 +251,18 @@ a:hover {
 a :hover {
   text-decoration: none !important;
 }
-.fa-facebook-f {
-  background: #3b5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55acee;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  color: white;
-  background: #d6249f;
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-}
 .srh {
   padding-right: 50px !important;
   padding-top: 15px;
   text-align: left;
+}
+@media (min-width: 760px) and (max-width: 1800px) {
+.ii{
+  display:none!important;
+}
+}
+.navbar {
+    position: relative;
+    padding: .0rem 0rem!important;
 }
 </style>
