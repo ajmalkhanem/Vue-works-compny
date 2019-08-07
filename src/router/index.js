@@ -468,22 +468,6 @@ let router = new Router({
       component: st,
       meta: { requiresAuth: true }
     },
-    {
-      path: 'analytics',
-      name: 'analytics',
-      component: analytics,
-      meta: { requiresAuth: true }
-    },
-
-
-
-
-
-
-
-
-
-
   ]
 })
 router.beforeEach((to, from, next) => {
@@ -497,18 +481,20 @@ router.beforeEach((to, from, next) => {
     next({ name: 'home' })
     return
   }
-   if (to.path === '/signup1' && store.state.isLoggedIn) {
-     next({ name: 'home' })
-     return
-   }
-  
-  //console.log(store.state.new)
+  if (to.path === '/signup1' && store.state.isLoggedIn) {
+    next({ name: 'home' })
+    return
+  }
 
 
-
-
+  if (to.path === '/completeprofile' && store.state.complete) {
+    console.log(store.state.complete)
+    next({ name: 'slider' })
+    return
+  }
 
   next()
+  // next({ name: 'home' })
 })
 export default router
 
