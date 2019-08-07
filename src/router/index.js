@@ -63,7 +63,8 @@ import editcar1 from '@/components/editcar1'
 import deletecar from '@/components/deletecar'
 import analytics from '@/components/analytics'
 import st from '@/components/st'
-
+import pr from '@/components/pr'
+import viewprofile from '@/components/viewprofile'
 
 import store from '../store'
 
@@ -78,6 +79,7 @@ let router = new Router({
       name: 'login',
       component: login
     },
+   
     {
       path: '/signup',
       name: 'signup',
@@ -472,6 +474,18 @@ let router = new Router({
       path: 'analytics',
       name: 'analytics',
       component: analytics,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: 'viewprofile',
+      name: 'viewprofile',
+      component: viewprofile,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/pr',
+      name: 'pr',
+      component: pr,
       meta: { requiresAuth: true }
     },
 
