@@ -189,6 +189,7 @@ export default {
             console.log(response.data.data);
             if (this.new1 == true) {
               if (this.usertype1 == 0) {
+                store.commit("loginUser", response.data.data);
                 this.$router.push({
                   name: "completeprofile"
                 });
@@ -209,6 +210,8 @@ export default {
                 localStorage.setItem("data2", response.data.data.nationality);
                 localStorage.setItem("data3", response.data.info.email);
                 localStorage.setItem("data4", response.data.info.ph);
+                store.commit("completedUser", response.data.data);
+                 localStorage.setItem("complete", 'new');
                 this.$router.push({
                   name: "slider"
                 });

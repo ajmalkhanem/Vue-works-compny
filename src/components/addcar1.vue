@@ -121,13 +121,12 @@
                   <div class="container" style="background-color:white"></div>
                   <div class="container">
                     <p>
-                     <input
-                              type="file"
-                              id="file"
-                              accept="image/*"
-                              v-on:change="uploadImage($event)"
-                              
-                            />
+                      <input
+                        type="file"
+                        id="file"
+                        accept="image/*"
+                        v-on:change="uploadImage($event)"
+                      />
                     </p>
                   </div>
                   <div class="container" style="background-color:white"></div>
@@ -154,33 +153,26 @@
   </div>
 </template>
  <script>
-  import navbar2 from '@/components/navbar2'
-  import navbar1 from '@/components/navbar1'
+import navbar2 from "@/components/navbar2";
+import navbar1 from "@/components/navbar1";
 
 import axios from "axios";
 //import store from "../store";
 export default {
-components:
-{ navbar2,
-navbar1
-},
-data(){
-
-return {
-
-users1:
-{
-vehname: '',
-onname:'',
-platenum:'',
-tcnum:'',
-rgdate:'',
-exdate:'',
-inexdate:'',
-polexdate:''
-
-},
-/* mounted() {
+  components: { navbar2, navbar1 },
+  data() {
+    return {
+      users1: {
+        vehname: "",
+        onname: "",
+        platenum: "",
+        tcnum: "",
+        rgdate: "",
+        exdate: "",
+        inexdate: "",
+        polexdate: ""
+      },
+      /* mounted() {
 if (localStorage.users1.username) {
 this.username = localStorage.users1.username;
 }
@@ -190,116 +182,107 @@ name(newName) {
 localStorage.users1.username = newName;
 }
 },*/
-obj:'',
-selectedFile:'',
-id:'',
-token:localStorage.getItem("token")
-
-};
-},
-methods: {
-  uploadImage() {
+      obj: "",
+      selectedFile: "",
+      id: "",
+      token: localStorage.getItem("token")
+    };
+  },
+  methods: {
+    uploadImage() {
       this.selectedFile = event.target.files[0];
-      this.url = URL.createObjectURL(this.selectedFile);},
-submit1(ev) {
-ev.preventDefault()
-var datas1 = {};
+      this.url = URL.createObjectURL(this.selectedFile);
+    },
+    submit1(ev) {
+      ev.preventDefault();
+      var datas1 = {};
 
-datas1['veh'] = this.users1.vehname;
-datas1['owner'] = this.users1.onname;
-datas1['plate'] = this.users1.platenum;
-datas1['tc'] = this.users1.tcnum;
-datas1['redate'] = this.users1.rgdate;
-datas1['pol'] = this.users1.exdate;
-datas1['in'] = this.users1.inexdate;
-datas1['polex'] = this.users1.polexdate;
+      datas1["veh"] = this.users1.vehname;
+      datas1["owner"] = this.users1.onname;
+      datas1["plate"] = this.users1.platenum;
+      datas1["tc"] = this.users1.tcnum;
+      datas1["redate"] = this.users1.rgdate;
+      datas1["pol"] = this.users1.exdate;
+      datas1["in"] = this.users1.inexdate;
+      datas1["polex"] = this.users1.polexdate;
 
-console.log(datas1)
+      console.log(datas1);
 
-axios.post('http://13.233.110.196/add/vehicle/',{  
- to:this.token,  
-vehicleName :this.users1.vehname,
-ownerName: this.users1.onname,
-plateNo: this.users1.platenum,
-tcNo: this.users1.tcnum,
-registerDate: this.users1.rgdate,
-expiryDate: this.users1.exdate,
-inexpiryDate: this.users1.inexdate,
-polexpiryDate: this.users1.polexdate,
-//documents: "asasa"
-
-
-
-
-})
-/*.then(response => {
+      axios
+        .post("http://13.233.110.196/add/vehicle/", {
+          to: this.token,
+          vehicleName: this.users1.vehname,
+          ownerName: this.users1.onname,
+          plateNo: this.users1.platenum,
+          tcNo: this.users1.tcnum,
+          registerDate: this.users1.rgdate,
+          expiryDate: this.users1.exdate,
+          inexpiryDate: this.users1.inexdate,
+          polexpiryDate: this.users1.polexdate
+          //documents: "asasa"
+        })
+        /*.then(response => {
 alert(that.$store.commit('LOGIN_SUCCESS', response.data.token));
 }).catch(error => {
 console.log("Error login")
 console.log(error)
 })
 this.dialog = false*/
-.then((response) =>{
-this.obj=response.data.msg
-if(response.data.status == true){
-          alert("Successfully added");
-          //imageupload
-          let formData = new FormData();
-          formData.append("document", this.selectedFile);
-          formData.append("id",response.data.vid);
-          axios({
-            method: "post",
-            url: "http://13.233.110.196/vehicle/add/document/",
-            data: 
-            formData,
-           
-            
-        
+        .then(response => {
+          this.obj = response.data.msg;
+          if (response.data.status == true) {
+            alert("Successfully added");
+            //imageupload
+            let formData = new FormData();
+            formData.append("document", this.selectedFile);
+            formData.append("id", response.data.vid);
+            axios({
+              method: "post",
+              url: "http://13.233.110.196/vehicle/add/document/",
+              data: formData,
 
-            headers: {
-              "Content-Type": "multipart/form-data",
-              to: localStorage.getItem("token"),
-              
-            }
-          })
-            .then(response => {
-              if (response.data.status == true) {
-                alert("Success");
-                this.$router.push({
-              name: "newpage"
-            });
-              } else {
-                alert("failed");
+              headers: {
+                "Content-Type": "multipart/form-data",
+                to: localStorage.getItem("token")
               }
             })
-            .catch(e => {
-              alert("Image upload Not success");
-              this.loading = false;
-            });
-        }
-        else{
-          //code
-          alert("failed")
-        }
+              .then(response => {
+                if (response.data.status == true) {
+                  alert("Success");
+                  this.$router.push({
+                    name: "newpage"
+                  });
+                } else {
+                  alert("failed");
+                }
+              })
+              .catch(e => {
+                alert("Image upload Not success");
+                this.loading = false;
+              });
+          } else {
+            //code
+            alert("failed");
+          }
 
- this.$router.push({
-name: "newpage"
-});
-})
-//this.$store.dispatch('submit1', { username, password })
-//.then(() => this.$router.push('/Home'))
-.catch((ev) => {})
-ev.target.reset()
-}
+          this.$router.push({
+            name: "newpage"
+          });
+        })
+        //this.$store.dispatch('submit1', { username, password })
+        //.then(() => this.$router.push('/Home'))
+        .catch(ev => {});
+      ev.target.reset();
+    }
 
-/* login() {
+    /* login() {
 username= this.users1.username 
 password = this.users1.password
 this.$store.dispatch('login', { username, password })
 .then(() => this.$router.push('/'))
 .catch(err => console.log(err))
 }*/
-}
+  }
 };
 </script>
 <style>

@@ -67,11 +67,6 @@ import st from '@/components/st'
 
 import store from '../store'
 
-
-
-
-
-
 Vue.use(Router)
 let router = new Router({
   //export default new Router({

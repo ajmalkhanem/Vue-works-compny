@@ -6,35 +6,34 @@ export default new Vuex.Store({
     state: {
         isLoggedIn: !!localStorage.getItem('token'),
         token: !!localStorage.getItem('token'),
-        data:!!localStorage.getItem('data'),
-        data1:!!localStorage.getItem('data1'),
-        data2:!!localStorage.getItem('data2'),
-        data3:!!localStorage.getItem('data3'),
-        data4:!!localStorage.getItem('data4'),
-
-        
-
-
+        data: !!localStorage.getItem('data'),
+        data1: !!localStorage.getItem('data1'),
+        data2: !!localStorage.getItem('data2'),
+        data3: !!localStorage.getItem('data3'),
+        data4: !!localStorage.getItem('data4'),
+        new: !!localStorage.getItem('new'),
+        new1: !!localStorage.getItem('new1'),
+        complete: !!localStorage.getItem('complete')
     },
     mutations: {
-        loginUser (state) {
+        loginUser(state) {
             state.isLoggedIn = true
-            state.token = true
-            state.data= true
-
-          
-            
+            state.isLog = true
+            state.data = true
+            state.new1 = true
+            state.new = null
         },
-       
-           
-            
-            
-        
-        logoutUser (state) {
+
+        completedUser(state) {
+            state.complete = true
+        },
+
+        logoutUser(state) {
             state.isLoggedIn = false
             state.data = false
-            
+            state.complete = false
         }
+
     }
-    
+
 })
