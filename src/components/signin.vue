@@ -118,6 +118,7 @@ export default {
       status1: "",
       usertype1: "",
       msg: "",
+      stat: "",
       log: store.state.isLoggedIn,
       new3: localStorage.getItem("new")
     };
@@ -140,13 +141,14 @@ export default {
         })
 
         .then(response => {
-          store.commit("loginUser", response.data.token);
-          localStorage.setItem("token", response.data.token);
-          localStorage.setItem("msg", response.data.message);
-
           this.status = response.data.status;
           this.usertype1 = response.data.usertype;
           this.msg = response.data.message;
+          this.stat = response.data.status;
+          if (this.stat == true) {
+            store.commit("loginUser", response.data.token);
+            localStorage.setItem("token", response.data.token);
+          }
 
           this.check1(response);
         })
