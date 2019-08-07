@@ -1,124 +1,133 @@
 <template>
-    <div>
-      <div style="padding-top: 20px!important;padding-top: 10px!important;">
-        <div v-for="listing in list">
-  
-  
-          <div class="card container">
-            <br>
-            <div class="col-md-12 row " style="margin-top:0px;">
-  
-              <div class="col-md-3">
-  
-  
-                <p v-for="doc in listing.documents">
-  
-                  <img v-bind:src="'http://13.233.110.196/document/get/'+doc" class="card-img img3 im1"
-                    style="width:200px;height:200px;"></p>
+  <div>
+    <div class="container">
+      <div class="col-md-12 row">
+        <div class="col-md-6">
+          <p style="color:black!important;padding-top:20px!important;">
+            <a href="/" style="text-decoration: none!important;">
+              <strong>Home</strong>
+            </a> > &nbsp;
+            <strong>My Vehicles</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <br />
+      <div class="row">
+        <div class="col-md-6" v-for="listing in list">
+          <div class="row box-two">
+            <div class="col-md-3">
+              <img
+                v-bind:src="'http://13.233.110.196/document/get/'+listing.documents[0]"
+                style="width:100%;height: auto;"
+              />
+            </div>
+            <div class="col-md-9">
+              <h6 class="new">{{listing.vehicleName}}</h6>
+              <hr class="cloudgmhr" />
+              <h10 class="clougmh10">
+                <i class="fa fa-car" aria-hidden="true"></i>
+                &nbsp;Registration No : {{ listing.plateNo}}
+              </h10>
+              <br />
+              <h10 class="clougmh10">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                &nbsp;TC No : {{ listing.tcNo}}
+              </h10>
+              <div class="newcloud">
+                <router-link
+                  v-bind:to="'/editcar1/' + listing._id"
+                  style="text-decoration: none!important;"
+                >
+                  <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Edit
+                </router-link>|
+                <router-link
+                  v-bind:to="'/profile/' + listing._id"
+                  style="text-decoration: none!important;"
+                >
+                  <i class="fa fa-street-view" aria-hidden="true"></i>&nbsp;View
+                </router-link>|
+                <router-link
+                  v-bind:to="'/deletecar/' + listing._id"
+                  style="text-decoration: none!important;"
+                >
+                  <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete
+                </router-link>
               </div>
-              <div class="col-md-9">
-                <h5 style="text-align: left;" class="card-title st"><b> &nbsp;{{ listing.vehicleName}} </b>
-                </h5>
-                <div class="col-md-12 row">
-  
-                  <div class="col-md-3">
-  
-                    <h6>Traffic Plate</h6>
-                    <h6>Registration Date</h6>
-                    <h6>TC Number</h6>
-                    <h6>Policy Expire</h6>
-                    <h6>Insurance Expire</h6>
-                  </div>
-                  <div class="col-md-6">
-                    <!-- <h6>{{ listing.vehicleName}}</h6> -->
-                    <h6>{{ listing.plateNo}}</h6>
-                    <h6>{{ listing.registerDate}}</h6>
-  
-                    <h6>{{ listing.tcNo}}</h6>
-                    <h6>{{ listing.polexpiryDate}}</h6>
-                    <h6>{{ listing.inexpiryDate}}</h6>
-                    </h6>
-                  </div>
-                  <div class="col-md-3">
-                    <b-nav-item-dropdown class="hv" text="Options " right>
-                      <b-dropdown-item href="#">
-                        <router-link v-bind:to="'/editcar1/' + listing._id" style="text-decoration: none!important;">Edit
-                        </router-link>
-                      </b-dropdown-item>
-                      <b-dropdown-item href="#">
-                        <router-link v-bind:to="'/profile/' + listing._id" style="text-decoration: none!important;"> view
-                        </router-link>
-                      </b-dropdown-item>
-                      <b-dropdown-item href="#">
-                        <router-link v-bind:to="'/deletecar/' + listing._id" style="text-decoration: none!important;">
-                          Delete</router-link>
-                      </b-dropdown-item>
-  
-                    </b-nav-item-dropdown>
-                  </div>
-  
-                </div>
-              </div>
-  
             </div>
           </div>
-  
         </div>
-        <br>
-        <p align="center"><router-link to="/addcar1" style="text-decoration: none!important;">
-          <b-button variant="primary">Add New Vehicle</b-button></router-link></p>
-  
-        
-      </div><br>
+      </div>
     </div>
-  </template>
+    <br />
+    <p align="center">
+      <router-link to="/addcar1" style="text-decoration: none!important;">
+        <b-button variant="primary">Add New Vehicle</b-button>
+      </router-link>
+    </p>
+  </div>
+</template>
   <script>
-  
-  
-    export default {
-      props: ['id'],
-      components: {
-  
-  
-      },
-      data() {
-        return {
-  
-          list: [],
-  
-        };
-      },
-      mounted: function () {
-        this.getData();
-      },
-      methods: {
-        getData() {
-          axios({
-            method: 'POST',
-            headers: {
-              to: localStorage.getItem("token")
-            },
-            url: 'http://13.233.110.196/list/vehicle/',
-  
-          })
-            .then((response) => {
-  
-              // console.log(response.data) 
-              //console.log(response.data[0])     
-              this.list = response.data.data
-  
-            })
-        },
-  
-      }
+export default {
+  props: ["id"],
+  components: {},
+  data() {
+    return {
+      list: []
     };
-  
-  </script>
+  },
+  mounted: function() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      axios({
+        method: "POST",
+        headers: {
+          to: localStorage.getItem("token")
+        },
+        url: "http://13.233.110.196/list/vehicle/"
+      }).then(response => {
+        this.list = response.data.data;
+      });
+    }
+  }
+};
+</script>
   <style>
-    .jj {
-      float: left;
-    }
-  
-    @media (min-width: 1025px) and (max-width: 1280px) {
-    }
-  </style>
+.cloudgmhr {
+  margin-top: 0.3rem !important;
+  margin-bottom: 0.3rem !important;
+}
+.box-two {
+  background: #fff none repeat scroll 0% 0%;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px 10px 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.new {
+  text-transform: uppercase;
+  padding-top: 5px;
+  font-weight: 700;
+}
+.cloudgmh10 {
+  padding-bottom: 10px;
+  color: #565454;
+  font-weight: 300;
+}
+.jj {
+  float: left;
+}
+
+.newcloud {
+  margin-top: 10px;
+  background-color: #eef1f3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+</style>
