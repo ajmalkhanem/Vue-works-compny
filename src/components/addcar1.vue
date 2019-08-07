@@ -131,7 +131,7 @@
                       />
 
                     </p> <output>
-      <img :src="previewUrl" v-if="previewUrl">
+      <img :src="previewUrl" v-if="previewUrl" style="width:150px;height:150px;">
       <p v-else>No image...</p>
     </output>
                   </div>
