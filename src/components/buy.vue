@@ -2,14 +2,19 @@
   <div>
     <div class="row">
       <div class="column">
+        
         <div class="container1">
           <img src="../assets/o3.jpg" alt="Avatar" class="image" style="width:100%;height:300px;" />
           <div class="middle">
             <div class="text">
               <b>Automobiles</b>
               <p style="font-size:12px;">“Don't Worry Drive Happy “</p>
-              <b-button variant="light">Explore</b-button>
-            </div>
+              <div v-if="loggedIn==true">
+             <router-link to="slider" ><b-button variant="light">Explore</b-button></router-link></div>
+              <div v-else >
+                  <router-link to="signin" ><b-button variant="light">Explore</b-button></router-link>
+              </div>      
+                  </div>
           </div>
         </div>
 
@@ -139,7 +144,28 @@
     </div>
   </div>
 </template>
+<script>
+    
+    import store from "../store";
 
+    export default {
+        name: 'app',
+        components:{
+            //nav1,
+        },
+        data() {
+
+            return {
+              //  data: localStorage.getItem("data")
+
+            }
+        },
+        computed: {
+        loggedIn(){
+            return  store.state.isLoggedIn
+        }
+      }}
+</script>
 <style>
 * {
   box-sizing: border-box;
