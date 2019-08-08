@@ -185,7 +185,7 @@
       <div style="padding-left: 100px;">
         <b-nav-item class="hv">
           <div v-if="loggedIn==true">
-          <b-nav-item-dropdown class="hv" text="CATEGORIES" right>
+          <b-nav-item-dropdown class="hv cate" text="CATEGORIES" right>
             <b-dropdown-item router-link to="/slider">Automobile</b-dropdown-item>
             <b-dropdown-item href="#">Communication</b-dropdown-item>
             <b-dropdown-item href="#">Education</b-dropdown-item>
@@ -204,40 +204,23 @@
         
       </div>
       <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
-      <b-collapse style="padding-right: 110px" is-nav id="nav_collapse">
+      <b-collapse  is-nav id="nav_collapse">
+          <b-nav-item href="#" class="mx-auto"></b-nav-item>  
         <b-nav-item href="/">HOME</b-nav-item>
-        <!-- <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>-->
+       
 
         <b-nav-item href="#">PAGES</b-nav-item>
-        <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>-->
+        
         
        
         <b-nav-item href="#">SERVICES</b-nav-item>
-        <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>-->
+        
 
         <b-nav-item href="#">CONTACT US</b-nav-item>
-        <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>-->
+        
 
         <b-nav-item href="#">PARTNER WITH US</b-nav-item>
-        <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown> -->
+       
       </b-collapse>
         <b-nav-item class="ml-auto">
           <i class="fa fa-phone">1234567890</i>
@@ -429,6 +412,11 @@ a :hover {
 @media (min-width: 320px) and (max-width: 480px) {
  .yy {
 display:none;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+ .cate {
+display:none!important;
   }
 }
 </style>

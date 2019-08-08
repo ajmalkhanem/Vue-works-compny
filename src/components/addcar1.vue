@@ -29,6 +29,7 @@
                     v-model="users1.vehname"
                     aria-describedby="emailHelp"
                     placeholder="Vehicle Name"
+                    required
                   />
                 </div>
 
@@ -42,6 +43,7 @@
                     v-model="users1.onname"
                     aria-describedby="emailHelp"
                     placeholder="Owner Name "
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -54,6 +56,7 @@
                     v-model="users1.platenum"
                     aria-describedby="emailHelp"
                     placeholder="Traffic Plate Number "
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -66,6 +69,7 @@
                     v-model="users1.tcnum"
                     aria-describedby="emailHelp"
                     placeholder="TC Number"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -78,6 +82,7 @@
                     aria-describedby="emailHelp"
                     v-model="users1.rgdate"
                     placeholder="Registration Date"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -90,6 +95,7 @@
                     aria-describedby="emailHelp"
                     v-model="users1.exdate"
                     placeholder="Expiry Date"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -102,6 +108,7 @@
                     v-model="users1.inexdate"
                     aria-describedby="emailHelp"
                     placeholder="Insurance Expiry Date"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -114,6 +121,7 @@
                     aria-describedby="emailHelp"
                     v-model="users1.polexdate"
                     placeholder="Policy Expiry Date"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -128,6 +136,7 @@
                         id="file"
                         accept="image/*"
                         v-on:change="uploadImage($event)"
+                        required
                       />
 
                     </p> <output>

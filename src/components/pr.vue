@@ -94,7 +94,8 @@
         <br>
         <br>
         <p style="text-align: center!important;">
-                <router-link to="/editprofile" style="text-decoration: none!important;">Edit</router-link>
+            
+                <router-link to="/editprofile" style="text-decoration: none!important;" id="bu">Edit</router-link>
                 <br />
                 <br />
               </p> 
@@ -234,8 +235,8 @@ export default {
 #bu {
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   border: none;
   border: solid 2px blue !important;
