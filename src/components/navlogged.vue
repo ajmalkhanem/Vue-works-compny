@@ -199,7 +199,7 @@
             <b-dropdown-item href="#">Travel & Tourism</b-dropdown-item>
             <b-dropdown-item href="#">Market Place</b-dropdown-item>
           </b-nav-item-dropdown></div>
-          <div v-else router-link to="/signup1"></div>
+          <div v-else router-link to="/signin"></div>
         </b-nav-item>
         
       </div>
