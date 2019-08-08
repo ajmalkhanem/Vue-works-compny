@@ -171,4 +171,8 @@ export default {
 .cd {
   border-radius: 75%;
 }
+a:hover {
+    color: black !important;
+    text-decoration: none;
+}
 </style>
