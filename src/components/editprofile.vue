@@ -12,7 +12,10 @@
         <div class="container" style="background-color: #f5f5f5;">
           <div class="row">
             <div class="col-md-4">
-              <img src="../assets/download1.png" />
+             <output>
+      <img :src="previewUrl" v-if="previewUrl" style="width:150px;height:150px;">
+      <p v-else>No image...</p>
+    </output>
             </div>
             <div class="col-md-8" style="padding-top:40px!important;padding-bottom:40px!important;">
               <h5>
@@ -131,6 +134,7 @@ export default {
       },
 
       msg: "",
+      previewUrl:'',
       token: localStorage.getItem("token")
     };
   },
@@ -140,6 +144,24 @@ export default {
   },
 
   methods: {
+    uploadImage() {
+      this.selectedFile = event.target.files[0];
+      this.url = URL.createObjectURL(this.selectedFile);
+       const file = event.target.files[0]
+      if (!file) {
+        return false
+      }
+      if (!file.type.match('image.*')) {
+        return false
+      }
+      const reader = new FileReader()
+      const that = this
+      reader.onload = function (e) {
+        that.previewUrl = e.target.result
+      }
+      reader.readAsDataURL(file)
+    
+    },
     submit1(ev) {
       axios({
         method: "POST",

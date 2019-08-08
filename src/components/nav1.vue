@@ -8,7 +8,7 @@
     >
       <div class="container">
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-        <span>Welcome to CloudGM</span>
+        <span></span>
 
         <b-collapse is-nav id="nav_collapse">
           <b-navbar-nav class="ml-auto">
@@ -65,11 +65,15 @@
         </a>
         <b-nav-item class="ml-auto">
           <div class="input-group srh sw" style="width: 13cm ;padding-bottom:10px;">
-            <input type="text" class="form-control" placeholder="Search here"
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search here"
               style="margin-top: 0px;
             margin-right: 0px;
             margin-bottom: 0px;
-            margin-left: 0px;"/>
+            margin-left: 0px;"
+            />
             <div class="input-group-append">
               <button type="button" class="btn btn-danger">
                 <span>
@@ -96,7 +100,7 @@
       <div class="container">
         <b-nav-item class="hv">
           <b-nav-item-dropdown class="hv yy" text="CATEGORIES" right>
-            <b-dropdown-item href="#">Automobile</b-dropdown-item>
+            <b-dropdown-item router-link to="/signin">Automobile</b-dropdown-item>
             <b-dropdown-item href="#">Communication</b-dropdown-item>
             <b-dropdown-item href="#">Education</b-dropdown-item>
             <b-dropdown-item href="#">Restaurant</b-dropdown-item>
@@ -127,9 +131,8 @@
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>-->
-          
-       
-        <b-nav-item href="#">SERVICES</b-nav-item>
+
+          <b-nav-item href="#">SERVICES</b-nav-item>
           <!-- <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
@@ -257,12 +260,12 @@ a :hover {
   text-align: left;
 }
 @media (min-width: 760px) and (max-width: 1800px) {
-.ii{
-  display:none!important;
-}
+  .ii {
+    display: none !important;
+  }
 }
 .navbar {
-    position: relative;
-    padding: .0rem 0rem!important;
+  position: relative;
+  padding: 0rem 0rem !important;
 }
 </style>
