@@ -262,7 +262,7 @@ this.dialog = false*/
         .then(response => {
           this.obj = response.data.msg;
           if (response.data.status == true) {
-            alert("Successfully added");
+            //alert("Successfully added");
             //imageupload
             let formData = new FormData();
             formData.append("document", this.selectedFile);
@@ -281,7 +281,7 @@ this.dialog = false*/
               .then(response => {
                // this.msg1=response.data.msg
                 if (response.data.status == true) {
-                  alert("Success");
+                  alert("Image upload Success");
                   this.$router.push({
                     name: "newpage"
                   });

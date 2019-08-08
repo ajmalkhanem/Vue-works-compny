@@ -12,10 +12,10 @@
         <div class="container" style="background-color: #f5f5f5;">
           <div class="row">
             <div class="col-md-4">
-                <output>
-                    <img :src="previewUrl" v-if="previewUrl" style="width:150px;height:150px;">
-                    <p v-else>No image...</p>
-                  </output>
+             <output>
+      <img :src="previewUrl" v-if="previewUrl" style="width:150px;height:150px;">
+      <p v-else>No image...</p>
+    </output>
             </div>
             <div class="col-md-8" style="padding-top:40px!important;padding-bottom:40px!important;">
               <h5>
@@ -136,9 +136,6 @@ export default {
       },
 
       msg: "",
-       msg1: "",
-      selectedFile: "",
-      id: "",
       previewUrl:'',
       token: localStorage.getItem("token")
     };

@@ -115,11 +115,15 @@
 <b-nav-item class="ml-auto">
   
           <div class="input-group srh sw" style="width: 13cm ;padding-bottom:10px;">
-            <input type="text" class="form-control" placeholder="Search here"
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search here"
               style="margin-top: 0px;
             margin-right: 0px;
             margin-bottom: 0px;
-            margin-left: 0px;"/>
+            margin-left: 0px;"
+            />
             <div class="input-group-append">
               <button type="button" class="btn btn-danger">
                 <span>
@@ -295,12 +299,12 @@ a :hover {
   text-align: left;
 }
 @media (min-width: 760px) and (max-width: 1800px) {
-.ii{
-  display:none!important;
-}
+  .ii {
+    display: none !important;
+  }
 }
 .navbar {
-    position: relative;
-    padding: .0rem 0rem!important;
+  position: relative;
+  padding: 0rem 0rem !important;
 }
 </style>
