@@ -139,15 +139,7 @@
     <br />
   </div>
 </template>
-    <script>
-import documentreg from "@/components/documentreg";
-
-export default {
-  components: {
-    documentreg
-  }
-};
-</script>
+   
     <style>
 #rcorners1 {
   border-radius: 25px;

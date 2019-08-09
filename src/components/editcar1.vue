@@ -12,7 +12,6 @@
           <div class="row">
             <div class="col-md-4">
               <h4 style="padding-top:20px!important;padding-left:50px!important;">UPDATE DETAILS</h4>
-              {{msg}}
             </div>
             <div class="col-md-5 yy">
               <div style="padding-top:50px!important;">
@@ -116,22 +115,27 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1" style="text-align: left!important;">
-                    <h5>Business Documents</h5>
+                    <h5>Vehicle Image</h5>
                   </label>
                   <div class="container" style="background-color:white"></div>
                   <div class="container">
                     <p>
-                      <input type="file" />
+                       <input
+                        type="file"
+                        id="file"
+                        accept="image/*"
+                        v-on:change="uploadImage($event)"
+                        required
+                      />
                     </p>
+                    <output>
+      <img :src="previewUrl" v-if="previewUrl" style="width:150px;height:150px;">
+      <p v-else>No image...</p></output>
                   </div>
                   <div class="container" style="background-color:white"></div>
-                  <div class="container">
-                    <p>
-                      <input type="file" />
-                    </p>
-                  </div>
+                  
                 </div>
-                <br />
+                <br />{{msg}}{{msg1}}
                 <p style="text-align: left!important;">
                   <b-button type="submit" variant="info">Update & Save</b-button>
                   <br />
@@ -181,6 +185,10 @@ localStorage.users1.username = newName;
 }
 },*/
       msg: "",
+      msg1:'',
+      id:'',
+      previewUrl:'',
+      selectedFile:'',
       token: localStorage.getItem("token")
     };
   },
@@ -215,6 +223,24 @@ localStorage.users1.username = newName;
 
     },*/
   methods: {
+     uploadImage() {
+      this.selectedFile = event.target.files[0];
+      this.url = URL.createObjectURL(this.selectedFile);
+       const file = event.target.files[0]
+      if (!file) {
+        return false
+      }
+      if (!file.type.match('image.*')) {
+        return false
+      }
+      const reader = new FileReader()
+      const that = this
+      reader.onload = function (e) {
+        that.previewUrl = e.target.result
+      }
+      reader.readAsDataURL(file)
+    
+    },
     submit1(ev) {
       axios({
         method: "POST",
@@ -264,13 +290,49 @@ localStorage.users1.username = newName;
           expiryDate: this.users1.exdate,
           inexpiryDate: this.users1.inexdate,
           polexpiryDate: this.users1.polexdate,
-          documents: "asasa"
+          //documents: "asasa"
         })
 
         .then(response => {
           this.msg = response.data.msg;
-          //store.commit("loginUser",response.data.token);
-          //localStorage.setItem("token", response.data.token)
+           //this.obj = response.data.msg;
+          if (response.data.status == true) {
+            alert("Successfully update");
+            //imageupload
+            let formData = new FormData();
+            formData.append("document", this.selectedFile);
+            formData.append("id", this.id);
+            
+            axios({
+              method: "post",
+              url: "http://13.233.110.196/vehicle/add/document/",
+              data: formData,
+
+              headers: {
+                "Content-Type": "multipart/form-data",
+                to: localStorage.getItem("token")
+              }
+            })
+              .then(response => {
+                this.msg1=response.data.msg
+                if (response.data.status == true) {
+                  alert("Image update Success");
+                  this.$router.push({
+                    name: "newpage"
+                  });
+                } else {
+                  alert("fail");
+                   
+                }
+              })
+              .catch(e => {
+                alert("Image upload Not success");
+                this.loading = false;
+              });
+          } else {
+            //code
+            //alert(this.obj);
+          }
           this.$router.push({
             name: "newpage"
           });

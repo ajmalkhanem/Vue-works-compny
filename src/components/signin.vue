@@ -219,7 +219,7 @@ export default {
               }
               if (this.usertype1 == 1) {
                 this.$router.push({
-                  name: "home"
+                  name: "sellerindex"
                 });
               }
             }

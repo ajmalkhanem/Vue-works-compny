@@ -1,52 +1,17 @@
 <template>
   <div>
   
-    <!--
-      <b-navbar class="navbar navbar-expand-sm bg-whitesmoke navbar-whitesmoke" toggleable="lgh" type="light"
-      variant="light">
-      <div>
-         
-        <b-collapse is-nav id="nav_collapse">
-          <b-navbar-nav class="ml-auto">
-              <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-              <span>Welcome to CloudGM </span>
-          </b-navbar-nav>
-          <b-navbar-nav class="mr-auto">
-              <b-nav-item >
-                <router-link to="/sellerindex" style=" text-decoration: none!important;"><span style="padding-left:10px;"> Become a Seller </span></router-link>
-              <span style="padding-left:10px;" > | </span>
-             <router-link to="/signup1"style=" text-decoration: none!important;" ><span style="padding-left:10px;">SignUp </span></router-link>
-              <span style="padding-left:10px;">| </span>
-              <router-link to="/signin" style=" text-decoration: none!important;"> <span style="padding-left:10px;">SignIn </span></router-link>
-            </b-nav-item>
-            </b-nav-item>
-            <b-nav-item class=" navt ">
-              <router-link to=""><strong>
-                  <div style="color:  #111113 !important;">
-                    <img src="../assets/ind.png" style="width:25px;height:20px;">
-                  </div>
-                </strong></router-link>
-            </b-nav-item>
-            <b-nav-item class="navt ">
-              <router-link to=""><strong>
-                  <div style="color:  #111113 !important;">
-                    <img src="../assets/uae.png" style="width:25px;height:25px;">
-                  </div>
-                </strong></router-link>
-            </b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>-->
         <b-navbar  toggleable="lg" type="light" variant="light" style="padding-top:10px!important;padding-bottom:10px!important;">
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
             <h5 style="color: whitesmoke!important;">_____</h5>
-         <a href="/" style="text-decoration: none!important;"> <h5 style="color:black!important;">Welcome to CloudGM</h5></a>
+         <a href="/" style="text-decoration: none!important;"> <h5 style="color:black!important;"></h5></a>
              <!--<a href="Home"><b-nav-text><h4 style="color:black!important;">TIES</h4></b-nav-text></a>-->
                <b-collapse is-nav id="nav_collapse">
                   <b-nav-item href="#" class="mx-auto"></b-nav-item>
                   <b-nav-item >
                       <router-link to="/sellerindex" style=" text-decoration: none!important;"><span style="padding-left:10px;"> Become a Seller </span></router-link>
                     <span style="padding-left:10px;" > | </span>
-                   <router-link to="/signup1"style=" text-decoration: none!important;" ><span style="padding-left:10px;">SignUp </span></router-link>
+                   <router-link to="/signup1" style=" text-decoration: none!important;" ><span style="padding-left:10px;">SignUp </span></router-link>
                     <span style="padding-left:10px;">| </span>
                     <router-link to="/signin" style=" text-decoration: none!important;"> <span style="padding-left:10px;">SignIn </span></router-link>
                   </b-nav-item>
@@ -67,7 +32,7 @@
                  
                  
                  </b-collapse>
-                 </b-navbar-nav toggleable="lg"> 
+                
                <b-navbar-brand>
                   <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
                   </b-navbar-brand>
@@ -75,8 +40,7 @@
       
 
 
-    </b-navbar>
-
+   
     <!---->
     <div class="container" style="background-color: white!important;">
       <b-navbar
@@ -85,7 +49,7 @@
         variant="light"
         style="background-color:white!important;"
       >
-        <a href="Home">
+        <a href="home">
           <b-img
             :src="require('../assets/CGMlo.png')"
             style=" width:250px; height:130px;padding-bottom:10px;"
@@ -178,7 +142,7 @@
         
         <b-nav-item href="#">PAGES</b-nav-item>
         
-          </b-nav-item>
+         
        
         <b-nav-item href="#">SERVICES</b-nav-item>
          
@@ -194,8 +158,7 @@
         </b-nav-item>
     
 
-      </b-collapse>
-    </b-navbar-nav toggleable="lg"> 
+      
   <b-navbar-brand>
      <!--<a href="Home">  <b-img :src="require('../assets/isilogo.jpg')" style="margin-left:20px; width:100px; height:auto;"></b-img></a>-->
      </b-navbar-brand>
@@ -203,7 +166,7 @@
 
 
 
-</b-navbar>
+
   </div>
 </template>
     

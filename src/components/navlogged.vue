@@ -124,7 +124,7 @@
         variant="light"
         style="background-color:white!important;"
       >
-        <a href="Home">
+        <a href="home">
           <b-img
             :src="require('../assets/CGMlo.png')"
             style=" width:250px; height:130px;padding-bottom:10px;"

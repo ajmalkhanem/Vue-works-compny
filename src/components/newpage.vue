@@ -19,7 +19,7 @@
           <div class="row box-two">
             <div class="col-md-3">
               <img
-                v-bind:src="'http://13.233.110.196/document/get/'+listing.documents[1]"
+                v-bind:src="'http://13.233.110.196/document/get/'+listing.documents[0]"
                 style="width:100%;height: auto;"
               />
             </div>
