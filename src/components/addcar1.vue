@@ -136,6 +136,7 @@
                         id="file"
                         accept="image/*"
                         v-on:change="uploadImage($event)"
+                        required
                       />
 
                     </p> <output>

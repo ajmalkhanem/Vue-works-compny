@@ -24,6 +24,7 @@
               <div style="padding-top:50px!important;">
                 <input type="file" id="file" accept="image/*" v-on:change="uploadImage($event)" />
               </div>
+              
             </div>
           </div>
         </div>
@@ -91,6 +92,7 @@
                   aria-describedby="emailHelp"
                   placeholder="Promo Reference Code "
                 />
+                
               </div>
               <br />
               <p style="text-align: right!important;">
@@ -199,6 +201,17 @@ export default {
           ph: this.users1.ph
           //documents: "asasa"
         })
+        let formData = new FormData();
+            formData.append("dp", this.selectedFile);
+            axios({
+              method: "post",
+              url: "http://13.233.110.196/customer/add/dp/",
+              data: formData,
+              headers: {
+                "Content-Type": "multipart/form-data",
+                to: localStorage.getItem("token")
+              }
+            })
 
         .then(response => {
           if (response.data.status == true) {
