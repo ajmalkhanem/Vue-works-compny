@@ -87,7 +87,7 @@
         </div>
         <div class="col-md-8">
           <h5>FUEL FILLING HISTORY</h5>
-          <p v-if="list.fuelFilling.length"></p>
+          <p v-if="list.fuelFilling.length">
           <table class="table table-hover">
             <thead>
               <tr>
@@ -115,7 +115,7 @@
                 </td>
               </tr>
             </tbody>
-          </table>
+          </table><p v-else>No data found</p>
         </div>
       </div>
     </div>

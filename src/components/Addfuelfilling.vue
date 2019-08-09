@@ -17,7 +17,7 @@
           <table class="table table-bordered">
             <thead class="oo">
               <tr>
-                <th scope="col" style=" background: rgb(242, 235, 235)">
+                <th scope="col" >
                   <router-link
                     :to="'/profile/' + this.id"
                     style="text-decoration: none!important;"
@@ -256,7 +256,7 @@ export default {
   })
   this.dialog = false*/
         .then(response => {
-          alert((this.msg = response.data.msg));
+          this.msg = response.data.msg
           //console.log(response.data.token)
           //store.commit("loginUser",response.data.token);
           //localStorage.setItem("token", response.data.token)

@@ -88,7 +88,7 @@
         <div class="col-md-8">
           <h5>PENALTY HISTORY</h5>
 
-          <p v-if="list.charges.length"></p>
+          <p v-if="list.charges.length">
           <table class="table table-hover">
             <thead>
               <tr>
@@ -112,7 +112,7 @@
                 </td>
               </tr>
             </tbody>
-          </table>
+          </table><p v-else>No data found</p>
         </div>
       </div>
     </div>
