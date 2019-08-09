@@ -96,7 +96,7 @@
               </div>
               <br />
               <p style="text-align: right!important;">
-                <button type="submit">submit</button>
+                <button class="btn btn-success" type="submit">Submit</button>
                 <br />
                 <br />
               </p>

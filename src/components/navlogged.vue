@@ -31,7 +31,7 @@
                   <router-link to>Settings</router-link>
                 </b-dropdown-item>
                 <b-dropdown-item>
-                  <a v-on:click="handlelogout()">logout</a>
+                  <a v-on:click="handlelogout()">Logout</a>
                 </b-dropdown-item>
               </b-nav-item-dropdown>
             </b-nav-item>
